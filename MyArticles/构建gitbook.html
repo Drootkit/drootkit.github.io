@@ -176,6 +176,25 @@
             
 
             
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="Basics/elf文件结构.html">
+            
+                <a href="Basics/elf文件结构.html">
+            
+                    
+                    ELF structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
         </li>
     
         <li class="chapter " data-level="1.6" data-path="Practice.html">
@@ -449,8 +468,41 @@ git push #&#x7528;-f&#x6765;&#x5F3A;&#x5236;&#x8986;&#x76D6;&#x4E4B;&#x524D;&#x8
 <h1 id="&#x53EF;&#x80FD;&#x7684;&#x81EA;&#x52A8;&#x5316;&#x811A;&#x672C;">&#x53EF;&#x80FD;&#x7684;&#x81EA;&#x52A8;&#x5316;&#x811A;&#x672C;</h1>
 <p>&#x80FD;&#x6211;&#x54EA;&#x5929;&#x628A;&#x8FD9;&#x4E2A;&#x641E;&#x5DEE;&#x4E0D;&#x591A;&#x6E05;&#x695A;&#x4E86;&#x8FD8;&#x662F;&#x8981;&#x5199;&#x4E00;&#x4E2A;&#x81EA;&#x52A8;&#x5316;&#x7684;&#x811A;&#x672C;&#x7684;&#x3002;&#x4E0D;&#x7136;&#x6BCF;&#x6B21;&#x90FD;&#x8981;&#x624B;&#x52A8;&#x590D;&#x5236;&#x53EF;&#x592A;&#x9EBB;&#x70E6;&#x4E86;&#xFF0C;&#x4E00;&#x4E0D;&#x6CE8;&#x610F;&#x518D;&#x628A;&#x6211;&#x7684;git&#x8986;&#x76D6;&#x6389;&#xFF0C;&#x90A3;&#x53EF;&#x662F;&#x771F;&#x7684;&#x64CD;&#x4E86;&#x72D7;&#x4E86;&#x3002;</p>
 <p>&#x6BCF;&#x6B21;&#x52A0;&#x5165;&#x65B0;&#x7684;&#x6587;&#x7AE0;&#x4E4B;&#x540E;&#x90FD;&#x8981;&#x4FEE;&#x6539;summary&#x90A3;&#x4E2A;md&#x4E5F;&#x662F;&#x4E00;&#x4EF6;&#x9EBB;&#x70E6;&#x4E8B;&#xFF0C;&#x4F46;&#x662F;&#x9EBB;&#x70E6;&#x5E26;&#x6765;&#x7684;&#x9AD8;&#x5EA6;&#x7684;&#x53EF;&#x64CD;&#x4F5C;&#x6027;&#xFF0C;&#x8FD9;&#x4E00;&#x70B9;&#x8FD8;&#x662F;&#x5F88;&#x96BE;&#x5E73;&#x8861;&#x7684;&#x3002;&#x603B;&#x4E4B;&#x6211;&#x611F;&#x89C9;&#x8FD9;&#x4E2A;&#x662F;&#x6BD4;hexo&#x8981;&#x597D;&#x7528;&#x7684;&#xFF0C;&#x4F9D;&#x8D56;&#x6CA1;&#x6709;hexo&#x90A3;&#x4E48;&#x591A;&#xFF0C;&#x76F8;&#x5BF9;&#x6765;&#x8BF4;&#x4E5F;&#x65B9;&#x4FBF;&#x914D;&#x7F6E;&#x4E00;&#x70B9;&#x3002;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> os
+
+<span class="hljs-comment"># &#x5220;&#x9664;git&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x6CA1;&#x6709;&#x7528;&#x7684;md&#x6587;&#x4EF6;&#xFF0C;&#x53EA;&#x4E0A;&#x4F20;html&#x6587;&#x4EF6;&#xFF0C;&#x6548;&#x679C;&#x4E00;&#x6837;&#xFF08;md&#x548C;png&#xFF09;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">cleanGit</span><span class="hljs-params">()</span>:</span>
+    path = <span class="hljs-string">&apos;D:\\myGitbook\\commit_dir\\MyArticles&apos;</span>
+    <span class="hljs-keyword">for</span> root, dirs, files <span class="hljs-keyword">in</span> os.walk(path):
+        <span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> files:
+            <span class="hljs-keyword">if</span> (name.endswith(<span class="hljs-string">&quot;.md&quot;</span>) <span class="hljs-keyword">or</span> name.endswith(<span class="hljs-string">&quot;.png&quot;</span>)):
+                print(name)
+                print(os.path.join(root, name))
+                os.remove(os.path.join(root, name))
+    <span class="hljs-comment"># &#x5220;&#x9664;&#x7A7A;&#x76EE;&#x5F55;</span>
+    <span class="hljs-comment"># for root, dirs, files in os.walk(path):</span>
+    <span class="hljs-comment">#     if not os.listdir(root):</span>
+    <span class="hljs-comment">#         os.rmdir(root)</span>
+
+<span class="hljs-comment"># &#x6E05;&#x7406;&#x672C;&#x5730;&#x7684;build&#x76EE;&#x5F55;&#xFF0C;&#x6587;&#x672C;&#x548C;&#x56FE;&#x7247;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">cleanLocal</span><span class="hljs-params">()</span>:</span>
+    path = <span class="hljs-string">&apos;D:\\myGitbook\\localOpreat\\_book\\MyArticles&apos;</span>
+    <span class="hljs-keyword">for</span> root, dirs, files <span class="hljs-keyword">in</span> os.walk(path):
+        <span class="hljs-keyword">for</span> name <span class="hljs-keyword">in</span> files:
+            <span class="hljs-keyword">if</span> (name.endswith(<span class="hljs-string">&quot;.md&quot;</span>) <span class="hljs-keyword">or</span> name.endswith(<span class="hljs-string">&quot;.png&quot;</span>)):
+                print(name)
+                print(os.path.join(root, name))
+                os.remove(os.path.join(root, name))
+    <span class="hljs-comment"># &#x5220;&#x9664;&#x7A7A;&#x76EE;&#x5F55;</span>
+    <span class="hljs-comment"># for root, dirs, files in os.walk(path):</span>
+    <span class="hljs-comment">#     if not os.listdir(root):</span>
+    <span class="hljs-comment">#         os.rmdir(root)</span>
+
+cleanGit()
+</code></pre>
+<p>&#x5220;&#x9664;&#x7A7A;&#x76EE;&#x5F55;&#x7684;&#x4EE3;&#x7801;&#x4F1A;&#x51FA;&#x95EE;&#x9898;&#xFF0C;&#x6682;&#x65F6;&#x5C31;&#x4E0D;&#x5199;&#x4E86;&#x3002;</p>
 <footer class="page-footer"><span class="copyright">&#x6CA1;&#x6709;&#x7248;&#x6743;&#xFF0C;&#x968F;&#x4FBF;&#x590D;&#x5236;&#xFF0C;&#x514D;&#x8D39;&#x7684;&#x77E5;&#x8BC6;&#x5E94;&#x8BE5;&#x5171;&#x4EAB; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2022-11-18 13:23:23
+2022-11-19 13:57:19
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -495,7 +547,7 @@ git push #&#x7528;-f&#x6765;&#x5F3A;&#x5236;&#x8986;&#x76D6;&#x4E4B;&#x524D;&#x8
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"写在开始，how2gitbook","level":"1.2","depth":1,"next":{"title":"Reverse","level":"1.3","depth":1,"path":"MyArticles/Reverse.md","ref":"MyArticles/Reverse.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","custom-favicon","tbfed-pagefooter","popup","-sharing","sharing-plus","intopic-toc","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"没有版权，随便复制，免费的知识应该共享","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"./icon/book.ico","back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MyArticles/构建gitbook.md","mtime":"2022-11-18T05:23:23.444Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-18T08:56:00.270Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"写在开始，how2gitbook","level":"1.2","depth":1,"next":{"title":"Reverse","level":"1.3","depth":1,"path":"MyArticles/Reverse.md","ref":"MyArticles/Reverse.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","custom-favicon","tbfed-pagefooter","popup","-sharing","sharing-plus","intopic-toc","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"没有版权，随便复制，免费的知识应该共享","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"./icon/book.ico","back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MyArticles/构建gitbook.md","mtime":"2022-11-19T05:57:19.977Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-19T05:57:40.555Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
