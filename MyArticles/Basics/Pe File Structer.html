@@ -1,0 +1,936 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>PE structure · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Practice.html" />
+    
+    
+    <link rel="prev" href="elf文件结构.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../构建gitbook.html">
+            
+                <a href="../构建gitbook.html">
+            
+                    
+                    写在开始，how2gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Reverse.html">
+            
+                <a href="../Reverse.html">
+            
+                    
+                    Reverse
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../PWN.html">
+            
+                <a href="../PWN.html">
+            
+                    
+                    PWN
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Basics.html">
+            
+                <a href="../Basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="elf文件结构.html">
+            
+                <a href="elf文件结构.html">
+            
+                    
+                    ELF structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.2" data-path="Pe File Structer.html">
+            
+                <a href="Pe File Structer.html">
+            
+                    
+                    PE structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Practice.html">
+            
+                <a href="../Practice.html">
+            
+                    
+                    Practice
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Dailynotes.html">
+            
+                <a href="../Dailynotes.html">
+            
+                    
+                    Daily notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Dailynotes/pdf解析重组.html">
+            
+                <a href="../Dailynotes/pdf解析重组.html">
+            
+                    
+                    电子书清晰化的尝试 利用python
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Development.html">
+            
+                <a href="../Development.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../CyberSec.html">
+            
+                <a href="../CyberSec.html">
+            
+                    
+                    CyberSec
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../ToolUsage.html">
+            
+                <a href="../ToolUsage.html">
+            
+                    
+                    Tool usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >PE structure</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5199;&#x5728;&#x524D;&#x9762;">&#x5199;&#x5728;&#x524D;&#x9762;</h1>
+<p>&#x5FAE;&#x8F6F;&#x57FA;&#x4E8E;COFF&#xFF08;&#x901A;&#x7528;&#x9879;&#x76EE;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#xFF09;&#x6765;&#x8BBE;&#x8BA1;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF0C;&#x672C;&#x7BC7;&#x5B66;&#x4E60;&#x7B14;&#x8BB0;&#x662F;&#x57FA;&#x4E8E;&#x300A;&#x9ED1;&#x5BA2;&#x514D;&#x6740;&#x653B;&#x9632;&#x300B;&#x4E00;&#x4E66;&#x6765;&#x5B66;&#x4E60;&#x8BB0;&#x5F55;&#x7684;&#xFF0C;&#x4E4B;&#x524D;&#x6709;&#x4E00;&#x7BC7;&#x8BB0;&#x5F55;&#x662F;&#x57FA;&#x4E8E;&#x300A;&#x9006;&#x5411;&#x5DE5;&#x7A0B;&#x6838;&#x5FC3;&#x539F;&#x7406;&#x300B;&#x5199;&#x7684;<a href="https://hellorootkit.github.io/2021/08/31/&#x9006;&#x5411;&#x5DE5;&#x7A0B;&#x5B66;&#x4E60;-PE&#x6587;&#x4EF6;&#x7ED3;&#x6784;/?highlight=pe" target="_blank">&#x9006;&#x5411;&#x5DE5;&#x7A0B;&#x5B66;&#x4E60;-PE&#x6587;&#x4EF6;&#x683C;&#x5F0F; | R-o-o-t-k-i-t (hellorootkit.github.io)</a>&#x8FD9;&#x4E24;&#x7BC7;&#x76F8;&#x4E92;&#x72EC;&#x7ACB;&#xFF0C;&#x53EA;&#x4E0D;&#x8FC7;&#x662F;&#x4E0D;&#x540C;&#x7684;&#x65F6;&#x95F4;&#x518D;&#x6B21;&#x5B66;&#x4E60;&#x4E00;&#x4E0B;&#x7F62;&#x4E86;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x5728;&#x6587;&#x4EF6;<code>WinNt.h</code>&#x6587;&#x4EF6;&#x4E2D;&#x627E;&#x5230;&#x3002;</p>
+<p>&#x4E00;&#x4E9B;&#x7F29;&#x5199;&#x3002;</p>
+<ul>
+<li>RAW&#xFF1A;&#x6587;&#x4EF6;&#x504F;&#x79FB;</li>
+<li>RVA&#xFF1A;&#x76F8;&#x5BF9;&#x865A;&#x62DF;&#x5730;&#x5740;&#xFF08;&#x662F;&#x6307;&#x76F8;&#x5BF9;&#x4E0E;ImageBase&#x7684;&#x504F;&#x79FB;&#xFF09;</li>
+<li>VA&#xFF1A;&#x865A;&#x62DF;&#x5730;&#x5740;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x7A0B;&#x5E8F;&#x88AB;&#x52A0;&#x8F7D;&#x5230;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x5730;&#x5740;</li>
+</ul>
+<h1 id="&#x5229;&#x7528;010editor">&#x5229;&#x7528;010editor</h1>
+<p>&#x9996;&#x5148;&#x4E0B;&#x8F7D;&#x5BF9;&#x5E94;&#x7684;<a href="https://www.sweetscape.com/010editor/repository/templates/" target="_blank">&#x6A21;&#x677F;</a>&#xFF0C;&#x7136;&#x540E;&#x5728;010&#x91CC;&#x8FD0;&#x884C;&#x6A21;&#x677F;&#xFF0C;&#x7136;&#x540E;alt+f4&#x663E;&#x793A;&#x6A21;&#x677F;&#x53D8;&#x91CF;&#xFF0C;&#x8FD9;&#x6837;&#x770B;&#x8D77;&#x6765;&#x6BD4;&#x8F83;&#x65B9;&#x4FBF;&#xFF0C;&#x6548;&#x679C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="ReadNote/image-20221205230517715.png" alt="image-20221205230517715"></p>
+<p>&#x8FD9;&#x91CC;&#x5206;&#x6790;&#x8D77;&#x6765;&#x7ED3;&#x6784;&#x5C31;&#x5982;&#x864E;&#x6DFB;&#x7FFC;&#x4E86;&#x3002;</p>
+<h1 id="ms-dos&#x5934;">MS-DOS&#x5934;</h1>
+<p>&#x666E;&#x904D;&#x5B58;&#x5728;&#x4E8E;PE&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x6CA1;&#x5565;&#x7528;&#x7684;&#x8282;&#x533A;&#xFF0C;&#x5F53;PE&#x6587;&#x4EF6;&#x8FD0;&#x884C;&#x5728;dos&#x7CFB;&#x7EDF;&#xFF08;DOS&#x4F5C;&#x4E3A;&#x5FAE;&#x8F6F;&#x516C;&#x53F8;&#x5728;&#x4E2A;&#x4EBA;&#x8BA1;&#x7B97;&#x673A;&#x4E0A;&#x4F7F;&#x7528;&#x7684;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x8F7D;&#x4F53;&#xFF0C;1981&#x5E74; - 1995&#x5E74;&#xFF09;&#x65F6;&#x4F1A;&#x6267;&#x884C;&#xFF0C;&#x544A;&#x8BC9;&#x4F60;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x4E0D;&#x80FD;&#x5728;dos&#x7CFB;&#x7EDF;&#x91CC;&#x6267;&#x884C;&#x3002;&#x5728;winnt.h&#x6587;&#x4EF6;&#x7684;14889&#x884C;&#x53EF;&#x4EE5;&#x627E;&#x5230;DOS&#x5934;&#x7684;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-c"><span class="hljs-comment">// DOS .EXE header</span>
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_DOS_HEADER{
+    WORD   e_magic;                   <span class="hljs-comment">// Magic number</span>
+    WORD   e_cblp;                    <span class="hljs-comment">// Bytes on last page of file</span>
+    WORD   e_cp;                      <span class="hljs-comment">// Pages in file</span>
+    WORD   e_crlc;                    <span class="hljs-comment">// Relocations</span>
+    WORD   e_cparhdr;                 <span class="hljs-comment">// Size of header in paragraphs</span>
+    WORD   e_minalloc;                <span class="hljs-comment">// Minimum extra paragraphs needed</span>
+    WORD   e_maxalloc;                <span class="hljs-comment">// Maximum extra paragraphs needed</span>
+    WORD   e_ss;                      <span class="hljs-comment">// Initial (relative) SS value</span>
+    WORD   e_sp;                      <span class="hljs-comment">// Initial SP value</span>
+    WORD   e_csum;                    <span class="hljs-comment">// Checksum</span>
+    WORD   e_ip;                      <span class="hljs-comment">// Initial IP value</span>
+    WORD   e_cs;                      <span class="hljs-comment">// Initial (relative) CS value</span>
+    WORD   e_lfarlc;                  <span class="hljs-comment">// File address of relocation table</span>
+    WORD   e_ovno;                    <span class="hljs-comment">// Overlay number</span>
+    WORD   e_res[<span class="hljs-number">4</span>];                  <span class="hljs-comment">// Reserved words</span>
+    WORD   e_oemid;                   <span class="hljs-comment">// OEM identifier (for e_oeminfo)</span>
+    WORD   e_oeminfo;                 <span class="hljs-comment">// OEM information; e_oemid specific</span>
+    WORD   e_res2[<span class="hljs-number">10</span>];                <span class="hljs-comment">// Reserved words</span>
+    LONG   e_lfanew;                  <span class="hljs-comment">// File address of new exe header</span>
+  } IMAGE_DOS_HEADER, *PIMAGE_DOS_HEADER;
+</code></pre>
+<p><img src="ReadNote/image-20221206195734465.png" alt="image-20221206195734465"></p>
+<h2 id="emagic">e_magic</h2>
+<p>&#x5C31;&#x662F;<code>4D 5A</code>&#x8FD9;&#x4E24;&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x8868;&#x793A;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;DOS&#x4E0B;&#x7684;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;</p>
+<h2 id="ess-esp">e_ss; e_sp&#x2026;&#x2026;</h2>
+<p>&#x8FD9;&#x4E24;&#x4E2A;&#x503C;&#x7528;&#x6765;&#x5728;&#x7A0B;&#x5E8F;&#x5F00;&#x59CB;&#x7684;&#x65F6;&#x5019;&#x521D;&#x59CB;&#x5316;<code>SS SP</code>&#x7684;&#x4E24;&#x4E2A;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x503C;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x540E;&#x9762;&#x7684;&#x51E0;&#x4E2A;&#x5C31;&#x662F;&#x521D;&#x59CB;&#x5316;&#x5404;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x503C;&#x3002;</p>
+<h2 id="elfarlc">e_lfarlc</h2>
+<p>&#x8FD9;&#x4E2A;&#x5934;&#x6307;&#x5411;&#x4E86;&#x7A0B;&#x5E8F;&#x4E2D;&#x91CD;&#x5B9A;&#x4F4D;&#x8868;&#x7684;&#x5730;&#x5740;</p>
+<h2 id="elfanew">e_lfanew</h2>
+<p>&#x8FD9;&#x4E2A;&#x503C;&#x6307;&#x5411;&#x7684;&#x662F;PE&#x6587;&#x4EF6;&#x5934;&#xFF08;NT&#x5934;&#xFF09;&#x7684;&#x504F;&#x79FB;&#xFF0C;&#x8FD9;&#x4E2A;&#x6570;&#x5B57;&#x7684;&#x504F;&#x79FB;&#x662F;<code>0x3c</code>&#xFF08;&#x4ECE;MZ&#x90A3;&#x5F00;&#x59CB;&#x7B97;&#x8D77;&#xFF09;</p>
+<h1 id="dos&#x7B7E;&#x540D;">DOS&#x7B7E;&#x540D;</h1>
+<p><img src="ReadNote/image-20221206195915648.png" alt="image-20221206195915648"></p>
+<p>&#x8FD9;&#x91CC;&#x5C31;&#x662F;&#x4E00;&#x4E32;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x548C;&#x4E00;&#x4E9B;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;dos&#x91CC;&#x663E;&#x793A;&#x51FA;&#x8FD9;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x3002;</p>
+<h1 id="pe&#x5934;&#xFF08;nt&#x5934;&#xFF09;">PE&#x5934;&#xFF08;NT&#x5934;&#xFF09;</h1>
+<p>&#x5728;&#x54EA;&#x4E2A;&#x5934;&#x6587;&#x4EF6;&#x7684;15186&#x884C;&#x53EF;&#x4EE5;&#x627E;&#x5BF9;&#x5BF9;&#x5E94;&#x7684;&#x63CF;&#x8FF0;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_NT_HEADERS64 {
+    DWORD Signature;
+    IMAGE_FILE_HEADER FileHeader;
+    IMAGE_OPTIONAL_HEADER64 OptionalHeader;
+} IMAGE_NT_HEADERS64, *PIMAGE_NT_HEADERS64;
+
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_NT_HEADERS {
+    DWORD Signature;
+    IMAGE_FILE_HEADER FileHeader;
+    IMAGE_OPTIONAL_HEADER32 OptionalHeader;
+} IMAGE_NT_HEADERS32, *PIMAGE_NT_HEADERS32;
+</code></pre>
+<p>&#x4E0D;&#x8BBA;&#x662F;64&#x4F4D;&#x7684;&#x7A0B;&#x5E8F;&#x8FD8;&#x662F;32&#x4F4D;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x4F53;&#x5305;&#x542B;&#x7684;&#x5185;&#x5BB9;&#x57FA;&#x672C;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;</p>
+<p><img src="ReadNote/image-20221206200811745.png" alt="image-20221206200811745"></p>
+<h2 id="signature">Signature</h2>
+<pre><code class="lang-c">DWORD Signature;
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x7531;&#x56DB;&#x4E2A;&#x5B57;&#x8282;&#x7EC4;&#x6210;<code>PE\x00\x00</code></p>
+<h2 id="imagefileheader">IMAGE_FILE_HEADER</h2>
+<pre><code class="lang-c">IMAGE_FILE_HEADER FileHeader;
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x6574;&#x4E2A;PE&#x6587;&#x4EF6;&#x7684;&#x6982;&#x89C8;&#x4FE1;&#x606F;&#xFF0C;&#x6587;&#x4EF6;&#x7684;15006&#x884C;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_FILE_HEADER {
+    WORD    Machine;
+    WORD    NumberOfSections;
+    DWORD   TimeDateStamp;
+    DWORD   PointerToSymbolTable;
+    DWORD   NumberOfSymbols;
+    WORD    SizeOfOptionalHeader;
+    WORD    Characteristics;
+} IMAGE_FILE_HEADER, *PIMAGE_FILE_HEADER;
+</code></pre>
+<h3 id="machine">Machine</h3>
+<p>&#x4E00;&#x4E2A;&#x4E24;&#x5B57;&#x8282;&#x7684;&#x503C;&#xFF0C;&#x8868;&#x793A;&#x4E86;&#x8BE5;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x5728;&#x4F55;&#x79CD;CPU&#x4E0A;&#x3002;&#x5728;15034&#x884C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5B8F;&#x5B9A;&#x4E49;&#xFF0C;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x503C;&#xFF0C;&#x4F46;&#x662F;&#x5229;&#x7528;&#x8D77;&#x6765;&#x6CA1;&#x5565;&#x7528;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_UNKNOWN      0</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_I386         0x014c  <span class="hljs-comment">// Intel 386.</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_R3000        0x0162  <span class="hljs-comment">// MIPS little-endian, 0x160 big-endian</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_R4000        0x0166  <span class="hljs-comment">// MIPS little-endian</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_R10000       0x0168  <span class="hljs-comment">// MIPS little-endian</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_WCEMIPSV2    0x0169  <span class="hljs-comment">// MIPS little-endian WCE v2</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_ALPHA        0x0184  <span class="hljs-comment">// Alpha_AXP</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_SH3          0x01a2  <span class="hljs-comment">// SH3 little-endian</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_SH3DSP       0x01a3</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_SH3E         0x01a4  <span class="hljs-comment">// SH3E little-endian</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_SH4          0x01a6  <span class="hljs-comment">// SH4 little-endian</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_SH5          0x01a8  <span class="hljs-comment">// SH5</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_ARM          0x01c0  <span class="hljs-comment">// ARM Little-Endian</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_THUMB        0x01c2  <span class="hljs-comment">// ARM Thumb/Thumb-2 Little-Endian</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_ARMNT        0x01c4  <span class="hljs-comment">// ARM Thumb-2 Little-Endian</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_AM33         0x01d3</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_POWERPC      0x01F0  <span class="hljs-comment">// IBM PowerPC Little-Endian</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_POWERPCFP    0x01f1</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_IA64         0x0200  <span class="hljs-comment">// Intel 64</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_MIPS16       0x0266  <span class="hljs-comment">// MIPS</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_ALPHA64      0x0284  <span class="hljs-comment">// ALPHA64</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_MIPSFPU      0x0366  <span class="hljs-comment">// MIPS</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_MIPSFPU16    0x0466  <span class="hljs-comment">// MIPS</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_AXP64        IMAGE_FILE_MACHINE_ALPHA64</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_TRICORE      0x0520  <span class="hljs-comment">// Infineon</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_CEF          0x0CEF</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_EBC          0x0EBC  <span class="hljs-comment">// EFI Byte Code</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_AMD64        0x8664  <span class="hljs-comment">// AMD64 (K8)</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_M32R         0x9041  <span class="hljs-comment">// M32R little-endian</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_FILE_MACHINE_CEE          0xC0EE</span>
+</code></pre>
+<h3 id="numberofsections">NumberOfSections</h3>
+<p>&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#x4E2D;&#x8282;&#x533A;&#x7684;&#x6570;&#x76EE;&#xFF0C;&#x5982;&#x679C;&#x8BF4;&#x8981;&#x65B0;&#x589E;&#x4E00;&#x4E2A;&#x8282;&#x533A;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x8981;&#x66F4;&#x6539;&#x8FD9;&#x91CC;&#x3002;</p>
+<h3 id="timedatestamp">TimeDateStamp</h3>
+<p>&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5728;&#x6837;&#x672C;&#x5206;&#x6790;&#x4E2D;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x65F6;&#x95F4;&#x6233;&#x6765;&#x8FDB;&#x884C;&#x753B;&#x50CF;&#x548C;&#x6EAF;&#x6E90;&#xFF0C;&#x8FD9;&#x662F;&#x6BD4;&#x7CFB;&#x7EDF;&#x7684;&#x65E5;&#x671F;&#x548C;&#x65F6;&#x95F4;&#x66F4;&#x52A0;&#x7CBE;&#x786E;&#x7684;&#x65F6;&#x95F4;&#x3002;</p>
+<p><img src="ReadNote/image-20221207215404226.png" alt="image-20221207215404226"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x90FD;&#x7CBE;&#x786E;&#x5230;&#x79D2;&#x4E86;&#x3002;</p>
+<h3 id="numberofsymbols">NumberOfSymbols</h3>
+<p>&#x7B26;&#x53F7;&#x8868;&#x4E2D;&#x7684;&#x7B26;&#x53F7;&#x7684;&#x6570;&#x91CF;&#xFF0C;COFF&#x6587;&#x4EF6;&#x7684;&#x7B26;&#x53F7;&#x8868; <strong>&#x957F;&#x5EA6;&#x56FA;&#x5B9A;</strong>&#xFF0C;&#x53EA;&#x6709;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x624D;&#x80FD;&#x7B97;&#x51FA;&#x6765;&#x7B26;&#x53F7;&#x8868;&#x7684;&#x7ED3;&#x5C3E;</p>
+<h3 id="sizeofoptionalheader">SizeOfOptionalHeader</h3>
+<p>&#x53EF;&#x9009;&#x5934;&#xFF08;&#x62D3;&#x5C55;&#x5934;&#xFF09;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x8FD9;&#x4E2A;&#x5934;&#x5C31;&#x5728;&#x8BE5;&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x540E;&#x9762;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x5927;&#x5C0F;&#x6765;&#x5224;&#x65AD;32&#x4F4D;&#xFF08;E0 00&#xFF09;&#x548C;64&#x4F4D;&#xFF08;F0 00&#xFF09;&#x3002;</p>
+<h3 id="characteristics">Characteristics</h3>
+<p>&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x9610;&#x8FF0;&#x4E86;PE&#x6587;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x662F;&#x7531;&#x4F17;&#x591A;&#x7684;&#x5C5E;&#x6027;&#x7684;&#x503C;&#x7EC4;&#x5408;&#x6210;&#x7684;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#xFF0C;&#x770B;&#x8D77;&#x6765;&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x4F46;&#x662F;&#x5305;&#x542B;&#x4E86;&#x5F88;&#x591A;&#x7684;&#x4E8C;&#x8FDB;&#x5236;&#x6587;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x3002;</p>
+<h2 id="imageoptionalheader">IMAGE_OPTIONAL_HEADER</h2>
+<p>&#x4ECE;&#x8FD9;&#x4E2A;&#x5757;&#x5F00;&#x59CB;&#xFF0C;&#x5C31;&#x5F00;&#x59CB;&#x590D;&#x6742;&#x4E86;&#xFF0C;&#x5C31;&#x771F;&#x6B63;&#x8FDB;&#x5165;PE&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#x7684;&#x6838;&#x5FC3;&#x4E86;&#x3002;</p>
+<pre><code class="lang-c">IMAGE_OPTIONAL_HEADER64 OptionalHeader;
+</code></pre>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x53EB;&#x53EF;&#x9009;&#x5934;&#xFF0C;&#x867D;&#x7136;&#x4ED6;&#x662F;&#x5FC5;&#x987B;&#x7684;&#xFF0C;&#x6CA1;&#x6709;&#x5C31;&#x5BC4;&#x4E86;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#x7684;&#x8BBE;&#x8BA1;&#x662F;&#x4EFF;&#x7167;&#x7684;COFF&#x6587;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x4F20;&#x4E0B;&#x6765;&#x4E86;&#x8FD9;&#x4E48;&#x4E00;&#x4E2A;&#x4E0D;&#x5408;&#x7406;&#x7684;&#x540D;&#x79F0;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x5934;&#x5728;64&#x4F4D;&#x548C;32&#x4F4D;&#x7684;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x7ED3;&#x6784;&#x4E0D;&#x540C;&#xFF08;&#x4E0A;&#x9762;&#x8BF4;&#x4E86;&#xFF0C;&#x5927;&#x5C0F;&#x4E0D;&#x540C;&#xFF0C;&#x6240;&#x4EE5;&#x7ED3;&#x6784;&#x80AF;&#x5B9A;&#x4E0D;&#x4E00;&#x6837;&#x554A;&#xFF09;&#x3002;</p>
+<p>&#x8FD9;&#x4E24;&#x4E2A;&#x5934;&#x5408;&#x5E76;&#x6210;&#x4E3A;<strong>PE&#x6587;&#x4EF6;&#x5934;</strong></p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_OPTIONAL_HEADER {
+    <span class="hljs-comment">//</span>
+    <span class="hljs-comment">// Standard fields.</span>
+    <span class="hljs-comment">//</span>
+
+    WORD    Magic;
+    BYTE    MajorLinkerVersion;
+    BYTE    MinorLinkerVersion;
+    DWORD   SizeOfCode;
+    DWORD   SizeOfInitializedData;
+    DWORD   SizeOfUninitializedData;
+    DWORD   AddressOfEntryPoint;
+    DWORD   BaseOfCode;
+    DWORD   BaseOfData;
+
+    <span class="hljs-comment">//</span>
+    <span class="hljs-comment">// NT additional fields.</span>
+    <span class="hljs-comment">//</span>
+
+    DWORD   ImageBase;
+    DWORD   SectionAlignment;
+    DWORD   FileAlignment;
+    WORD    MajorOperatingSystemVersion;
+    WORD    MinorOperatingSystemVersion;
+    WORD    MajorImageVersion;
+    WORD    MinorImageVersion;
+    WORD    MajorSubsystemVersion;
+    WORD    MinorSubsystemVersion;
+    DWORD   Win32VersionValue;
+    DWORD   SizeOfImage;
+    DWORD   SizeOfHeaders;
+    DWORD   CheckSum;
+    WORD    Subsystem;
+    WORD    DllCharacteristics;
+    DWORD   SizeOfStackReserve;
+    DWORD   SizeOfStackCommit;
+    DWORD   SizeOfHeapReserve;
+    DWORD   SizeOfHeapCommit;
+    DWORD   LoaderFlags;
+    DWORD   NumberOfRvaAndSizes;
+    IMAGE_DATA_DIRECTORY DataDirectory[IMAGE_NUMBEROF_DIRECTORY_ENTRIES];
+} IMAGE_OPTIONAL_HEADER32, *PIMAGE_OPTIONAL_HEADER32;
+
+<span class="hljs-comment">// 64&#x4F4D;&#x7684;&#x7A0B;&#x5E8F;&#x7684;&#x7ED3;&#x6784;</span>
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_OPTIONAL_HEADER64 {
+    WORD        Magic;
+    BYTE        MajorLinkerVersion;
+    BYTE        MinorLinkerVersion;
+    DWORD       SizeOfCode;
+    DWORD       SizeOfInitializedData;
+    DWORD       SizeOfUninitializedData;
+    DWORD       AddressOfEntryPoint;
+    DWORD       BaseOfCode;
+    ULONGLONG   ImageBase;
+    DWORD       SectionAlignment;
+    DWORD       FileAlignment;
+    WORD        MajorOperatingSystemVersion;
+    WORD        MinorOperatingSystemVersion;
+    WORD        MajorImageVersion;
+    WORD        MinorImageVersion;
+    WORD        MajorSubsystemVersion;
+    WORD        MinorSubsystemVersion;
+    DWORD       Win32VersionValue;
+    DWORD       SizeOfImage;
+    DWORD       SizeOfHeaders;
+    DWORD       CheckSum;
+    WORD        Subsystem;
+    WORD        DllCharacteristics;
+    ULONGLONG   SizeOfStackReserve;
+    ULONGLONG   SizeOfStackCommit;
+    ULONGLONG   SizeOfHeapReserve;
+    ULONGLONG   SizeOfHeapCommit;
+    DWORD       LoaderFlags;
+    DWORD       NumberOfRvaAndSizes;
+    IMAGE_DATA_DIRECTORY DataDirectory[IMAGE_NUMBEROF_DIRECTORY_ENTRIES];
+} IMAGE_OPTIONAL_HEADER64, *PIMAGE_OPTIONAL_HEADER64;
+</code></pre>
+<p><img src="ReadNote/image-20221207222008684.png" alt="image-20221207222008684"></p>
+<h3 id="magic">Magic</h3>
+<p>&#x6587;&#x4EF6;&#x7C7B;&#x578B;&#x6807;&#x8BC6;&#xFF0C;&#x8FD9;&#x4E2A;&#x5206;&#x5F00;&#x4E86;PE32+&#x6587;&#x4EF6;&#xFF08;0x020b&#xFF09;,ROM&#x6587;&#x4EF6;&#xFF08;0x0170&#xFF09;,&#x666E;&#x901A;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF08;0x010b&#xFF09;&#x3002;</p>
+<h3 id="majorlinkerversion">MajorLinkerVersion</h3>
+<p>&#x94FE;&#x63A5;&#x5668;&#x7684;&#x4E3B;&#x7248;&#x672C;&#x53F7;</p>
+<h3 id="minorlinkerversion">MinorLinkerVersion</h3>
+<p>&#x94FE;&#x63A5;&#x5668;&#x7684;&#x5B50;&#x7248;&#x672C;&#x53F7;</p>
+<h3 id="sizeofcode">SizeOfCode</h3>
+<p>&#x6240;&#x6709;&#x7684;<code>IMAGE_SCN_CNT_CODE</code>&#x7684;&#x5C5E;&#x6027;&#x7684;&#x4EE3;&#x7801;&#x7684;&#x603B;&#x5927;&#x5C0F;&#xFF0C;&#x8FD9;&#x662F;&#x78C1;&#x76D8;&#x6247;&#x533A;&#x5B57;&#x8282;&#x6570;&#x7684;&#x6574;&#x500D;&#x6570;&#x8BA1;&#x7B97;&#xFF0C;15353&#x884C;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_SCN_CNT_CODE     0x00000020  <span class="hljs-comment">// Section contains code.</span></span>
+</code></pre>
+<p>&#x5C31;&#x662F;&#x8282;&#x533A;&#x4E2D;&#x5305;&#x542B;&#x53EF;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;&#x7684;&#x5C5E;&#x6027;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x662F;&#x53EF;&#x6267;&#x884C;&#x5C5E;&#x6027;</p>
+<h3 id="addressofentrypoint">AddressOfEntryPoint</h3>
+<p>&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x5165;&#x53E3;RVA&#x5730;&#x5740;&#xFF0C;&#x4E00;&#x822C;&#x6307;&#x5411;&#x8FD0;&#x884C;&#x65F6;&#x5E93;&#x4EE3;&#x7801;&#xFF0C;&#x7A0B;&#x5E8F;&#x7684;main&#x4E4B;&#x7C7B;&#x7684;&#x5165;&#x53E3;&#x70B9;&#x7531;&#x8FD9;&#x4E9B;&#x5E93;&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF1B;&#x5728;DLL&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x8FD9;&#x4E2A;&#x503C;&#x4E00;&#x822C;&#x8BBE;&#x7F6E;&#x4E3A;0&#x3002;</p>
+<h3 id="baseofcode">BaseOfCode</h3>
+<p>&#x4EE3;&#x7801;&#x6BB5;&#x7684;RVA&#x5730;&#x5740;&#xFF0C;&#x4E0B;&#x9762;&#x90A3;&#x4E2A;&#x662F;&#x6570;&#x636E;&#x6BB5;&#x7684;&#x4EE3;&#x7801;&#x6BB5;DataOfCode</p>
+<h3 id="imagebase">ImageBase</h3>
+<p>&#x6587;&#x4EF6;&#x88C5;&#x5165;&#x5185;&#x5B58;&#x7684;&#x9996;&#x9009;&#x5730;&#x5740;&#xFF0C;&#x52A0;&#x8F7D;&#x5668;&#x4F1A;&#x9996;&#x5148;&#x5C1D;&#x8BD5;&#x5728;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x52A0;&#x8F7D;&#x6587;&#x4EF6;&#xFF0C;&#x52A0;&#x8F7D;&#x6210;&#x529F;&#x5C31;&#x8DF3;&#x8FC7;&#x88C5;&#x8F7D;&#x5668;&#x7684;&#x91CD;&#x5B9A;&#x4F4D;&#x8FC7;&#x7A0B;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x88AB;&#x5360;&#x7528;&#x7684;&#x8BDD;&#xFF0C;&#x88C5;&#x8F7D;&#x5668;&#x5C31;&#x4F1A;&#x91CD;&#x65B0;&#x627E;&#x4E00;&#x4E2A;&#x5408;&#x6CD5;&#x7684;&#x5730;&#x5740;&#x88C5;&#x8F7D;&#x6587;&#x4EF6;&#x3002;</p>
+<h3 id="sizeofimage">SizeOfImage</h3>
+<p>&#x6620;&#x50CF;&#x88C5;&#x5165;&#x5185;&#x5B58;&#x4E4B;&#x540E;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x4ECE;ImageBase&#x5230;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x533A;&#x6BB5;&#x7684;&#x603B;&#x5927;&#x5C0F;</p>
+<h3 id="sizeofheaders">SizeOfHeaders</h3>
+<p>&#x524D;&#x9762;&#x8FD9;&#x4E9B;&#x4E2A;&#x5404;&#x79CD;&#x5934;&#x7684;&#x603B;&#x5927;&#x5C0F;</p>
+<h3 id="checksum">CheckSum</h3>
+<p>&#x6620;&#x50CF;&#x6587;&#x4EF6;&#x7684;&#x6821;&#x9A8C;&#x548C;&#xFF0C;&#x8FD9;&#x4E2A;&#x5BF9;&#x4E8E;&#x4E00;&#x822C;&#x7684;&#x6587;&#x4EF6;&#x6CA1;&#x5565;&#x8981;&#x6C42;&#xFF0C;&#x4E00;&#x822C;&#x5C31;&#x662F;0&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x5185;&#x6838;&#x6A21;&#x5F0F;&#x7684;&#x9A71;&#x52A8;&#x548C;&#x7CFB;&#x7EDF;dll&#x7684;&#x8FD9;&#x4E2A;&#x503C;&#x5FC5;&#x987B;&#x6709;&#x8FD9;&#x4E2A;&#x5408;&#x9002;&#x7684;&#x503C;</p>
+<h3 id="imagedatadirectory">IMAGE_DATA_DIRECTORY</h3>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_NUMBEROF_DIRECTORY_ENTRIES    16        <span class="hljs-comment">// 15047&#x884C;</span></span>
+IMAGE_DATA_DIRECTORY DataDirectory[IMAGE_NUMBEROF_DIRECTORY_ENTRIES];
+</code></pre>
+<p>PE&#x6587;&#x4EF6;&#x4E2D;&#x5404;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x7684;&#x7D22;&#x5F15;&#x76EE;&#x5F55;&#xFF0C;&#x7531;&#x6570;&#x4E2A;&#x7ED3;&#x6784;&#x76F8;&#x540C;&#x7684;<code>IMAGE_DATA_DIRECTORY</code>&#x7EC4;&#x6210;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_DATA_DIRECTORY {
+    DWORD   VirtualAddress;
+    DWORD   Size;
+} IMAGE_DATA_DIRECTORY, *PIMAGE_DATA_DIRECTORY;
+</code></pre>
+<p><img src="ReadNote/image-20221208203431261-16705028721091.png" alt="image-20221208203431261"></p>
+<p>&#x5728;&#x6587;&#x4EF6;&#x4E2D;&#x662F;&#x8FD9;&#x4E48;&#x63CF;&#x8FF0;&#x7684;</p>
+<pre><code class="lang-c">
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_DIRECTORY_ENTRY_EXPORT          0   <span class="hljs-comment">// Export Directory</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_DIRECTORY_ENTRY_IMPORT          1   <span class="hljs-comment">// Import Directory</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_DIRECTORY_ENTRY_RESOURCE        2   <span class="hljs-comment">// Resource Directory</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_DIRECTORY_ENTRY_EXCEPTION       3   <span class="hljs-comment">// Exception Directory</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_DIRECTORY_ENTRY_SECURITY        4   <span class="hljs-comment">// Security Directory</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_DIRECTORY_ENTRY_BASERELOC       5   <span class="hljs-comment">// Base Relocation Table</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_DIRECTORY_ENTRY_DEBUG           6   <span class="hljs-comment">// Debug Directory</span></span>
+<span class="hljs-comment">//      IMAGE_DIRECTORY_ENTRY_COPYRIGHT       7   // (X86 usage)</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_DIRECTORY_ENTRY_ARCHITECTURE    7   <span class="hljs-comment">// Architecture Specific Data</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_DIRECTORY_ENTRY_GLOBALPTR       8   <span class="hljs-comment">// RVA of GP</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_DIRECTORY_ENTRY_TLS             9   <span class="hljs-comment">// TLS Directory</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_DIRECTORY_ENTRY_LOAD_CONFIG    10   <span class="hljs-comment">// Load Configuration Directory</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_DIRECTORY_ENTRY_BOUND_IMPORT   11   <span class="hljs-comment">// Bound Import Directory in headers</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_DIRECTORY_ENTRY_IAT            12   <span class="hljs-comment">// Import Address Table</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_DIRECTORY_ENTRY_DELAY_IMPORT   13   <span class="hljs-comment">// Delay Load Import Descriptors</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IMAGE_DIRECTORY_ENTRY_COM_DESCRIPTOR 14   <span class="hljs-comment">// COM Runtime descriptor</span></span>
+</code></pre>
+<h4 id="imagedirectoryentrysecurity">IMAGE_DIRECTORY_ENTRY_SECURITY</h4>
+<p>&#x5B89;&#x5168;&#x76EE;&#x5F55;&#xFF0C;&#x4E00;&#x822C;&#x7528;&#x6765;&#x5B58;&#x653E;&#x6570;&#x5B57;&#x7B7E;&#x540D;&#x6216;&#x8005;&#x8BC1;&#x4E66;&#x4E4B;&#x7C7B;&#x7684;&#x3002;</p>
+<h4 id="imagedirectoryentrybasereloc">IMAGE_DIRECTORY_ENTRY_BASERELOC</h4>
+<p>&#x57FA;&#x5740;&#x91CD;&#x5B9A;&#x4F4D;&#x8868;&#xFF0C;&#x5B58;&#x653E;&#x8FD9;&#x4E00;&#x4E2A;&#x504F;&#x79FB;&#xFF0C;&#x662F;&#x9700;&#x8981;&#x6267;&#x884C;&#x91CD;&#x5B9A;&#x4F4D;&#x7684;&#x4EE3;&#x7801;&#x7684;&#x504F;&#x79FB;&#x4FE1;&#x606F;</p>
+<h4 id="imagedirectoryentryboundimport">IMAGE_DIRECTORY_ENTRY_BOUND_IMPORT</h4>
+<p>&#x7ED1;&#x5B9A;&#x8F93;&#x5165;&#x76EE;&#x5F55;&#xFF0C;&#x5B58;&#x50A8;&#x7684;&#x662F;&#x4E00;&#x4E9B;API&#x7ED1;&#x5B9A;&#x4FE1;&#x606F;&#xFF0C;&#x8FD9;&#x4E9B;&#x53EF;&#x4EE5;&#x52A0;&#x901F;&#x7A0B;&#x5E8F;&#x7684;&#x52A0;&#x8F7D;&#x65F6;&#x95F4;&#x3002;</p>
+<h4 id="imagedirectoryentryiat">IMAGE_DIRECTORY_ENTRY_IAT</h4>
+<p>&#x5BFC;&#x5165;&#x5730;&#x5740;&#x8868;&#xFF0C;&#x4FDD;&#x5B58;&#x5BFC;&#x5165;&#x51FD;&#x6570;&#x7684;&#x771F;&#x6B63;&#x5730;&#x5740;</p>
+<h1 id="&#x8282;&#x8868;&#xFF08;&#x533A;&#x5757;&#x8868;&#xFF09;">&#x8282;&#x8868;&#xFF08;&#x533A;&#x5757;&#x8868;&#xFF09;</h1>
+<p>&#x8BE5;&#x8868;&#x7528;&#x6765;&#x63CF;&#x8FF0;&#x540E;&#x9762;&#x7684;&#x8FD9;&#x4E9B;&#x4E2A;&#x533A;&#x6BB5;&#x7684;&#x5404;&#x79CD;&#x5C5E;&#x6027;&#xFF0C;&#x4E00;&#x4E2A;PE&#x6587;&#x4EF6;&#x8D77;&#x7801;&#x8981;&#x4E00;&#x4E2A;&#x8282;&#x533A;&#x624D;&#x80FD;&#x8DD1;&#xFF0C;&#x54EA;&#x6015;&#x5269;&#x4E00;&#x4E2A;&#x4E5F;&#x5F97;&#x5269;&#x4E0B;text&#x8282;&#x533A;&#xFF0C;&#x8FDE;&#x4EE3;&#x7801;&#x6BB5;&#x90FD;&#x6CA1;&#x4E86;&#xFF0C;&#x8DD1;&#x5C3C;&#x739B;&#x5462;&#x3002;</p>
+<p>&#x8BE5;&#x8868;&#x7531;&#x9996;&#x4F4D;&#x76F8;&#x8FDE;&#x7684;&#x6570;&#x4E2A;&#x7ED3;&#x6784;&#x76F8;&#x540C;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x6784;&#x6210;</p>
+<p><img src="ReadNote/image-20221208215317072.png" alt="image-20221208215317072"></p>
+<p><img src="ReadNote/image-20221208215352718.png" alt="image-20221208215352718"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x8868;&#x7684;&#x4E3B;&#x8981;&#x6784;&#x6210;&#x5C31;&#x662F;&#x4E00;&#x5806;IMAGE_SECTION_HEADER&#x7ED3;&#x6784;&#x4F53;&#x6784;&#x6210;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x7ED3;&#x6784;&#x4F53;&#x4EE3;&#x8868;&#x4E86;&#x4E4B;&#x540E;&#x7684;&#x4E00;&#x4E2A;&#x8282;&#x533A;</p>
+<h2 id="imagesectionheader">IMAGE_SECTION_HEADER</h2>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_SECTION_HEADER {
+    BYTE    Name[IMAGE_SIZEOF_SHORT_NAME];
+    <span class="hljs-keyword">union</span> {
+            DWORD   PhysicalAddress;
+            DWORD   VirtualSize;
+    } Misc;
+    DWORD   VirtualAddress;
+    DWORD   SizeOfRawData;
+    DWORD   PointerToRawData;
+    DWORD   PointerToRelocations;
+    DWORD   PointerToLinenumbers;
+    WORD    NumberOfRelocations;
+    WORD    NumberOfLinenumbers;
+    DWORD   Characteristics;
+} IMAGE_SECTION_HEADER, *PIMAGE_SECTION_HEADER;
+</code></pre>
+<h3 id="name">Name</h3>
+<p><img src="ReadNote/image-20221211194856251.png" alt="image-20221211194856251"></p>
+<p>&#x8FD9;&#x4E2A;&#x5B57;&#x6BB5;&#x5C31;&#x662F;&#x9610;&#x8FF0;&#x7684;&#x8BE5;&#x8282;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x4E00;&#x4E2A;8&#x5B57;&#x8282;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5F00;&#x5934;&#x4E00;&#x822C;&#x90FD;&#x662F;<code>.</code>&#xFF0C;&#x5982;&#x679C;&#x7528;<code>$</code>&#x5F00;&#x5934;&#x7684;&#x540C;&#x540D;&#x7684;&#x533A;&#x6BB5;&#x4F1A;&#x5408;&#x5E76;&#x6210;&#x4E00;&#x4E2A;&#x533A;&#x6BB5;&#x3002;</p>
+<h3 id="virtualsize">VirtualSize</h3>
+<p>&#x8FD9;&#x4E2A;&#x548C;PhysicalAddress&#x5B57;&#x6BB5;&#x5728;&#x4E00;&#x4E2A;&#x8054;&#x5408;&#x4F53;&#x4E2D;&#xFF0C;&#x5728;obj&#x6587;&#x4EF6;&#x4E2D;&#x4ED6;&#x7684;&#x503C;&#x662F;<code>0x00000000</code>; &#x5176;&#x4ED6;&#x6587;&#x4EF6;&#x8868;&#x793A;&#x7684;&#x662F;&#x8BE5;&#x8282;&#x533A;&#x5B9E;&#x9645;&#x88AB;&#x4F7F;&#x7528;&#x7684;&#x533A;&#x6BB5;&#x5927;&#x5C0F;&#xFF08;&#x6CA1;&#x6709;&#x7ECF;&#x8FC7;&#x5BF9;&#x9F50;&#xFF09;&#x3002;</p>
+<h3 id="virtualaddress">VirtualAddress</h3>
+<p>&#x6587;&#x4EF6;&#x8F7D;&#x5165;&#x5185;&#x5B58;&#x4E2D;&#x7684;RVA&#xFF0C;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x662F;&#x6309;&#x7167;&#x9875;&#x5185;&#x5B58;&#x5BF9;&#x9F50;&#x7684;&#xFF0C;&#x6C38;&#x8FDC;&#x662F;&#x53EF;&#x9009;&#x5934;&#x4E2D;&#x7684;<code>SectionAlignment</code>&#x7684;&#x6574;&#x6570;&#x500D;&#x3002;</p>
+<h3 id="sizeofrawdata">SizeOfRawData</h3>
+<p>&#x8FD9;&#x4E2A;&#x533A;&#x6BB5;&#x5728;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5360;&#x7528;&#x78C1;&#x76D8;&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x6309;&#x7167;&#x9875;&#x5185;&#x5B58;&#x5BF9;&#x9F50;&#x7684;&#xFF0C;&#x6C38;&#x8FDC;&#x662F;&#x53EF;&#x9009;&#x5934;&#x4E2D;&#x7684;<code>FileAlignment</code>&#x7684;&#x6574;&#x500D;&#x6570;</p>
+<h3 id="pointertorawdata">PointerToRawData</h3>
+<p>&#x8BE5;&#x533A;&#x6BB5;&#x5728;&#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x504F;&#x79FB;</p>
+<h3 id="pointertorelocations">PointerToRelocations</h3>
+<p>&#x8BE5;&#x533A;&#x6BB5;&#x91CD;&#x5B9A;&#x4F4D;&#x8868;&#x7684;&#x504F;&#x79FB;&#xFF0C;&#x6307;&#x5411;&#x4E86;IMAGE_RELOCATION&#x7ED3;&#x6784;&#x6570;&#x7EC4;</p>
+<h4 id="imagerelocation">IMAGE_RELOCATION</h4>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_RELOCATION {
+    <span class="hljs-keyword">union</span> {
+        DWORD   VirtualAddress;
+        DWORD   RelocCount; <span class="hljs-comment">// Set to the real count when IMAGE_SCN_LNK_NRELOC_OVFL is set</span>
+    } DUMMYUNIONNAME;
+    DWORD   SymbolTableIndex;
+    WORD    Type;
+} IMAGE_RELOCATION;
+<span class="hljs-keyword">typedef</span> IMAGE_RELOCATION UNALIGNED *PIMAGE_RELOCATION;
+</code></pre>
+<h3 id="characteristics">Characteristics</h3>
+<p>&#x9610;&#x8FF0;&#x4E86;&#x533A;&#x6BB5;&#x7684;&#x4E00;&#x4E9B;&#x5C5E;&#x6027;&#xFF0C;&#x6BD4;&#x5982;&#x8BFB;&#x5199;&#x60C5;&#x51B5;&#x548C;&#x5176;&#x4ED6;&#x72B6;&#x6001;&#x3002;&#x8FD9;&#x4E9B;&#x5C5E;&#x6027;&#x6709;&#x4E9B;&#x4E8B;&#x53EF;&#x4EE5;&#x5408;&#x5E76;&#x7684;&#xFF0C;&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>|</code>&#x6765;&#x5408;&#x5E76;&#x5C5E;&#x6027;</p>
+<p><img src="ReadNote/image-20221211201140376.png" alt="image-20221211201140376"></p>
+<p><img src="ReadNote/image-20221211201154042.png" alt="image-20221211201154042"></p>
+<h2 id="&#x533A;&#x6BB5;&#x7684;&#x547D;&#x540D;">&#x533A;&#x6BB5;&#x7684;&#x547D;&#x540D;</h2>
+<p>&#x533A;&#x6BB5;&#x540D;&#x79F0;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#xFF0C;&#x4F46;&#x662F;&#x4E00;&#x822C;&#x662F;&#x4F7F;&#x7528;&#x9ED8;&#x8BA4;&#x7684;&#x533A;&#x6BB5;&#x540D;&#x79F0;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5982;&#x4E0B;&#x5F62;&#x5F0F;&#x5BF9;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;<strong>&#x6570;&#x636E;&#x6BB5;</strong>&#x8FDB;&#x884C;&#x6539;&#x540D;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">pragma</span> data_seg(<span class="hljs-string">&quot;&#x4EFB;&#x610F;&#x7684;&#x540D;&#x5B57;&quot;</span>);</span>
+</code></pre>
+<h2 id="&#x533A;&#x6BB5;&#x7684;&#x5BF9;&#x9F50;">&#x533A;&#x6BB5;&#x7684;&#x5BF9;&#x9F50;</h2>
+<p>&#x5728;&#x6587;&#x4EF6;&#x4E2D;&#x4E0D;&#x8BBA;&#x662F;&#x4EC0;&#x4E48;&#x5185;&#x5BB9;&#xFF0C;&#x90FD;&#x8981;&#x9075;&#x5B88;&#x4E00;&#x4E2A;&#x9875;&#x5BF9;&#x9F50;&#x7684;&#x89C4;&#x5219;&#x3002;&#x5BF9;&#x4E8E;PE&#x6587;&#x4EF6;&#x6765;&#x8BF4;&#xFF0C;&#x53EA;&#x8981;&#x662F;2&#x7684;&#x500D;&#x6570;&#x5C31;&#x53EF;&#x4EE5;</p>
+<h3 id="&#x4EE5;text&#x533A;&#x6BB5;&#x4E3A;&#x4F8B;">&#x4EE5;text&#x533A;&#x6BB5;&#x4E3A;&#x4F8B;</h3>
+<p><img src="ReadNote/image-20221212131252610.png" alt="image-20221212131252610"></p>
+<p><img src="ReadNote/image-20221212131315701.png" alt="image-20221212131315701"></p>
+<p>&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x6BB5;&#x7684;VirtualSize&#x662F;<code>0x1d18</code>&#xFF0C;&#x7136;&#x540E;&#x518D;&#x770B;<code>VirtualAddress</code>&#x548C;<code>SizeOfRawData</code>&#x8FD9;&#x4E24;&#x4E2A;&#x5B57;&#x6BB5;</p>
+<ul>
+<li>VirtualAddress&#xFF1A;0x1000</li>
+</ul>
+<p>&#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x533A;&#x6BB5;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x7684;&#x5927;&#x5C0F;&#x5E94;&#x8BE5;&#x662F;0x2000&#xFF0C;&#x7F3A;&#x7684;&#x5B57;&#x8282;&#x7528;0x00&#x8865;&#x9F50;&#x3002;&#x7528;x64dbg&#x53EF;&#x4EE5;&#x8BC1;&#x660E;&#xFF1A;</p>
+<p><img src="ReadNote/image-20221212132933127.png" alt="image-20221212132933127"></p>
+<ul>
+<li>SizeOfRawData&#xFF1A;0x1E00</li>
+</ul>
+<p>&#x6839;&#x636E;&#x4E0A;&#x8FF0;&#x5927;&#x5C0F;&#xFF0C;&#x8FD9;&#x4E2A;&#x533A;&#x6BB5;&#x5728;&#x786C;&#x76D8;&#x4E2D;&#x7684;&#x5927;&#x5C0F;&#x5E94;&#x8BE5;&#x662F;0x1E00&#x7684;&#x6574;&#x500D;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x7406;&#x8BBA;&#x4E0A;&#x5E94;&#x8BE5;&#x662F;0x1E00&#x3002;</p>
+<p><img src="ReadNote/image-20221212133300167.png" alt="image-20221212133300167"></p>
+<h1 id="&#x540E;&#x7EED;&#xFF1A;">&#x540E;&#x7EED;&#xFF1A;</h1>
+<p>&#x6839;&#x636E;&#x4E66;&#x4E0A;&#x4ECB;&#x7ECD;&#xFF0C;&#x540E;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x90FD;&#x4F1A;&#x6559;&#x4F60;&#x5982;&#x4F55;&#x5B9A;&#x4F4D;&#xFF0C;&#x4F46;&#x662F;&#x73B0;&#x5728;&#x7684;CFF&#xFF0C;PE studio&#x8FD9;&#x4E48;&#x65B9;&#x4FBF;&#xFF0C;&#x6CA1;&#x5FC5;&#x8981;&#x518D;&#x53BB;&#x7814;&#x7A76;&#x600E;&#x4E48;&#x624B;&#x52A8;&#x5B9A;&#x4F4D;&#x4E86;&#x3002;</p>
+<h1 id="imageexportdirectory&#xFF08;&#x5BFC;&#x51FA;&#x8868;&#xFF09;">IMAGE_EXPORT_DIRECTORY&#xFF08;&#x5BFC;&#x51FA;&#x8868;&#xFF09;</h1>
+<p>&#x5728;&#x5934;&#x6587;&#x4EF6;&#x7684;16148&#x884C;&#x627E;&#x5230;&#x4E86;&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x63CF;&#x8FF0;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_EXPORT_DIRECTORY {
+    DWORD   Characteristics;    <span class="hljs-comment">//&#x9ED8;&#x8BA4;&#x662F;0&#xFF0C;&#x4F5C;&#x4E3A;&#x4FDD;&#x7559;&#x503C;</span>
+    DWORD   TimeDateStamp;        <span class="hljs-comment">//&#x5BFC;&#x51FA;&#x8868;&#x521B;&#x5EFA;&#x65F6;&#x95F4;</span>
+    WORD    MajorVersion;
+    WORD    MinorVersion;
+    DWORD   Name;                <span class="hljs-comment">//&#x6307;&#x5411;&#x6A21;&#x5757;&#x7684;&#x540D;&#x79F0;&#x7684;RVA&#x5730;&#x5740;</span>
+    DWORD   Base;
+    DWORD   NumberOfFunctions;    <span class="hljs-comment">//&#x5BFC;&#x51FA;&#x5730;&#x5740;&#x8868;&#xFF08;EAT&#xFF09;&#x4E2D;&#x6210;&#x5458;&#x4E2A;&#x6570;</span>
+    DWORD   NumberOfNames;        <span class="hljs-comment">//&#x5BFC;&#x51FA;&#x540D;&#x79F0;&#x8868;&#xFF08;ENT&#xFF09;&#x4E2D;&#x6210;&#x5458;&#x4E2A;&#x6570;</span>
+    DWORD   AddressOfFunctions;     <span class="hljs-comment">// RVA from base of image</span>
+    DWORD   AddressOfNames;         <span class="hljs-comment">// RVA from base of image</span>
+    DWORD   AddressOfNameOrdinals;  <span class="hljs-comment">// RVA from base of image</span>
+} IMAGE_EXPORT_DIRECTORY, *PIMAGE_EXPORT_DIRECTORY;
+</code></pre>
+<p>&#x5BFC;&#x51FA;&#x8868;&#x4E3B;&#x8981;&#x662F;&#x5B58;&#x653E;&#x7684;&#x7A0B;&#x5E8F;&#x7684;&#x5BFC;&#x51FA;&#x51FD;&#x6570;&#xFF0C;exe&#x6587;&#x4EF6;&#x4E00;&#x822C;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x8868;&#xFF0C;&#x666E;&#x904D;&#x5B58;&#x5728;dll&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<p><img src="ReadNote/image-20221212135728877.png" alt="image-20221212135728877"></p>
+<p>&#x4E0D;&#x77E5;&#x9053;&#x4E3A;&#x5565;&#xFF0C;&#x8FD9;&#x4E2A;&#x8D44;&#x6599;&#x7528;&#x4E86;&#x5F88;&#x5927;&#x7684;&#x7AE0;&#x8282;&#x6765;&#x9610;&#x8FF0;&#x5982;&#x4F55;&#x5B9A;&#x4F4D;&#x5230;&#x5BFC;&#x51FA;&#x8868;&#x2026;&#x2026;&#xFF0C;</p>
+<p>&#x5BFC;&#x51FA;&#x8868;&#x5728;&#x903B;&#x8F91;&#x4E0A;&#x5206;&#x4E3A;&#x4E09;&#x90E8;&#x5206;&#xFF1A;&#x540D;&#x79F0;&#x8868;&#xFF1B;&#x5E8F;&#x53F7;&#x8868;&#xFF1B;&#x51FD;&#x6570;&#x8868;&#x3002;</p>
+<p>&#x8C03;&#x7528;&#x8005;&#x901A;&#x8FC7;&#x524D;&#x4E24;&#x8005;&#x8FDB;&#x884C;&#x7D22;&#x5F15;&#xFF0C;&#x627E;&#x5230;&#x771F;&#x6B63;&#x7684;&#x51FD;&#x6570;&#x8868;&#x3002;&#x6211;&#x4EEC;&#x5E73;&#x65F6;&#x8C03;&#x7528;dll&#x65F6;&#x7528;&#x5230;&#x7684;&#x5E8F;&#x53F7;&#xFF0C;&#x9700;&#x8981;&#x51CF;&#x53BB;<code>DWORD   Base;</code>&#x7684;&#x503C;&#x624D;&#x80FD;&#x5F97;&#x5230;&#x771F;&#x6B63;&#x7684;&#x4FDD;&#x5B58;&#x7684;&#x5E8F;&#x53F7;&#x3002;&#x4F46;&#x662F;&#x4E0D;&#x77E5;&#x9053;&#x8FD9;&#x4E2A;&#x6709;&#x4EC0;&#x4E48;&#x5B9E;&#x9645;&#x7528;&#x5904;</p>
+<h1 id="imageimportdirectory&#xFF08;&#x5BFC;&#x5165;&#x8868;&#xFF09;">IMAGE_IMPORT_DIRECTORY&#xFF08;&#x5BFC;&#x5165;&#x8868;&#xFF09;</h1>
+<p>&#x8FD9;&#x4E2A;&#x8868;&#x662F;&#x91CD;&#x8981;&#x7684;&#x4E00;&#x4E2A;&#x8868;&#x3002;&#x8FD9;&#x4E2A;&#x8868;&#x5B58;&#x5728;&#x7684;&#x610F;&#x4E49;&#x662F;&#xFF1A;&#x8BE5;&#x7A0B;&#x5E8F;&#x8C03;&#x7528;&#x7B2C;&#x4E09;&#x65B9;API&#x51FD;&#x6570;&#x4F9B;&#x672C;&#x5730;&#x4F7F;&#x7528;&#x7684;&#x8C03;&#x7528;&#x673A;&#x5236;&#x3002;&#x8FD9;&#x4E2A;&#x8868;&#x666E;&#x904D;&#x5B58;&#x5728;&#x4E8E;PE&#x6587;&#x4EF6;&#x4E2D;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_IMPORT_DESCRIPTOR {
+    <span class="hljs-keyword">union</span> {
+        DWORD   Characteristics;      <span class="hljs-comment">// 0 for terminating null import descriptor</span>
+        DWORD   OriginalFirstThunk;   <span class="hljs-comment">// &#x8F93;&#x5165;&#x8868;&#x540D;&#x79F0;&#xFF08;INT&#xFF09;&#x7684;RVA</span>
+    } DUMMYUNIONNAME;
+    DWORD   TimeDateStamp;            <span class="hljs-comment">// 0 if not bound,</span>
+                                      <span class="hljs-comment">// -1 if bound, and real date\time stamp</span>
+                                      <span class="hljs-comment">//     in IMAGE_DIRECTORY_ENTRY_BOUND_IMPORT (new BIND)</span>
+                                      <span class="hljs-comment">// O.W. date/time stamp of DLL bound to (Old BIND)</span>
+    DWORD   ForwarderChain;           <span class="hljs-comment">// -1 if no forwarders</span>
+    DWORD   Name;                    <span class="hljs-comment">// &#x6307;&#x51FA;&#x5BFC;&#x5165;&#x6B64;&#x6620;&#x50CF;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x5B57;</span>
+    DWORD   FirstThunk;               <span class="hljs-comment">// RVA to IAT (if bound this IAT has actual addresses)</span>
+} IMAGE_IMPORT_DESCRIPTOR;
+</code></pre>
+<p>&#x8BE5;&#x7ED3;&#x6784;&#x5E76;&#x4E0D;&#x80FD;&#x5B8C;&#x6210;PE&#x6587;&#x4EF6;&#x6574;&#x4E2A;&#x7684;&#x5BFC;&#x5165;&#x6587;&#x4EF6;&#xFF0C;&#x53EA;&#x662F;&#x5E2E;&#x52A9;&#x88C5;&#x8F7D;&#x5668;&#x627E;&#x5230;&#x7A0B;&#x5E8F;&#x771F;&#x6B63;&#x7684;&#x4FDD;&#x5B58;&#x6709;&#x5BFC;&#x5165;&#x4FE1;&#x606F;&#x7684;&#x7ED3;&#x6784;&#x3002;&#x771F;&#x6B63;&#x4FDD;&#x5B58;&#x5BFC;&#x5165;&#x51FD;&#x6570;&#x7684;&#x662F;&#x5982;&#x4E0B;&#x4E24;&#x4E2A;&#x7ED3;&#x6784;&#x4F53;<code>_IMAGE_IMPORT_BY_NAME</code>&#x548C;<code>_IMAGE_THUNK_DATA</code>&#x3002;16166&#x884C;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_IMPORT_BY_NAME {
+    WORD    Hint;
+    CHAR   Name[<span class="hljs-number">1</span>];
+} IMAGE_IMPORT_BY_NAME, *PIMAGE_IMPORT_BY_NAME;
+
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_THUNK_DATA64 {
+    <span class="hljs-keyword">union</span> {
+        ULONGLONG ForwarderString;  <span class="hljs-comment">// &#x8F6C;&#x53D1;&#x5B57;&#x7B26;&#x4E32;&#x7684;RVA</span>
+        ULONGLONG Function;         <span class="hljs-comment">// &#x88AB;&#x5BFC;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x5730;&#x5740;</span>
+        ULONGLONG Ordinal;
+        ULONGLONG AddressOfData;    <span class="hljs-comment">// PIMAGE_IMPORT_BY_NAME</span>
+    } u1;
+} IMAGE_THUNK_DATA64;
+
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_THUNK_DATA32 {
+    <span class="hljs-keyword">union</span> {
+        DWORD ForwarderString;      <span class="hljs-comment">// PBYTE </span>
+        DWORD Function;             <span class="hljs-comment">// PDWORD</span>
+        DWORD Ordinal;
+        DWORD AddressOfData;        <span class="hljs-comment">// PIMAGE_IMPORT_BY_NAME</span>
+    } u1;
+} IMAGE_THUNK_DATA32;
+</code></pre>
+<p>IMAGE_IMPORT_DIRECTORY&#x7ED3;&#x6784;&#x7684;&#x4E2A;&#x6570;&#x7531;&#x5BFC;&#x5165;&#x51FD;&#x6570;&#x7684;&#x6570;&#x91CF;&#x51B3;&#x5B9A;&#xFF0C;&#x6700;&#x540E;&#x4EE5;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;IMAGE_IMPORT_DIRECTORY&#x7ED3;&#x6784;&#x7ED3;&#x5C3E;</p>
+<p>&#x8FD9;&#x4E2A;&#x5B9E;&#x4F8B;&#x7A0B;&#x5E8F;&#x4E2D;&#x53EA;&#x6709;&#x4E24;&#x4E2A;&#x7ED3;&#x6784;&#xFF0C;&#x4E00;&#x4E2A;&#x662F;kernel32&#x7684;&#x4E00;&#x4E2A;&#x662F;msvcrt&#x7684;</p>
+<p><img src="ReadNote/image-20221212142052071.png" alt="image-20221212142052071"></p>
+<p>&#x5305;&#x542B;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x7A7A;&#x7ED3;&#x6784;&#xFF1A;</p>
+<p><img src="ReadNote/image-20221212142218566.png" alt="image-20221212142218566"></p>
+<h2 id="originalfirstthunk">OriginalFirstThunk</h2>
+<p>&#x5305;&#x542B;&#x6307;&#x5411;INT&#x7684;RVA&#xFF0C;INT&#x5C31;&#x662F;&#x4E00;&#x4E2A;_IMAGE_THUNK_DATA&#x7C7B;&#x578B;&#x7684;&#x6570;&#x7EC4;&#xFF0C;&#x7ED3;&#x5C3E;&#x662F;&#x4E00;&#x4E2A;&#x7A7A;&#x7684;_IMAGE_THUNK_DATA&#x7ED3;&#x6784;&#x4F53;&#xFF1B;&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;_IMAGE_THUNK_DATA&#x7ED3;&#x6784;&#x4F1A;&#x6307;&#x5411;_IMAGE_IMPORT_BY_NAME&#x7ED3;&#x6784;&#x3002;</p>
+<p>_IMAGE_IMPORT_BY_NAME&#x7ED3;&#x6784;&#x4F53;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_IMPORT_BY_NAME {
+    WORD    Hint;    <span class="hljs-comment">// &#x5BFC;&#x5165;&#x8868;&#x9700;&#x8981;&#x5BFC;&#x5165;&#x7684;&#x51FD;&#x6570;&#x7684;&#x7B26;&#x53F7;</span>
+    CHAR   Name[<span class="hljs-number">1</span>];    <span class="hljs-comment">// &#x5BFC;&#x5165;&#x8868;&#x9700;&#x8981;&#x5BFC;&#x5165;&#x7684;&#x51FD;&#x6570;&#x7684;&#x540D;&#x79F0;</span>
+} IMAGE_IMPORT_BY_NAME, *PIMAGE_IMPORT_BY_NAME;
+</code></pre>
+<p>&#x8BE5;&#x7ED3;&#x6784;&#x6700;&#x540E;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x5168;&#x7A7A;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x7ED3;&#x5C3E;&#xFF0C;</p>
+<h2 id="firstthunk">FirstThunk</h2>
+<p>&#x6307;&#x5411;&#x5BFC;&#x5165;&#x5730;&#x5740;&#x8868;&#xFF08;IAT&#xFF09;&#x7684;RVA&#x5730;&#x5740;</p>
+<h1 id="&#x5F02;&#x5E38;">&#x5F02;&#x5E38;</h1>
+<p>&#x5F02;&#x5E38;&#x76EE;&#x5F55;&#x5E38;&#x7528;&#x6765;<strong>&#x5B58;&#x653E;</strong>&#x7528;&#x4E8E;&#x63CF;&#x8FF0;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x7684;&#x76F8;&#x5173;&#x7684;<strong>&#x5F02;&#x5E38;&#x5904;&#x7406;&#x51FD;&#x6570;&#x3001;SEH&#x76F8;&#x5173;&#x7684;&#x5730;&#x5740;&#x7B49;&#x4FE1;&#x606F;</strong>&#xFF0C;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x4E00;&#x822C;&#x4F4D;&#x4E8E;<code>pdata</code>&#x533A;&#x6BB5;&#x4E2D;&#x3002;</p>
+<p>PE&#x6587;&#x4EF6;&#x7ED3;&#x6784;&#x4E2D;&#x7684;&#x5F02;&#x5E38;&#x76EE;&#x5F55;&#x76EE;&#x524D;&#x53EA;&#x5728;&#xFF1A;</p>
+<ul>
+<li>X64</li>
+<li>ARMv7</li>
+<li>ARM</li>
+<li>MIPS</li>
+<li>PowerPC</li>
+</ul>
+<p>&#x8FD9;&#x4E9B;&#x5E73;&#x53F0;&#x4E0A;&#x624D;&#x6709;&#x5B9E;&#x9645;&#x4F5C;&#x7528;&#x3002;</p>
+<p>&#x5728;16551&#x884C;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x63CF;&#x8FF0;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_RUNTIME_FUNCTION_ENTRY {
+    DWORD BeginAddress;    <span class="hljs-comment">// SEH&#x4EE3;&#x7801;&#x8D77;&#x59CB;&#x5730;&#x5740;</span>
+    DWORD EndAddress;    <span class="hljs-comment">// SEH&#x4EE3;&#x7801;&#x7684;&#x7ED3;&#x675F;&#x5730;&#x5740;</span>
+    <span class="hljs-keyword">union</span> {
+        DWORD UnwindInfoAddress;
+        DWORD UnwindData;
+    } DUMMYUNIONNAME;
+} _IMAGE_RUNTIME_FUNCTION_ENTRY, *_PIMAGE_RUNTIME_FUNCTION_ENTRY;
+</code></pre>
+<h1 id="&#x5B89;&#x5168;">&#x5B89;&#x5168;</h1>
+<p>&#x6570;&#x636E;&#x76EE;&#x5F55;&#x7684;IMAGE_DIRECTORY_ENTRY_SECURITY&#x6307;&#x5411;&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x3002;&#x8FD9;&#x4E2A;&#x76EE;&#x5F55;&#x4E5F;&#x88AB;&#x79F0;&#x4E3A;&#x201C;&#x5B89;&#x5168;&#x76EE;&#x5F55;&#x201D;&#x6216;&#x8005;&#x201C;&#x5C5E;&#x6027;&#x8BC1;&#x4E66;&#x76EE;&#x5F55;&#x201D;&#xFF0C;&#x4E00;&#x822C;&#x5B58;&#x653E;&#x7684;&#x662F;&#x6587;&#x4EF6;&#x7684;&#x6570;&#x5B57;&#x7B7E;&#x540D;&#x3002;</p>
+<h2 id="&#x5B89;&#x5168;&#x76EE;&#x5F55;&#x7ED3;&#x6784;">&#x5B89;&#x5168;&#x76EE;&#x5F55;&#x7ED3;&#x6784;</h2>
+<p>&#x5728;wintrust.h&#x6587;&#x4EF6;&#x4E2D;1398&#x884C;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x63CF;&#x8FF0;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _WIN_CERTIFICATE
+{
+    DWORD       dwLength;    <span class="hljs-comment">// &#x5F53;&#x524D;&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x957F;&#x5EA6;</span>
+    WORD        wRevision;    <span class="hljs-comment">// &#x7B7E;&#x540D;&#x7684;&#x7248;&#x672C;&#x53F7;</span>
+    WORD        wCertificateType;   <span class="hljs-comment">// WIN_CERT_TYPE_xxx</span>
+    BYTE        bCertificate[ANYSIZE_ARRAY];    <span class="hljs-comment">// &#x5305;&#x542B;&#x4E86;&#x8BB8;&#x591A;&#x8BC1;&#x4E66;</span>
+
+} WIN_CERTIFICATE, *LPWIN_CERTIFICATE;
+</code></pre>
+<h1 id="&#x57FA;&#x8D28;&#x91CD;&#x5B9A;&#x5411;&#x8868;">&#x57FA;&#x8D28;&#x91CD;&#x5B9A;&#x5411;&#x8868;</h1>
+<p>&#x5728;&#x8FD0;&#x884C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x603B;&#x662F;exe&#x6587;&#x4EF6;&#x88AB;&#x4F18;&#x5148;&#x52A0;&#x8F7D;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x8868;&#x666E;&#x904D;&#x5B58;&#x5728;&#x4E8E;dll&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x5F53;exe&#x6587;&#x4EF6;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#x8FD0;&#x884C;&#x5360;&#x636E;&#x4E86;dll&#x7684;&#x9ED8;&#x8BA4;&#x5730;&#x5740;&#xFF0C;&#x5C31;&#x4F1A;&#x8FDB;&#x884C;&#x91CD;&#x5B9A;&#x5411;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x60C5;&#x51B5;&#x4E0B;<code>.reloc</code>&#x7684;&#x6BB5;&#x4E2D;&#x5B58;&#x5728;&#x8FD9;&#x4E2A;&#x57FA;&#x5740;&#x91CD;&#x5B9A;&#x4F4D;&#x8868;&#xFF1B;&#x5C06;PE&#x6587;&#x4EF6;&#x4E2D;&#x6240;&#x6709;&#x9700;&#x8981;&#x91CD;&#x5B9A;&#x4F4D;&#x7684;&#x5730;&#x5740;&#x653E;&#x5728;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#x91CC;&#x3002;</p>
+<h2 id="imagebaserelocation">IMAGE_BASE_RELOCATION</h2>
+<pre><code class="lang-C"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_BASE_RELOCATION {
+    DWORD   VirtualAddress;
+    DWORD   SizeOfBlock;
+<span class="hljs-comment">//  WORD    TypeOffset[1];</span>
+} IMAGE_BASE_RELOCATION;
+</code></pre>
+<p>&#x5728;&#x4E00;&#x4E2A;PE&#x6587;&#x4EF6;&#x4E2D;&#xFF0C;&#x91CD;&#x5B9A;&#x4F4D;&#x7ED3;&#x6784;&#x7531;&#x4F17;&#x591A;&#x7684;&#x4E0A;&#x8FF0;&#x7ED3;&#x6784;&#x7EC4;&#x6210;&#x3002;&#x6839;&#x636E;&#x4E66;&#x4E0A;&#x8BF4;&#xFF1A;&#x6BCF;&#x4E2A;&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x7BA1;&#x7406;&#x7684;&#x53EA;&#x6709;4kb&#x5927;&#x5C0F;&#x7684;&#x5206;&#x9875;&#x5185;&#x7684;&#x91CD;&#x5B9A;&#x4F4D;&#x4FE1;&#x606F;&#xFF0C;PE&#x6587;&#x4EF6;&#x4E2D;&#x6BCF;&#x9694;0x1000&#x5B57;&#x8282;&#x7684;&#x5927;&#x5C0F;&#x5C31;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x4E0E;&#x5176;&#x5BF9;&#x5E94;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x4E2D;&#x7684;<code>VirtualAddress</code>&#x7684;&#x503C;&#x6C38;&#x8FDC;&#x662F;0x1000&#x7684;&#x500D;&#x6570;&#x3002;</p>
+<h1 id="&#x8C03;&#x8BD5;">&#x8C03;&#x8BD5;</h1>
+<p>&#x6570;&#x636E;&#x7ED3;&#x6784;&#x76EE;&#x5F55;&#x4E2D;&#x7684;IMAGE_DIRECTORY_ENTRY_DEBUG&#x7ED3;&#x6784;&#x6307;&#x5411;&#x4E86;&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#xFF0C;&#x8BE5;&#x7ED3;&#x6784;&#x4E5F;&#x88AB;&#x6210;&#x4E3A;&#x662F;&#x8C03;&#x8BD5;&#x76EE;&#x5F55;&#xFF0C;&#x4E00;&#x822C;&#x4FDD;&#x5B58;&#x5728;<code>.debug</code>&#x533A;&#x6BB5;&#x4E2D;&#x3002;</p>
+<h2 id="imagedebugdirectory">IMAGE_DEBUG_DIRECTORY</h2>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_DEBUG_DIRECTORY {
+    DWORD   Characteristics;    <span class="hljs-comment">// &#x4FDD;&#x7559;&#x5B57;&#x6BB5;</span>
+    DWORD   TimeDateStamp;        <span class="hljs-comment">// &#x8C03;&#x8BD5;&#x6570;&#x636E;&#x5EFA;&#x7ACB;&#x7684;&#x65F6;&#x95F4;&#x548C;&#x65E5;&#x671F;</span>
+    WORD    MajorVersion;
+    WORD    MinorVersion;
+    DWORD   Type;
+    DWORD   SizeOfData;
+    DWORD   AddressOfRawData;    <span class="hljs-comment">// &#x52A0;&#x8F7D;&#x5230;&#x5185;&#x5B58;&#x7684;&#x8C03;&#x8BD5;&#x6570;&#x636E;RVA</span>
+    DWORD   PointerToRawData;    <span class="hljs-comment">// &#x8C03;&#x5F0F;&#x6570;&#x636E;&#x7684;&#x6587;&#x4EF6;&#x504F;&#x79FB;</span>
+} IMAGE_DEBUG_DIRECTORY, *PIMAGE_DEBUG_DIRECTORY;
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x4F53;&#x4E0D;&#x662F;&#x5F88;&#x4E25;&#x683C;&#xFF0C;&#x5728;type&#x91CC;&#x53EF;&#x4EE5;&#x81EA;&#x5B9A;&#x4E49;&#x4E00;&#x4E9B;&#x7C7B;&#x578B;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4E5F;&#x6CA1;&#x6709;&#x5B9E;&#x9645;&#x64CD;&#x4F5C;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4E0D;&#x6E05;&#x695A;&#x8FD9;&#x4E2A;&#x8282;&#x533A;&#x5177;&#x4F53;&#x6709;&#x4EC0;&#x4E48;&#x7528;&#x5904;</p>
+<h1 id="tls">TLS</h1>
+<p>&#x89C1;&#x53E6;&#x4E00;&#x7B14;&#x8BB0;&#xFF0C;&#x672C;&#x7BC7;&#x53EA;&#x7528;&#x6765;&#x8BB0;&#x5F55;PE&#x7ED3;&#x6784;&#x7684;&#x4E00;&#x4E9B;&#x5185;&#x5BB9;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">&#x6CA1;&#x6709;&#x7248;&#x6743;&#xFF0C;&#x968F;&#x4FBF;&#x590D;&#x5236;&#xFF0C;&#x514D;&#x8D39;&#x7684;&#x77E5;&#x8BC6;&#x5E94;&#x8BE5;&#x5171;&#x4EAB; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2023-02-13 15:26:36
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="elf文件结构.html" class="navigation navigation-prev " aria-label="Previous page: ELF structure">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Practice.html" class="navigation navigation-next " aria-label="Next page: Practice">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"PE structure","level":"1.5.2","depth":2,"next":{"title":"Practice","level":"1.6","depth":1,"path":"MyArticles/Practice.md","ref":"MyArticles/Practice.md","articles":[]},"previous":{"title":"ELF structure","level":"1.5.1","depth":2,"path":"MyArticles/Basics/elf文件结构.md","ref":"MyArticles/Basics/elf文件结构.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","custom-favicon","tbfed-pagefooter","popup","-sharing","sharing-plus","intopic-toc","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"没有版权，随便复制，免费的知识应该共享","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"./icon/book.ico","back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MyArticles/Basics/Pe File Structer.md","mtime":"2023-02-13T07:26:36.023Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-02-13T07:32:34.607Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
