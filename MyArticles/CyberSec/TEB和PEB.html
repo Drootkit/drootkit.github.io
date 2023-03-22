@@ -1,0 +1,929 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>TEB & PEB · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="进程注入-基础.html" />
+    
+    
+    <link rel="prev" href="IOC-痛苦金字塔.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../构建gitbook.html">
+            
+                <a href="../构建gitbook.html">
+            
+                    
+                    写在开始，how2gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Reverse.html">
+            
+                <a href="../Reverse.html">
+            
+                    
+                    Reverse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Re/Windows消息队列.html">
+            
+                <a href="../Re/Windows消息队列.html">
+            
+                    
+                    windows 消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Re/常见加密算法-学习.html">
+            
+                <a href="../Re/常见加密算法-学习.html">
+            
+                    
+                    加密解密学习 - 更
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Re/分组密码学习.html">
+            
+                <a href="../Re/分组密码学习.html">
+            
+                    
+                    分组密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Basics.html">
+            
+                <a href="../Basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Basics/elf文件结构.html">
+            
+                <a href="../Basics/elf文件结构.html">
+            
+                    
+                    ELF structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Basics/Pe File Structer.html">
+            
+                <a href="../Basics/Pe File Structer.html">
+            
+                    
+                    PE structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Basics/Windows消息队列学习.html">
+            
+                <a href="../Basics/Windows消息队列学习.html">
+            
+                    
+                    Windows消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Practice.html">
+            
+                <a href="../Practice.html">
+            
+                    
+                    Practice
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Practice/YouTubePremium.apk.html">
+            
+                <a href="../Practice/YouTubePremium.apk.html">
+            
+                    
+                    Malware-APK0
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Dailynotes.html">
+            
+                <a href="../Dailynotes.html">
+            
+                    
+                    Daily notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Dailynotes/pdf解析重组.html">
+            
+                <a href="../Dailynotes/pdf解析重组.html">
+            
+                    
+                    电子书清晰化的尝试 利用python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Dailynotes/ipv6_base_vps.html">
+            
+                <a href="../Dailynotes/ipv6_base_vps.html">
+            
+                    
+                    搭建ipv6自有服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Dailynotes/learn_shell.html">
+            
+                <a href="../Dailynotes/learn_shell.html">
+            
+                    
+                    Shell 学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Development.html">
+            
+                <a href="../Development.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Development/Build-Arm.html">
+            
+                <a href="../Development/Build-Arm.html">
+            
+                    
+                    构建qemu的持续学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Development/查看父进程.html">
+            
+                <a href="../Development/查看父进程.html">
+            
+                    
+                    查看父进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../CyberSec.html">
+            
+                <a href="../CyberSec.html">
+            
+                    
+                    CyberSec
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="yara.html">
+            
+                <a href="yara.html">
+            
+                    
+                    YARA学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="关于bitcoin.html">
+            
+                <a href="关于bitcoin.html">
+            
+                    
+                    啥是Bitcoin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="IOC-痛苦金字塔.html">
+            
+                <a href="IOC-痛苦金字塔.html">
+            
+                    
+                    从痛苦金字塔学习分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.4" data-path="TEB和PEB.html">
+            
+                <a href="TEB和PEB.html">
+            
+                    
+                    TEB & PEB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="进程注入-基础.html">
+            
+                <a href="进程注入-基础.html">
+            
+                    
+                    进程注入-前置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="6种常见注入方式.html">
+            
+                <a href="6种常见注入方式.html">
+            
+                    
+                    windows下的进程注入（6种）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../ToolUsage.html">
+            
+                <a href="../ToolUsage.html">
+            
+                    
+                    Tool usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >TEB & PEB</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x56E0;&#x4E3A;&#x8FD9;&#x4FE9;&#x7ED3;&#x6784;&#x6BD4;&#x8F83;&#x957F;&#xFF0C;&#x6240;&#x4EE5;&#x5355;&#x72EC;&#x5217;&#x51FA;&#x6765;</p>
+<h1 id="teb-&#x7EBF;&#x7A0B;&#x73AF;&#x5883;&#x5757;">TEB-&#x7EBF;&#x7A0B;&#x73AF;&#x5883;&#x5757;</h1>
+<p>&#x7EBF;&#x7A0B;&#x73AF;&#x5883;&#x5757;</p>
+<pre><code class="lang-c">ntdll!_TEB
+   +<span class="hljs-number">0x000</span> NtTib            : _NT_TIB
+   +<span class="hljs-number">0x038</span> EnvironmentPointer : Ptr64 Void
+   +<span class="hljs-number">0x040</span> ClientId         : _CLIENT_ID
+   +<span class="hljs-number">0x050</span> ActiveRpcHandle  : Ptr64 Void
+   +<span class="hljs-number">0x058</span> ThreadLocalStoragePointer : Ptr64 Void
+   +<span class="hljs-number">0x060</span> ProcessEnvironmentBlock : Ptr64 _PEB
+   +<span class="hljs-number">0x068</span> LastErrorValue   : Uint4B
+   +<span class="hljs-number">0x06c</span> CountOfOwnedCriticalSections : Uint4B
+   +<span class="hljs-number">0x070</span> CsrClientThread  : Ptr64 Void
+   +<span class="hljs-number">0x078</span> Win32ThreadInfo  : Ptr64 Void
+   +<span class="hljs-number">0x080</span> User32Reserved   : [<span class="hljs-number">26</span>] Uint4B
+   +<span class="hljs-number">0x0e8</span> UserReserved     : [<span class="hljs-number">5</span>] Uint4B
+   +<span class="hljs-number">0x100</span> WOW32Reserved    : Ptr64 Void
+   +<span class="hljs-number">0x108</span> CurrentLocale    : Uint4B
+   +<span class="hljs-number">0x10c</span> FpSoftwareStatusRegister : Uint4B
+   +<span class="hljs-number">0x110</span> ReservedForDebuggerInstrumentation : [<span class="hljs-number">16</span>] Ptr64 Void
+   +<span class="hljs-number">0x190</span> SystemReserved1  : [<span class="hljs-number">30</span>] Ptr64 Void
+   +<span class="hljs-number">0x280</span> PlaceholderCompatibilityMode : Char
+   +<span class="hljs-number">0x281</span> PlaceholderHydrationAlwaysExplicit : UChar
+   +<span class="hljs-number">0x282</span> PlaceholderReserved : [<span class="hljs-number">10</span>] Char
+   +<span class="hljs-number">0x28c</span> ProxiedProcessId : Uint4B
+   +<span class="hljs-number">0x290</span> _ActivationStack : _ACTIVATION_CONTEXT_STACK
+   +<span class="hljs-number">0x2b8</span> WorkingOnBehalfTicket : [<span class="hljs-number">8</span>] UChar
+   +<span class="hljs-number">0x2c0</span> ExceptionCode    : Int4B
+   +<span class="hljs-number">0x2c4</span> Padding0         : [<span class="hljs-number">4</span>] UChar
+   +<span class="hljs-number">0x2c8</span> ActivationContextStackPointer : Ptr64 _ACTIVATION_CONTEXT_STACK
+   +<span class="hljs-number">0x2d0</span> InstrumentationCallbackSp : Uint8B
+   +<span class="hljs-number">0x2d8</span> InstrumentationCallbackPreviousPc : Uint8B
+   +<span class="hljs-number">0x2e0</span> InstrumentationCallbackPreviousSp : Uint8B
+   +<span class="hljs-number">0x2e8</span> TxFsContext      : Uint4B
+   +<span class="hljs-number">0x2ec</span> InstrumentationCallbackDisabled : UChar
+   +<span class="hljs-number">0x2ed</span> UnalignedLoadStoreExceptions : UChar
+   +<span class="hljs-number">0x2ee</span> Padding1         : [<span class="hljs-number">2</span>] UChar
+   +<span class="hljs-number">0x2f0</span> GdiTebBatch      : _GDI_TEB_BATCH
+   +<span class="hljs-number">0x7d8</span> RealClientId     : _CLIENT_ID
+   +<span class="hljs-number">0x7e8</span> GdiCachedProcessHandle : Ptr64 Void
+   +<span class="hljs-number">0x7f0</span> GdiClientPID     : Uint4B
+   +<span class="hljs-number">0x7f4</span> GdiClientTID     : Uint4B
+   +<span class="hljs-number">0x7f8</span> GdiThreadLocalInfo : Ptr64 Void
+   +<span class="hljs-number">0x800</span> Win32ClientInfo  : [<span class="hljs-number">62</span>] Uint8B
+   +<span class="hljs-number">0x9f0</span> glDispatchTable  : [<span class="hljs-number">233</span>] Ptr64 Void
+   +<span class="hljs-number">0x1138</span> glReserved1      : [<span class="hljs-number">29</span>] Uint8B
+   +<span class="hljs-number">0x1220</span> glReserved2      : Ptr64 Void
+   +<span class="hljs-number">0x1228</span> glSectionInfo    : Ptr64 Void
+   +<span class="hljs-number">0x1230</span> glSection        : Ptr64 Void
+   +<span class="hljs-number">0x1238</span> glTable          : Ptr64 Void
+   +<span class="hljs-number">0x1240</span> glCurrentRC      : Ptr64 Void
+   +<span class="hljs-number">0x1248</span> glContext        : Ptr64 Void
+   +<span class="hljs-number">0x1250</span> LastStatusValue  : Uint4B
+   +<span class="hljs-number">0x1254</span> Padding2         : [<span class="hljs-number">4</span>] UChar
+   +<span class="hljs-number">0x1258</span> StaticUnicodeString : _UNICODE_STRING
+   +<span class="hljs-number">0x1268</span> StaticUnicodeBuffer : [<span class="hljs-number">261</span>] Wchar
+   +<span class="hljs-number">0x1472</span> Padding3         : [<span class="hljs-number">6</span>] UChar
+   +<span class="hljs-number">0x1478</span> DeallocationStack : Ptr64 Void
+   +<span class="hljs-number">0x1480</span> TlsSlots         : [<span class="hljs-number">64</span>] Ptr64 Void
+   +<span class="hljs-number">0x1680</span> TlsLinks         : _LIST_ENTRY
+   +<span class="hljs-number">0x1690</span> Vdm              : Ptr64 Void
+   +<span class="hljs-number">0x1698</span> ReservedForNtRpc : Ptr64 Void
+   +<span class="hljs-number">0x16a0</span> DbgSsReserved    : [<span class="hljs-number">2</span>] Ptr64 Void
+   +<span class="hljs-number">0x16b0</span> HardErrorMode    : Uint4B
+   +<span class="hljs-number">0x16b4</span> Padding4         : [<span class="hljs-number">4</span>] UChar
+   +<span class="hljs-number">0x16b8</span> Instrumentation  : [<span class="hljs-number">11</span>] Ptr64 Void
+   +<span class="hljs-number">0x1710</span> ActivityId       : _GUID
+   +<span class="hljs-number">0x1720</span> SubProcessTag    : Ptr64 Void
+   +<span class="hljs-number">0x1728</span> PerflibData      : Ptr64 Void
+   +<span class="hljs-number">0x1730</span> EtwTraceData     : Ptr64 Void
+   +<span class="hljs-number">0x1738</span> WinSockData      : Ptr64 Void
+   +<span class="hljs-number">0x1740</span> GdiBatchCount    : Uint4B
+   +<span class="hljs-number">0x1744</span> CurrentIdealProcessor : _PROCESSOR_NUMBER
+   +<span class="hljs-number">0x1744</span> IdealProcessorValue : Uint4B
+   +<span class="hljs-number">0x1744</span> ReservedPad0     : UChar
+   +<span class="hljs-number">0x1745</span> ReservedPad1     : UChar
+   +<span class="hljs-number">0x1746</span> ReservedPad2     : UChar
+   +<span class="hljs-number">0x1747</span> IdealProcessor   : UChar
+   +<span class="hljs-number">0x1748</span> GuaranteedStackBytes : Uint4B
+   +<span class="hljs-number">0x174c</span> Padding5         : [<span class="hljs-number">4</span>] UChar
+   +<span class="hljs-number">0x1750</span> ReservedForPerf  : Ptr64 Void
+   +<span class="hljs-number">0x1758</span> ReservedForOle   : Ptr64 Void
+   +<span class="hljs-number">0x1760</span> WaitingOnLoaderLock : Uint4B
+   +<span class="hljs-number">0x1764</span> Padding6         : [<span class="hljs-number">4</span>] UChar
+   +<span class="hljs-number">0x1768</span> SavedPriorityState : Ptr64 Void
+   +<span class="hljs-number">0x1770</span> ReservedForCodeCoverage : Uint8B
+   +<span class="hljs-number">0x1778</span> ThreadPoolData   : Ptr64 Void
+   +<span class="hljs-number">0x1780</span> TlsExpansionSlots : Ptr64 Ptr64 Void
+   +<span class="hljs-number">0x1788</span> DeallocationBStore : Ptr64 Void
+   +<span class="hljs-number">0x1790</span> BStoreLimit      : Ptr64 Void
+   +<span class="hljs-number">0x1798</span> MuiGeneration    : Uint4B
+   +<span class="hljs-number">0x179c</span> IsImpersonating  : Uint4B
+   +<span class="hljs-number">0x17a0</span> NlsCache         : Ptr64 Void
+   +<span class="hljs-number">0x17a8</span> pShimData        : Ptr64 Void
+   +<span class="hljs-number">0x17b0</span> HeapData         : Uint4B
+   +<span class="hljs-number">0x17b4</span> Padding7         : [<span class="hljs-number">4</span>] UChar
+   +<span class="hljs-number">0x17b8</span> CurrentTransactionHandle : Ptr64 Void
+   +<span class="hljs-number">0x17c0</span> ActiveFrame      : Ptr64 _TEB_ACTIVE_FRAME
+   +<span class="hljs-number">0x17c8</span> FlsData          : Ptr64 Void
+   +<span class="hljs-number">0x17d0</span> PreferredLanguages : Ptr64 Void
+   +<span class="hljs-number">0x17d8</span> UserPrefLanguages : Ptr64 Void
+   +<span class="hljs-number">0x17e0</span> MergedPrefLanguages : Ptr64 Void
+   +<span class="hljs-number">0x17e8</span> MuiImpersonation : Uint4B
+   +<span class="hljs-number">0x17ec</span> CrossTebFlags    : Uint2B
+   +<span class="hljs-number">0x17ec</span> SpareCrossTebBits : Pos <span class="hljs-number">0</span>, <span class="hljs-number">16</span> Bits
+   +<span class="hljs-number">0x17ee</span> SameTebFlags     : Uint2B
+   +<span class="hljs-number">0x17ee</span> SafeThunkCall    : Pos <span class="hljs-number">0</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x17ee</span> InDebugPrint     : Pos <span class="hljs-number">1</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x17ee</span> HasFiberData     : Pos <span class="hljs-number">2</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x17ee</span> SkipThreadAttach : Pos <span class="hljs-number">3</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x17ee</span> WerInShipAssertCode : Pos <span class="hljs-number">4</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x17ee</span> RanProcessInit   : Pos <span class="hljs-number">5</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x17ee</span> ClonedThread     : Pos <span class="hljs-number">6</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x17ee</span> SuppressDebugMsg : Pos <span class="hljs-number">7</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x17ee</span> DisableUserStackWalk : Pos <span class="hljs-number">8</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x17ee</span> RtlExceptionAttached : Pos <span class="hljs-number">9</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x17ee</span> InitialThread    : Pos <span class="hljs-number">10</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x17ee</span> SessionAware     : Pos <span class="hljs-number">11</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x17ee</span> LoadOwner        : Pos <span class="hljs-number">12</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x17ee</span> LoaderWorker     : Pos <span class="hljs-number">13</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x17ee</span> SkipLoaderInit   : Pos <span class="hljs-number">14</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x17ee</span> SpareSameTebBits : Pos <span class="hljs-number">15</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x17f0</span> TxnScopeEnterCallback : Ptr64 Void
+   +<span class="hljs-number">0x17f8</span> TxnScopeExitCallback : Ptr64 Void
+   +<span class="hljs-number">0x1800</span> TxnScopeContext  : Ptr64 Void
+   +<span class="hljs-number">0x1808</span> LockCount        : Uint4B
+   +<span class="hljs-number">0x180c</span> WowTebOffset     : Int4B
+   +<span class="hljs-number">0x1810</span> ResourceRetValue : Ptr64 Void
+   +<span class="hljs-number">0x1818</span> ReservedForWdf   : Ptr64 Void
+   +<span class="hljs-number">0x1820</span> ReservedForCrt   : Uint8B
+   +<span class="hljs-number">0x1828</span> EffectiveContainerId : _GUID
+</code></pre>
+<h2 id="nttib-&#x7EBF;&#x7A0B;&#x4FE1;&#x606F;&#x5757;">NtTib-&#x7EBF;&#x7A0B;&#x4FE1;&#x606F;&#x5757;</h2>
+<p>Thread Information Block</p>
+<pre><code class="lang-c"><span class="hljs-number">0</span>:<span class="hljs-number">024</span>&gt; dt _NT_TIB
+ntdll!_NT_TIB
+   +<span class="hljs-number">0x000</span> ExceptionList    : Ptr64 _EXCEPTION_REGISTRATION_RECORD  ;&#x6307;&#x5411;{}&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x94FE;&#x8868;&#x6307;&#x9488;
+   +<span class="hljs-number">0x008</span> StackBase        : Ptr64 Void
+   +<span class="hljs-number">0x010</span> StackLimit       : Ptr64 Void
+   +<span class="hljs-number">0x018</span> SubSystemTib     : Ptr64 Void
+   +<span class="hljs-number">0x020</span> FiberData        : Ptr64 Void
+   +<span class="hljs-number">0x020</span> Version          : Uint4B
+   +<span class="hljs-number">0x028</span> ArbitraryUserPointer : Ptr64 Void
+   +<span class="hljs-number">0x030</span> Self             : Ptr64 _NT_TIB
+</code></pre>
+<h2 id="processenvironmentblock">ProcessEnvironmentBlock</h2>
+<p>PEB&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;teb&#x91CC;&#x7684;&#x8FD9;&#x4E2A;&#x6210;&#x5458;&#x6765;&#x5B9A;&#x4F4D;peb&#x7684;&#x4F4D;&#x7F6E;</p>
+<p>&#x5269;&#x4E0B;&#x7684;&#x8FD8;&#x6CA1;&#x6709;&#x53D1;&#x73B0;&#x5177;&#x4F53;&#x7684;&#x7528;&#x5904;&#xFF0C;&#x5C31;&#x5148;&#x4E0D;&#x5B66;&#x4E86;</p>
+<h1 id="peb-&#x8FDB;&#x7A0B;&#x73AF;&#x5883;&#x5757;">PEB-&#x8FDB;&#x7A0B;&#x73AF;&#x5883;&#x5757;</h1>
+<p>&#x8FDB;&#x7A0B;&#x73AF;&#x5883;&#x5757;</p>
+<pre><code class="lang-c">ntdll!_PEB
+   +<span class="hljs-number">0x000</span> InheritedAddressSpace : UChar
+   +<span class="hljs-number">0x001</span> ReadImageFileExecOptions : UChar
+   +<span class="hljs-number">0x002</span> BeingDebugged    : UChar
+   +<span class="hljs-number">0x003</span> BitField         : UChar
+   +<span class="hljs-number">0x003</span> ImageUsesLargePages : Pos <span class="hljs-number">0</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x003</span> IsProtectedProcess : Pos <span class="hljs-number">1</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x003</span> IsImageDynamicallyRelocated : Pos <span class="hljs-number">2</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x003</span> SkipPatchingUser32Forwarders : Pos <span class="hljs-number">3</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x003</span> IsPackagedProcess : Pos <span class="hljs-number">4</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x003</span> IsAppContainer   : Pos <span class="hljs-number">5</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x003</span> IsProtectedProcessLight : Pos <span class="hljs-number">6</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x003</span> IsLongPathAwareProcess : Pos <span class="hljs-number">7</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x004</span> Padding0         : [<span class="hljs-number">4</span>] UChar
+   +<span class="hljs-number">0x008</span> Mutant           : Ptr64 Void
+   +<span class="hljs-number">0x010</span> ImageBaseAddress : Ptr64 Void
+   +<span class="hljs-number">0x018</span> Ldr              : Ptr64 _PEB_LDR_DATA
+   +<span class="hljs-number">0x020</span> ProcessParameters : Ptr64 _RTL_USER_PROCESS_PARAMETERS
+   +<span class="hljs-number">0x028</span> SubSystemData    : Ptr64 Void
+   +<span class="hljs-number">0x030</span> ProcessHeap      : Ptr64 Void
+   +<span class="hljs-number">0x038</span> FastPebLock      : Ptr64 _RTL_CRITICAL_SECTION
+   +<span class="hljs-number">0x040</span> AtlThunkSListPtr : Ptr64 _SLIST_HEADER
+   +<span class="hljs-number">0x048</span> IFEOKey          : Ptr64 Void
+   +<span class="hljs-number">0x050</span> CrossProcessFlags : Uint4B
+   +<span class="hljs-number">0x050</span> ProcessInJob     : Pos <span class="hljs-number">0</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x050</span> ProcessInitializing : Pos <span class="hljs-number">1</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x050</span> ProcessUsingVEH  : Pos <span class="hljs-number">2</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x050</span> ProcessUsingVCH  : Pos <span class="hljs-number">3</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x050</span> ProcessUsingFTH  : Pos <span class="hljs-number">4</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x050</span> ProcessPreviouslyThrottled : Pos <span class="hljs-number">5</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x050</span> ProcessCurrentlyThrottled : Pos <span class="hljs-number">6</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x050</span> ProcessImagesHotPatched : Pos <span class="hljs-number">7</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x050</span> ReservedBits0    : Pos <span class="hljs-number">8</span>, <span class="hljs-number">24</span> Bits
+   +<span class="hljs-number">0x054</span> Padding1         : [<span class="hljs-number">4</span>] UChar
+   +<span class="hljs-number">0x058</span> KernelCallbackTable : Ptr64 Void
+   +<span class="hljs-number">0x058</span> UserSharedInfoPtr : Ptr64 Void
+   +<span class="hljs-number">0x060</span> SystemReserved   : Uint4B
+   +<span class="hljs-number">0x064</span> AtlThunkSListPtr32 : Uint4B
+   +<span class="hljs-number">0x068</span> ApiSetMap        : Ptr64 Void
+   +<span class="hljs-number">0x070</span> TlsExpansionCounter : Uint4B
+   +<span class="hljs-number">0x074</span> Padding2         : [<span class="hljs-number">4</span>] UChar
+   +<span class="hljs-number">0x078</span> TlsBitmap        : Ptr64 Void
+   +<span class="hljs-number">0x080</span> TlsBitmapBits    : [<span class="hljs-number">2</span>] Uint4B
+   +<span class="hljs-number">0x088</span> ReadOnlySharedMemoryBase : Ptr64 Void
+   +<span class="hljs-number">0x090</span> SharedData       : Ptr64 Void
+   +<span class="hljs-number">0x098</span> ReadOnlyStaticServerData : Ptr64 Ptr64 Void
+   +<span class="hljs-number">0x0a0</span> AnsiCodePageData : Ptr64 Void
+   +<span class="hljs-number">0x0a8</span> OemCodePageData  : Ptr64 Void
+   +<span class="hljs-number">0x0b0</span> UnicodeCaseTableData : Ptr64 Void
+   +<span class="hljs-number">0x0b8</span> NumberOfProcessors : Uint4B
+   +<span class="hljs-number">0x0bc</span> NtGlobalFlag     : Uint4B
+   +<span class="hljs-number">0x0c0</span> CriticalSectionTimeout : _LARGE_INTEGER
+   +<span class="hljs-number">0x0c8</span> HeapSegmentReserve : Uint8B
+   +<span class="hljs-number">0x0d0</span> HeapSegmentCommit : Uint8B
+   +<span class="hljs-number">0x0d8</span> HeapDeCommitTotalFreeThreshold : Uint8B
+   +<span class="hljs-number">0x0e0</span> HeapDeCommitFreeBlockThreshold : Uint8B
+   +<span class="hljs-number">0x0e8</span> NumberOfHeaps    : Uint4B
+   +<span class="hljs-number">0x0ec</span> MaximumNumberOfHeaps : Uint4B
+   +<span class="hljs-number">0x0f0</span> ProcessHeaps     : Ptr64 Ptr64 Void
+   +<span class="hljs-number">0x0f8</span> GdiSharedHandleTable : Ptr64 Void
+   +<span class="hljs-number">0x100</span> ProcessStarterHelper : Ptr64 Void
+   +<span class="hljs-number">0x108</span> GdiDCAttributeList : Uint4B
+   +<span class="hljs-number">0x10c</span> Padding3         : [<span class="hljs-number">4</span>] UChar
+   +<span class="hljs-number">0x110</span> LoaderLock       : Ptr64 _RTL_CRITICAL_SECTION
+   +<span class="hljs-number">0x118</span> OSMajorVersion   : Uint4B
+   +<span class="hljs-number">0x11c</span> OSMinorVersion   : Uint4B
+   +<span class="hljs-number">0x120</span> OSBuildNumber    : Uint2B
+   +<span class="hljs-number">0x122</span> OSCSDVersion     : Uint2B
+   +<span class="hljs-number">0x124</span> OSPlatformId     : Uint4B
+   +<span class="hljs-number">0x128</span> ImageSubsystem   : Uint4B
+   +<span class="hljs-number">0x12c</span> ImageSubsystemMajorVersion : Uint4B
+   +<span class="hljs-number">0x130</span> ImageSubsystemMinorVersion : Uint4B
+   +<span class="hljs-number">0x134</span> Padding4         : [<span class="hljs-number">4</span>] UChar
+   +<span class="hljs-number">0x138</span> ActiveProcessAffinityMask : Uint8B
+   +<span class="hljs-number">0x140</span> GdiHandleBuffer  : [<span class="hljs-number">60</span>] Uint4B
+   +<span class="hljs-number">0x230</span> PostProcessInitRoutine : Ptr64     <span class="hljs-keyword">void</span> 
+   +<span class="hljs-number">0x238</span> TlsExpansionBitmap : Ptr64 Void
+   +<span class="hljs-number">0x240</span> TlsExpansionBitmapBits : [<span class="hljs-number">32</span>] Uint4B
+   +<span class="hljs-number">0x2c0</span> SessionId        : Uint4B
+   +<span class="hljs-number">0x2c4</span> Padding5         : [<span class="hljs-number">4</span>] UChar
+   +<span class="hljs-number">0x2c8</span> AppCompatFlags   : _ULARGE_INTEGER
+   +<span class="hljs-number">0x2d0</span> AppCompatFlagsUser : _ULARGE_INTEGER
+   +<span class="hljs-number">0x2d8</span> pShimData        : Ptr64 Void
+   +<span class="hljs-number">0x2e0</span> AppCompatInfo    : Ptr64 Void
+   +<span class="hljs-number">0x2e8</span> CSDVersion       : _UNICODE_STRING
+   +<span class="hljs-number">0x2f8</span> ActivationContextData : Ptr64 _ACTIVATION_CONTEXT_DATA
+   +<span class="hljs-number">0x300</span> ProcessAssemblyStorageMap : Ptr64 _ASSEMBLY_STORAGE_MAP
+   +<span class="hljs-number">0x308</span> SystemDefaultActivationContextData : Ptr64 _ACTIVATION_CONTEXT_DATA
+   +<span class="hljs-number">0x310</span> SystemAssemblyStorageMap : Ptr64 _ASSEMBLY_STORAGE_MAP
+   +<span class="hljs-number">0x318</span> MinimumStackCommit : Uint8B
+   +<span class="hljs-number">0x320</span> SparePointers    : [<span class="hljs-number">4</span>] Ptr64 Void
+   +<span class="hljs-number">0x340</span> SpareUlongs      : [<span class="hljs-number">5</span>] Uint4B
+   +<span class="hljs-number">0x358</span> WerRegistrationData : Ptr64 Void
+   +<span class="hljs-number">0x360</span> WerShipAssertPtr : Ptr64 Void
+   +<span class="hljs-number">0x368</span> pUnused          : Ptr64 Void
+   +<span class="hljs-number">0x370</span> pImageHeaderHash : Ptr64 Void
+   +<span class="hljs-number">0x378</span> TracingFlags     : Uint4B
+   +<span class="hljs-number">0x378</span> HeapTracingEnabled : Pos <span class="hljs-number">0</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x378</span> CritSecTracingEnabled : Pos <span class="hljs-number">1</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x378</span> LibLoaderTracingEnabled : Pos <span class="hljs-number">2</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x378</span> SpareTracingBits : Pos <span class="hljs-number">3</span>, <span class="hljs-number">29</span> Bits
+   +<span class="hljs-number">0x37c</span> Padding6         : [<span class="hljs-number">4</span>] UChar
+   +<span class="hljs-number">0x380</span> CsrServerReadOnlySharedMemoryBase : Uint8B
+   +<span class="hljs-number">0x388</span> TppWorkerpListLock : Uint8B
+   +<span class="hljs-number">0x390</span> TppWorkerpList   : _LIST_ENTRY
+   +<span class="hljs-number">0x3a0</span> WaitOnAddressHashTable : [<span class="hljs-number">128</span>] Ptr64 Void
+   +<span class="hljs-number">0x7a0</span> TelemetryCoverageHeader : Ptr64 Void
+   +<span class="hljs-number">0x7a8</span> CloudFileFlags   : Uint4B
+   +<span class="hljs-number">0x7ac</span> CloudFileDiagFlags : Uint4B
+   +<span class="hljs-number">0x7b0</span> PlaceholderCompatibilityMode : Char
+   +<span class="hljs-number">0x7b1</span> PlaceholderCompatibilityModeReserved : [<span class="hljs-number">7</span>] Char
+   +<span class="hljs-number">0x7b8</span> LeapSecondData   : Ptr64 _LEAP_SECOND_DATA
+   +<span class="hljs-number">0x7c0</span> LeapSecondFlags  : Uint4B
+   +<span class="hljs-number">0x7c0</span> SixtySecondEnabled : Pos <span class="hljs-number">0</span>, <span class="hljs-number">1</span> Bit
+   +<span class="hljs-number">0x7c0</span> Reserved         : Pos <span class="hljs-number">1</span>, <span class="hljs-number">31</span> Bits
+   +<span class="hljs-number">0x7c4</span> NtGlobalFlag2    : Uint4B
+</code></pre>
+<h2 id="beingdebugged">BeingDebugged</h2>
+<p> <strong>IsDebuggerPresent()</strong>&#x8BBF;&#x95EE;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x6210;&#x5458;&#x5224;&#x65AD;&#x662F;&#x5426;&#x88AB;&#x8C03;&#x8BD5;&#xFF0C;&#x6C47;&#x7F16;&#x76F4;&#x63A5;&#x628A;test&#x6539;&#x6210;cmp&#x5C31;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;</p>
+<h2 id="imagebaseaddress">ImageBaseAddress</h2>
+<p>&#x8FD9;&#x4E2A;&#x5728;&#x5199;shellcode&#x7684;&#x65F6;&#x5019;&#x5E38;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x5230;exe&#x7684;&#x8D77;&#x59CB;&#x5730;&#x5740;</p>
+<h2 id="processheap">ProcessHeap</h2>
+<p>&#x8FDB;&#x7A0B;&#x5806;&#x7684;&#x53E5;&#x67C4;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x6307;&#x5411;&#x7ED3;&#x6784;&#x4F53;<strong>HEAP&#x7684;</strong>&#x6307;&#x9488;&#xFF1B;</p>
+<p>&#x7A0B;&#x5E8F;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#x65F6;&#xFF0C;ProcessHeap.Flags&#x7684;&#x503C;&#x4E3A;2 &#xFF0C; ProcessHeap. ForceFlags &#x7684;&#x503C;&#x4E3A;0&#xFF0C;&#x4E5F;&#x5E38;&#x7528;&#x4E8E;&#x53CD;&#x8C03;&#x8BD5;</p>
+<p>&#x76EE;&#x524D;&#x9047;&#x5230;&#x7684;&#x5C31;&#x662F;&#x8FD9;&#x4FE9;&#x7ED3;&#x6784;&#x91CC;&#x7684;&#x8FD9;&#x51E0;&#x4E2A;&#x5185;&#x5BB9;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x9047;&#x89C1;&#x518D;&#x8BF4; </p>
+<footer class="page-footer"><span class="copyright">&#x6CA1;&#x6709;&#x7248;&#x6743;&#xFF0C;&#x968F;&#x4FBF;&#x590D;&#x5236;&#xFF0C;&#x514D;&#x8D39;&#x7684;&#x77E5;&#x8BC6;&#x5E94;&#x8BE5;&#x5171;&#x4EAB; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2023-03-19 16:36:23
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="IOC-痛苦金字塔.html" class="navigation navigation-prev " aria-label="Previous page: 从痛苦金字塔学习分析报告">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="进程注入-基础.html" class="navigation navigation-next " aria-label="Next page: 进程注入-前置">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"TEB & PEB","level":"1.8.4","depth":2,"next":{"title":"进程注入-前置","level":"1.8.5","depth":2,"path":"MyArticles/CyberSec/进程注入-基础.md","ref":"MyArticles/CyberSec/进程注入-基础.md","articles":[]},"previous":{"title":"从痛苦金字塔学习分析报告","level":"1.8.3","depth":2,"path":"MyArticles/CyberSec/IOC-痛苦金字塔.md","ref":"MyArticles/CyberSec/IOC-痛苦金字塔.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","custom-favicon","tbfed-pagefooter","popup","-sharing","sharing-plus","intopic-toc","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"没有版权，随便复制，免费的知识应该共享","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"./icon/book.ico","back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MyArticles/CyberSec/TEB和PEB.md","mtime":"2023-03-19T08:36:23.558Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-22T00:13:19.133Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

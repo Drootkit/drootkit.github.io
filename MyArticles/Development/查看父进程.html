@@ -1,0 +1,870 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>查看父进程 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../CyberSec.html" />
+    
+    
+    <link rel="prev" href="Build-Arm.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../构建gitbook.html">
+            
+                <a href="../构建gitbook.html">
+            
+                    
+                    写在开始，how2gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Reverse.html">
+            
+                <a href="../Reverse.html">
+            
+                    
+                    Reverse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Re/Windows消息队列.html">
+            
+                <a href="../Re/Windows消息队列.html">
+            
+                    
+                    windows 消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Re/常见加密算法-学习.html">
+            
+                <a href="../Re/常见加密算法-学习.html">
+            
+                    
+                    加密解密学习 - 更
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Re/分组密码学习.html">
+            
+                <a href="../Re/分组密码学习.html">
+            
+                    
+                    分组密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Basics.html">
+            
+                <a href="../Basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Basics/elf文件结构.html">
+            
+                <a href="../Basics/elf文件结构.html">
+            
+                    
+                    ELF structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Basics/Pe File Structer.html">
+            
+                <a href="../Basics/Pe File Structer.html">
+            
+                    
+                    PE structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Basics/Windows消息队列学习.html">
+            
+                <a href="../Basics/Windows消息队列学习.html">
+            
+                    
+                    Windows消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Practice.html">
+            
+                <a href="../Practice.html">
+            
+                    
+                    Practice
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Practice/YouTubePremium.apk.html">
+            
+                <a href="../Practice/YouTubePremium.apk.html">
+            
+                    
+                    Malware-APK0
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Dailynotes.html">
+            
+                <a href="../Dailynotes.html">
+            
+                    
+                    Daily notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Dailynotes/pdf解析重组.html">
+            
+                <a href="../Dailynotes/pdf解析重组.html">
+            
+                    
+                    电子书清晰化的尝试 利用python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Dailynotes/ipv6_base_vps.html">
+            
+                <a href="../Dailynotes/ipv6_base_vps.html">
+            
+                    
+                    搭建ipv6自有服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Dailynotes/learn_shell.html">
+            
+                <a href="../Dailynotes/learn_shell.html">
+            
+                    
+                    Shell 学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Development.html">
+            
+                <a href="../Development.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="Build-Arm.html">
+            
+                <a href="Build-Arm.html">
+            
+                    
+                    构建qemu的持续学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7.2" data-path="查看父进程.html">
+            
+                <a href="查看父进程.html">
+            
+                    
+                    查看父进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../CyberSec.html">
+            
+                <a href="../CyberSec.html">
+            
+                    
+                    CyberSec
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../CyberSec/yara.html">
+            
+                <a href="../CyberSec/yara.html">
+            
+                    
+                    YARA学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../CyberSec/关于bitcoin.html">
+            
+                <a href="../CyberSec/关于bitcoin.html">
+            
+                    
+                    啥是Bitcoin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../CyberSec/IOC-痛苦金字塔.html">
+            
+                <a href="../CyberSec/IOC-痛苦金字塔.html">
+            
+                    
+                    从痛苦金字塔学习分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../CyberSec/TEB和PEB.html">
+            
+                <a href="../CyberSec/TEB和PEB.html">
+            
+                    
+                    TEB & PEB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../CyberSec/进程注入-基础.html">
+            
+                <a href="../CyberSec/进程注入-基础.html">
+            
+                    
+                    进程注入-前置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../CyberSec/6种常见注入方式.html">
+            
+                <a href="../CyberSec/6种常见注入方式.html">
+            
+                    
+                    windows下的进程注入（6种）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../ToolUsage.html">
+            
+                <a href="../ToolUsage.html">
+            
+                    
+                    Tool usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >查看父进程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x539F;&#x7406;">&#x539F;&#x7406;</h1>
+<p>Windows&#x4E0B;&#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x4ED6;&#x7684;&#x7236;&#x8FDB;&#x7A0B;&#x4E00;&#x822C;&#x90FD;&#x662F;explore&#xFF0C;linux&#x4E0B;&#x4E00;&#x822C;&#x662F;bash&#xFF0C;&#x56E0;&#x4E3A;&#x662F;&#x4ECE;shell&#x754C;&#x9762;&#x76F4;&#x63A5;&#x8D77;&#x7684;&#x3002;</p>
+<p>&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x5F88;&#x591A;&#xFF0C;&#x57FA;&#x672C;&#x601D;&#x8DEF;&#x5C31;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x83B7;&#x5F97;&#x7236;&#x8FDB;&#x7A0B;&#x7684;pid</li>
+<li>&#x5229;&#x7528;pid&#x67E5;&#x627E;proc name</li>
+</ul>
+<h1 id="windows">windows</h1>
+<h2 id="c">C</h2>
+<pre><code class="lang-c#">using System;
+using System.Diagnostics;
+using System.Management;
+using System.Windows.Forms;
+
+namespace Check_Father
+{
+    class check_father_proc
+    {
+        static bool if_proc = true;
+        static void Main(string[] args)
+        {
+            // &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x5BF9;&#x8C61;
+            try
+            {
+                Process currentProcess = Process.GetCurrentProcess();
+                if (GetParentProcess(currentProcess).ProcessName.Equals(&quot;explore&quot;))
+                {
+                    if_proc = true;
+                }
+                else
+                {
+                    Console.WriteLine($&quot;{GetParentProcess(currentProcess).ProcessName}&quot;);
+                }
+            }
+            catch
+            {
+                Environment.Exit(0);
+            }
+        }
+        private static Process GetParentProcess(Process process)
+        {
+            // &#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x8FDB;&#x7A0B;&#x7684;&#x7236;&#x8FDB;&#x7A0B; ID
+            int parentProcessId = 0;
+            ManagementObjectSearcher searcher = new ManagementObjectSearcher($&quot;SELECT ParentProcessId FROM Win32_Process WHERE ProcessId = {process.Id}&quot;);
+            ManagementObjectCollection collection = searcher.Get();
+            foreach (ManagementObject obj in collection)
+            {
+                parentProcessId = Convert.ToInt32(obj[&quot;ParentProcessId&quot;]);
+                break;
+            }
+            // &#x83B7;&#x53D6;&#x7236;&#x8FDB;&#x7A0B;&#x5BF9;&#x8C61;
+            Process parentProcess = null;
+            if (parentProcessId &gt; 0)
+            {
+                try
+                {
+                    parentProcess = Process.GetProcessById(parentProcessId);
+                }
+                catch (Exception)
+                {
+                    parentProcess = null;
+                }
+            }
+            return parentProcess;
+        }
+    }
+}
+</code></pre>
+<ol>
+<li>&#x8C03;&#x7528; GetCurrentProcess() &#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x5BF9;&#x8C61;&#x3002;</li>
+<li>&#x8C03;&#x7528; GetParentProcess() &#x65B9;&#x6CD5;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x7684;&#x7236;&#x8FDB;&#x7A0B;&#x5BF9;&#x8C61;&#x3002;</li>
+<li>&#x5224;&#x65AD;&#x7236;&#x8FDB;&#x7A0B;&#x5BF9;&#x8C61;&#x7684; ProcessName &#x5C5E;&#x6027;&#x662F;&#x5426;&#x4E3A; &quot;explorer&quot;&#xFF0C;&#x4EE5;&#x786E;&#x5B9A;&#x7236;&#x8FDB;&#x7A0B;&#x662F;&#x5426;&#x4E3A; Windows Explorer&#x3002;</li>
+</ol>
+<p>&#x5176;&#x4E2D;&#xFF0C;&#x6B65;&#x9AA4; 2 &#x4E3B;&#x8981;&#x662F;&#x901A;&#x8FC7; WMI (Windows Management Instrumentation) &#x67E5;&#x8BE2;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x7684;&#x7236;&#x8FDB;&#x7A0B; ID&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x8C03;&#x7528; Process.GetProcessById() &#x65B9;&#x6CD5;&#x6765;&#x83B7;&#x53D6;&#x7236;&#x8FDB;&#x7A0B;&#x5BF9;&#x8C61;&#x3002;&#x5177;&#x4F53;&#x5B9E;&#x73B0;&#x662F;&#xFF1A;</p>
+<ul>
+<li>&#x8C03;&#x7528; ManagementObjectSearcher &#x5BF9;&#x8C61;&#x7684; Get() &#x65B9;&#x6CD5;&#x6765;&#x6267;&#x884C; WMI &#x67E5;&#x8BE2;&#xFF0C;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x4E3A;&#x83B7;&#x53D6;&#x7236;&#x8FDB;&#x7A0B; ID&#xFF0C;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x4E3A; $&quot;SELECT ParentProcessId FROM Win32_Process WHERE ProcessId = {process.Id}&quot;&#x3002;</li>
+<li>&#x904D;&#x5386;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#xFF0C;&#x83B7;&#x53D6;&#x7236;&#x8FDB;&#x7A0B; ID&#x3002;</li>
+<li>&#x8C03;&#x7528; Process.GetProcessById() &#x65B9;&#x6CD5;&#x6839;&#x636E;&#x7236;&#x8FDB;&#x7A0B; ID &#x83B7;&#x53D6;&#x7236;&#x8FDB;&#x7A0B;&#x5BF9;&#x8C61;&#x3002;</li>
+</ul>
+<h2 id="c">C</h2>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;windows.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;tchar.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;tlhelp32.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;psapi.h&gt;</span> //GetModuleFileNameEx</span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x53E5;&#x67C4;</span>
+    HANDLE currentProcess = GetCurrentProcess();
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8FDB;&#x7A0B; ID</span>
+    DWORD currentProcessId = GetProcessId(currentProcess);
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x8FDB;&#x7A0B;&#x5FEB;&#x7167;</span>
+    HANDLE snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">if</span> (snapshot == INVALID_HANDLE_VALUE)
+    {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;CreateToolhelp32Snapshot failed, error code %d\n&quot;</span>, GetLastError());
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+
+    PROCESSENTRY32 processEntry;
+    processEntry.dwSize = <span class="hljs-keyword">sizeof</span>(PROCESSENTRY32);
+
+    <span class="hljs-comment">// &#x904D;&#x5386;&#x8FDB;&#x7A0B;&#x5FEB;&#x7167;&#xFF0C;&#x67E5;&#x627E;&#x7236;&#x8FDB;&#x7A0B;</span>
+    <span class="hljs-keyword">if</span> (Process32First(snapshot, &amp;processEntry))
+    {
+        <span class="hljs-keyword">do</span> 
+        {
+            <span class="hljs-keyword">if</span> (processEntry.th32ProcessID == currentProcessId)
+            {
+                <span class="hljs-comment">// &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x7684;&#x7236;&#x8FDB;&#x7A0B; ID</span>
+                DWORD parentProcessId = processEntry.th32ParentProcessID;
+                <span class="hljs-comment">// &#x6839;&#x636E;&#x7236;&#x8FDB;&#x7A0B; ID &#x83B7;&#x53D6;&#x7236;&#x8FDB;&#x7A0B;&#x53E5;&#x67C4;</span>
+                HANDLE parentProcess = OpenProcess(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, FALSE, parentProcessId);
+                <span class="hljs-keyword">if</span> (parentProcess != <span class="hljs-literal">NULL</span>)
+                {
+                    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x7236;&#x8FDB;&#x7A0B;&#x7684;&#x540D;&#x79F0;</span>
+                    TCHAR parentProcessName[MAX_PATH];
+                    <span class="hljs-keyword">if</span> (GetModuleFileNameEx(parentProcess, <span class="hljs-literal">NULL</span>, parentProcessName, MAX_PATH))
+                    {
+                        <span class="hljs-comment">// &#x5224;&#x65AD;&#x7236;&#x8FDB;&#x7A0B;&#x540D;&#x79F0;&#x662F;&#x5426;&#x4E3A; explorer.exe</span>
+                        <span class="hljs-keyword">if</span> (_tcsicmp(parentProcessName, _T(<span class="hljs-string">&quot;explorer.exe&quot;</span>)) == <span class="hljs-number">0</span>)
+                        {
+                            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;The parent process is explorer.exe.\n&quot;</span>);
+                        }
+                        <span class="hljs-keyword">else</span>
+                        {
+                            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;The parent process is %ws.\n&quot;</span>, parentProcessName);
+                        }
+                    }
+                    <span class="hljs-keyword">else</span>
+                    {
+                        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;GetModuleFileNameEx failed, error code %d\n&quot;</span>, GetLastError());
+                    }
+                    CloseHandle(parentProcess);
+                }
+                <span class="hljs-keyword">else</span>
+                {
+                    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;OpenProcess failed, error code %d\n&quot;</span>, GetLastError());
+                }
+                <span class="hljs-keyword">break</span>;
+            }
+        } <span class="hljs-keyword">while</span> (Process32Next(snapshot, &amp;processEntry));
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Process32First failed, error code %d\n&quot;</span>, GetLastError());
+    }
+
+    CloseHandle(snapshot);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<ol>
+<li>&#x4F7F;&#x7528;  <code>GetCurrentProcess()</code> &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x7684;&#x53E5;&#x67C4;&#x3002;</li>
+<li>&#x4F7F;&#x7528; <code>GetProcessId()</code> &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x7684; ID&#x3002;</li>
+<li>&#x4F7F;&#x7528;  <code>CreateToolhelp32Snapshot()</code> &#x521B;&#x5EFA;&#x8FDB;&#x7A0B;&#x5FEB;&#x7167;&#x3002;</li>
+<li>&#x904D;&#x5386;&#x8FDB;&#x7A0B;&#x5FEB;&#x7167;&#xFF0C;&#x67E5;&#x627E;&#x7236;&#x8FDB;&#x7A0B;&#x3002;&#x4F7F;&#x7528; <code>Process32First()</code> &#x83B7;&#x53D6;&#x7B2C;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x7136;&#x540E;&#x4F7F;&#x7528; <code>Process32Next()</code> &#x904D;&#x5386;&#x4E0B;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#xFF0C;&#x76F4;&#x5230;&#x627E;&#x5230;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x3002;</li>
+<li>&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x7684;&#x7236;&#x8FDB;&#x7A0B; ID&#xFF0C;&#x5E76;&#x4F7F;&#x7528; <code>OpenProcess()</code> &#x51FD;&#x6570;&#x6253;&#x5F00;&#x7236;&#x8FDB;&#x7A0B;&#x7684;&#x53E5;&#x67C4;&#x3002;</li>
+<li>&#x4F7F;&#x7528; `GetModuleFileName</li>
+</ol>
+<h1 id="linux">Linux</h1>
+<p>&#x56E0;&#x4E3A;linux&#x662F;&#x57FA;&#x4E8E;&#x6587;&#x4EF6;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x6587;&#x4EF6;&#x6765;&#x83B7;&#x5F97;&#x8FDB;&#x7A0B;&#x540D;&#x79F0;&#xFF0C;&#x4F46;&#x662F;linux&#x6709;&#x73B0;&#x6210;&#x7684;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5F97;&#x5230;&#x7236;&#x8FDB;&#x7A0B;&#x7684;pid&#xFF0C;&#x5404;&#x6709;&#x5343;&#x79CB;&#x3002;</p>
+<p>&#x8FDB;&#x7A0B;&#x5BF9;&#x5E94;&#x7684;&#x8FDB;&#x7A0B;&#x53F7;&#x5728;<code>/proc</code>&#x76EE;&#x5F55;&#x4E0B;&#x5B58;&#x5728;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;pid&#x7684;&#x76EE;&#x5F55;&#x3002;</p>
+<p><img src="&#x67E5;&#x770B;&#x7236;&#x8FDB;&#x7A0B;/image-20230319192034539.png" alt="image-20230319192034539"></p>
+<p>&#x968F;&#x4FBF;&#x8FDB;&#x53BB;&#x4E00;&#x4E2A;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5F88;&#x591A;&#x6587;&#x4EF6;</p>
+<p><img src="&#x67E5;&#x770B;&#x7236;&#x8FDB;&#x7A0B;/image-20230319192145429.png" alt="image-20230319192145429"></p>
+<p>comm&#x6587;&#x4EF6;&#x91CC;&#x9762;&#x5B58;&#x653E;&#x7684;&#x5C31;&#x662F;&#x8FDB;&#x7A0B;&#x7684;&#x540D;&#x79F0;</p>
+<h2 id="c">C</h2>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;unistd.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sys/types.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;string.h&gt;</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> 
+</span>{
+    <span class="hljs-keyword">pid_t</span> pid = getpid();
+    <span class="hljs-keyword">pid_t</span> ppid = getppid();
+
+    <span class="hljs-keyword">char</span> filename[<span class="hljs-number">256</span>];
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x540D;&#x79F0; </span>
+    <span class="hljs-built_in">snprintf</span>(filename, <span class="hljs-keyword">sizeof</span>(filename), <span class="hljs-string">&quot;/proc/%d/comm&quot;</span>, pid);  <span class="hljs-comment">// &#x6784;&#x9020;&#x6587;&#x4EF6;&#x540D;</span>
+    FILE* fp = fopen(filename, <span class="hljs-string">&quot;r&quot;</span>);      <span class="hljs-comment">// &#x6253;&#x5F00;&#x6587;&#x4EF6;</span>
+    <span class="hljs-keyword">if</span> (fp) 
+    {
+        <span class="hljs-keyword">char</span> name[<span class="hljs-number">256</span>];
+        fgets(name, <span class="hljs-keyword">sizeof</span>(name), fp);  <span class="hljs-comment">// &#x8BFB;&#x53D6;&#x8FDB;&#x7A0B;&#x540D;&#x79F0;</span>
+        name[<span class="hljs-built_in">strcspn</span>(name, <span class="hljs-string">&quot;\n&quot;</span>)] = <span class="hljs-number">0</span>;  <span class="hljs-comment">// &#x53BB;&#x9664;&#x6362;&#x884C;&#x7B26;</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;current process name: %s\n&quot;</span>, name);
+        fclose(fp);                      <span class="hljs-comment">// &#x5173;&#x95ED;&#x6587;&#x4EF6;</span>
+    }
+    <span class="hljs-keyword">else</span> 
+    {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;failed to open file: %s\n&quot;</span>, filename);
+    }
+
+<span class="hljs-comment">// &#x83B7;&#x53D6;&#x7236;&#x8FDB;&#x7A0B;&#x7684;&#x8FDB;&#x7A0B;&#x540D;&#x79F0;</span>
+    <span class="hljs-built_in">snprintf</span>(filename, <span class="hljs-keyword">sizeof</span>(filename), <span class="hljs-string">&quot;/proc/%d/comm&quot;</span>, ppid);  <span class="hljs-comment">// &#x6784;&#x9020;&#x6587;&#x4EF6;&#x540D;</span>
+    fp = fopen(filename, <span class="hljs-string">&quot;r&quot;</span>);          <span class="hljs-comment">// &#x6253;&#x5F00;&#x6587;&#x4EF6;</span>
+    <span class="hljs-keyword">if</span> (fp) 
+    {
+        <span class="hljs-keyword">char</span> name[<span class="hljs-number">256</span>];
+        fgets(name, <span class="hljs-keyword">sizeof</span>(name), fp);  <span class="hljs-comment">// &#x8BFB;&#x53D6;&#x8FDB;&#x7A0B;&#x540D;&#x79F0;</span>
+        name[<span class="hljs-built_in">strcspn</span>(name, <span class="hljs-string">&quot;\n&quot;</span>)] = <span class="hljs-number">0</span>;  <span class="hljs-comment">// &#x53BB;&#x9664;&#x6362;&#x884C;&#x7B26;</span>
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;current process parent name: %s\n&quot;</span>, name);
+        fclose(fp);                      <span class="hljs-comment">// &#x5173;&#x95ED;&#x6587;&#x4EF6;</span>
+    } 
+    <span class="hljs-keyword">else</span> 
+    {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;failed to open file: %s\n&quot;</span>, filename);
+    }
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<footer class="page-footer"><span class="copyright">&#x6CA1;&#x6709;&#x7248;&#x6743;&#xFF0C;&#x968F;&#x4FBF;&#x590D;&#x5236;&#xFF0C;&#x514D;&#x8D39;&#x7684;&#x77E5;&#x8BC6;&#x5E94;&#x8BE5;&#x5171;&#x4EAB; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2023-03-19 19:46:56
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Build-Arm.html" class="navigation navigation-prev " aria-label="Previous page: 构建qemu的持续学习">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../CyberSec.html" class="navigation navigation-next " aria-label="Next page: CyberSec">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"查看父进程","level":"1.7.2","depth":2,"next":{"title":"CyberSec","level":"1.8","depth":1,"path":"MyArticles/CyberSec.md","ref":"MyArticles/CyberSec.md","articles":[{"title":"YARA学习","level":"1.8.1","depth":2,"path":"MyArticles/CyberSec/yara.md","ref":"MyArticles/CyberSec/yara.md","articles":[]},{"title":"啥是Bitcoin","level":"1.8.2","depth":2,"path":"MyArticles/CyberSec/关于bitcoin.md","ref":"MyArticles/CyberSec/关于bitcoin.md","articles":[]},{"title":"从痛苦金字塔学习分析报告","level":"1.8.3","depth":2,"path":"MyArticles/CyberSec/IOC-痛苦金字塔.md","ref":"MyArticles/CyberSec/IOC-痛苦金字塔.md","articles":[]},{"title":"TEB & PEB","level":"1.8.4","depth":2,"path":"MyArticles/CyberSec/TEB和PEB.md","ref":"MyArticles/CyberSec/TEB和PEB.md","articles":[]},{"title":"进程注入-前置","level":"1.8.5","depth":2,"path":"MyArticles/CyberSec/进程注入-基础.md","ref":"MyArticles/CyberSec/进程注入-基础.md","articles":[]},{"title":"windows下的进程注入（6种）","level":"1.8.6","depth":2,"path":"MyArticles/CyberSec/6种常见注入方式.md","ref":"MyArticles/CyberSec/6种常见注入方式.md","articles":[]}]},"previous":{"title":"构建qemu的持续学习","level":"1.7.1","depth":2,"path":"MyArticles/Development/Build-Arm.md","ref":"MyArticles/Development/Build-Arm.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","custom-favicon","tbfed-pagefooter","popup","-sharing","sharing-plus","intopic-toc","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"没有版权，随便复制，免费的知识应该共享","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"./icon/book.ico","back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MyArticles/Development/查看父进程.md","mtime":"2023-03-19T11:46:56.692Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-22T00:13:19.133Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

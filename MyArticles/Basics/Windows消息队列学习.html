@@ -1,0 +1,735 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Windows消息队列 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Practice.html" />
+    
+    
+    <link rel="prev" href="Pe File Structer.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../构建gitbook.html">
+            
+                <a href="../构建gitbook.html">
+            
+                    
+                    写在开始，how2gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Reverse.html">
+            
+                <a href="../Reverse.html">
+            
+                    
+                    Reverse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Re/Windows消息队列.html">
+            
+                <a href="../Re/Windows消息队列.html">
+            
+                    
+                    windows 消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Re/常见加密算法-学习.html">
+            
+                <a href="../Re/常见加密算法-学习.html">
+            
+                    
+                    加密解密学习 - 更
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Re/分组密码学习.html">
+            
+                <a href="../Re/分组密码学习.html">
+            
+                    
+                    分组密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Basics.html">
+            
+                <a href="../Basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="elf文件结构.html">
+            
+                <a href="elf文件结构.html">
+            
+                    
+                    ELF structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="Pe File Structer.html">
+            
+                <a href="Pe File Structer.html">
+            
+                    
+                    PE structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="Windows消息队列学习.html">
+            
+                <a href="Windows消息队列学习.html">
+            
+                    
+                    Windows消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Practice.html">
+            
+                <a href="../Practice.html">
+            
+                    
+                    Practice
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Practice/YouTubePremium.apk.html">
+            
+                <a href="../Practice/YouTubePremium.apk.html">
+            
+                    
+                    Malware-APK0
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Dailynotes.html">
+            
+                <a href="../Dailynotes.html">
+            
+                    
+                    Daily notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Dailynotes/pdf解析重组.html">
+            
+                <a href="../Dailynotes/pdf解析重组.html">
+            
+                    
+                    电子书清晰化的尝试 利用python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Dailynotes/ipv6_base_vps.html">
+            
+                <a href="../Dailynotes/ipv6_base_vps.html">
+            
+                    
+                    搭建ipv6自有服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Dailynotes/learn_shell.html">
+            
+                <a href="../Dailynotes/learn_shell.html">
+            
+                    
+                    Shell 学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Development.html">
+            
+                <a href="../Development.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Development/Build-Arm.html">
+            
+                <a href="../Development/Build-Arm.html">
+            
+                    
+                    构建qemu的持续学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Development/查看父进程.html">
+            
+                <a href="../Development/查看父进程.html">
+            
+                    
+                    查看父进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../CyberSec.html">
+            
+                <a href="../CyberSec.html">
+            
+                    
+                    CyberSec
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../CyberSec/yara.html">
+            
+                <a href="../CyberSec/yara.html">
+            
+                    
+                    YARA学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../CyberSec/关于bitcoin.html">
+            
+                <a href="../CyberSec/关于bitcoin.html">
+            
+                    
+                    啥是Bitcoin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../CyberSec/IOC-痛苦金字塔.html">
+            
+                <a href="../CyberSec/IOC-痛苦金字塔.html">
+            
+                    
+                    从痛苦金字塔学习分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../CyberSec/TEB和PEB.html">
+            
+                <a href="../CyberSec/TEB和PEB.html">
+            
+                    
+                    TEB & PEB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../CyberSec/进程注入-基础.html">
+            
+                <a href="../CyberSec/进程注入-基础.html">
+            
+                    
+                    进程注入-前置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../CyberSec/6种常见注入方式.html">
+            
+                <a href="../CyberSec/6种常见注入方式.html">
+            
+                    
+                    windows下的进程注入（6种）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../ToolUsage.html">
+            
+                <a href="../ToolUsage.html">
+            
+                    
+                    Tool usage
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Windows消息队列</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4E00;&#x3001;&#x6D88;&#x606F;&#x961F;&#x5217;">&#x4E00;&#x3001;&#x6D88;&#x606F;&#x961F;&#x5217;</h1>
+<p>&#x6D88;&#x606F;&#x961F;&#x5217;&#x662F;&#x5728;&#x4EC0;&#x4E48;&#x65F6;&#x5019;&#x521B;&#x5EFA;&#x7684;&#xFF1F;
+&#x5728;&#x7EBF;&#x7A0B;&#x88AB;&#x7B2C;&#x4E00;&#x6B21;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5F53;&#x7EBF;&#x7A0B;&#x7B2C;&#x4E00;&#x6B21;&#x88AB;&#x521B;&#x5EFA;&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x5047;&#x8BBE;&#x4ED6;&#x4E0D;&#x4F1A;&#x88AB;&#x7528;&#x4E8E;&#x4E0E;&#x4EFB;&#x4F55;&#x7528;&#x6237;&#x754C;&#x9762;&#x6240;&#x76F8;&#x5173;&#x7684;&#x4EFB;&#x52A1;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x6709;&#x6548;&#x51CF;&#x5C11;&#x7CFB;&#x7EDF;&#x8D44;&#x6E90;&#x7684;&#x4F7F;&#x7528;&#x3002;&#x5F53;&#x68C0;&#x6D4B;&#x5230;&#x4ED6;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x548C;&#x4E0E;&#x56FE;&#x5F62;&#x76F8;&#x5173;&#x7684;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7CFB;&#x7EDF;&#x4E3A;&#x4ED6;&#x5206;&#x914D;&#x989D;&#x5916;&#x7684;&#x8D44;&#x6E90;</p>
+<p>Windows&#x4E0B;&#x7684;&#x5E94;&#x7528;&#x662F;&#x57FA;&#x4E8E;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x7684;&#xFF0C;&#x4ED6;&#x7B49;&#x5F85;&#x7CFB;&#x7EDF;&#x5411;&#x5176;&#x4F20;&#x9012;&#x8F93;&#x5165;&#xFF1B;dos&#x7A0B;&#x5E8F;&#x662F;&#x987A;&#x5E8F;&#x7684;&#x3001;&#x8FC7;&#x7A0B;&#x9A71;&#x52A8;&#x7684;&#x3002;</p>
+<h2 id="windows&#x6D88;&#x606F;&#x4F20;&#x9012;&#x7684;&#x8FC7;&#x7A0B;&#xFF1A;">Windows&#x6D88;&#x606F;&#x4F20;&#x9012;&#x7684;&#x8FC7;&#x7A0B;&#xFF1A;</h2>
+<p>&#x7528;&#x6237;&#x6216;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x67D0;&#x4E9B;&#x884C;&#x4E3A;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E9B;&#x4E8B;&#x4EF6;&#x3002;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x627E;&#x5230;&#x4E8B;&#x4EF6;&#x6240;&#x5C5E;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x7136;&#x540E;&#x5411;&#x8BE5;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x53D1;&#x9001;&#x6761;&#x76F8;&#x5E94;&#x7684;&#x6D88;&#x606F;&#x3002;&#x7136;&#x540E;&#xFF0C;&#x8BE5;&#x6D88;&#x606F;&#x5C31;&#x88AB;&#x52A0;&#x5165;&#x5230;&#x8BE5;&#x5F15;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#x3002;&#x4E4B;&#x540E;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x4E0D;&#x65AD;&#x5730;&#x68C0;&#x6773;&#x6D88;&#x606F;&#x961F;&#x5217;&#xFF0C;&#x6BCF;&#x5F53;&#x63A5;&#x6536;&#x5230;&#x4E00;&#x6761;&#x6D88;&#x606F;&#x65F6;&#xFF0C;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5C31;&#x5C06;&#x8BE5;&#x6D88;&#x606F;&#x5206;&#x53D1;&#x7ED9;&#x4E0E;&#x8BE5;&#x6D88;&#x606F;&#x6240;&#x5C5E;&#x7A97;&#x53E3;&#x76F8;&#x5173;&#x7684;&#x7A97;&#x53E3;&#x8FC7;&#x7A0B;&#x3002;&#x6700;&#x540E;&#xFF0C;&#x7A97;&#x53E3;&#x8FC7;&#x7A0B;&#x6267;&#x884C;&#x4E0E;&#x5F53;&#x524D;&#x6D88;&#x606F;&#x5BF9;&#x5E94;&#x7684;&#x6307;&#x4EE4;&#x3002;</p>
+<h2 id="windows&#x6D88;&#x606F;&#x961F;&#x5217;&#xFF1A;">Windows&#x6D88;&#x606F;&#x961F;&#x5217;&#xFF1A;</h2>
+<p>Windows&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#x4E2D;&#x6709;&#x4E00;&#x4E2A;&#x7CFB;&#x7EDF;&#x6D88;&#x606F;&#x961F;&#x5217;&#xFF08;system message queue&#xFF09;&#xFF0C;&#x5728;&#x5185;&#x6838;&#x7A7A;&#x95F4;&#x4E2D;&#x8FD8;&#x4E3A;&#x6BCF;&#x4E2A;UI&#x7EBF;&#x7A0B;&#x5206;&#x914D;&#x5404;&#x81EA;&#x7684;&#x7EBF;&#x7A0B;&#x6D88;&#x606F;&#x961F;&#x5217;(Thread message queue)&#x3002;&#x5728;&#x53D1;&#x751F;&#x8F93;&#x5165;&#x4E8B;&#x4EF6;&#x4E4B;&#x540E;&#xFF0C;Windows&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x8F93;&#x5165;&#x8BBE;&#x5907;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x5C06;&#x8F93;&#x5165;&#x4E8B;&#x4EF6;&#x8F6C;&#x6362;&#x4E3A;&#x4E00;&#x4E2A;&#x201C;&#x6D88;&#x606F;&#x201D;&#x6295;&#x5BC4;&#x5230;&#x7CFB;&#x7EDF;&#x6D88;&#x606F;&#x961F;&#x5217;&#xFF1B;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x4E00;&#x4E2A;&#x4E13;&#x95E8;&#x7EBF;&#x7A0B;&#x4ECE;&#x7CFB;&#x7EDF;&#x6D88;&#x606F;&#x961F;&#x5217;&#x53D6;&#x51FA;&#x6D88;&#x606F;&#xFF0C;&#x5206;&#x53D1;&#x5230;&#x5404;&#x4E2A;UI&#x7EBF;&#x7A0B;&#x7684;&#x8F93;&#x5165;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#x3002;
+Windows&#x7684;&#x4E8B;&#x4EF6;&#x9A71;&#x52A8;&#x6A21;&#x5F0F;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x628A;&#x6D88;&#x606F;&#x4E3B;&#x52A8;&#x5206;&#x53D1;&#x7ED9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF1B;&#x800C;&#x662F;&#x7531;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x6BCF;&#x4E2A;UI&#x7EBF;&#x7A0B;&#x901A;&#x8FC7;&#x201C;&#x6D88;&#x606F;&#x5FAA;&#x73AF;&#x201D;&#x4EE3;&#x7801;&#x4ECE;UI&#x7EBF;&#x7A0B;&#x6D88;&#x606F;&#x961F;&#x5217;&#x83B7;&#x53D6;&#x6D88;&#x606F;</p>
+<h2 id="windows&#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;&#x53E5;&#x67C4;&#xFF1A;">Windows&#x4E3A;&#x4EC0;&#x4E48;&#x4F7F;&#x7528;&#x53E5;&#x67C4;&#xFF1A;</h2>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x8BF4;&#x53E5;&#x67C4;&#x662F;&#x4E00;&#x79CD;&#x6307;&#x5411;&#x6307;&#x9488;&#x7684;&#x6307;&#x9488;&#x3002;
+&#x7531;&#x4E8E;windows&#x662F;&#x4E00;&#x79CD;&#x4EE5;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x4E3A;&#x57FA;&#x7840;&#x7684;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF0C;&#x5176;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x5668;&#x7ECF;&#x5E38;&#x4F1A;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x6765;&#x56DE;&#x7684;&#x79FB;&#x52A8;&#x5BF9;&#x8C61;&#xFF0C;&#x4EE5;&#x6B64;&#x6765;&#x6EE1;&#x8DB3;&#x5404;&#x79CD;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5BF9;&#x5185;&#x5B58;&#x7684;&#x9700;&#x6C42;&#x3002;&#x800C;&#x5BF9;&#x8C61;&#x7684;&#x79FB;&#x52A8;&#x610F;&#x5473;&#x7740;&#x5BF9;&#x8C61;&#x5185;&#x5B58;&#x5730;&#x5740;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x6B63;&#x662F;&#x56E0;&#x4E3A;&#x5982;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x6307;&#x9488;&#xFF0C;&#x5728;&#x5185;&#x5B58;&#x5730;&#x5740;&#x88AB;&#x6539;&#x53D8;&#x540E;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C06;&#x4E0D;&#x77E5;&#x9053;&#x5230;&#x54EA;&#x91CC;&#x53BB;&#x518D;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x3002;windows&#x7CFB;&#x7EDF;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x7CFB;&#x7EDF;&#x4E13;&#x95E8;&#x4E3A;&#x5404;&#x79CD;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x817E;&#x51FA;&#x4E86;&#x4E00;&#x5B9A;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF08;&#x53E5;&#x67C4;&#xFF09;&#x4E13;&#x95E8;&#x7528;&#x6765;&#x8BB0;&#x5F55;&#x8FD9;&#x4E9B;&#x53D8;&#x5316;&#x7684;&#x5730;&#x5740;&#xFF08;&#x8FD9;&#x4E9B;&#x5185;&#x5B58;&#x5730;&#x5740;&#x5C31;&#x662F;&#x6307;&#x5411;&#x6307;&#x9488;&#x7684;&#x6307;&#x9488;&#xFF09;&#xFF0C;&#x8FD9;&#x4E9B;&#x5185;&#x5B58;&#x5730;&#x5740;&#x672C;&#x8EAB;&#x662F;&#x4E00;&#x76F4;&#x4E0D;&#x53D8;&#x5316;&#x7684;&#x3002;windows&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x5668;&#x5728;&#x79FB;&#x52A8;&#x67D0;&#x4E9B;&#x5BF9;&#x8C61;&#x4E4B;&#x540E;&#xFF0C;&#x4ED6;&#x4F1A;&#x5C06;&#x8FD9;&#x4E9B;&#x5BF9;&#x8C61;&#x65B0;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#x4F20;&#x7ED9;&#x53E5;&#x67C4;&#xFF0C;&#x544A;&#x8BC9;&#x4ED6;&#x79FB;&#x52A8;&#x540E;&#x5BF9;&#x8C61;&#x53BB;&#x4E86;&#x54EA;&#x91CC;</p>
+<h2 id="&#x6B7B;&#x9501;&#xFF1A;message-deadlocks">&#x6B7B;&#x9501;&#xFF1A;Message Deadlocks</h2>
+<p>&#x539F;&#x56E0;&#xFF1A;&#x53D1;&#x9001;&#x7684;&#x6D88;&#x606F;&#x88AB;&#x5904;&#x7406;&#x65F6;&#x88AB;&#x201D;&#x4E22;&#x5F03;&#x201D;&#x4E86;&#xFF0C;&#x800C;&#x53D1;&#x9001;&#x4E0E;&#x63A5;&#x6536;&#x7684;&#x7EBF;&#x7A0B;&#x662F;&#x540C;&#x4E00;&#x961F;&#x5217;&#xFF0C;&#x8FD9;&#x5C31;&#x4F1A;&#x5BFC;&#x81F4;&#x8BE5;&#x7EBF;&#x7A0B;&#x201D;&#x6B7B;&#x201D;&#x4E86;&#x3002;</p>
+<p>&#x5176;&#x5B9E;&#x53EF;&#x4EE5;&#x770B;&#x505A;&#x4E00;&#x4E2A;&#x76F8;&#x4E92;&#x7B49;&#x5F85;&#x7684;&#x573A;&#x666F;&#xFF1A;</p>
+<ul>
+<li>a&#x7EBF;&#x7A0B;&#x53D1;&#x6D88;&#x606F;1&#x7ED9;b&#x7EBF;&#x7A0B;</li>
+<li>b&#x7EBF;&#x7A0B;&#x5904;&#x7406;&#x6D88;&#x606F;1&#xFF0C;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E2D;&#x53D1;&#x4E86;&#x6D88;&#x606F;2&#x7ED9;a</li>
+<li>a&#x63A5;&#x5230;&#x6D88;&#x606F;2&#xFF0C;&#x4F46;&#x56E0;&#x4E3A;b&#x5BF9;&#x6D88;&#x606F;1&#x7684;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x8FD8;&#x6CA1;&#x56DE;&#x6765;&#x800C;&#x7B49;&#x5F85;</li>
+<li>b&#x56E0;&#x4E3A;&#x6D88;&#x606F;2&#x7684;&#x5904;&#x7406;&#x7ED3;&#x679C;&#x8FD8;&#x6CA1;&#x56DE;&#x6765;&#x800C;&#x7B49;&#x5F85;</li>
+</ul>
+<h1 id="&#x4E8C;&#x3001;&#x76F8;&#x5173;api">&#x4E8C;&#x3001;&#x76F8;&#x5173;API</h1>
+<pre><code class="lang-c">postMessage <span class="hljs-comment">//&#x6D88;&#x606F;&#x8FDB;&#x5165;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#x540E;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#xFF0C;&#x6D88;&#x606F;&#x53EF;&#x80FD;&#x4E0D;&#x88AB;&#x5904;&#x7406;&#x3002;</span>
+PostThreadMessage <span class="hljs-comment">//&#x6D88;&#x606F;&#x653E;&#x5165;&#x6307;&#x5B9A;&#x7EBF;&#x7A0B;&#x7684;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#x540E;&#x7ACB;&#x5373;&#x8FD4;&#x56DE;&#xFF0C;&#x6D88;&#x606F;&#x53EF;&#x80FD;&#x4E0D;&#x88AB;&#x5904;&#x7406;&#x3002;</span>
+SendMessage <span class="hljs-comment">//&#x6D88;&#x606F;&#x8FDB;&#x5165;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x5904;&#x7406;&#x540E;&#x624D;&#x8FD4;&#x56DE;&#xFF0C;&#x5982;&#x679C;&#x6D88;&#x606F;&#x4E0D;&#x88AB;&#x5904;&#x7406;&#xFF0C;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x7684;&#x7EBF;&#x7A0B;&#x5C06;&#x4E00;&#x76F4;&#x5904;&#x4E8E;&#x963B;&#x585E;&#x72B6;&#x6001;&#xFF0C;&#x7B49;&#x5F85;&#x6D88;&#x606F;&#x8FD4;&#x56DE;&#x3002;</span>
+SendNotifyMessage<span class="hljs-comment">//&#x5982;&#x679C;&#x6D88;&#x606F;&#x8FDB;&#x5165;&#x672C;&#x7EBF;&#x7A0B;&#xFF0C;&#x5219;&#x4E3A;SendMessage()&#xFF0C;&#x4E0D;&#x662F;&#x5219;&#x91C7;&#x53D6;postMessage()&#xFF0C;&#x5F53;&#x76EE;&#x6807;&#x7EBF;&#x7A0B;&#x4ECD;&#x7136;&#x4F9D;send&#x5904;&#x7406;</span>
+SendMessageTimeout <span class="hljs-comment">//&#x6D88;&#x606F;&#x8FDB;&#x5165;&#x6D88;&#x606F;&#x961F;&#x5217;&#xFF0C;&#x5904;&#x7406;&#x6216;&#x8D85;&#x65F6;&#x5219;&#x8FD4;&#x56DE;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;SendMessage()&#x5C31;&#x662F;&#x5EFA;&#x7ACB;&#x5728;&#x8BE5;&#x51FD;&#x6570;&#x4E0A;&#x7684;</span>
+SendMessageCallback <span class="hljs-comment">//&#x5728;&#x672C;&#x7EBF;&#x7A0B;&#x518D;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x5F53;&#x5904;&#x7406;&#x5B8C;&#x540E;&#x518D;&#x6B21;&#x5904;&#x7406;</span>
+BroadcastSystemMessage <span class="hljs-comment">//&#x53D1;&#x9001;&#x76EE;&#x6807;&#x4E3A;&#x7CFB;&#x7EDF;&#x7EC4;&#x4EF6;&#xFF0C;&#x6BD4;&#x5982;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;</span>
+</code></pre>
+<h2 id="windows&#x7F16;&#x7A0B;">windows&#x7F16;&#x7A0B;</h2>
+<p>c&#x8BED;&#x8A00;&#x7684;&#x7A0B;&#x5E8F;&#x81F3;&#x5C11;&#x6709;&#x4E00;&#x4E2A;&#x4E3B;&#x51FD;&#x6570;main&#xFF0C;Windows&#x7F16;&#x7A0B;&#x4E2D;&#x5B58;&#x5728;&#x4E24;&#x4E2A;&#x4E3B;&#x51FD;&#x6570;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">int</span> WINAPI <span class="hljs-title">WinMain</span><span class="hljs-params">(
+ HINSTANCE hInstance, <span class="hljs-comment">// handle to current instance</span>
+ HINSTANCE hPrevInstance, <span class="hljs-comment">// handle to previous instance</span>
+ LPSTR lpCmdLine,   <span class="hljs-comment">// pointer to command line</span>
+ <span class="hljs-keyword">int</span> nCmdShow     <span class="hljs-comment">// show state of window</span>
+)</span></span>;
+
+<span class="hljs-function">LRESULT CALLBACK <span class="hljs-title">WindowProc</span><span class="hljs-params">(
+ HWND hwnd,   <span class="hljs-comment">// handle to window</span>
+ UINT uMsg,   <span class="hljs-comment">// message identifier</span>
+ WPARAM wParam, <span class="hljs-comment">// first message parameter</span>
+ LPARAM lParam  <span class="hljs-comment">// second message parameter</span>
+)</span></span>;
+</code></pre>
+<p>&#x7B2C;&#x4E8C;&#x4E2A;&#x662F;&#x4E2A;callback&#x51FD;&#x6570;&#xFF0C;Windows&#x5FC5;&#x987B;&#x81F3;&#x5C11;&#x4E00;&#x4E2A;callback&#x51FD;&#x6570;</p>
+<p>&#x7B2C;&#x4E00;&#x4E2A;winmain&#x51FD;&#x6570;&#x7528;&#x6765;&#x4ECE;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#x4E0D;&#x65AD;&#x7684;&#x53D1;&#x73B0;&#x6D88;&#x606F;&#xFF0C;&#x5E76;&#x5904;&#x7406;&#x6D88;&#x606F;&#xFF08;&#x53D1;&#x9001;&#x7ED9;&#x5BF9;&#x5E94;&#x7684;&#x7A97;&#x53E3;&#x51FD;&#x6570;&#xFF09;</p>
+<pre><code class="lang-c">MSG msg; <span class="hljs-comment">//&#x5B9A;&#x4E49;&#x6D88;&#x606F;&#x540D;</span>
+<span class="hljs-keyword">while</span> (GetMessage (&amp;msg, <span class="hljs-literal">NULL</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>))
+{
+   TranslateMessage (&amp;msg) ; <span class="hljs-comment">//&#x7FFB;&#x8BD1;&#x6D88;&#x606F;</span>
+   DispatchMessage (&amp;msg) ;  <span class="hljs-comment">//&#x64A4;&#x53BB;&#x6D88;&#x606F;</span>
+}
+<span class="hljs-keyword">return</span> msg.wParam;
+</code></pre>
+<p>&#x5173;&#x4E8E;msg&#x7684;&#x7ED3;&#x6784;&#x5B9A;&#x4E49;&#xFF0C;Windows&#x4E2D;&#x7EDD;&#x5927;&#x591A;&#x6570;&#x90FD;&#x662F;&#x57FA;&#x4E8E;&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x4F53;&#x7CFB;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> tagMSG {   <span class="hljs-comment">// msg </span>
+  HWND  hwnd;      <span class="hljs-comment">// &#x8981;&#x5C06;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x5230;&#x7684;&#x76EE;&#x6807;&#x53E5;&#x67C4;  </span>
+  UINT  message;        <span class="hljs-comment">// &#x4E00;&#x4E2A;&#x6D88;&#x606F;&#x6570;&#x5B57;&#xFF0C;&#x5BF9;&#x5E94;&#x4E00;&#x4E2A;&#x6D88;&#x606F;&#x7C7B;&#x578B;</span>
+  WPARAM wParam;
+  LPARAM lParam;
+  DWORD time;            <span class="hljs-comment">// &#x6D88;&#x606F;&#x653E;&#x5165;&#x961F;&#x5217;&#x7684;&#x65F6;&#x95F4;&#xFF08;&#x76F8;&#x5BF9;&#x4E8E;Windows&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x4E0D;&#x662F;&#x7269;&#x7406;&#x65F6;&#x95F4;&#xFF09;</span>
+  POINT pt;                <span class="hljs-comment">// &#x6D88;&#x606F;&#x653E;&#x961F;&#x5217;&#x7684;&#x9F20;&#x6807;&#x4F4D;&#x7F6E;</span>
+} MSG;
+</code></pre>
+<h2 id="sendmessage&#x548C;postmessage">sendmessage&#x548C;postmessage</h2>
+<p>&#x524D;&#x8005;&#x53D1;&#x9001;&#x6D88;&#x606F;&#x4E4B;&#x540E;&#x9700;&#x8981;&#x7B49;&#x5230;&#x8FD4;&#x56DE;&#x624D;&#x80FD;&#x8FD4;&#x56DE;&#x3001;&#x540E;&#x8005;&#x53D1;&#x9001;&#x4E4B;&#x540E;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x7B49;&#x5F85;&#x3002;
+&#x56E0;&#x4E3A;&#x524D;&#x8005;&#x76F4;&#x63A5;&#x8C03;&#x7528;WndProc&#x6D88;&#x606F;&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x7B49;&#x5F85;&#x8FD4;&#x56DE;&#x4E4B;&#x540E;&#x624D;&#x80FD;&#x8FD4;&#x56DE;&#x3002;
+&#x540E;&#x8005;&#x662F;&#x76F4;&#x63A5;&#x628A;&#x6D88;&#x606F;&#x653E;&#x5230;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x3002;</p>
+<h1 id="&#x4E09;&#x3001;&#x5B9E;&#x9645;&#x8FD0;&#x7528;">&#x4E09;&#x3001;&#x5B9E;&#x9645;&#x8FD0;&#x7528;</h1>
+<p>&#x5728;&#x5F00;&#x53D1;&#x5C42;&#x9762;&#x8FD0;&#x7528;&#x5F88;&#x591A;&#xFF0C;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x521B;&#x5EFA;&#x7A97;&#x53E3;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x5229;&#x7528;MFC&#x6216;&#x8005;&#x662F;&#x5229;&#x7528;&#x5176;&#x4ED6;&#x7684;&#x73B0;&#x6210;&#x7684;&#x6846;&#x67B6;&#x3002;</p>
+<h2 id="&#x7EC6;&#x8282;">&#x7EC6;&#x8282;</h2>
+<p>&#x7A0B;&#x5E8F;&#x8C03;&#x7528;CreateWindowEx&#x51FD;&#x6570;&#xFF0C;&#x5C06;&#x7A97;&#x53E3;&#x7684;&#x6837;&#x5F0F;&#x88AB;&#x8BBE;&#x7F6E;&#x6210;&#x4E3A;WS_EX_TOOLWINDOW&#xFF0C;&#x8BE5;&#x5C5E;&#x6027;&#x7684;&#x7A97;&#x53E3;&#x6709;&#x4EE5;&#x4E0B;&#x7279;&#x70B9;&#xFF1A;</p>
+<ol>
+<li>&#x4E0D;&#x5728;&#x4EFB;&#x52A1;&#x680F;&#x663E;&#x793A;&#x3002;</li>
+<li>&#x4E0D;&#x663E;&#x793A;&#x5728;Alt+Tab&#x7684;&#x5207;&#x6362;&#x5217;&#x8868;&#x4E2D;&#x3002;</li>
+<li>&#x5728;&#x4EFB;&#x52A1;&#x7BA1;&#x7406;&#x5668;&#x7684;&#x7A97;&#x53E3;&#x7BA1;&#x7406;Tab&#x4E2D;&#x4E0D;&#x663E;&#x793A;&#x3002;</li>
+</ol>
+<p>&#x76F8;&#x5F53;&#x4E8E;&#x521B;&#x5EFA;&#x4E86;&#x4E00;&#x4E2A;&#x9690;&#x5F62;&#x7A97;&#x53E3;&#x3002;&#x901A;&#x8FC7;&#x6D88;&#x606F;&#x673A;&#x5236;&#x8C03;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5B9E;&#x73B0;&#x521B;&#x5EFA;&#x5B50;&#x7A0B;&#x5E8F;&#xFF0C;&#x5229;&#x7528;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x6839;&#x636E;&#x6D88;&#x606F;&#x6267;&#x884C;&#x7684;&#x7279;&#x70B9;&#xFF0C;&#x53EF;&#x4EE5;&#x89C4;&#x907F;&#x8C03;&#x8BD5;&#x3002;</p>
+<p>&#x6587;&#x7AE0;<a href="https://www.anquanke.com/post/id/176079#h2-7&#x65E2;&#x6CA1;&#x6709;&#x7ED9;&#x51FA;hash&#xFF0C;&#x56FE;&#x7247;&#x8FD8;&#x5BC4;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x7684;&#x601D;&#x8DEF;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;Windows&#x8FDB;&#x7A0B;&#x6CE8;&#x5165;&#x4E2D;&#x7684;&#x56DE;&#x8C03;&#x6CE8;&#x5165;&#x65B9;&#x5F0F;&#x3002;" target="_blank">https://www.anquanke.com/post/id/176079#h2-7&#x65E2;&#x6CA1;&#x6709;&#x7ED9;&#x51FA;hash&#xFF0C;&#x56FE;&#x7247;&#x8FD8;&#x5BC4;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x79CD;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x7684;&#x601D;&#x8DEF;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;Windows&#x8FDB;&#x7A0B;&#x6CE8;&#x5165;&#x4E2D;&#x7684;&#x56DE;&#x8C03;&#x6CE8;&#x5165;&#x65B9;&#x5F0F;&#x3002;</a> </p>
+<footer class="page-footer"><span class="copyright">&#x6CA1;&#x6709;&#x7248;&#x6743;&#xFF0C;&#x968F;&#x4FBF;&#x590D;&#x5236;&#xFF0C;&#x514D;&#x8D39;&#x7684;&#x77E5;&#x8BC6;&#x5E94;&#x8BE5;&#x5171;&#x4EAB; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2023-03-21 23:34:25
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="Pe File Structer.html" class="navigation navigation-prev " aria-label="Previous page: PE structure">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Practice.html" class="navigation navigation-next " aria-label="Next page: Practice">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Windows消息队列","level":"1.4.3","depth":2,"next":{"title":"Practice","level":"1.5","depth":1,"path":"MyArticles/Practice.md","ref":"MyArticles/Practice.md","articles":[{"title":"Malware-APK0","level":"1.5.1","depth":2,"path":"MyArticles/Practice/YouTubePremium.apk.md","ref":"MyArticles/Practice/YouTubePremium.apk.md","articles":[]}]},"previous":{"title":"PE structure","level":"1.4.2","depth":2,"path":"MyArticles/Basics/Pe File Structer.md","ref":"MyArticles/Basics/Pe File Structer.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","custom-favicon","tbfed-pagefooter","popup","-sharing","sharing-plus","intopic-toc","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"没有版权，随便复制，免费的知识应该共享","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"./icon/book.ico","back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MyArticles/Basics/Windows消息队列学习.md","mtime":"2023-03-21T15:34:25.531Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-03-22T00:13:19.133Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
