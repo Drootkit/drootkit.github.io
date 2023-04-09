@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Find DLL in Process · GitBook</title>
+        <title>调用约定和断点 · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="find_thread_in_process.html" />
+    <link rel="next" href="elf文件结构.html" />
     
     
-    <link rel="prev" href="../Development.html" />
+    <link rel="prev" href="../Basics.html" />
     
 
     </head>
@@ -237,9 +237,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../Basics/调用约定和断点.html">
+        <li class="chapter active" data-level="1.4.1" data-path="调用约定和断点.html">
             
-                <a href="../Basics/调用约定和断点.html">
+                <a href="调用约定和断点.html">
             
                     
                     调用约定和断点
@@ -250,9 +250,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../Basics/elf文件结构.html">
+        <li class="chapter " data-level="1.4.2" data-path="elf文件结构.html">
             
-                <a href="../Basics/elf文件结构.html">
+                <a href="elf文件结构.html">
             
                     
                     ELF structure
@@ -263,9 +263,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../Basics/Pe File Structer.html">
+        <li class="chapter " data-level="1.4.3" data-path="Pe File Structer.html">
             
-                <a href="../Basics/Pe File Structer.html">
+                <a href="Pe File Structer.html">
             
                     
                     PE structure
@@ -276,9 +276,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../Basics/arm学习.html">
+        <li class="chapter " data-level="1.4.4" data-path="arm学习.html">
             
-                <a href="../Basics/arm学习.html">
+                <a href="arm学习.html">
             
                     
                     ARM 基础学习
@@ -289,9 +289,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="../Basics/Windows消息队列学习.html">
+        <li class="chapter " data-level="1.4.5" data-path="Windows消息队列学习.html">
             
-                <a href="../Basics/Windows消息队列学习.html">
+                <a href="Windows消息队列学习.html">
             
                     
                     Windows消息队列
@@ -424,9 +424,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.7.1" data-path="find_dll_in_proc.html">
+        <li class="chapter " data-level="1.7.1" data-path="../Development/find_dll_in_proc.html">
             
-                <a href="find_dll_in_proc.html">
+                <a href="../Development/find_dll_in_proc.html">
             
                     
                     Find DLL in Process
@@ -437,9 +437,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="find_thread_in_process.html">
+        <li class="chapter " data-level="1.7.2" data-path="../Development/find_thread_in_process.html">
             
-                <a href="find_thread_in_process.html">
+                <a href="../Development/find_thread_in_process.html">
             
                     
                     Find Thread in Process
@@ -450,9 +450,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="Build-Arm.html">
+        <li class="chapter " data-level="1.7.3" data-path="../Development/Build-Arm.html">
             
-                <a href="Build-Arm.html">
+                <a href="../Development/Build-Arm.html">
             
                     
                     构建qemu的持续学习
@@ -463,9 +463,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.4" data-path="查看父进程.html">
+        <li class="chapter " data-level="1.7.4" data-path="../Development/查看父进程.html">
             
-                <a href="查看父进程.html">
+                <a href="../Development/查看父进程.html">
             
                     
                     查看父进程
@@ -711,7 +711,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Find DLL in Process</a>
+        <a href="../.." >调用约定和断点</a>
     </h1>
 </div>
 
@@ -726,121 +726,110 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <p>&#x901A;&#x8FC7;LDR&#x7ED3;&#x6784;&#x4F53;&#x53BB;&#x89C2;&#x5BDF;&#x5DF2;&#x7ECF;&#x8F7D;&#x5165;&#x7684;dll&#x3002;&#x5982;&#x679C;&#x60F3;&#x76F4;&#x5230;&#x6240;&#x6709;&#x7684;&#x7528;&#x5230;&#x7684;dll&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8BBF;&#x95EE;&#x7A0B;&#x5E8F;&#x7684;&#x5BFC;&#x51FA;&#x8868;&#xFF0C;&#x8FD9;&#x91CC;&#x7684;&#x5DE5;&#x5177;&#x662F;&#x5229;&#x7528;LDR&#x89C2;&#x5BDF;&#x6B63;&#x5728;&#x4F7F;&#x7528;&#x7684;dll&#x3002;DLL &#x662F;&#x5728;&#x9700;&#x8981;&#x65F6;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x6709;&#x53EF;&#x80FD;&#x67D0;&#x4E9B; DLL &#x5C1A;&#x672A;&#x52A0;&#x8F7D;&#x3002;</p>
-<p>&#x7F3A;&#x70B9;&#xFF1A;&#x65E0;&#x6CD5;&#x89C2;&#x5BDF;&#x5230;&#x901A;&#x8FC7;loadlibrary&#x8F7D;&#x5165;&#x7684;dll&#x6587;&#x4EF6;&#x3002;</p>
-<p>&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#xFF1A;</p>
-<p><code>fdip [pid]</code></p>
-<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;Windows.h&gt;</span></span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;winternl.h&gt;</span></span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-string">&quot;struct.h&quot;</span></span>
-
-
-<span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">LONG</span><span class="hljs-params">(NTAPI* NtQueryInformationProcessPtr)</span><span class="hljs-params">(
-    HANDLE ProcessHandle,
-    DWORD ProcessInformationClass,
-    PVOID ProcessInformation,
-    ULONG ProcessInformationLength,
-    PULONG ReturnLength
-    )</span></span>;
-
-<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">int</span> argc, <span class="hljs-keyword">char</span>* argv[])</span>
-</span>{
-    <span class="hljs-comment">// &#x6CA1;&#x6709;&#x83B7;&#x53D6;&#x5230;&#x53C2;&#x6570;&#x7684;&#x60C5;&#x51B5;</span>
-    <span class="hljs-keyword">if</span> (argc &lt;= <span class="hljs-number">1</span>)
-    {
-        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Usage: %s &lt;filename&gt;\n&quot;</span>, argv[<span class="hljs-number">0</span>]);
-        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;Example: fdip32 [proc Id]\n&quot;</span>);
-        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
-    }
-    DWORD ProcID = atoi(argv[<span class="hljs-number">1</span>]);
-
-    <span class="hljs-comment">//DWORD ProcID = 32956;</span>
-
-    HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, ProcID);
-
-    HMODULE hNtdll = LoadLibraryA(<span class="hljs-string">&quot;ntdll.dll&quot;</span>);
-    <span class="hljs-keyword">if</span> (hNtdll == <span class="hljs-literal">NULL</span>)
-    {
-        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;&#x65E0;&#x6CD5;&#x52A0;&#x8F7D; ntdll.dll &#x5E93;\n&quot;</span>);
-        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
-    }
-
-    NtQueryInformationProcessPtr NtQueryInformationProcess = (NtQueryInformationProcessPtr)GetProcAddress(hNtdll, <span class="hljs-string">&quot;NtQueryInformationProcess&quot;</span>);
-
-    <span class="hljs-comment">//find base addr by peb</span>
-    PROCESS_BASIC_INFORMATION pbi;
-    ULONG ReturnLength;
-    NTSTATUS status = NtQueryInformationProcess(hProcess, <span class="hljs-number">0</span>, &amp;pbi, <span class="hljs-keyword">sizeof</span>(pbi), &amp;ReturnLength);
-    <span class="hljs-keyword">if</span> (status != <span class="hljs-number">0</span>)
-    {
-        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;NtQueryInformationProcess &#x5931;&#x8D25;&#xFF0C;&#x9519;&#x8BEF;&#x7801; %lu\n&quot;</span>, status);
-        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
-    }
-
-    PEB peb;
-    ReadProcessMemory(hProcess, pbi.PebBaseAddress, &amp;peb, <span class="hljs-keyword">sizeof</span>(peb), <span class="hljs-literal">NULL</span>);
-
-    PPEB_LDR_DATA ldrr = peb.Ldr;
-
-    PLIST_ENTRY pListEntry = ldrr-&gt;InMemoryOrderModuleList.Flink;
-
-    <span class="hljs-keyword">if</span> (!<span class="hljs-built_in">strcmp</span>(argv[<span class="hljs-number">1</span>], <span class="hljs-string">&quot;-a&quot;</span>) || !<span class="hljs-built_in">strcmp</span>(argv[<span class="hljs-number">1</span>], <span class="hljs-string">&quot;--a&quot;</span>))
-    {
-        <span class="hljs-keyword">while</span> (pListEntry != &amp;ldrr-&gt;InMemoryOrderModuleList)
-        {
-            PLDR_DATA_TABLE_ENTRY pEntry = CONTAINING_RECORD(pListEntry, LDR_DATA_TABLE_ENTRY, InMemoryOrderLinks);
-
-            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[+^+] Loaded DLL: LLLLL\tbase address: &lt;%p&gt;\n&quot;</span>, pEntry-&gt;FullDllName.Buffer, pEntry-&gt;DllBase);
-
-            pListEntry = pListEntry-&gt;Flink;
-        }
-    }
-    <span class="hljs-keyword">else</span>
-    {
-        <span class="hljs-keyword">while</span> (pListEntry != &amp;ldrr-&gt;InMemoryOrderModuleList)
-        {
-            PLDR_DATA_TABLE_ENTRY pEntry = CONTAINING_RECORD(pListEntry, LDR_DATA_TABLE_ENTRY, InMemoryOrderLinks);
-            <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[++] Loaded DLL: LLLLL\nbase address: &lt;%p&gt;\n\n&quot;</span>, pEntry-&gt;FullDllName.Buffer, pEntry-&gt;DllBase);
-            pListEntry = pListEntry-&gt;Flink;
-        }
-    }
-
-    <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;have a nice day :-)\n&quot;</span>);
-    CloseHandle(hProcess);
-
-    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-}
-</code></pre>
-<p>&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x7684;</p>
-<pre><code class="lang-c"><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;[++] Loaded DLL: LLLLL\nbase address: &lt;%p&gt;\n\n&quot;</span>, pEntry-&gt;FullDllName.Buffer, pEntry-&gt;DllBase);
-</code></pre>
-<p>&#x91CC;&#x9762;&#x7684;LLLLL&#x5E94;&#x8BE5;&#x662F;{%ws}&#xFF0C;&#x4F46;&#x662F;md&#x8BC6;&#x522B;&#x6709;&#x95EE;&#x9898;&#x3002;</p>
-<p>&#x601D;&#x8DEF;&#xFF1A;&#x901A;&#x8FC7;PEB&#x5B9A;&#x4F4D;&#x5230;LDR&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x5229;&#x7528;<code>InMemoryOrderModuleList</code>&#x8BBF;&#x95EE;&#x5230;<code>LDR_DATA_TABLE_ENTRY</code>&#x7ED3;&#x6784;&#x4F53;&#xFF0C;&#x7136;&#x540E;&#x901A;&#x8FC7;&#x91CC;&#x9762;&#x7684;<code>DllBase</code> <code>FullDllName</code>&#x6765;&#x8BBF;&#x95EE;&#x57FA;&#x5740;&#x548C;&#x6A21;&#x5757;&#x540D;&#x79F0;&#x3002;</p>
-<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _LDR_DATA_TABLE_ENTRY {
-    PVOID Reserved1[<span class="hljs-number">2</span>];
-    LIST_ENTRY InMemoryOrderLinks;
-    PVOID Reserved2[<span class="hljs-number">2</span>];
-    PVOID DllBase;
-    PVOID Reserved3[<span class="hljs-number">2</span>];
-    UNICODE_STRING FullDllName;
-    BYTE Reserved4[<span class="hljs-number">8</span>];
-    PVOID Reserved5[<span class="hljs-number">3</span>];
-<span class="hljs-meta">#<span class="hljs-meta-keyword">pragma</span> <span class="hljs-meta-keyword">warning</span>(push)</span>
-<span class="hljs-meta">#<span class="hljs-meta-keyword">pragma</span> <span class="hljs-meta-keyword">warning</span>(disable: 4201) <span class="hljs-comment">// we&apos;ll always use the Microsoft compiler</span></span>
-    <span class="hljs-keyword">union</span> {
-        ULONG CheckSum;
-        PVOID Reserved6;
-    } DUMMYUNIONNAME;
-<span class="hljs-meta">#<span class="hljs-meta-keyword">pragma</span> <span class="hljs-meta-keyword">warning</span>(pop)</span>
-    ULONG TimeDateStamp;
-} LDR_DATA_TABLE_ENTRY, *PLDR_DATA_TABLE_ENTRY;
-</code></pre>
-<p>&#x4F7F;&#x7528;&#x6548;&#x679C;</p>
-<p><img src="find_dll_in_proc/image-20230406192718247.png" alt="image-20230406192718247"> </p>
+                                <h1 id="&#x8C03;&#x7528;&#x7EA6;&#x5B9A;">&#x8C03;&#x7528;&#x7EA6;&#x5B9A;</h1>
+<p>&#x5B9A;&#x4E49;&#x5B50;&#x8FC7;&#x7A0B;&#x4ECE;&#x8C03;&#x7528;&#x5904;&#x63A5;&#x53D7;&#x53C2;&#x6570;&#x4EE5;&#x53CA;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x7684;&#x65B9;&#x6CD5;&#x7684;&#x7EA6;&#x5B9A;&#xFF0C;&#x5728;&#x5E38;&#x89C1;&#x7684;&#x8BB8;&#x591A;&#x8C03;&#x7528;&#x7EA6;&#x5B9A;&#x4E2D;&#xFF0C;&#x5C31;&#x662F;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x5982;&#x4E0B;&#x51E0;&#x4E2A;&#x95EE;&#x9898;&#xFF1A;</p>
+<ul>
+<li>&#x53C2;&#x6570;&#x548C;&#x8FD4;&#x56DE;&#x503C;&#x7684;&#x4F4D;&#x7F6E;</li>
+<li>&#x53C2;&#x6570;&#x4F20;&#x9012;&#x7684;&#x987A;&#x5E8F;</li>
+<li>&#x8C03;&#x7528;&#x524D;&#x540E;&#x7684;&#x6808;&#x6E05;&#x7406;&#x5DE5;&#x4F5C;</li>
+</ul>
+<p>&#x5E38;&#x89C1;&#x7684;&#x8C03;&#x7528;&#x7EA6;&#x5B9A;&#x6709;</p>
+<ul>
+<li>stdcall</li>
+<li>cdecl</li>
+<li>fastcall</li>
+<li>thiscall</li>
+<li>naked call</li>
+</ul>
+<h2 id="&#x53C2;&#x6570;&#x4F20;&#x9012;">&#x53C2;&#x6570;&#x4F20;&#x9012;</h2>
+<h3 id="32-bit">32-bit</h3>
+<h4 id="windows">Windows</h4>
+<h4 id="linux">linux</h4>
+<p>&#x65E0;&#x8BBA;&#x662F;Windows&#x8FD8;&#x662F;linux&#xFF0C;&#x5728;32&#x4F4D;&#x7A0B;&#x5E8F;&#x4E0B;&#x90FD;&#x662F;&#x4F7F;&#x7528;&#x7684; <strong>&#x6808;</strong> &#x6765;&#x4F20;&#x9012;&#xFF0C;&#x5148;&#x5C06;&#x53C2;&#x6570;push&#x5230;&#x6808;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x8FD4;&#x56DE;&#x5730;&#x5740;push&#x8FDB;&#x53BB;&#xFF0C;&#x7136;&#x540E;jmp&#x5230;&#x51FD;&#x6570;&#x5730;&#x5740;&#x3002;</p>
+<h3 id="64-bit">64-bit</h3>
+<h4 id="windows">Windows</h4>
+<p>&#x9ED8;&#x8BA4;&#x662F;&#x4F7F;&#x7528;fastcall&#x7684;&#x8C03;&#x7528;&#x7EA6;&#x5B9A;&#xFF0C;&#x524D;4&#x4E2A;&#x53C2;&#x6570;&#x4F7F;&#x7528;&#xFF1A;</p>
+<pre><code>rcx, rdx,r8, r9
+</code></pre><p>&#x6765;&#x4F20;&#x9012;&#x53C2;&#x6570;&#xFF0C;&#x591A;&#x4F59;&#x7684;&#x53C2;&#x6570;&#x653E;&#x5230;&#x6808;&#x4E2D;&#x4F20;&#x9012;</p>
+<h4 id="linux">linux</h4>
+<p>linux&#x4E0B;&#x7684;&#x524D;&#x516D;&#x4E2A;&#x53C2;&#x6570;&#x90FD;&#x662F;&#x4F7F;&#x7528;&#x5BC4;&#x5B58;&#x5668;&#x6765;&#x4F20;&#x9012;&#xFF0C;&#x591A;&#x4F59;&#x7684;&#x53C2;&#x6570;&#x653E;&#x5230;&#x6808;&#x4E0A;&#x6267;&#x884C;&#x3002;</p>
+<pre><code>rdi, rsi, rdx, rcx, r8, r9
+</code></pre><h2 id="stdcall">stdcall</h2>
+<p>&#x8FD9;&#x662F;win32 API&#x548C;WinMain&#x8FD8;&#x6709;CAllBACK&#x51FD;&#x6570;&#x7684;&#x9ED8;&#x8BA4;&#x7684;&#x8C03;&#x7528;&#x7EA6;&#x5B9A;&#xFF0C;&#x5728;C&#x8BED;&#x8A00;&#x4E2D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x524D;&#x7F00;&#x5173;&#x952E;&#x5B57;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x89C4;&#x5B9A;&#x91C7;&#x7528;&#x4F55;&#x79CD;&#x8C03;&#x7528;&#x7EA6;&#x5B9A;</p>
+<ul>
+<li>&#x53C2;&#x6570;<strong>&#x4ECE;&#x53F3;&#x5411;&#x5DE6;</strong>&#x538B;&#x5165;&#x5806;&#x6808;</li>
+<li>&#x51FD;&#x6570;&#x81EA;&#x8EAB;&#x4FEE;&#x6539;&#x5806;&#x6808;</li>
+<li>&#x51FD;&#x6570;&#x7684;&#x88C5;&#x9970;&#x540D;(decoration name/mangling name)&#x4E3A;&#x51FD;&#x6570;&#x540D;&#x81EA;&#x52A8;&#x52A0;&#x524D;&#x5BFC;&#x7684;&#x4E0B;&#x5212;&#x7EBF;, &#x540E;&#x9762;&#x7D27;&#x8DDF;&#x4E00;&#x4E2A;@&#x7B26;&#x53F7;, &#x5176;&#x540E;&#x7D27;&#x8DDF;&#x7740;&#x53C2;&#x6570;&#x7684;&#x5C3A;&#x5BF8;</li>
+</ul>
+<pre><code class="lang-c"><span class="hljs-keyword">int</span> __<span class="hljs-function">stdcall <span class="hljs-title">add</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b, <span class="hljs-keyword">int</span> c, <span class="hljs-keyword">int</span> d, <span class="hljs-keyword">int</span> e, <span class="hljs-keyword">int</span> f, <span class="hljs-keyword">int</span> g, <span class="hljs-keyword">int</span> h, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> j, <span class="hljs-keyword">int</span> k)</span>
+</span></code></pre>
+<p>&#x4E0A;&#x8FF0;&#x51FD;&#x6570;&#x4ECE;&#x6808;&#x7ED3;&#x6784;&#x53EF;&#x4EE5;&#x6E05;&#x695A;&#x7684;&#x770B;&#x5230;</p>
+<p><img src="&#x8C03;&#x7528;&#x7EA6;&#x5B9A;/image-20230409140225309.png" alt="image-20230409140225309"></p>
+<h2 id="cdecl">cdecl</h2>
+<p>cdecl&#x8C03;&#x7528;&#x7EA6;&#x5B9A;&#x53C8;&#x79F0;&#x4E3A;C&#x8C03;&#x7528;&#x7EA6;&#x5B9A;, &#x662F;C&#x8BED;&#x8A00;&#x7F3A;&#x7701;&#x7684;&#x8C03;&#x7528;&#x7EA6;&#x5B9A;, &#x5B83;&#x7684;&#x5B9A;&#x4E49;&#x8BED;&#x6CD5;&#x662F;:</p>
+<ol>
+<li><pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">function</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span> <span class="hljs-comment">//&#x4E0D;&#x52A0;&#x4FEE;&#x9970;&#x9ED8;&#x8BA4;&#x5C31;&#x662F;C&#x8C03;&#x7528;&#x7EA6;&#x5B9A;</span>
+<span class="hljs-keyword">int</span> __cdecl <span class="hljs-title">function</span><span class="hljs-params">(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b)</span> <span class="hljs-comment">//&#x660E;&#x786E;&#x6307;&#x5B9A;C&#x8C03;&#x7528;&#x7EA6;&#x5B9A;</span>
+</span></code></pre>
+</li>
+<li><p>&#x53C2;&#x6570;<strong>&#x4ECE;&#x53F3;&#x5411;&#x5DE6;</strong>&#x538B;&#x5165;&#x5806;&#x6808;</p>
+</li>
+<li>&#x51FD;&#x6570;<strong>&#x7684;&#x8C03;&#x7528;&#x8005;</strong>&#x4FEE;&#x6539;&#x5806;&#x6808;</li>
+</ol>
+<h2 id="fastcall">fastcall</h2>
+<p>&#x8FD9;&#x662F;win64&#x4F4D;&#x4E0B;&#x7684;&#x9ED8;&#x8BA4;&#x8C03;&#x7528;&#x65B9;&#x5F0F;</p>
+<ul>
+<li>&#x901A;&#x8FC7;rcx&#x3001;rdx&#x548C;r8&#xFF0C;r9&#x4F20;&#x9012;, &#x5176;&#x4ED6;&#x53C2;&#x6570;&#x901A;&#x8FC7;&#x4ECE;&#x53F3;&#x5411;&#x5DE6;&#x7684;&#x987A;&#x5E8F;&#x538B;&#x6808;</li>
+<li>&#x6D6E;&#x70B9;&#x6570;&#x53C2;&#x6570;&#x5728; XMM0L&#x3001;XMM1L&#x3001;XMM2L &#x548C; XMM3L &#x4E2D;&#x4F20;&#x9012;</li>
+<li>&#x88AB;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x6E05;&#x7406;&#x5806;&#x6808;</li>
+<li>&#x4FEE;&#x9970;&#x540D;&#x4E3A;&#x51FD;&#x6570;&#x540D;&#x524D;&#x52A0;&#x4E0A;&#x4E00;&#x4E2A;&#x201C;@&#x201D;&#x7B26;&#x53F7;&#xFF0C;&#x540E;&#x9762;&#x4E5F;&#x662F;&#x4E00;&#x4E2A;&#x201C;@&#x201D;&#x7B26;&#x53F7;&#x548C;&#x5176;&#x53C2;&#x6570;&#x7684;&#x5B57;&#x8282;&#x6570;</li>
+</ul>
+<h1 id="&#x65AD;&#x70B9;&#x7C7B;&#x578B;">&#x65AD;&#x70B9;&#x7C7B;&#x578B;</h1>
+<p>&#x5E38;&#x89C1;&#x65AD;&#x70B9;&#x7C7B;&#x578B;&#x5206;&#x4E3A;</p>
+<ul>
+<li>&#x8F6F;&#x4EF6;&#x65AD;&#x70B9;</li>
+<li>&#x786C;&#x4EF6;&#x65AD;&#x70B9;</li>
+<li>&#x5185;&#x5B58;&#x65AD;&#x70B9;</li>
+</ul>
+<h2 id="&#x8F6F;&#x4EF6;&#x65AD;&#x70B9;">&#x8F6F;&#x4EF6;&#x65AD;&#x70B9;</h2>
+<p>&#x53C8;&#x79F0;&#x4E3A;<code>int3</code>&#x65AD;&#x70B9;&#xFF0C;&#x8FD9;&#x79CD;&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x5C06;&#x5F53;&#x524D;&#x7684;&#x6307;&#x4EE4;&#x4FEE;&#x6539;&#x6210;<code>0xcc</code>&#xFF0C;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x5230;&#x8FD9;&#x91CC;&#x4F1A;&#x89E6;&#x53D1;&#x5F02;&#x5E38;&#xFF0C;&#x8C03;&#x8BD5;&#x5668;&#x6355;&#x83B7;&#x5230;&#x8FD9;&#x4E2A;&#x5F02;&#x5E38;&#xFF0C;&#x5B9E;&#x73B0;&#x65AD;&#x70B9;&#x7684;&#x529F;&#x80FD;</p>
+<h3 id="&#x7F3A;&#x70B9;">&#x7F3A;&#x70B9;</h3>
+<p>&#x4E0A;&#x8FF0;&#x65AD;&#x70B9;&#x4F1A;&#x4FEE;&#x6539;&#x7A0B;&#x5E8F;&#x7684;&#x5185;&#x5B58;&#xFF0C;&#x5982;&#x679C;&#x7A0B;&#x5E8F;&#x672C;&#x8EAB;&#x6709;&#x5B8C;&#x6574;&#x6027;&#x68C0;&#x67E5;&#x7684;&#x8BDD;&#x5C31;&#x4F1A;&#x51FA;&#x95EE;&#x9898;&#x3002;&#x75C5;&#x6BD2;&#x7A0B;&#x5E8F;&#x7ECF;&#x5E38;&#x68C0;&#x6D4B;&#x7A0B;&#x5E8F;&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x8FD0;&#x884C;&#x7684;&#x4EE3;&#x7801;&#x7684; CRC &#x503C;&#x662F;&#x5426;&#x76F8;&#x540C;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x540C;&#xFF0C;&#x8BF4;&#x660E;&#x6570;&#x636E;&#x88AB;&#x4FEE;&#x6539;&#xFF0C;&#x5219;&#x81EA;&#x52A8;&#x6740;&#x6389;&#x81EA;&#x5DF1;&#x3002;</p>
+<h2 id="&#x786C;&#x4EF6;&#x65AD;&#x70B9;">&#x786C;&#x4EF6;&#x65AD;&#x70B9;</h2>
+<h3 id="&#x7F3A;&#x70B9;">&#x7F3A;&#x70B9;</h3>
+<p>&#x53EA;&#x80FD;&#x8BBE;&#x7F6E;4&#x4E2A;&#xFF0C;&#x800C;&#x4E14;&#x9700;&#x8981;&#x5185;&#x5B58;&#x5BF9;&#x5176;&#xFF08;1&#xFF0C;2&#xFF0C;4&#xFF0C;8&#xFF09;&#x5B57;&#x8282;&#x7684;&#x65AD;&#x70B9;&#x7C7B;&#x578B;&#xFF0C;&#x90FD;&#x9700;&#x8981;&#x5BF9;&#x5176;&#xFF08;1&#x5B57;&#x8282;&#x7684;&#x4E0D;&#x9700;&#x8981;&#xFF09;&#x3002;</p>
+<h3 id="&#x4F7F;&#x7528;">&#x4F7F;&#x7528;</h3>
+<p>&#x4E00;&#x4E2A;CPU&#x4E00;&#x822C;&#x6709;8&#x4E2A;&#x8C03;&#x8BD5;&#x5BC4;&#x5B58;&#x5668;&#xFF08;DR0 ~ DR7 &#x5BC4;&#x5B58;&#x5668;&#xFF09;&#xFF0C;&#x7528;&#x4E8E;&#x7BA1;&#x7406;&#x786C;&#x4EF6;&#x65AD;&#x70B9;</p>
+<ul>
+<li>DR0 ~DR3&#xFF1A; &#x5B58;&#x50A8;&#x786C;&#x4EF6;&#x65AD;&#x70B9;&#x5730;&#x5740;&#x3002;</li>
+<li>DR4 &#x548C; DR5&#xFF1A; &#x4FDD;&#x7559;&#x3002;</li>
+<li>DR6&#xFF1A;&#x8C03;&#x8BD5;&#x72B6;&#x6001;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x7528;&#x4E8E;&#x5411;&#x8C03;&#x8BD5;&#x5668;&#x62A5;&#x544A;&#x4E8B;&#x4EF6;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x4EE5;&#x4F9B;&#x8C03;&#x8BD5;&#x5668;&#x5224;&#x65AD;&#x53D1;&#x751F;&#x7684;&#x662F;&#x4F55;&#x79CD;&#x4E8B;&#x4EF6;&#x3002;</li>
+<li>DR7&#xFF1A;&#x8C03;&#x8BD5;&#x63A7;&#x5236;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x7528;&#x4E8E;&#x5B9A;&#x4E49;&#x65AD;&#x70B9;&#x7684;&#x4E2D;&#x65AD;&#x6761;&#x4EF6;&#x3002;</li>
+</ul>
+<p>&#x8F6F;&#x4EF6;&#x65AD;&#x70B9;&#x662F;int3&#x65AD;&#x70B9;&#xFF0C;&#x786C;&#x4EF6;&#x65AD;&#x70B9;&#x662F;int1&#x65AD;&#x70B9;&#x3002;</p>
+<ul>
+<li>&#x5728; CPU &#x6BCF;&#x6B21;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x4E4B;&#x524D;&#xFF0C;&#x90FD;&#x4F1A;&#x5148;&#x786E;&#x8BA4;&#x5F53;&#x524D;&#x5C06;&#x6267;&#x884C;&#x7684;&#x4EE3;&#x7801;&#x7684;&#x5730;&#x5740;&#x662F;&#x5426;&#x662F;&#x786C;&#x4EF6;&#x65AD;&#x70B9;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x540C;&#x65F6;&#x4E5F;&#x8981;&#x786E;&#x8BA4;&#x662F;&#x5426;&#x6709;&#x4EE3;&#x7801;&#x8981;&#x8BBF;&#x95EE;&#x88AB;&#x8BBE;&#x7F6E;&#x4E86;&#x786C;&#x4EF6;&#x65AD;&#x70B9;&#x7684;&#x5185;&#x5B58;&#x533A;&#x57DF;&#x3002;</li>
+</ul>
+<p>&#x4E0A;&#x8FF0;&#x4FE9;&#x65AD;&#x70B9;&#x90FD;&#x53EA;&#x80FD;&#x5728;&#x6709;&#x9650;&#x7684;&#x533A;&#x57DF;&#x5185;&#x4E0B;&#x65AD;&#x70B9;&#xFF0C;&#x4E0D;&#x80FD;&#x5927;&#x9762;&#x79EF;&#x4E0B;&#x65AD;&#x70B9;&#x3002;&#x5728;&#x8131;&#x58F3;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x7528;&#x5230;&#x786C;&#x4EF6;&#x65AD;&#x70B9;&#x3002;</p>
+<h3 id="gdb">gdb</h3>
+<p>&#x5728;gdb&#x4E2D;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x547D;&#x4EE4;</p>
+<pre><code>hbreak
+</code></pre><p>&#x4E0B;&#x4E00;&#x4E2A;&#x786C;&#x4EF6;&#x65AD;&#x70B9;</p>
+<h2 id="&#x5185;&#x5B58;&#x65AD;&#x70B9;">&#x5185;&#x5B58;&#x65AD;&#x70B9;</h2>
+<h3 id="&#x4F18;&#x70B9;">&#x4F18;&#x70B9;</h3>
+<p>&#x53EF;&#x4EE5;&#x5927;&#x8303;&#x56F4;&#x7684;&#x4E0B;&#x65AD;&#x70B9;&#xFF0C;&#x5728;&#x8131;&#x58F3;&#x7684;&#x65F6;&#x5019;&#x5E38;&#x7528;&#x3002;</p>
+<h3 id="&#x672C;&#x8D28;">&#x672C;&#x8D28;</h3>
+<p>&#x4ED6;&#x5E76;&#x4E0D;&#x662F;&#x4FEE;&#x6539;&#x67D0;&#x4E00;&#x4E2A;&#x7279;&#x5B9A;&#x7684;&#x6307;&#x4EE4;&#xFF0C;&#x800C;&#x662F;&#x6539;&#x53D8;&#x4E86;&#x5185;&#x5B58;&#x4E2D;&#x67D0;&#x4E2A;&#x5757;&#x6216;&#x8005;&#x9875;&#x7684;&#x6743;&#x9650;&#x3002;</p>
+<ul>
+<li>&#x4E00;&#x4E2A;&#x5185;&#x5B58;&#x9875;&#x662F;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5904;&#x7406;&#x7684;&#x6700;&#x5C0F;&#x7684;&#x5185;&#x5B58;&#x5355;&#x4F4D;&#x3002;&#x4E00;&#x4E2A;&#x5185;&#x5B58;&#x9875;&#x88AB;&#x7533;&#x8BF7;&#x6210;&#x529F;&#x4EE5;&#x540E;&#xFF0C;&#x5C31;&#x62E5;&#x6709;&#x4E86;&#x4E00;&#x4E2A;<strong>&#x6743;&#x9650;&#x96C6;</strong>&#xFF0C;&#x5B83;&#x51B3;&#x5B9A;&#x4E86;&#x5185;&#x5B58;&#x8BE5;&#x5982;&#x4F55;&#x88AB;&#x8BBF;&#x95EE;&#x3002;<ul>
+<li>&#x53EF;&#x6267;&#x884C;&#x9875;&#xFF1A;&#x5141;&#x8BB8;&#x6267;&#x884C;&#x4F46;&#x4E0D;&#x5141;&#x8BB8;&#x8BFB;&#x6216;&#x5199;&#xFF0C;&#x5426;&#x5219;&#x629B;&#x51FA;&#x8BBF;&#x95EE;&#x5F02;&#x5E38;&#x3002;</li>
+<li>&#x53EF;&#x8BFB;&#x9875;&#xFF1A;&#x53EA;&#x5141;&#x8BB8;&#x4ECE;&#x9875;&#x9762;&#x4E2D;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#xFF0C;&#x5176;&#x4F59;&#x7684;&#x5219;&#x629B;&#x51FA;&#x8BBF;&#x95EE;&#x5F02;&#x5E38;&#x3002;</li>
+<li>&#x53EF;&#x5199;&#x9875;&#xFF1A;&#x5141;&#x8BB8;&#x5C06;&#x6570;&#x636E;&#x5199;&#x5165;&#x9875;&#x9762;&#x3002; </li>
+</ul>
+</li>
+</ul>
 <footer class="page-footer"><span class="copyright">&#x6CA1;&#x6709;&#x7248;&#x6743;&#xFF0C;&#x968F;&#x4FBF;&#x590D;&#x5236;&#xFF0C;&#x514D;&#x8D39;&#x7684;&#x77E5;&#x8BC6;&#x5E94;&#x8BE5;&#x5171;&#x4EAB; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2023-04-06 22:10:41
+2023-04-09 14:31:10
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -869,12 +858,12 @@
 
             
                 
-                <a href="../Development.html" class="navigation navigation-prev " aria-label="Previous page: Development">
+                <a href="../Basics.html" class="navigation navigation-prev " aria-label="Previous page: Basics">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="find_thread_in_process.html" class="navigation navigation-next " aria-label="Next page: Find Thread in Process">
+                <a href="elf文件结构.html" class="navigation navigation-next " aria-label="Next page: ELF structure">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -885,7 +874,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Find DLL in Process","level":"1.7.1","depth":2,"next":{"title":"Find Thread in Process","level":"1.7.2","depth":2,"path":"MyArticles/Development/find_thread_in_process.md","ref":"MyArticles/Development/find_thread_in_process.md","articles":[]},"previous":{"title":"Development","level":"1.7","depth":1,"path":"MyArticles/Development.md","ref":"MyArticles/Development.md","articles":[{"title":"Find DLL in Process","level":"1.7.1","depth":2,"path":"MyArticles/Development/find_dll_in_proc.md","ref":"MyArticles/Development/find_dll_in_proc.md","articles":[]},{"title":"Find Thread in Process","level":"1.7.2","depth":2,"path":"MyArticles/Development/find_thread_in_process.md","ref":"MyArticles/Development/find_thread_in_process.md","articles":[]},{"title":"构建qemu的持续学习","level":"1.7.3","depth":2,"path":"MyArticles/Development/Build-Arm.md","ref":"MyArticles/Development/Build-Arm.md","articles":[]},{"title":"查看父进程","level":"1.7.4","depth":2,"path":"MyArticles/Development/查看父进程.md","ref":"MyArticles/Development/查看父进程.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","custom-favicon","tbfed-pagefooter","popup","-sharing","sharing-plus","intopic-toc","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"没有版权，随便复制，免费的知识应该共享","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"./icon/book.ico","back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MyArticles/Development/find_dll_in_proc.md","mtime":"2023-04-06T14:10:41.984Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-09T14:20:22.983Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"调用约定和断点","level":"1.4.1","depth":2,"next":{"title":"ELF structure","level":"1.4.2","depth":2,"path":"MyArticles/Basics/elf文件结构.md","ref":"MyArticles/Basics/elf文件结构.md","articles":[]},"previous":{"title":"Basics","level":"1.4","depth":1,"path":"MyArticles/Basics.md","ref":"MyArticles/Basics.md","articles":[{"title":"调用约定和断点","level":"1.4.1","depth":2,"path":"MyArticles/Basics/调用约定和断点.md","ref":"MyArticles/Basics/调用约定和断点.md","articles":[]},{"title":"ELF structure","level":"1.4.2","depth":2,"path":"MyArticles/Basics/elf文件结构.md","ref":"MyArticles/Basics/elf文件结构.md","articles":[]},{"title":"PE structure","level":"1.4.3","depth":2,"path":"MyArticles/Basics/Pe File Structer.md","ref":"MyArticles/Basics/Pe File Structer.md","articles":[]},{"title":"ARM 基础学习","level":"1.4.4","depth":2,"path":"MyArticles/Basics/arm学习.md","ref":"MyArticles/Basics/arm学习.md","articles":[]},{"title":"Windows消息队列","level":"1.4.5","depth":2,"path":"MyArticles/Basics/Windows消息队列学习.md","ref":"MyArticles/Basics/Windows消息队列学习.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","custom-favicon","tbfed-pagefooter","popup","-sharing","sharing-plus","intopic-toc","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"没有版权，随便复制，免费的知识应该共享","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"./icon/book.ico","back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MyArticles/Basics/调用约定和断点.md","mtime":"2023-04-09T06:31:10.276Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-09T14:20:22.983Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -1,0 +1,1104 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>反调试以及沙箱对抗技巧收集 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="常见加密算法-学习.html" />
+    
+    
+    <link rel="prev" href="控制流平坦化.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../构建gitbook.html">
+            
+                <a href="../构建gitbook.html">
+            
+                    
+                    写在开始，how2gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Reverse.html">
+            
+                <a href="../Reverse.html">
+            
+                    
+                    Reverse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="控制流平坦化.html">
+            
+                <a href="控制流平坦化.html">
+            
+                    
+                    反控制流平坦化学习-angr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="反调试 & 沙箱对抗技巧收集.html">
+            
+                <a href="反调试 & 沙箱对抗技巧收集.html">
+            
+                    
+                    反调试以及沙箱对抗技巧收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="常见加密算法-学习.html">
+            
+                <a href="常见加密算法-学习.html">
+            
+                    
+                    加密解密学习 - 更
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="分组密码学习.html">
+            
+                <a href="分组密码学习.html">
+            
+                    
+                    分组密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="vmp3.5unpacke.html">
+            
+                <a href="vmp3.5unpacke.html">
+            
+                    
+                    vmp3.X 工具向脱壳
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Basics.html">
+            
+                <a href="../Basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Basics/调用约定和断点.html">
+            
+                <a href="../Basics/调用约定和断点.html">
+            
+                    
+                    调用约定和断点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Basics/elf文件结构.html">
+            
+                <a href="../Basics/elf文件结构.html">
+            
+                    
+                    ELF structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Basics/Pe File Structer.html">
+            
+                <a href="../Basics/Pe File Structer.html">
+            
+                    
+                    PE structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Basics/arm学习.html">
+            
+                <a href="../Basics/arm学习.html">
+            
+                    
+                    ARM 基础学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Basics/Windows消息队列学习.html">
+            
+                <a href="../Basics/Windows消息队列学习.html">
+            
+                    
+                    Windows消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Practice.html">
+            
+                <a href="../Practice.html">
+            
+                    
+                    Practice
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Practice/YouTubePremium.apk.html">
+            
+                <a href="../Practice/YouTubePremium.apk.html">
+            
+                    
+                    Malware-APK0
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Dailynotes.html">
+            
+                <a href="../Dailynotes.html">
+            
+                    
+                    Daily notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Dailynotes/pdf解析重组.html">
+            
+                <a href="../Dailynotes/pdf解析重组.html">
+            
+                    
+                    电子书清晰化的尝试 利用python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Dailynotes/ipv6_base_vps.html">
+            
+                <a href="../Dailynotes/ipv6_base_vps.html">
+            
+                    
+                    搭建ipv6自有服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Dailynotes/learn_shell.html">
+            
+                <a href="../Dailynotes/learn_shell.html">
+            
+                    
+                    Shell 学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Dailynotes/就业意向.html">
+            
+                <a href="../Dailynotes/就业意向.html">
+            
+                    
+                    就业意向
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Development.html">
+            
+                <a href="../Development.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Development/find_dll_in_proc.html">
+            
+                <a href="../Development/find_dll_in_proc.html">
+            
+                    
+                    Find DLL in Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Development/find_thread_in_process.html">
+            
+                <a href="../Development/find_thread_in_process.html">
+            
+                    
+                    Find Thread in Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Development/Build-Arm.html">
+            
+                <a href="../Development/Build-Arm.html">
+            
+                    
+                    构建qemu的持续学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Development/查看父进程.html">
+            
+                <a href="../Development/查看父进程.html">
+            
+                    
+                    查看父进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../CyberSec.html">
+            
+                <a href="../CyberSec.html">
+            
+                    
+                    CyberSec
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../CyberSec/免杀手法收集.html">
+            
+                <a href="../CyberSec/免杀手法收集.html">
+            
+                    
+                    免杀手法收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../CyberSec/yara.html">
+            
+                <a href="../CyberSec/yara.html">
+            
+                    
+                    YARA学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../CyberSec/关于bitcoin.html">
+            
+                <a href="../CyberSec/关于bitcoin.html">
+            
+                    
+                    啥是Bitcoin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../CyberSec/IOC-痛苦金字塔.html">
+            
+                <a href="../CyberSec/IOC-痛苦金字塔.html">
+            
+                    
+                    从痛苦金字塔学习分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../CyberSec/PEB和TEB.html">
+            
+                <a href="../CyberSec/PEB和TEB.html">
+            
+                    
+                    TEB & PEB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../CyberSec/进程注入-基础.html">
+            
+                <a href="../CyberSec/进程注入-基础.html">
+            
+                    
+                    进程注入-前置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../CyberSec/6种常见注入方式.html">
+            
+                <a href="../CyberSec/6种常见注入方式.html">
+            
+                    
+                    windows下的进程注入（6种）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../CyberSec/dll-inject.html">
+            
+                <a href="../CyberSec/dll-inject.html">
+            
+                    
+                    Dll注入的3.5种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Vulnerability_Mining.html">
+            
+                <a href="../Vulnerability_Mining.html">
+            
+                    
+                    Vulnerability Mining
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Vulnerability_Mining/Windows通用shellcode编写.html">
+            
+                <a href="../Vulnerability_Mining/Windows通用shellcode编写.html">
+            
+                    
+                    shellcode编写-地址定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../ToolUsage.html">
+            
+                <a href="../ToolUsage.html">
+            
+                    
+                    Tool usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../ToolUsage/Fiddler学习.html">
+            
+                <a href="../ToolUsage/Fiddler学习.html">
+            
+                    
+                    Fiddler学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../ToolUsage/windbg记录.html">
+            
+                <a href="../ToolUsage/windbg记录.html">
+            
+                    
+                    windbg使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >反调试以及沙箱对抗技巧收集</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#xFF08;&#x4E00;&#xFF09;&#x53CD;&#x8C03;&#x8BD5;">&#xFF08;&#x4E00;&#xFF09;&#x53CD;&#x8C03;&#x8BD5;</h1>
+<p>&#x5728;&#x653B;&#x51FB;&#x4E2D;&#xFF0C;&#x4E3A;&#x4E86;&#x9632;&#x6B62;&#x81EA;&#x5DF1;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x7684;&#x6CC4;&#x9732;&#xFF0C;&#x4F1A;&#x5BF9;&#x653B;&#x51FB;&#x6837;&#x672C;&#x672C;&#x8EAB;&#x8FDB;&#x884C;&#x53CD;&#x8C03;&#x8BD5;&#x548C;&#x6DF7;&#x6DC6;&#x64CD;&#x4F5C;&#x3002;</p>
+<h2 id="&#x4E00;&#x3001;api&#x53CD;&#x8C03;&#x8BD5;">&#x4E00;&#x3001;API&#x53CD;&#x8C03;&#x8BD5;</h2>
+<h3 id="isdebuggerpresent">IsDebuggerPresent</h3>
+<pre><code class="lang-c"><span class="hljs-function">BOOL <span class="hljs-title">IsDebuggerPresent</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<p>&#x7ECF;&#x5178;&#x7684;&#x53CD;&#x8C03;&#x8BD5;API&#xFF0C;&#x67E5;&#x8BE2;&#x8FDB;&#x7A0B;&#x73AF;&#x5883;&#x5757;(PEB)&#x4E2D;&#x7684;IsDebugged&#x6807;&#x5FD7;&#x3002;</p>
+<ul>
+<li>&#x6CA1;&#x6709;&#x8FD0;&#x884C;&#x5728;&#x8C03;&#x8BD5;&#x5668;&#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x51FD;&#x6570;&#x8FD4;&#x56DE;0&#xFF1B;</li>
+<li>&#x8C03;&#x8BD5;&#x9644;&#x52A0;&#x4E86;&#x8FDB;&#x7A0B;&#xFF0C;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x4E00;&#x4E2A;&#x975E;&#x96F6;&#x503C;&#x3002;</li>
+</ul>
+<p>&#x8FD9;&#x4E2A;&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x4FEE;&#x6539;&#x8FD4;&#x56DE;&#x503C;&#x53EF;&#x4EE5;&#x7ED5;&#x8FC7;&#x3002;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x5229;&#x7528;&#x201C;&#x9690;&#x85CF;&#x8C03;&#x8BD5;&#x5668;&#x201D;&#x9009;&#x9879;&#x5C31;&#x53EF;&#x4EE5;</p>
+<h3 id="checkremotedebuggerpresent">CheckRemoteDebuggerPresent</h3>
+<p>&#x548C;&#x4E0A;&#x8FF0;API&#x5B9E;&#x73B0;&#x8FC7;&#x7A0B;&#x57FA;&#x672C;&#x4E00;&#x81F4;</p>
+<pre><code class="lang-c"><span class="hljs-function">BOOL <span class="hljs-title">CheckRemoteDebuggerPresent</span><span class="hljs-params">(
+  [in]      HANDLE hProcess,    <span class="hljs-comment">// &#x8FDB;&#x7A0B;&#x7684;&#x53E5;&#x67C4;&#x3002;</span>
+  [in, out] PBOOL  pbDebuggerPresent        <span class="hljs-comment">// &#x8FDB;&#x7A0B;&#x88AB;&#x8C03;&#x8BD5;&#x5219;&#x8FD4;&#x56DE;TRUE</span>
+)</span></span>;
+</code></pre>
+<p>&#x901A;&#x8FC7;&#x4FEE;&#x6539;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x503C;&#x4E5F;&#x53EF;&#x4EE5;&#x7ED5;&#x8FC7;&#x3002;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x3002;</p>
+<h3 id="ntqueryinformationprocess">NtQueryInformationProcess</h3>
+<p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6CA1;&#x6709;&#x516C;&#x5F00;&#x7684;&#x5728;<code>ntdll.dll</code>&#x4E2D;&#x7684;api&#xFF0C;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x83B7;&#x53D6;&#x7A0B;&#x5E8F;&#x4E2D;&#x6307;&#x5B9A;&#x7684;&#x7ED3;&#x6784;&#x4F53;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x4ED6;&#x8BFB;&#x53D6;&#x4E00;&#x4E9B;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#x6765;&#x5224;&#x65AD;&#x8C03;&#x8BD5;&#x6280;&#x672F;&#x3002;&#x76F4;&#x63A5;&#x5229;&#x7528;&#x201C;&#x9690;&#x85CF;&#x8C03;&#x8BD5;&#x5668;&#x201D;&#x9009;&#x9879;&#x5C31;&#x53EF;&#x4EE5;</p>
+<h3 id="getlasterror">GetLastError</h3>
+<p>&#x8FD9;&#x4E2A;&#x9700;&#x8981;&#x548C;&#x51E0;&#x4E2A;API&#x642D;&#x914D;&#x4F7F;&#x7528;&#x3002;</p>
+<pre><code>OutputDebugStringA 
+SetLastError
+GetLastError
+</code></pre><p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8C03;&#x8BD5;&#x8FDB;&#x7A0B;&#x7684;&#x8BDD;&#xFF0C;&#x8FD9;&#x4E2A;api&#x5C31;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x53EF;&#x4EE5;&#x63D0;&#x524D;&#x4F7F;&#x7528;<code>SetLastError</code>&#x6765;&#x63D0;&#x524D;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x9519;&#x8BEF;&#x503C;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">OutputDebugStringA</span><span class="hljs-params">(
+  [in, optional] LPCSTR lpOutputString
+)</span></span>;
+</code></pre>
+<p>&#x5B8C;&#x4E8B;&#x6700;&#x540E;&#x5229;&#x7528;<code>GetLastError</code>&#x6765;&#x83B7;&#x53D6;&#x9519;&#x8BEF;&#x503C;&#xFF0C;&#x5982;&#x679C;&#x8C03;&#x8BD5;&#x7684;&#x8BDD;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x4F1A;&#x51FA;&#x73B0;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x5E38;&#x89C1;&#x642D;&#x914D;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-function">BOOL <span class="hljs-title">IsDebugger</span><span class="hljs-params">()</span>
+</span>{
+    DWORD errorValue = <span class="hljs-number">2234</span>;
+    SetLastError(errorValue);
+    OutputDebugString(<span class="hljs-string">&quot;Test for debugger!&quot;</span>);
+    <span class="hljs-keyword">return</span> (GetLastError() == errorValue)?TRUE:FALSE;
+}
+</code></pre>
+<p>&#x7C7B;&#x4F3C;&#x7684;&#x6A21;&#x677F;&#x4E5F;&#x53EF;&#x4EE5;&#x642D;&#x914D;&#x5176;&#x4ED6;&#x7684;API&#x51FD;&#x6570;&#x6765;&#x4F7F;&#x7528;&#x3002;</p>
+<p>&#x7ED5;&#x8FC7;&#x4E5F;&#x7B80;&#x5355;&#xFF0C;&#x8FD9;&#x4E2A;&#x4E0D;&#x4F1A;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x7A0B;&#x5E8F;&#xFF0C;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x8FD4;&#x56DE;&#x503C;&#x5C31;&#x884C;&#x3002;&#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x5229;&#x7528;&#x201C;&#x9690;&#x85CF;&#x8C03;&#x8BD5;&#x5668;&#x201D;&#x9009;&#x9879;&#x4E86;&#x3002;</p>
+<h3 id="zwsetinformationthread">ZwSetInformationThread</h3>
+<p>&#x8BBE;&#x7F6E;&#x7EBF;&#x7A0B;&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x3002;&#x901A;&#x8FC7;&#x4E3A;&#x7EBF;&#x7A0B;&#x8BBE;&#x7F6E; <strong>ThreadHideFromDebugger</strong>&#xFF0C;&#x53EF;&#x4EE5;&#x7981;&#x6B62;&#x7EBF;&#x7A0B;&#x4EA7;&#x751F;&#x8C03;&#x8BD5;&#x4E8B;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">NTSYSAPI NTSTATUS <span class="hljs-title">ZwSetInformationThread</span><span class="hljs-params">(
+  [in] HANDLE          ThreadHandle,
+  [in] THREADINFOCLASS ThreadInformationClass,
+  [in] PVOID           ThreadInformation,
+  [in] ULONG           ThreadInformationLength
+)</span></span>;
+</code></pre>
+<p>&#x539F;&#x7406;&#xFF1A;&#x8C03;&#x8BD5;&#x8FDB;&#x7A0B;&#x5C31;&#x4F1A;&#x88AB;&#x5206;&#x79BB;&#x51FA;&#x6765;&#x3002;&#x8BE5;&#x51FD;&#x6570;&#x4E0D;&#x4F1A;&#x5BF9;&#x6B63;&#x5E38;&#x8FD0;&#x884C;&#x7684;&#x7A0B;&#x5E8F;&#x4EA7;&#x751F;&#x4EFB;&#x4F55;&#x5F71;&#x54CD;&#xFF0C;&#x4F46;&#x82E5;&#x8FD0;&#x884C;&#x7684;&#x662F;&#x8C03;&#x8BD5;&#x5668;&#x7A0B;&#x5E8F;&#xFF0C;&#x56E0;&#x4E3A;&#x8BE5;&#x51FD;&#x6570;&#x9690;&#x85CF;&#x4E86;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#xFF0C;&#x8C03;&#x8BD5;&#x5668;&#x65E0;&#x6CD5;&#x518D;&#x6536;&#x5230;&#x8BE5;&#x7EBF;&#x7A0B;&#x7684;&#x8C03;&#x8BD5;&#x4E8B;&#x4EF6;&#xFF0C;&#x6700;&#x7EC8;&#x505C;&#x6B62;&#x8C03;&#x8BD5;</p>
+<p>&#x7ED5;&#x8FC7;&#x65B9;&#x5F0F;&#xFF1A;<strong>&#x7B2C; 2 &#x4E2A;&#x53C2;&#x6570;</strong>&#x4E3A; ThreadHideFromDebugger&#xFF0C;&#x5176;&#x503C;&#x4E3A; <strong>0x11</strong>&#x3002;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x8FD9;&#x4E2A;&#x503C;&#x5C31;&#x53EF;&#x4EE5;</p>
+<h3 id="debugactiveprocessstop">debugActiveProcessStop</h3>
+<p>&#x505C;&#x6B62;&#x8C03;&#x8BD5;&#x5668;&#x6307;&#x5B9A;&#x7684;&#x8FDB;&#x7A0B;</p>
+<pre><code class="lang-c"><span class="hljs-function">BOOL <span class="hljs-title">DebugActiveProcessStop</span><span class="hljs-params">(
+  [in] DWORD dwProcessId    <span class="hljs-comment">// &#x60F3;&#x505C;&#x6B62;&#x7684;&#x8C03;&#x8BD5;&#x8FDB;&#x7A0B;&#x7684;&#x8FDB;&#x7A0B;&#x53F7;</span>
+)</span></span>;
+</code></pre>
+<p>&#x51FD;&#x6570;&#x5931;&#x8D25;&#xFF0C;&#x5219;&#x8FD4;&#x56DE;&#x503C;&#x4E3A;&#x96F6;</p>
+<h3 id="&#x67E5;&#x627E;&#x7A97;&#x4F53;&#x4FE1;&#x606F;">&#x67E5;&#x627E;&#x7A97;&#x4F53;&#x4FE1;&#x606F;</h3>
+<h4 id="findwindow">FindWindow</h4>
+<p>&#x68C0;&#x7D22;&#x9876;&#x7EA7;&#x7A97;&#x53E3;&#x7684;&#x53E5;&#x67C4;&#xFF0C;&#x8BE5;&#x7A97;&#x53E3;&#x7684;&#x7C7B;&#x540D;&#x79F0;&#x548C;&#x7A97;&#x53E3;&#x540D;&#x79F0;&#x4E0E;&#x6307;&#x5B9A;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x5339;&#x914D;&#x3002; &#x6B64;&#x51FD;&#x6570;&#x4E0D;&#x641C;&#x7D22;&#x5B50;&#x7A97;&#x53E3;&#x3002; &#x6B64;&#x51FD;&#x6570;&#x4E0D;&#x6267;&#x884C;&#x533A;&#x5206;&#x5927;&#x5C0F;&#x5199;&#x7684;&#x641C;&#x7D22;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">HWND <span class="hljs-title">FindWindowW</span><span class="hljs-params">(
+  [in, optional] LPCWSTR lpClassName,
+  [in, optional] LPCWSTR lpWindowName
+)</span></span>;
+</code></pre>
+<p>&#x76F4;&#x63A5;&#x7528;&#x5B83;&#x548C;&#x4E00;&#x4E9B;&#x8C03;&#x8BD5;&#x5668;&#x7684;&#x540D;&#x79F0;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x5C31;&#x884C;&#x3002;&#x7ED5;&#x8FC7;&#x4E5F;&#x662F;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x8FD4;&#x56DE;&#x503C;&#x6216;&#x8005;&#x662F;&#x4FEE;&#x6539;&#x5B57;&#x7B26;&#x4E32;&#x3002;</p>
+<h4 id="enumwindows">EnumWindows</h4>
+<p>&#x901A;&#x8FC7;&#x5C06;&#x53E5;&#x67C4;&#x4F20;&#x9012;&#x5230;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5B9A;&#x4E49;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#xFF0C;&#x679A;&#x4E3E;&#x5C4F;&#x5E55;&#x4E0A;&#x7684;&#x6240;&#x6709;&#x9876;&#x7EA7;&#x7A97;&#x53E3;&#x3002; <strong>&#x679A;&#x4E3E;&#x679A;&#x4E3E;</strong> &#x5230;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x9876;&#x7EA7;&#x7A97;&#x53E3;&#x6216;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x8FD4;&#x56DE; <strong>FALSE</strong> &#x4E3A;&#x6B62;&#x3002;&#x5E76;&#x5C06;&#x7A97;&#x53E3;&#x53E5;&#x67C4;&#x4F20;&#x9001;&#x7ED9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x5B9A;&#x4E49;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">BOOL <span class="hljs-title">EnumWindows</span><span class="hljs-params">(
+  [in] WNDENUMPROC lpEnumFunc,
+  [in] LPARAM      lParam
+)</span></span>;
+</code></pre>
+<p>&#x5E38;&#x7528;&#x4EE3;&#x7801;&#x7ED3;&#x6784;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">BOOL CALLBACK <span class="hljs-title">EnumWndProc</span><span class="hljs-params">(HWND hwnd, LPARAM lParam)</span>  
+</span>{  
+    <span class="hljs-keyword">char</span> cur_window[<span class="hljs-number">1024</span>];
+    GetWindowTextA(hwnd, cur_window, <span class="hljs-number">1023</span>);
+    <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strstr</span>(cur_window, <span class="hljs-string">&quot;WinDbg&quot;</span>)!=<span class="hljs-literal">NULL</span> || <span class="hljs-built_in">strstr</span>(cur_window, <span class="hljs-string">&quot;x64_dbg&quot;</span>)!=<span class="hljs-literal">NULL</span> || <span class="hljs-built_in">strstr</span>(cur_window, <span class="hljs-string">&quot;OllyICE&quot;</span>)!=<span class="hljs-literal">NULL</span> || <span class="hljs-built_in">strstr</span>(cur_window, <span class="hljs-string">&quot;OllyDBG&quot;</span>)!=<span class="hljs-literal">NULL</span> || <span class="hljs-built_in">strstr</span>(cur_window, <span class="hljs-string">&quot;Immunity&quot;</span>)!=<span class="hljs-literal">NULL</span>)
+    {
+        *((BOOL*)lParam) = TRUE;
+    }
+    <span class="hljs-keyword">return</span> TRUE;
+}
+</code></pre>
+<h3 id="&#x67E5;&#x627E;&#x8FDB;&#x7A0B;&#x4FE1;&#x606F;">&#x67E5;&#x627E;&#x8FDB;&#x7A0B;&#x4FE1;&#x606F;</h3>
+<h4 id="&#x904D;&#x5386;&#x8FDB;&#x7A0B;&#x5217;&#x8868;">&#x904D;&#x5386;&#x8FDB;&#x7A0B;&#x5217;&#x8868;</h4>
+<p>&#x901A;&#x8FC7;&#x8FDB;&#x7A0B;&#x5FEB;&#x7167;&#x6765;&#x904D;&#x5386;&#x8FDB;&#x7A0B;&#x5217;&#x8868;&#xFF0C;&#x901A;&#x8FC7;&#x5B57;&#x7B26;&#x4E32;&#x6BD4;&#x8F83;&#x6765;&#x5224;&#x65AD;&#xFF0C;&#x7ED5;&#x8FC7;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x5B57;&#x7B26;&#x4E32;&#x5C31;&#x884C;</p>
+<h4 id="&#x67E5;&#x770B;&#x7236;&#x8FDB;&#x7A0B;">&#x67E5;&#x770B;&#x7236;&#x8FDB;&#x7A0B;</h4>
+<p>Windows&#x4E00;&#x822C;&#x9ED8;&#x8BA4;&#x7684;&#x7236;&#x8FDB;&#x7A0B;&#x5C31;&#x662F;<code>explore</code>&#xFF0C;&#x540C;&#x65F6;<code>STARTUPINFO</code>&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x4FE1;&#x606F;&#x4E5F;&#x662F;0&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x4E5F;&#x597D;&#x7ED5;&#x8FC7;&#xFF0C;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x5B57;&#x7B26;&#x4E32;&#x6216;&#x8005;&#x662F;&#x7ED5;&#x8FC7;&#x5C31;&#x884C;&#x4E86;&#x3002;</p>
+<h3 id="&#x4EE3;&#x7801;&#x6821;&#x9A8C;&#x548C;&#x68C0;&#x67E5;">&#x4EE3;&#x7801;&#x6821;&#x9A8C;&#x548C;&#x68C0;&#x67E5;</h3>
+<p>&#x8BA1;&#x7B97;&#x4EE3;&#x7801;&#x6BB5;&#x7684;&#x6821;&#x9A8C;&#x5E76;&#x5B9E;&#x73B0;&#x4E0E;&#x626B;&#x63CF;&#x4E2D;&#x65AD;&#x76F8;&#x540C;&#x7684;&#x76EE;&#x7684;&#x3002;&#x4E0E;&#x626B;&#x63CF;0xCC&#x4E0D;&#x540C;&#xFF0C;&#x8FD9;&#x79CD;&#x68C0;&#x67E5;&#x4EC5;&#x6267;&#x884C;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x4E2D;&#x673A;&#x5668;&#x7801;CRC&#x6216;&#x8005;MD5&#x6821;&#x9A8C;&#x548C;&#x68C0;&#x67E5;&#x3002;</p>
+<h3 id="&#x65F6;&#x949F;&#x68C0;&#x6D4B;">&#x65F6;&#x949F;&#x68C0;&#x6D4B;</h3>
+<p>&#x5982;&#x4E0B;&#x4E24;&#x79CD;&#x7528;&#x65F6;&#x949F;&#x68C0;&#x6D4B;&#x6765;&#x63A2;&#x6D4B;&#x8C03;&#x8BD5;&#x5668;&#x5B58;&#x5728;&#x7684;&#x65B9;&#x6CD5;&#x3002;</p>
+<ul>
+<li>&#x8BB0;&#x5F55;&#x4E00;&#x6BB5;&#x64CD;&#x4F5C;&#x524D;&#x540E;&#x7684;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x7136;&#x540E;&#x6BD4;&#x8F83;&#x8FD9;&#x4E24;&#x4E2A;&#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5982;&#x679C;&#x5B58;&#x5728;&#x6EDE;&#x540E;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x5B58;&#x5728;&#x8C03;&#x8BD5;&#x5668;&#x3002;</li>
+<li>&#x8BB0;&#x5F55;&#x89E6;&#x53D1;&#x4E00;&#x4E2A;&#x5F02;&#x5E38;&#x524D;&#x540E;&#x7684;&#x65F6;&#x95F4;&#x6233;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x8C03;&#x8BD5;&#x8FDB;&#x7A0B;&#xFF0C;&#x53EF;&#x4EE5;&#x5F88;&#x5FEB;&#x5904;&#x7406;&#x5B8C;&#x5F02;&#x5E38;&#xFF0C;&#x56E0;&#x4E3A;&#x8C03;&#x8BD5;&#x5668;&#x5904;&#x7406;&#x5F02;&#x5E38;&#x7684;&#x901F;&#x5EA6;&#x975E;&#x5E38;&#x6162;&#x3002;</li>
+</ul>
+<h4 id="rdtsc">rdtsc</h4>
+<p>&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x6C47;&#x7F16;&#x6307;&#x4EE4;&#x3002;</p>
+<p>&#x5B83;&#x8FD4;&#x56DE;&#x81F3;&#x7CFB;&#x7EDF;&#x91CD;&#x65B0;&#x542F;&#x52A8;&#x4EE5;&#x6765;&#x7684;&#x65F6;&#x949F;&#x6570;&#xFF0C;&#x5E76;&#x4E14;&#x5C06;&#x5176;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;64&#x4F4D;&#x7684;&#x503C;&#x5B58;&#x5165;EDX:EAX&#x4E2D;&#x3002;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x4E24;&#x6B21;rdtsc&#x6307;&#x4EE4;&#xFF0C;&#x7136;&#x540E;&#x6BD4;&#x8F83;&#x4E24;&#x6B21;&#x8BFB;&#x53D6;&#x4E4B;&#x95F4;&#x7684;&#x5DEE;&#x503C;&#x3002;</p>
+<h4 id="queryperformancecounter&#x548C;gettickcount">QueryPerformanceCounter&#x548C;GetTickCount</h4>
+<p>QueryPerformanceCounter&#xFF1A;&#x68C0;&#x7D22;&#x6027;&#x80FD;&#x8BA1;&#x6570;&#x5668;&#x7684;&#x5F53;&#x524D;&#x503C;&#xFF0C;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x9AD8;&#x5206;&#x8FA8;&#x7387; (&lt;1us) &#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x53EF;&#x7528;&#x4E8E;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x5EA6;&#x91CF;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">BOOL <span class="hljs-title">QueryPerformanceCounter</span><span class="hljs-params">(
+  [out] LARGE_INTEGER *lpPerformanceCount    <span class="hljs-comment">// &#x63A5;&#x6536;&#x5F53;&#x524D;&#x6027;&#x80FD;&#x8BA1;&#x6570;&#x5668;&#x503C;&#x7684;&#x53D8;&#x91CF;&#x7684;&#x6307;&#x9488;</span>
+)</span></span>;
+</code></pre>
+<p>GetTickCount&#xFF1A;&#x68C0;&#x7D22;&#x81EA;&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x4EE5;&#x6765;&#x5DF2;&#x7528;&#x8FC7;&#x7684;&#x6BEB;&#x79D2;&#x6570;&#xFF0C;&#x6700;&#x957F;&#x4E3A; 49.7 &#x5929;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">DWORD <span class="hljs-title">GetTickCount</span><span class="hljs-params">()</span></span>;
+</code></pre>
+<h2 id="&#x4E8C;&#x3001;&#x624B;&#x5DE5;&#x53CD;&#x8C03;&#x8BD5;">&#x4E8C;&#x3001;&#x624B;&#x5DE5;&#x53CD;&#x8C03;&#x8BD5;</h2>
+<h3 id="&#x624B;&#x52A8;&#x68C0;&#x67E5;&#x76F8;&#x5173;&#x7ED3;&#x6784;">&#x624B;&#x52A8;&#x68C0;&#x67E5;&#x76F8;&#x5173;&#x7ED3;&#x6784;</h3>
+<p>&#x4F7F;&#x7528;&#x4E0A;&#x8FF0;&#x63D0;&#x5230;&#x7684;&#x68C0;&#x6D4B;&#x8C03;&#x8BD5;&#x7684;api&#x5F88;&#x5BB9;&#x6613;&#x88AB;&#x53D1;&#x73B0;&#x7ED5;&#x8FC7;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x7684;&#x5B9E;&#x73B0;&#x4E0A;&#x8FF0;api&#x7684;&#x529F;&#x80FD;&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#x68C0;&#x67E5;ProcessHeap&#x4F4D;&#x4E8E;PEB&#x7ED3;&#x6784;&#x7684;0x18&#x5904;&#x3002;&#x7B2C;&#x4E00;&#x4E2A;&#x5806;&#x5934;&#x90E8;&#x6709;&#x4E00;&#x4E2A;&#x5C5E;&#x6027;&#x5B57;&#x6BB5;&#xFF0C;&#x5B83;&#x544A;&#x8BC9;&#x5185;&#x6838;&#x8FD9;&#x4E2A;&#x5806;&#x662F;&#x5426;&#x5728;&#x8C03;&#x8BD5;&#x5668;&#x4E2D;&#x521B;&#x5EFA;&#x3002;</p>
+<p>&#x5728;&#x4E0D;&#x540C;&#x7684;&#x73AF;&#x5883;&#x4E0B;&#x4F1A;&#x663E;&#x793A;&#x4E0D;&#x540C;&#x7684;&#x503C;&#x3002;</p>
+<h3 id="&#x8F6F;&#x4EF6;&#x65AD;&#x70B9;&#x68C0;&#x67E5;">&#x8F6F;&#x4EF6;&#x65AD;&#x70B9;&#x68C0;&#x67E5;</h3>
+<p>&#x6076;&#x610F;&#x4EE3;&#x7801;&#x5E38;&#x7528;&#x7684;&#x4E00;&#x79CD;&#x53CD;&#x8C03;&#x8BD5;&#x6280;&#x672F;&#x662F;&#x5728;&#x5B83;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x67E5;&#x627E;&#x673A;&#x5668;&#x7801;0xCC&#xFF0C;&#x6765;&#x626B;&#x63CF;&#x8C03;&#x8BD5;&#x5668;&#x5BF9;&#x5B83;&#x4EE3;&#x7801;&#x7684;INT 3&#x4FEE;&#x6539;&#x3002;<strong>repne scasb</strong>&#x6307;&#x4EE4;&#x7528;&#x4E8E;&#x5728;&#x4E00;&#x6BB5;&#x6570;&#x636E;&#x7F13;&#x51B2;&#x533A;&#x4E2D;&#x641C;&#x7D22;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x3002;EDI&#x9700;&#x6307;&#x5411;&#x7F13;&#x51B2;&#x533A;&#x5730;&#x5740;&#xFF0C;AL&#x5219;&#x5305;&#x542B;&#x8981;&#x627E;&#x7684;&#x5B57;&#x8282;&#xFF0C;ECX&#x8BBE;&#x4E3A;&#x7F13;&#x51B2;&#x533A;&#x7684;&#x957F;&#x5EA6;&#x3002;&#x5F53;ECX=0&#x6216;&#x627E;&#x5230;&#x8BE5;&#x5B57;&#x8282;&#x65F6;&#xFF0C;&#x6BD4;&#x8F83;&#x505C;&#x6B62;&#x3002;</p>
+<h3 id="&#x786C;&#x4EF6;&#x65AD;&#x70B9;&#x68C0;&#x67E5;">&#x786C;&#x4EF6;&#x65AD;&#x70B9;&#x68C0;&#x67E5;</h3>
+<p>&#x5728;Windows&#x4E0B;&#x901A;&#x8FC7;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x4E0A;&#x4E0B;&#x6587;&#x4FE1;&#x606F;<code>context</code>&#x6765;&#x83B7;&#x5F97;&#x5230;DR0-DR7&#x8FD9;&#x4E9B;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x786C;&#x4EF6;&#x65AD;&#x70B9;&#xFF0C;&#x5219;&#x8FD9;&#x51E0;&#x4E2A;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x503C;&#x90FD;&#x662F;0&#x3002;</p>
+<h3 id="&#x4F7F;&#x7528;tls&#x56DE;&#x8C03;">&#x4F7F;&#x7528;TLS&#x56DE;&#x8C03;</h3>
+<p>&#x901A;&#x8FC7;&#x6CE8;&#x518C;TLS&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5728;&#x51FD;&#x6570;&#x5165;&#x53E3;&#x70B9;&#x4E4B;&#x524D;&#x6267;&#x884C;&#x4EE3;&#x7801;&#xFF0C;&#x53EF;&#x4EE5;&#x8D77;&#x5230;&#x76EE;&#x7684;&#x3002;&#x4F46;&#x662F;&#x53EF;&#x4EE5;&#x5C06;&#x65AD;&#x70B9;&#x8BBE;&#x7F6E;<code>TLS&#x5F00;&#x59CB;</code>&#x7684;&#x4F4D;&#x7F6E;&#x6765;&#x65AD;&#x4F4F;&#xFF0C;ida&#x5206;&#x6790;&#x4E5F;&#x5F88;&#x7B80;&#x5355;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x6B63;&#x5E38;&#x7F16;&#x8BD1;&#x7684;&#x7A0B;&#x5E8F;&#x4F1A;&#x5F00;&#x542F;TLS&#x529F;&#x80FD;&#xFF0C;&#x8FD9;&#x65F6;&#x5C31;&#x53EF;&#x4EE5;&#x627E;&#x5230;<code>TLS&#x8868;</code>&#xFF0C;TLS&#x7684;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_TLS_DIRECTORY64 {
+    ULONGLONG StartAddressOfRawData;
+    ULONGLONG EndAddressOfRawData;
+    ULONGLONG AddressOfIndex;         <span class="hljs-comment">// PDWORD</span>
+    ULONGLONG AddressOfCallBacks;     <span class="hljs-comment">// PIMAGE_TLS_CALLBACK *;</span>
+    DWORD SizeOfZeroFill;
+    <span class="hljs-keyword">union</span> {
+        DWORD Characteristics;
+        <span class="hljs-keyword">struct</span> {
+            DWORD Reserved0 : <span class="hljs-number">20</span>;
+            DWORD Alignment : <span class="hljs-number">4</span>;
+            DWORD Reserved1 : <span class="hljs-number">8</span>;
+        } DUMMYSTRUCTNAME;
+    } DUMMYUNIONNAME;
+
+} IMAGE_TLS_DIRECTORY64;
+
+
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _IMAGE_TLS_DIRECTORY32 {
+    DWORD   StartAddressOfRawData;
+    DWORD   EndAddressOfRawData;
+    DWORD   AddressOfIndex;             <span class="hljs-comment">// PDWORD</span>
+    DWORD   AddressOfCallBacks;         <span class="hljs-comment">// PIMAGE_TLS_CALLBACK *</span>
+    DWORD   SizeOfZeroFill;
+    <span class="hljs-keyword">union</span> {
+        DWORD Characteristics;
+        <span class="hljs-keyword">struct</span> {
+            DWORD Reserved0 : <span class="hljs-number">20</span>;
+            DWORD Alignment : <span class="hljs-number">4</span>;
+            DWORD Reserved1 : <span class="hljs-number">8</span>;
+        } DUMMYSTRUCTNAME;
+    } DUMMYUNIONNAME;
+
+} IMAGE_TLS_DIRECTORY32;
+<span class="hljs-keyword">typedef</span> IMAGE_TLS_DIRECTORY32 * PIMAGE_TLS_DIRECTORY32;
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5728;&#x6E90;&#x4EE3;&#x7801;&#x4E2D;&#x6DFB;&#x52A0;&#x6216;&#x8005;&#x5728;&#x4E8C;&#x8FDB;&#x5236;&#x7A0B;&#x5E8F;&#x4E2D;&#x624B;&#x52A8;&#x6DFB;&#x52A0;&#x3002;&#x8FD9;&#x4E2A;&#x540E;&#x7EED;&#x518D;&#x8BF4;&#x3002;</p>
+<h3 id="&#x4E2D;&#x65AD;">&#x4E2D;&#x65AD;</h3>
+<p>&#x8C03;&#x8BD5;&#x5668;&#x4F7F;&#x7528;INT 3&#x6765;&#x8BBE;&#x7F6E;&#x8F6F;&#x4EF6;&#x65AD;&#x70B9;&#xFF0C;&#x6240;&#x4EE5;&#x4E00;&#x79CD;&#x53CD;&#x8C03;&#x8BD5;&#x6280;&#x672F;&#x5C31;&#x662F;&#x5728;&#x5408;&#x6CD5;&#x4EE3;&#x7801;&#x6BB5;&#x4E2D;&#x63D2;&#x5165;0xCC(INT 3)&#x6B3A;&#x9A97;&#x8C03;&#x8BD5;&#x5668;&#xFF0C;&#x4F7F;&#x5176;&#x8BA4;&#x4E3A;&#x8FD9;&#x4E9B;0xCC&#x673A;&#x5668;&#x7801;&#x662F;&#x81EA;&#x5DF1;&#x8BBE;&#x7F6E;&#x7684;&#x65AD;&#x70B9;&#x3002;&#x5728;CTF&#x7ADE;&#x8D5B;&#x4E2D;&#x65F6;&#x5E38;&#x4F1A;&#x89C1;&#x5230;&#x8FD9;&#x4E2A;&#x53CD;&#x8C03;&#x8BD5;&#x624B;&#x6BB5;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">BOOL <span class="hljs-title">CheckDebug</span><span class="hljs-params">()</span>
+</span>{
+      __try
+      {
+            __asm <span class="hljs-keyword">int</span> <span class="hljs-number">3</span>
+      }
+      __except(<span class="hljs-number">1</span>)
+      {
+            <span class="hljs-keyword">return</span> FALSE;
+      }
+      <span class="hljs-keyword">return</span> TRUE;
+}
+</code></pre>
+<p>&#x4E0A;&#x8FF0;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x7A0B;&#x5E8F;&#x6B63;&#x5E38;&#x6267;&#x884C;&#x7684;&#x8BDD;&#xFF0C;&#x6267;&#x884C;&#x5230;<code>int3</code>&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x89E6;&#x53D1;&#x5F02;&#x5E38;&#x8FD4;&#x56DE;FALSE&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x8C03;&#x8BD5;&#x5668;&#x5B58;&#x5728;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x8FD4;&#x56DE;TRUE&#x3002;</p>
+<p>&#x6309;&#x7167; &#x4E0A;&#x8FF0;&#x601D;&#x8DEF;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;&#x89E6;&#x53D1;&#x5F02;&#x5E38;&#x6765;&#x63A7;&#x5236;&#x7A0B;&#x5E8F;&#x6D41;&#x8FBE;&#x5230;&#x53CD;&#x8C03;&#x8BD5;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+<p>&#x4F8B;&#x5982;jmp&#x5230;&#x975E;&#x6CD5;&#x5730;&#x5740;&#xFF0C;&#x9664;&#x4EE5;0&#x4E4B;&#x7C7B;&#x7684;&#x65B9;&#x5F0F;&#x3002;</p>
+<h3 id="&#x9677;&#x9631;&#x6807;&#x5FD7;&#x4F4D;">&#x9677;&#x9631;&#x6807;&#x5FD7;&#x4F4D;</h3>
+<p>EFLAGS&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x7B2C;&#x516B;&#x4E2A;&#x6BD4;&#x7279;&#x4F4D;&#x662F;&#x9677;&#x9631;&#x6807;&#x5FD7;&#x4F4D;&#x3002;&#x5982;&#x679C;&#x8BBE;&#x7F6E;&#x4E86;&#xFF0C;&#x5C31;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x5355;&#x6B65;&#x5F02;&#x5E38;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x5F02;&#x5E38;&#x5C31;&#x662F;f8&#x548C;f7&#x7684;&#x5B9E;&#x73B0;&#x539F;&#x7406;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">BOOL <span class="hljs-title">CheckDebug</span><span class="hljs-params">()</span>
+</span>{
+      __try
+      {
+            __asm
+            {
+                  pushfd     
+                  or word ptr[esp], <span class="hljs-number">0x100</span>            
+                  popfd
+                  nop        
+            }
+      }
+      __except(<span class="hljs-number">1</span>)
+      {
+            <span class="hljs-keyword">return</span> FALSE;
+      }
+      <span class="hljs-keyword">return</span> TRUE;
+}
+</code></pre>
+<h3 id="&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#x7ED3;&#x6784;">&#x4FEE;&#x6539;&#x6587;&#x4EF6;&#x7ED3;&#x6784;</h3>
+<p>&#x6709;&#x4E9B;&#x8C03;&#x8BD5;&#x5668;&#x6BD4;&#x5982;OD&#xFF0C;&#x4E25;&#x683C;&#x6309;&#x7167;COFF&#x7684;&#x6587;&#x4EF6;&#x683C;&#x5F0F;&#x6765;&#x8BFB;&#x53D6;&#x6587;&#x4EF6;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x4FEE;&#x6539;&#x7A0B;&#x5E8F;&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x8FDB;&#x884C;&#x53D8;&#x5F02;&#x6765;&#x7981;&#x6B62;&#x8C03;&#x8BD5;&#x5668;&#x542F;&#x52A8;&#x3002;</p>
+<ul>
+<li>&#x53EF;&#x9009;&#x5934;&#x7684;&#x6700;&#x540E;&#x4E00;&#x9879; - <code>NumberOfRvaAndSizes</code></li>
+</ul>
+<p>&#x4ED6;&#x6807;&#x8BB0;&#x4E86;&#x540E;&#x9762;<code>DataDirectory</code>&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x5143;&#x7D20;&#x4E2A;&#x6570;</p>
+<p><img src="&#x53CD;&#x8C03;&#x8BD5; &amp; &#x6C99;&#x7BB1;&#x5BF9;&#x6297;&#x6280;&#x5DE7;&#x6536;&#x96C6;/image-20230409171742257.png" alt="image-20230409171742257"></p>
+<p>&#x5F53;<code>NumberOfRvaAndSizes</code>&#x5927;&#x4E8E;0x10&#x65F6;&#xFF0C;Windows&#x52A0;&#x8F7D;&#x5668;&#x5C06;&#x4F1A;&#x5FFD;&#x7565;<code>NumberOfRvaAndSizes</code>&#x3002;</p>
+<p>&#x4F46;&#x662F;&#x65E0;&#x8BBA;<code>NumberOfRvaAndSizes</code>&#x662F;&#x4EC0;&#x4E48;&#x503C;&#xFF0C;OllyDbg&#x90FD;&#x4F7F;&#x7528;&#x5B83;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x8BBE;&#x7F6E;<code>NumberOfRvaAndSizes</code>&#x4E3A;&#x4E00;&#x4E2A;&#x8D85;&#x8FC7;<code>0x10</code>&#x7684;&#x503C;&#xFF0C;&#x4F1A;&#x5BFC;&#x81F4;&#x5728;&#x7A0B;&#x5E8F;&#x9000;&#x51FA;&#x524D;&#xFF0C;OllyDbg&#x5BF9;&#x7528;&#x6237;&#x5F39;&#x51FA;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#x3002;&#x5982;&#x56FE;&#x6240;&#x793A;&#xFF0C;&#x4F7F;&#x7528;LordPE&#x6253;&#x5F00;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF0C;&#x4FEE;&#x6539;RVA&#x6570;&#x53CA;&#x5927;&#x5C0F;&#x5E76;&#x4FDD;&#x5B58;&#xFF0C;&#x518D;&#x7528;OllyDbg&#x6253;&#x5F00;&#xFF0C;&#x4F1A;&#x63D0;&#x793A;&#x9519;&#x8BEF;&#x3002;</p>
+<p><strong>&#x8FD9;&#x4E2A;&#x5728;x32dbg&#x7CFB;&#x5217;&#x4E2D;&#x5DF2;&#x7ECF;&#x4E0D;&#x5B58;&#x5728;&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#x4E86;&#x3002;</strong></p>
+<h2 id="&#x4E09;&#x3001;&#x9759;&#x6001;&#x6DF7;&#x6DC6;&#x6280;&#x672F;">&#x4E09;&#x3001;&#x9759;&#x6001;&#x6DF7;&#x6DC6;&#x6280;&#x672F;</h2>
+<h3 id="&#x52A0;&#x58F3;">&#x52A0;&#x58F3;</h3>
+<p>&#x538B;&#x7F29;&#x58F3;&#xFF0C;&#x52A0;&#x5BC6;&#x58F3;&#xFF0C;&#x5404;&#x79CD;&#x58F3;</p>
+<h3 id="&#x63A7;&#x5236;&#x6D41;&#x5E73;&#x5766;&#x5316;">&#x63A7;&#x5236;&#x6D41;&#x5E73;&#x5766;&#x5316;</h3>
+<p>&#x8FD9;&#x662F;&#x5728;&#x9759;&#x6001;&#x5206;&#x6790;&#x4E2D;&#x6700;&#x6076;&#x5FC3;&#x7684;&#x4E00;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x5B8C;&#x7F8E;&#x7684;&#x811A;&#x672C;&#x53EF;&#x4EE5;&#x5B8C;&#x5168;&#x53BB;&#x9664;&#x6DF7;&#x6DC6;&#x7684;&#x5F71;&#x54CD;</p>
+<p>OLLVM&#x4E2D;&#x4F7F;&#x7528;&#x5230;&#x7684;&#x4E00;&#x79CD;&#x4EE3;&#x7801;&#x4FDD;&#x62A4;&#x65B9;&#x5F0F;&#xFF0C;&#x5B83;&#x8FD8;&#x6709;2&#x4E2A;&#x5144;&#x5F1F;-&#x865A;&#x5047;&#x63A7;&#x5236;&#x6D41;&#x548C;&#x6307;&#x4EE4;&#x66FF;&#x6362;&#xFF0C;&#x8FD9;3&#x79CD;&#x4FDD;&#x62A4;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x7D2F;&#x52A0;&#xFF0C;&#x5BF9;&#x4E8E;&#x9759;&#x6001;&#x5206;&#x6790;&#x6765;&#x8BF4;&#x6DF7;&#x6DC6;&#x540E;&#x4EE3;&#x7801;&#x975E;&#x5E38;&#x590D;&#x6742;&#x3002;</p>
+<p>&#x63A7;&#x5236;&#x6D41;&#x5E73;&#x5766;&#x5316;&#x7684;&#x4E3B;&#x8981;&#x601D;&#x60F3;&#x5C31;&#x662F;&#x4EE5;&#x57FA;&#x672C;&#x5757;&#x4E3A;&#x5355;&#x4F4D;&#xFF0C;&#x901A;&#x8FC7;&#x4E00;&#x4E2A;&#x4E3B;&#x5206;&#x53D1;&#x5668;&#x6765;&#x63A7;&#x5236;&#x7A0B;&#x5E8F;&#x7684;&#x6267;&#x884C;&#x6D41;&#x7A0B;&#x3002;&#x7C7B;&#x4F3C;&#x4E8E;VMP&#x4FDD;&#x62A4;&#x7684;&#x4E00;&#x79CD;&#x5F62;&#x5F0F;&#x3002;</p>
+<p><img src="&#x53CD;&#x8C03;&#x8BD5; &amp; &#x6C99;&#x7BB1;&#x5BF9;&#x6297;&#x6280;&#x5DE7;&#x6536;&#x96C6;/image-20230409164158635.png" alt="image-20230409164158635"></p>
+<p>while+switch&#x7684;&#x7ED3;&#x6784;&#xFF0C;&#x5176;&#x4E2D;&#x7684;switch&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x4E3B;&#x5206;&#x53D1;&#x5668;&#x3002;&#x901A;&#x8FC7;ida&#x89C2;&#x5BDF;&#x53EF;&#x4EE5;&#x5F88;&#x6E05;&#x695A;&#x7684;&#x53D1;&#x73B0;&#x6D41;&#x7A0B;&#x56FE;&#x90FD;&#x662F;&#x6B63;&#x65B9;&#x5F62;&#x6216;&#x8005;&#x957F;&#x65B9;&#x5F62;&#x3002;</p>
+<p>&#x901A;&#x8FC7;&#x7B80;&#x5355;&#x4EE3;&#x7801;&#x7684;&#x5BF9;&#x6BD4;&#xFF0C;&#x4E0D;&#x96BE;&#x53D1;&#x73B0;&#x6DF7;&#x6DC6;&#x4E4B;&#x540E;&#x7684;&#x533A;&#x522B;</p>
+<p>&#x4F1A;&#x770B;&#x5230;&#x51FA;&#x73B0;&#x4E86;&#x5F88;&#x591A;&#x7684;while&#x548C;switch&#xFF0C;&#x7B26;&#x5408;&#x4E86;&#x5F00;&#x5934;&#x90A3;&#x5F20;&#x56FE;&#xFF0C;&#x4E3B;&#x5206;&#x53D1;&#x5668;&#x8FDB;&#x884C;&#x7A0B;&#x5E8F;&#x63A7;&#x5236;&#xFF0C;&#x6267;&#x884C;&#x5B8C;&#x4E00;&#x4E2A;&#x5C0F;&#x5757;&#x540E;&#x8FD4;&#x56DE;&#x4E3B;&#x5206;&#x53D1;&#x5668;</p>
+<p><img src="&#x53CD;&#x8C03;&#x8BD5; &amp; &#x6C99;&#x7BB1;&#x5BF9;&#x6297;&#x6280;&#x5DE7;&#x6536;&#x96C6;/image-20210917210315891.png" alt="image-20210917210315891"></p>
+<p>&#x4E0B;&#x9762;&#x5C31;&#x662F;&#x4E3B;&#x8981;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5269;&#x4E0B;&#x7684;&#x5C31;&#x662F;&#x5404;&#x79CD;&#x5206;&#x53D1;&#x5668;&#xFF0C;&#x63A7;&#x5236;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x6D41;&#x3002;</p>
+<p>&#x590D;&#x539F;&#x7A0B;&#x5E8F;&#x4E3B;&#x8981;&#x4F1A;&#x7528;&#x5230;&#x7684;&#x811A;&#x672C;&#x662F;<code>deflat.py</code>&#x5176;&#x4E2D;&#x7684;&#x4E3B;&#x8981;&#x539F;&#x7406;&#x5C31;&#x662F;angr&#xFF0C;&#x8FD9;&#x4E2A;&#x4E4B;&#x540E;&#x518D;&#x8BF4;</p>
+<h3 id="smc">SMC</h3>
+<p>&#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x671F;&#x95F4;&#x8FB9;&#x89E3;&#x5BC6;&#x8FB9;&#x8FD0;&#x884C;&#x7684;&#x4E00;&#x79CD;&#x4FDD;&#x62A4;&#xFF0C;self-modifying code&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x5177;&#x6709;&#x4E00;&#x5B9A;&#x7684;&#x4EE3;&#x4EF7;&#xFF0C;&#x56E0;&#x4E3A;&#x9700;&#x8981;&#x5F00;&#x8F9F;&#x65B0;&#x7684;&#x6267;&#x884C;&#x7A7A;&#x95F4;&#x3002;<strong>&#x5F00;&#x542F;&#x56FA;&#x5B9A;&#x57FA;&#x5740;&#xFF0C;&#x5173;&#x95ED;&#x968F;&#x673A;&#x57FA;&#x5740;&#xFF0C;&#x5173;&#x95ED;&#x6570;&#x636E;&#x4FDD;&#x62A4;</strong></p>
+<h3 id="&#x7C7B;&#x540D;&#x6DF7;&#x6DC6;">&#x7C7B;&#x540D;&#x6DF7;&#x6DC6;</h3>
+<p>&#x8FD9;&#x662F;&#x5728;net&#x7A0B;&#x5E8F;&#x4E2D;&#x5E38;&#x89C1;&#x7684;&#x4E00;&#x79CD;&#x6DF7;&#x6DC6;&#x65B9;&#x5F0F;&#xFF0C;&#x5BF9;&#x547D;&#x540D;&#x7A7A;&#x95F4;&#xFF0C;&#x7C7B;&#xFF0C;&#x65B9;&#x6CD5;&#xFF0C;&#x5B57;&#x6BB5;&#x8FDB;&#x884C;&#x91CD;&#x547D;&#x540D;&#x4EE5;&#x589E;&#x52A0;&#x9605;&#x8BFB;&#x96BE;&#x5EA6;&#x3002;&#x8FD9;&#x4E5F;&#x4E0D;&#x7B97;&#x58F3;&#xFF0C;&#x5206;&#x6790;&#x8D77;&#x6765;&#x4E5F;&#x6BD4;&#x8F83;&#x9EBB;&#x70E6;&#x3002;</p>
+<p>&#x53CD;&#x6DF7;&#x6DC6;&#x4E5F;&#x5F88;&#x56F0;&#x96BE;&#x3002;</p>
+<h3 id="&#x6587;&#x4EF6;&#x4E0D;&#x843D;&#x5730;&#x6280;&#x672F;">&#x6587;&#x4EF6;&#x4E0D;&#x843D;&#x5730;&#x6280;&#x672F;</h3>
+<p>&#x4E0D;&#x5411;&#x78C1;&#x76D8;&#x5199;&#x5165;&#x53EF;&#x6267;&#x884C;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x662F;&#x4EE5;<strong>&#x811A;&#x672C;&#x5F62;&#x5F0F;&#x5B58;&#x5728;&#x8BA1;&#x7B97;&#x673A;&#x4E2D;&#x7684;&#x6CE8;&#x518C;&#x8868;&#x5B50;&#x9879;&#x76EE;&#x4E2D;</strong>&#xFF0C;&#x4EE5;&#x6B64;&#x6765;&#x8EB2;&#x907F;&#x6740;&#x8F6F;&#x7684;&#x68C0;&#x6D4B;&#xFF0C;&#x90A3;&#x4E48;&#x7ED5;&#x8FC7;&#x4E86;&#x4F20;&#x7EDF;&#x9632;&#x75C5;&#x6BD2;&#xFF08;AV&#xFF09;&#x5BFB;&#x627E;&#x88AB;&#x4FDD;&#x5B58;&#x5230;&#x78C1;&#x76D8;&#x4E0A;&#x7684;&#x6587;&#x4EF6;&#x5E76;&#x626B;&#x63CF;&#x8FD9;&#x4E9B;&#x6587;&#x4EF6;&#x4EE5;&#x786E;&#x5B9A;&#x5B83;&#x4EEC;&#x662F;&#x5426;&#x6076;&#x610F;&#x7684;&#x67E5;&#x6740;&#x65B9;&#x6CD5;&#x3002;</p>
+<h1 id="&#xFF08;&#x4E8C;&#xFF09;&#x6C99;&#x7BB1;&#x5BF9;&#x6297;">&#xFF08;&#x4E8C;&#xFF09;&#x6C99;&#x7BB1;&#x5BF9;&#x6297;</h1>
+<p>&#x964D;&#x4F4E;&#x81EA;&#x5DF1;&#x7684;&#x66DD;&#x5149;&#x7387;&#xFF0C;&#x9632;&#x6B62;&#x8FC7;&#x65E9;&#x66B4;&#x9732;&#x81EA;&#x5DF1;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x4E00;&#x4E9B;&#x6280;&#x672F;&#x5BF9;&#x6297;&#x4E91;&#x6C99;&#x7BB1;&#x3002;</p>
+<h2 id="sleep&#x7C7B;">Sleep&#x7C7B;</h2>
+<h3 id="&#x5E38;&#x89C4;&#x7B49;&#x5F85;">&#x5E38;&#x89C4;&#x7B49;&#x5F85;</h3>
+<p>&#x51FA;&#x4E8E;&#x6027;&#x80FD;&#x8003;&#x8651;&#xFF0C;&#x6C99;&#x7BB1;&#x5728;&#x6267;&#x884C;&#x7A0B;&#x5E8F;&#x65F6;&#x4E0D;&#x53EF;&#x80FD;&#x957F;&#x65F6;&#x95F4;&#x7B49;&#x5F85;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#xFF0C;&#x56E0;&#x6B64;&#x884D;&#x751F;&#x51FA;&#x4E86; &#x5EF6;&#x65F6;&#x6267;&#x884C;&#x7684;&#x53CD;&#x6C99;&#x7BB1;&#x6280;&#x672F;&#xFF1A;&#x5229;&#x7528;Windows API sleep &#x5B9E;&#x73B0;&#x4F11;&#x7720;&#xFF0C;&#x81F4;&#x4F7F;&#x6C99;&#x7BB1;&#x4E0D;&#x6267;&#x884C;&#x6076;&#x610F;&#x7A0B;&#x5E8F;&#xFF0C;&#x8FDB;&#x800C;&#x7ED5;&#x8FC7;&#x6C99;&#x7BB1;&#x68C0;&#x6D4B;&#x3002;</p>
+<p>&#x540C;&#x65F6;&#xFF0C;&#x6C99;&#x7BB1;&#x5F00;&#x53D1;&#x8005;&#x4E5F;&#x901A;&#x8FC7;hook Api&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x7F29;&#x77ED;&#x6216;&#x7ED5;&#x8FC7;sleep&#x7684;&#x65F6;&#x95F4;&#xFF0C;&#x5BF9;&#x6297;&#x6B64;&#x7C7B;&#x53CD;&#x6C99;&#x7BB1;&#x6280;&#x672F;&#x3002;</p>
+<p>&#x73B0;&#x5982;&#x4ECA;&#x4E5F;&#x5B58;&#x5728;&#x7740;&#x4E94;&#x82B1;&#x516B;&#x95E8;&#x7684;API&#x8C03;&#x7528;&#x5B9E;&#x73B0;&#x5EF6;&#x8FDF;&#x6267;&#x884C;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x7684;&#x6548;&#x679C;&#xFF0C;&#x5982;: WaitForSingleObject&#x3001;NtWaitForSingleObject&#x3001;SetTimer&#x3001;SetWaitableTimer&#x3001;CreateTimerQueueTimer&#x3001;socket &#x4E2D;&#x7684;select&#x51FD;&#x6570;&#x7B49;</p>
+<p>&#x4E00;&#x4E2A;&#x9AD8;&#x7EA7;&#x7684;&#x6C99;&#x7BB1;&#x5F80;&#x5F80;&#x4F1A;&#x5BF9;&#x8FD9;&#x4E9B;&#x4E2A;&#x4F1A;&#x9020;&#x6210;&#x7B49;&#x5F85;&#x7684;&#x51FD;&#x6570;&#x8FDB;&#x884C;hook&#x7ED5;&#x8FC7;&#xFF0C;&#x6765;&#x4FC3;&#x8FDB;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x5230;&#x6838;&#x5FC3;&#x4EE3;&#x7801;&#x7684;&#x4F4D;&#x7F6E;&#x3002;&#x5F80;&#x5F80;&#x4E00;&#x4E2A;&#x6837;&#x672C;&#x4E2D;&#x4F1A;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x7B49;&#x5F85;&#x7C7B;api&#x6765;&#x5BF9;&#x6297;&#x6C99;&#x7BB1;</p>
+<h3 id="beep">Beep</h3>
+<p>&#x5728;&#x65B0;&#x7684;&#x653B;&#x51FB;&#x4E2D;&#x51FA;&#x73B0;&#x4E86;&#x4E00;&#x79CD;&#x5229;&#x7528;<strong>&#x8702;&#x9E23;&#x5668;</strong>&#x6765;&#x5EF6;&#x65F6;&#x6267;&#x884C;&#x7684;&#x76EE;&#x7684;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">BOOL <span class="hljs-title">Beep</span><span class="hljs-params">(
+  [in] DWORD dwFreq,  # &#x58F0;&#x97F3;&#x9891;&#x7387;&#xFF0C;&#x8D6B;&#x5179;&#x4E3A;&#x5355;&#x4F4D;
+  [in] DWORD dwDuration # &#x58F0;&#x97F3;&#x7684;&#x6301;&#x7EED;&#x65F6;&#x95F4;&#xFF0C;&#x6BEB;&#x79D2;&#x4E3A;&#x5355;&#x4F4D;
+)</span></span>;
+</code></pre>
+<p>&#x4E0A;&#x8FF0;api&#x5728;&#x8702;&#x9E23;&#x7ED3;&#x675F;&#x4E4B;&#x524D;&#xFF0C;&#x4E0D;&#x4F1A;&#x91CA;&#x653E;&#x7A0B;&#x5E8F;&#x7684;&#x6240;&#x6709;&#x6743;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x8FBE;&#x5230;&#x4E00;&#x4E2A;&#x7B49;&#x5F85;&#x7684;&#x76EE;&#x7684;&#xFF0C;&#x540C;&#x65F6;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;hz&#x5927;&#x5C0F;&#x6765;&#x7ED5;&#x8FC7;&#x4EBA;&#x8033;&#x68C0;&#x6D4B;</p>
+<h2 id="check">Check</h2>
+<h3 id="&#x68C0;&#x67E5;&#x786C;&#x4EF6;&#x73AF;&#x5883;">&#x68C0;&#x67E5;&#x786C;&#x4EF6;&#x73AF;&#x5883;</h3>
+<p>&#x68C0;&#x67E5;&#x78C1;&#x76D8;&#x5927;&#x5C0F;</p>
+<p>&#x68C0;&#x67E5;CPU&#x4E2A;&#x6570;</p>
+<h3 id="&#x8F6F;&#x4EF6;&#x73AF;&#x5883;">&#x8F6F;&#x4EF6;&#x73AF;&#x5883;</h3>
+<p>&#x68C0;&#x67E5;&#x81EA;&#x5DF1;&#x662F;&#x5426;&#x88AB;&#x6CE8;&#x5165;&#x6C99;&#x7BB1;&#x76F8;&#x5173;&#x7684;dll</p>
+<p>&#x68C0;&#x67E5;&#x7F51;&#x7EDC;&#x73AF;&#x5883;</p>
+<p>&#x68C0;&#x67E5;&#x8FDB;&#x7A0B;&#x5217;&#x8868;&#x5B9A;&#x4F4D;&#x7279;&#x6B8A;&#x8FDB;&#x7A0B;</p>
+<h3 id="&#x4EA4;&#x4E92;&#x68C0;&#x67E5;">&#x4EA4;&#x4E92;&#x68C0;&#x67E5;</h3>
+<p>&#x4E3B;&#x52A8;&#x63A2;&#x6D4B;&#x4EBA;&#x673A;&#x4EA4;&#x4E92;&#x7684;&#x884C;&#x4E3A;&#xFF0C;&#x5728;&#x4E00;&#x5B9A;&#x7684;&#x65F6;&#x95F4;&#x95F4;&#x9694;&#x5185;&#xFF0C;&#x4E24;&#x6B21;&#x83B7;&#x53D6;&#x5F53;&#x524D;&#x9F20;&#x6807;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x7684;&#x4F4D;&#x7F6E;&#x5750;&#x6807;&#xFF0C;&#x6BD4;&#x8F83;&#x4E24;&#x6B21;&#x4F4D;&#x7F6E;&#x662F;&#x5426;&#x53D8;&#x5316;&#x3002;</p>
+<p><strong>&#x53C2;&#x8003;</strong>&#xFF1A;</p>
+<blockquote>
+<p> <a href="https://blog.csdn.net/qq_32400847/article/details/52798050" target="_blank">&#x53CD;&#x8C03;&#x8BD5;&#x6280;&#x672F;</a></p>
+<p> &#x5F20;&#x541B;&#x6D9B;,&#x738B;&#x8F76;&#x9A8F;,&#x859B;&#x8D28;. &#x57FA;&#x4E8E;angr&#x7684;&#x5BF9;&#x6297;&#x6076;&#x610F;&#x4EE3;&#x7801;&#x6C99;&#x7BB1;&#x68C0;&#x6D4B;&#x65B9;&#x6CD5;&#x7684;&#x7814;&#x7A76;[J]. &#x8BA1;&#x7B97;&#x673A;&#x5E94;&#x7528;&#x4E0E;&#x8F6F;&#x4EF6;,2019,36(2):308-314. DOI:10.3969/j.issn.1000-386x.2019.02.054.</p>
+</blockquote>
+<footer class="page-footer"><span class="copyright">&#x6CA1;&#x6709;&#x7248;&#x6743;&#xFF0C;&#x968F;&#x4FBF;&#x590D;&#x5236;&#xFF0C;&#x514D;&#x8D39;&#x7684;&#x77E5;&#x8BC6;&#x5E94;&#x8BE5;&#x5171;&#x4EAB; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2023-04-09 17:20:59
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="控制流平坦化.html" class="navigation navigation-prev " aria-label="Previous page: 反控制流平坦化学习-angr">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="常见加密算法-学习.html" class="navigation navigation-next " aria-label="Next page: 加密解密学习 - 更">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"反调试以及沙箱对抗技巧收集","level":"1.3.2","depth":2,"next":{"title":"加密解密学习 - 更","level":"1.3.3","depth":2,"path":"MyArticles/Re/常见加密算法-学习.md","ref":"MyArticles/Re/常见加密算法-学习.md","articles":[]},"previous":{"title":"反控制流平坦化学习-angr","level":"1.3.1","depth":2,"path":"MyArticles/Re/控制流平坦化.md","ref":"MyArticles/Re/控制流平坦化.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","custom-favicon","tbfed-pagefooter","popup","-sharing","sharing-plus","intopic-toc","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"没有版权，随便复制，免费的知识应该共享","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"./icon/book.ico","back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MyArticles/Re/反调试 & 沙箱对抗技巧收集.md","mtime":"2023-04-09T09:20:59.934Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-09T14:20:22.983Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
