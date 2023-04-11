@@ -237,7 +237,20 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../Basics/调用约定和断点.html">
+        <li class="chapter " data-level="1.4.1" data-path="../Basics/DebugC">
+            
+                <span>
+            
+                    
+                    调试C#的DLL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Basics/调用约定和断点.html">
             
                 <a href="../Basics/调用约定和断点.html">
             
@@ -250,7 +263,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../Basics/elf文件结构.html">
+        <li class="chapter " data-level="1.4.3" data-path="../Basics/elf文件结构.html">
             
                 <a href="../Basics/elf文件结构.html">
             
@@ -263,7 +276,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.3" data-path="../Basics/Pe File Structer.html">
+        <li class="chapter " data-level="1.4.4" data-path="../Basics/Pe File Structer.html">
             
                 <a href="../Basics/Pe File Structer.html">
             
@@ -276,7 +289,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.4" data-path="../Basics/arm学习.html">
+        <li class="chapter " data-level="1.4.5" data-path="../Basics/arm学习.html">
             
                 <a href="../Basics/arm学习.html">
             
@@ -289,7 +302,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.5" data-path="../Basics/Windows消息队列学习.html">
+        <li class="chapter " data-level="1.4.6" data-path="../Basics/Windows消息队列学习.html">
             
                 <a href="../Basics/Windows消息队列学习.html">
             
@@ -839,6 +852,7 @@ __declspec(dllexport) <span class="hljs-keyword">int</span> __<span class="hljs-
 <li>&#x6D88;&#x606F;HOOK</li>
 <li>APC&#x6CE8;&#x5165;</li>
 </ul>
+<p><img src="dll-inject/image-20230411160731183.png" alt="image-20230411160731183"></p>
 <h2 id="1&#x3001;&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x7EBF;&#x7A0B;">1&#x3001;&#x521B;&#x5EFA;&#x8FDC;&#x7A0B;&#x7EBF;&#x7A0B;</h2>
 <p>&#x5229;&#x7528;<code>CreateRemoteThread</code>API&#x8FDB;&#x884C;dll&#x6CE8;&#x5165;&#xFF0C;&#x8FD9;&#x4E2A;API&#x4E5F;&#x662F;&#x5728;&#x8FDB;&#x7A0B;&#x6CE8;&#x5165;&#x4E2D;&#x5E38;&#x7528;&#x7684;API&#x3002;</p>
 <h3 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h3>
@@ -965,7 +979,6 @@ LPCWSTR dllpath = <span class="hljs-string">L&quot;C:\\Users\\rootkit\\Desktop\\
 <li>&#x901A;&#x8FC7;pe explore&#x7684;shift+ctrl+f&#x7684;&#x529F;&#x80FD;&#x6765;&#x641C;&#x7D22;dll&#x7A0B;&#x5E8F;&#xFF0C;&#x67E5;&#x770B;&#x662F;&#x5426;&#x88AB;&#x6CE8;&#x5165;&#x3002;</li>
 </ul>
 <h2 id="15&#x3001;&#x7A81;&#x7834;-session-0-&#x9694;&#x79BB;">1.5&#x3001;&#x7A81;&#x7834; session 0 &#x9694;&#x79BB;</h2>
-<p>&#x5982;&#x679C;&#x8981;&#x6CE8;&#x5165;&#x7684;dll&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x4E00;&#x4E9B;&#x7CFB;&#x7EDF;&#x670D;&#x52A1;&#xFF0C;&#x90A3;&#x4E48;&#x4F7F;&#x7528;&#x4F20;&#x7EDF;&#x7684;&#x8FDC;&#x7A0B;&#x6CE8;&#x5165;&#x65B9;&#x5F0F;&#x662F;&#x4E0D;&#x53EF;&#x53D6;&#x7684;&#xFF0C;&#x540E;&#x9762;&#x4F1A;&#x8BF4;&#x539F;&#x56E0;&#x3002;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;dll&#x6CE8;&#x5165;&#x5B9E;&#x73B0;&#x66F4;&#x5E95;&#x5C42;&#x9AD8;&#x7EA7;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x6BD4;&#x5982;&#x4FDD;&#x6301;&#x5B58;&#x6D3B;&#x4E4B;&#x7C7B;&#x7684;&#x3002;</p>
 <h3 id="session-0&#x9694;&#x79BB;">session 0&#x9694;&#x79BB;</h3>
 <h4 id="&#x5386;&#x53F2;">&#x5386;&#x53F2;</h4>
 <p>&#x5728;Windows XP&#x3001;Windows Server 2003&#xFF0C;&#x4EE5;&#x53CA;&#x66F4;&#x8001;&#x7248;&#x672C;&#x7684;Windows&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E2D;&#xFF0C;<strong>&#x670D;&#x52A1;</strong>&#x548C;<strong>&#x5E94;&#x7528;&#x7A0B;&#x5E8F;</strong>&#x4F7F;&#x7528;<strong>&#x76F8;&#x540C;&#x7684;&#x4F1A;&#x8BDD;</strong>&#xFF08;Session&#xFF09;&#x8FD0;&#x884C;&#xFF0C;&#x800C;&#x8FD9;&#x4E2A;&#x4F1A;&#x8BDD;&#x662F;&#x7531;<strong>&#x7B2C;&#x4E00;&#x4E2A;&#x767B;&#x5F55;&#x5230;&#x63A7;&#x5236;&#x53F0;&#x7684;&#x7528;&#x6237;</strong>&#x542F;&#x52A8;&#x7684;&#x3002;&#x8BE5;<strong>&#x4F1A;&#x8BDD;&#x5C31;&#x53EB;&#x505A;Session 0</strong>&#x3002;</p>
@@ -975,7 +988,9 @@ LPCWSTR dllpath = <span class="hljs-string">L&quot;C:\\Users\\rootkit\\Desktop\\
 <p>&#x7C7B;&#x4F3C;&#x4E8E;&#x5965;&#x7279;&#x66FC;&#x91CC;&#x7684;&#x5B87;&#x5B99;&#xFF0C;session 0&#x5C31;&#x662F;&#x6709;M78&#x661F;&#x4E91;&#x7684;&#x5B87;&#x5B99;&#xFF0C;&#x8D5B;&#x7F57;&#x98DE;&#x51FA;&#x6765;&#x770B;&#x5230;&#x7684;&#x5176;&#x4ED6;&#x5B87;&#x5B99;&#x5C31;&#x662F;session1- n&#x8FD9;&#x4E9B;&#x3002;</p>
 <p>&#x8FD9;&#x91CC;&#x8981;&#x5B9E;&#x73B0;&#x7684;&#x5C31;&#x662F;&#x4ECE;&#x5176;&#x4ED6;session&#x4E2D;&#xFF0C;&#x5C06;dll&#x6CE8;&#x5165;&#x5230;session 0&#x4E2D;&#x3002;</p>
 <h3 id="&#x539F;&#x7406;&#x65B9;&#x6CD5;">&#x539F;&#x7406;&#x65B9;&#x6CD5;</h3>
-<p>&#x7531;&#x4E8E;SESSION 0&#x9694;&#x79BB;&#x673A;&#x5236;&#x5728;&#x5185;&#x6838;6.0&#x4E4B;&#x540E;&#xFF08;vista&#x3001;7&#x3001;8...&#xFF09;,&#x5F53;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x540E;&#xFF0C;&#x5E76;&#x4E0D;&#x4F1A;&#x7ACB;&#x5373;&#x8FD0;&#x884C;&#xFF0C;&#x901A;&#x8FC7;&#x5148;&#x6302;&#x8D77;&#x8FDB;&#x7A0B;&#xFF0C;&#x67E5;&#x770B;&#x8981;&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#x6240;&#x5728;&#x4F1A;&#x8BDD;&#x5C42;&#x4E4B;&#x540E;&#x518D;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x6062;&#x590D;&#x8FDB;&#x7A0B;&#x8FD0;&#x884C;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;<code>CreateRemoteThread</code>&#x65E0;&#x6CD5;&#x5B9E;&#x73B0;&#x3010;CreateSuspended&#x7684;&#x53C2;&#x6570;&#x503C;&#x4E3A;1&#x5BFC;&#x81F4;&#x7EBF;&#x7A0B;&#x65E0;&#x6CD5;&#x6062;&#x590D;&#x8FD0;&#x884C;&#xFF0C;&#x5BFC;&#x81F4;DLL&#x6CE8;&#x5165;&#x5931;&#x8D25;&#x3002;&#x3011;</p>
+<p>&#x7531;&#x4E8E;SESSION 0&#x9694;&#x79BB;&#x673A;&#x5236;&#x5728;&#x5185;&#x6838;6.0&#x4E4B;&#x540E;&#xFF08;vista&#x3001;7&#x3001;8...&#xFF09;,&#x5F53;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x540E;&#xFF0C;&#x5E76;&#x4E0D;&#x4F1A;&#x7ACB;&#x5373;&#x8FD0;&#x884C;&#xFF0C;&#x901A;&#x8FC7;&#x5148;&#x6302;&#x8D77;&#x8FDB;&#x7A0B;&#xFF0C;&#x67E5;&#x770B;&#x8981;&#x8FD0;&#x884C;&#x7684;&#x8FDB;&#x7A0B;&#x6240;&#x5728;&#x4F1A;&#x8BDD;&#x5C42;&#x4E4B;&#x540E;&#x518D;&#x51B3;&#x5B9A;&#x662F;&#x5426;&#x6062;&#x590D;&#x8FDB;&#x7A0B;&#x8FD0;&#x884C;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;<code>CreateRemoteThread</code>&#x65E0;&#x6CD5;&#x5B9E;&#x73B0;&#x3010;CreateSuspended&#x7684;&#x9ED8;&#x8BA4;&#x53C2;&#x6570;&#x503C;&#x4E3A;1&#x5BFC;&#x81F4;&#x7EBF;&#x7A0B;&#x65E0;&#x6CD5;&#x6062;&#x590D;&#x8FD0;&#x884C;&#xFF0C;&#x5BFC;&#x81F4;DLL&#x6CE8;&#x5165;&#x5931;&#x8D25;&#x3002;&#x3011;</p>
+<h3 id="&#x7A81;&#x7834;">&#x7A81;&#x7834;</h3>
+<p>&#x76F4;&#x63A5;&#x8C03;&#x7528;ZwCreateThreadEx&#xFF0C;&#x5E76;&#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x6307;&#x5B9A;CreateSuspended&#x4E3A;0&#x5373;&#x53EF;&#x5B9E;&#x73B0;&#x8FDC;&#x7A0B;&#x7EBF;&#x7A0B;&#x6CE8;&#x5165;DLL&#x7A81;&#x7834;SESSION 0&#x9694;&#x79BB;&#x3002;</p>
 <h3 id="&#x5173;&#x952E;api">&#x5173;&#x952E;API</h3>
 <h4 id="zwcreatethreadex">ZwCreateThreadEx</h4>
 <p>&#x8FD9;&#x4E2A;api&#x6CA1;&#x6709;&#x516C;&#x5E03;&#xFF0C;&#x6240;&#x4EE5;&#x4ECB;&#x7ECD;&#x4E0D;&#x591A;&#x3002;&#x5728; <code>ntdll.dll</code> &#x4E2D;&#x5E76;&#x6CA1;&#x6709;&#x58F0;&#x660E;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4F7F;&#x7528; <code>GetProcAddress</code>&#x4ECE; <code>ntdll.dll</code>&#x4E2D;&#x83B7;&#x53D6;&#x8BE5;&#x51FD;&#x6570;&#x7684;&#x5BFC;&#x51FA;&#x5730;&#x5740;&#x3002;</p>
@@ -1037,8 +1052,20 @@ PTOKEN_PRIVILEGES PreviousState,<span class="hljs-comment">//&#x63A5;&#x6536;&#x
 PDWORD ReturnLength             <span class="hljs-comment">//&#x63A5;&#x6536;PreviousState&#x7F13;&#x5B58;&#x533A;&#x8981;&#x6C42;&#x7684;&#x5927;&#x5C0F;</span>
 )</span></span>;
 </code></pre>
-<h3 id="&#x5148;&#x63D0;&#x6743;">&#x5148;&#x63D0;&#x6743;</h3>
-<p>win10&#x7CFB;&#x7EDF;&#x4E0B;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8981;&#x6CE8;&#x5165;&#x7CFB;&#x7EDF;&#x6743;&#x9650;&#x7684;exe&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x5230;debug&#x8C03;&#x8BD5;&#x6743;&#x9650;&#x3002;&#x5728;&#x7CFB;&#x7EDF;&#x7A0B;&#x5E8F;&#x4E2D;&#xFF0C;&#x65E0;&#x6CD5;&#x4F7F;&#x7528;MessageBox&#x51FD;&#x6570;&#xFF0C;</p>
+<h3 id="&#x5B9E;&#x73B0;&#x6D41;&#x7A0B;">&#x5B9E;&#x73B0;&#x6D41;&#x7A0B;</h3>
+<ul>
+<li>&#x5BF9;&#x81EA;&#x5DF1;&#x8FDB;&#x7A0B;&#x8FDB;&#x884C;&#x63D0;&#x6743;&#xFF0C;&#x63D0;&#x6743;&#x662F;&#x4E3A;&#x4E86;&#x6267;&#x884C;&#x7279;&#x6743;&#x6307;&#x4EE4;</li>
+<li>OpenProcess &#x6253;&#x5F00;&#x8981;&#x6CE8;&#x5165;&#x7684;&#x8FDB;&#x7A0B;&#x83B7;&#x53D6;&#x8FDB;&#x7A0B;&#x53E5;&#x67C4;</li>
+<li>VirtualAllocEx &#x5728;&#x88AB;&#x6CE8;&#x5165;&#x7684;&#x8FDB;&#x7A0B;&#x4E2D;&#x7533;&#x8BF7;&#x8BFB;&#x5199;&#x5185;&#x5B58;</li>
+<li>WriteProcessMemory &#x5199;&#x5165;DLL&#x8DEF;&#x5F84;&#x5230;&#x7533;&#x8BF7;&#x7684;&#x5185;&#x5B58;&#x4E2D;</li>
+<li>&#x83B7;&#x53D6;ZtCreateThreadEx&#x5730;&#x5740;</li>
+</ul>
+<h4 id="&#x63D0;&#x6743;">&#x63D0;&#x6743;</h4>
+<p>&#x56E0;&#x4E3A;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x8981;&#x6267;&#x884C;&#x9AD8;&#x6743;&#x9650;&#x7684;&#x4E00;&#x4E9B;&#x5B58;&#x653E;&#x5728;dll&#x4E2D;&#x7684;&#x4E00;&#x4E9B;&#x51FD;&#x6570;&#x529F;&#x80FD;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x5148;&#x5BF9;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x8FDB;&#x884C;&#x63D0;&#x6743;&#x64CD;&#x4F5C;&#x3002;</p>
+<p>1&#x3001;OpenProcessToken
+2&#x3001;LookupPrivilegeValue
+3&#x3001;AdjustTokenPrivileges</p>
+<p>&#x6240;&#x8C13;&#x63D0;&#x6743;&#x7684;&#x672C;&#x8D28;&#x8FD8;&#x662F;&#x5229;&#x7528;<code>AdjustTokenPrivileges</code>api&#x5C06;&#x7981;&#x7528;&#x7684;&#x6743;&#x9650;&#x91CD;&#x65B0;&#x542F;&#x7528;&#x3002;</p>
 <pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
 <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;Windows.h&gt;</span></span>
@@ -1106,7 +1133,7 @@ LPCWSTR pszDllFileName = <span class="hljs-string">L&quot;C:\\Users\\rootkit\\De
     BOOL fOk = FALSE;
 
     <span class="hljs-comment">// &#x5229;&#x7528; TOKEN_ADJUST_PRIVILEGES &#xFF0C;&#x8FD9;&#x65F6;&#x542F;&#x7528;&#x6216;&#x7981;&#x7528;&#x7279;&#x6743;&#x6240;&#x5FC5;&#x9700;&#x7684;&#xFF0C;&#x51FD;&#x6570;&#x8FD4;&#x56DE;&#x65F6;&#x6807;&#x8BC6;&#x65B0;&#x6253;&#x5F00;&#x7684;&#x8BBF;&#x95EE;&#x4EE4;&#x724C;&#x7684;&#x53E5;&#x67C4;&#x7684;&#x6307;&#x9488;hToken</span>
-    <span class="hljs-keyword">if</span> (OpenProcessToken(GetCurrentProcess(), TOKEN_ADJUST_PRIVILEGES, &amp;hToken))
+    <span class="hljs-keyword">if</span> (!OpenProcessToken(GetCurrentProcess(), TOKEN_ADJUST_PRIVILEGES, &amp;hToken))
     {
         <span class="hljs-comment">// &#x5305;&#x542B;&#x6709;&#x5173;&#x8BBF;&#x95EE;&#x4EE4;&#x724C;&#x7684;&#x4E00;&#x7EC4;&#x7279;&#x6743;&#x7684;&#x4FE1;&#x606F;&#x7684;&#x7ED3;&#x6784;&#x4F53;</span>
         TOKEN_PRIVILEGES tp;
@@ -1121,9 +1148,8 @@ LPCWSTR pszDllFileName = <span class="hljs-string">L&quot;C:\\Users\\rootkit\\De
         tp.Privileges[<span class="hljs-number">0</span>].Attributes = SE_PRIVILEGE_ENABLED;
 
         <span class="hljs-comment">// &#x542F;&#x7528;&#x6216;&#x7981;&#x7528;&#x6307;&#x5B9A;&#x8BBF;&#x95EE;&#x4EE4;&#x724C;&#x4E2D;&#x7684;&#x7279;&#x6743;</span>
-        AdjustTokenPrivileges(hToken, FALSE, &amp;tp, <span class="hljs-keyword">sizeof</span>(tp), <span class="hljs-literal">NULL</span>, <span class="hljs-literal">NULL</span>);
+        fOk = AdjustTokenPrivileges(hToken, FALSE, &amp;tp, <span class="hljs-keyword">sizeof</span>(tp), <span class="hljs-literal">NULL</span>, <span class="hljs-literal">NULL</span>);
 
-        fOk = (GetLastError() == ERROR_SUCCESS);
         CloseHandle(hToken);
     }
     <span class="hljs-keyword">return</span> fOk;
@@ -1139,14 +1165,17 @@ LPCWSTR pszDllFileName = <span class="hljs-string">L&quot;C:\\Users\\rootkit\\De
     HANDLE hRemoteThread = <span class="hljs-literal">NULL</span>;
     DWORD dwStatus = <span class="hljs-number">0</span>;
 
-    <span class="hljs-comment">// &#x5148;&#x7ED9;&#x81EA;&#x5DF1;&#x63D0;&#x6743;</span>
-    EnableDebugPrivilege();
+    <span class="hljs-keyword">if</span> (!EnableDebugPrivilege())
+    {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;modify the promession failed\n&quot;</span>);
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
 
     <span class="hljs-comment">// &#x6253;&#x5F00;&#x6CE8;&#x5165;&#x8FDB;&#x7A0B;&#xFF0C;&#x83B7;&#x53D6;&#x8FDB;&#x7A0B;&#x53E5;&#x67C4;</span>
     hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, notePID);
     <span class="hljs-keyword">if</span> (hProcess == <span class="hljs-literal">NULL</span>)
     {
-        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;OpenProcess - Error!\n\n&quot;</span>);
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;OpenProcess Error! %d\n&quot;</span>, GetLastError());
         <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;
     }
 
@@ -1155,12 +1184,14 @@ LPCWSTR pszDllFileName = <span class="hljs-string">L&quot;C:\\Users\\rootkit\\De
     pDllAddr = VirtualAllocEx(hProcess, <span class="hljs-literal">NULL</span>, dwSize, MEM_COMMIT, PAGE_READWRITE);
     <span class="hljs-keyword">if</span> (<span class="hljs-literal">NULL</span> == pDllAddr)
     {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;VirualAlloc failed %d\n&quot;</span>, GetLastError());
         <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;
     }
 
     <span class="hljs-comment">//&#x5199;&#x5165;&#x5185;&#x5B58;&#x5730;&#x5740;</span>
     <span class="hljs-keyword">if</span> (WriteProcessMemory(hProcess, pDllAddr, pszDllFileName, dwSize, <span class="hljs-literal">NULL</span>))
     {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;WriteProcessMemory failed %d&quot;</span>, GetLastError());
         <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;
     }
 
@@ -1168,6 +1199,7 @@ LPCWSTR pszDllFileName = <span class="hljs-string">L&quot;C:\\Users\\rootkit\\De
     HMODULE hNtdllDll = LoadLibraryA(<span class="hljs-string">&quot;ntdll.dll&quot;</span>);
     <span class="hljs-keyword">if</span> (<span class="hljs-literal">NULL</span> == hNtdllDll)
     {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;loadlibrary failed %d\n&quot;</span>, GetLastError());
         <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;
     }
 
@@ -1175,6 +1207,7 @@ LPCWSTR pszDllFileName = <span class="hljs-string">L&quot;C:\\Users\\rootkit\\De
     pFuncProcAddr = GetProcAddress(GetModuleHandleA(<span class="hljs-string">&quot;Kernelbase.dll&quot;</span>), <span class="hljs-string">&quot;LoadLibraryW&quot;</span>);
     <span class="hljs-keyword">if</span> (pFuncProcAddr)
     {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;find loadlibrary addr failed %d\n&quot;</span>, GetLastError());
         <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;
     }
 
@@ -1182,6 +1215,7 @@ LPCWSTR pszDllFileName = <span class="hljs-string">L&quot;C:\\Users\\rootkit\\De
     typedef_ZwCreateThreadEx ZwCreateThreadEx = (typedef_ZwCreateThreadEx)GetProcAddress(hNtdllDll, <span class="hljs-string">&quot;ZwCreateThreadEx&quot;</span>);
     <span class="hljs-keyword">if</span> (ZwCreateThreadEx)
     {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;get ZwCreateThread failed %d\n&quot;</span>, GetLastError());
         <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;
     }
 
@@ -1189,6 +1223,7 @@ LPCWSTR pszDllFileName = <span class="hljs-string">L&quot;C:\\Users\\rootkit\\De
     dwStatus = ZwCreateThreadEx(&amp;hRemoteThread, PROCESS_ALL_ACCESS, <span class="hljs-literal">NULL</span>, hProcess, (LPTHREAD_START_ROUTINE)pFuncProcAddr, pDllAddr, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-literal">NULL</span>);
     <span class="hljs-keyword">if</span> (ZwCreateThreadEx)
     {
+        <span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;call ZwCreateThread failed %d\n&quot;</span>, GetLastError());
         <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;
     }
 
@@ -1204,8 +1239,6 @@ LPCWSTR pszDllFileName = <span class="hljs-string">L&quot;C:\\Users\\rootkit\\De
 <p>&#x5229;&#x7528; <strong>AppInit_DLLs</strong> &#x6280;&#x672F;&#x901A;&#x8FC7;&#x4FEE;&#x6539;&#x52A0;&#x8F7D;&#x987A;&#x5E8F;&#x6765;&#x8FBE;&#x5230;&#x6CE8;&#x5165;&#x7684;&#x76EE;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x4FEE;&#x6539;&#x662F;&#x5168;&#x5C40;&#x7684;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5BFC;&#x81F4;&#x7CFB;&#x7EDF;&#x65E0;&#x6CD5;&#x6B63;&#x5E38;&#x542F;&#x52A8;&#xFF0C;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x6076;&#x610F;&#x75C5;&#x6BD2;&#x4F20;&#x64AD;&#x3002;</p>
 <h3 id="&#x539F;&#x7406;">&#x539F;&#x7406;</h3>
 <p>User32.dll&#x88AB;&#x52A0;&#x8F7D;&#x5230;&#x8FDB;&#x7A0B;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x8BFB;&#x53D6;&#x5B58;&#x653E;&#x5728;AppInit_DLLs&#xFF0C;&#x5982;&#x679C;&#x91CC;&#x9762;&#x6709;&#x503C;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x8C03;&#x7528;loadlibrary&#x52A0;&#x8F7D;&#x7528;&#x6237;dll&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x5B58;&#x653E;&#x7684;dll&#x5E76;&#x4E0D;&#x4F1A;&#x52A0;&#x8F7D;&#x5230;&#x6240;&#x6709;&#x8FDB;&#x7A0B;&#xFF0C;&#x53EA;&#x4F1A;&#x52A0;&#x8F7D;&#x5230;User32.dll&#x7684;&#x8FDB;&#x7A0B;&#x4E2D;&#x53BB;&#x3002;</p>
-<h3 id="&#x7A81;&#x7834;">&#x7A81;&#x7834;</h3>
-<p>&#x76F4;&#x63A5;&#x8C03;&#x7528;ZwCreateThreadEx&#xFF0C;&#x5E76;&#x5728;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x6307;&#x5B9A;CreateSuspended&#x4E3A;0&#x5373;&#x53EF;&#x5B9E;&#x73B0;&#x8FDC;&#x7A0B;&#x7EBF;&#x7A0B;&#x6CE8;&#x5165;DLL&#x7A81;&#x7834;SESSION 0&#x9694;&#x79BB;&#x3002;</p>
 <h2 id="3&#x3001;setwindowshookex">3&#x3001;SetWindowsHookEx</h2>
 <h3 id="&#x539F;&#x7406;">&#x539F;&#x7406;</h3>
 <p>&#x8BE5;&#x65B9;&#x6CD5;&#x7684;&#x6838;&#x5FC3;&#x539F;&#x7406;&#x662F;&#x4F9D;&#x8D56;&#x4E8E;&#x8FD9;&#x4E2A;api&#x8FDB;&#x884C;&#x7684;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x6280;&#x672F;&#x3002;</p>
@@ -1649,8 +1682,10 @@ int main()
 </code></pre>
 <p>&#x7ED3;&#x679C;&#xFF1A;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8BE5;dll&#x5DF2;&#x7ECF;&#x6210;&#x529F;&#x52A0;&#x8F7D;&#x5230;&#x5BF9;&#x5E94;&#x8FDB;&#x7A0B;&#x7684;&#x5185;&#x5B58;&#x4E2D;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x56E0;&#x4E3A;&#x6211;&#x5199;&#x7684;dll&#x91CC;&#x6709;&#x592A;&#x591A;&#x7684;&#x5F39;&#x7A97;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x5361;&#x6B7B;&#xFF0C;&#x6240;&#x4EE5;&#x80FD;&#x4E0D;&#x80FD;&#x5F39;&#x51FA;&#x6765;&#x770B;&#x8FD0;&#x6C14;</p>
 <p><img src="dll-inject/image-20230405141124544.png" alt="image-20230405141124544"></p>
+<h2 id="5&#x3001;&#x5176;&#x4ED6;">5&#x3001;&#x5176;&#x4ED6;</h2>
+<p>&#x4E0A;&#x8FF0;&#x662F;&#x5E38;&#x89C1;&#x7684;&#x4E00;&#x4E9B;dll&#x6CE8;&#x5165;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x4F46;&#x662F;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x7528;&#x6765;&#x5B9E;&#x73B0;&#x8FD9;&#x4E2A;&#x76EE;&#x7684;&#xFF0C;&#x53EA;&#x9700;&#x8981;api&#x53EF;&#x4EE5;&#x6EE1;&#x8DB3;&#x8C03;&#x7528;<code>loadlibrary</code>&#x548C;&#x5E26;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5C31;&#x53EF;&#x4EE5;&#x5B9E;&#x73B0;&#xFF0C;&#x6BD4;&#x5982;<code>RtlCreateUserThread</code></p>
 <footer class="page-footer"><span class="copyright">&#x6CA1;&#x6709;&#x7248;&#x6743;&#xFF0C;&#x968F;&#x4FBF;&#x590D;&#x5236;&#xFF0C;&#x514D;&#x8D39;&#x7684;&#x77E5;&#x8BC6;&#x5E94;&#x8BE5;&#x5171;&#x4EAB; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
-2023-04-05 16:31:42
+2023-04-11 19:42:37
 </span></footer>
 <script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
                                 
@@ -1695,7 +1730,7 @@ int main()
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Dll注入的3.5种方式","level":"1.8.8","depth":2,"next":{"title":"Vulnerability Mining","level":"1.9","depth":1,"path":"MyArticles/Vulnerability_Mining.md","ref":"MyArticles/Vulnerability_Mining.md","articles":[{"title":"shellcode编写-地址定位","level":"1.9.1","depth":2,"path":"MyArticles/Vulnerability_Mining/Windows通用shellcode编写.md","ref":"MyArticles/Vulnerability_Mining/Windows通用shellcode编写.md","articles":[]}]},"previous":{"title":"windows下的进程注入（6种）","level":"1.8.7","depth":2,"path":"MyArticles/CyberSec/6种常见注入方式.md","ref":"MyArticles/CyberSec/6种常见注入方式.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","custom-favicon","tbfed-pagefooter","popup","-sharing","sharing-plus","intopic-toc","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"没有版权，随便复制，免费的知识应该共享","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"./icon/book.ico","back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MyArticles/CyberSec/dll-inject.md","mtime":"2023-04-05T08:31:42.080Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-09T14:20:22.983Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Dll注入的3.5种方式","level":"1.8.8","depth":2,"next":{"title":"Vulnerability Mining","level":"1.9","depth":1,"path":"MyArticles/Vulnerability_Mining.md","ref":"MyArticles/Vulnerability_Mining.md","articles":[{"title":"shellcode编写-地址定位","level":"1.9.1","depth":2,"path":"MyArticles/Vulnerability_Mining/Windows通用shellcode编写.md","ref":"MyArticles/Vulnerability_Mining/Windows通用shellcode编写.md","articles":[]}]},"previous":{"title":"windows下的进程注入（6种）","level":"1.8.7","depth":2,"path":"MyArticles/CyberSec/6种常见注入方式.md","ref":"MyArticles/CyberSec/6种常见注入方式.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","custom-favicon","tbfed-pagefooter","popup","-sharing","sharing-plus","intopic-toc","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"没有版权，随便复制，免费的知识应该共享","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"./icon/book.ico","back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MyArticles/CyberSec/dll-inject.md","mtime":"2023-04-11T11:42:37.226Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-11T12:06:06.513Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
