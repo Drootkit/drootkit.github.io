@@ -1,0 +1,1129 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>WinAFL使用-安装 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="GDB使用.html" />
+    
+    
+    <link rel="prev" href="HonggFuzz使用-入门.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../构建gitbook.html">
+            
+                <a href="../构建gitbook.html">
+            
+                    
+                    写在开始，how2gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Reverse.html">
+            
+                <a href="../Reverse.html">
+            
+                    
+                    Reverse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Re/控制流平坦化.html">
+            
+                <a href="../Re/控制流平坦化.html">
+            
+                    
+                    反控制流平坦化学习-angr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Re/反调试 & 沙箱对抗技巧收集.html">
+            
+                <a href="../Re/反调试 & 沙箱对抗技巧收集.html">
+            
+                    
+                    反调试以及沙箱对抗技巧收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Re/常见加密算法-学习.html">
+            
+                <a href="../Re/常见加密算法-学习.html">
+            
+                    
+                    加密解密学习 - 更
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Re/分组密码学习.html">
+            
+                <a href="../Re/分组密码学习.html">
+            
+                    
+                    分组密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Re/vmp3.5unpacke.html">
+            
+                <a href="../Re/vmp3.5unpacke.html">
+            
+                    
+                    vmp3.X 工具向脱壳
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Basics.html">
+            
+                <a href="../Basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Basics/DebugC">
+            
+                <span>
+            
+                    
+                    调试C#的DLL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Basics/调用约定和断点.html">
+            
+                <a href="../Basics/调用约定和断点.html">
+            
+                    
+                    调用约定和断点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Basics/elf文件结构.html">
+            
+                <a href="../Basics/elf文件结构.html">
+            
+                    
+                    ELF structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Basics/Pe File Structer.html">
+            
+                <a href="../Basics/Pe File Structer.html">
+            
+                    
+                    PE structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Basics/arm学习.html">
+            
+                <a href="../Basics/arm学习.html">
+            
+                    
+                    ARM 基础学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Basics/Windows消息队列学习.html">
+            
+                <a href="../Basics/Windows消息队列学习.html">
+            
+                    
+                    Windows消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Practice.html">
+            
+                <a href="../Practice.html">
+            
+                    
+                    Practice
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Practice/YouTubePremium.apk.html">
+            
+                <a href="../Practice/YouTubePremium.apk.html">
+            
+                    
+                    Malware-APK0
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Dailynotes.html">
+            
+                <a href="../Dailynotes.html">
+            
+                    
+                    Daily notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Dailynotes/pdf解析重组.html">
+            
+                <a href="../Dailynotes/pdf解析重组.html">
+            
+                    
+                    电子书清晰化的尝试 利用python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Dailynotes/ipv6_base_vps.html">
+            
+                <a href="../Dailynotes/ipv6_base_vps.html">
+            
+                    
+                    搭建ipv6自有服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Dailynotes/learn_shell.html">
+            
+                <a href="../Dailynotes/learn_shell.html">
+            
+                    
+                    Shell 学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Dailynotes/就业意向.html">
+            
+                <a href="../Dailynotes/就业意向.html">
+            
+                    
+                    就业意向
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Development.html">
+            
+                <a href="../Development.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Development/find_dll_in_proc.html">
+            
+                <a href="../Development/find_dll_in_proc.html">
+            
+                    
+                    Find DLL in Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Development/find_thread_in_process.html">
+            
+                <a href="../Development/find_thread_in_process.html">
+            
+                    
+                    Find Thread in Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Development/Build-Arm.html">
+            
+                <a href="../Development/Build-Arm.html">
+            
+                    
+                    构建qemu的持续学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Development/查看父进程.html">
+            
+                <a href="../Development/查看父进程.html">
+            
+                    
+                    查看父进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../CyberSec.html">
+            
+                <a href="../CyberSec.html">
+            
+                    
+                    CyberSec
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../CyberSec/免杀手法收集.html">
+            
+                <a href="../CyberSec/免杀手法收集.html">
+            
+                    
+                    免杀手法收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../CyberSec/yara.html">
+            
+                <a href="../CyberSec/yara.html">
+            
+                    
+                    YARA学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../CyberSec/关于bitcoin.html">
+            
+                <a href="../CyberSec/关于bitcoin.html">
+            
+                    
+                    啥是Bitcoin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../CyberSec/IOC-痛苦金字塔.html">
+            
+                <a href="../CyberSec/IOC-痛苦金字塔.html">
+            
+                    
+                    从痛苦金字塔学习分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../CyberSec/PEB和TEB.html">
+            
+                <a href="../CyberSec/PEB和TEB.html">
+            
+                    
+                    TEB & PEB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../CyberSec/进程注入-基础.html">
+            
+                <a href="../CyberSec/进程注入-基础.html">
+            
+                    
+                    进程注入-前置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../CyberSec/6种常见注入方式.html">
+            
+                <a href="../CyberSec/6种常见注入方式.html">
+            
+                    
+                    windows下的进程注入（6种）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../CyberSec/dll-inject.html">
+            
+                <a href="../CyberSec/dll-inject.html">
+            
+                    
+                    Dll注入的3.5种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Vulnerability_Mining.html">
+            
+                <a href="../Vulnerability_Mining.html">
+            
+                    
+                    Vulnerability Mining
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Vulnerability_Mining/Windows通用shellcode编写.html">
+            
+                <a href="../Vulnerability_Mining/Windows通用shellcode编写.html">
+            
+                    
+                    shellcode编写-地址定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../ToolUsage.html">
+            
+                <a href="../ToolUsage.html">
+            
+                    
+                    Tool usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="HonggFuzz使用-入门.html">
+            
+                <a href="HonggFuzz使用-入门.html">
+            
+                    
+                    honggfuzz使用-安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10.2" data-path="WinAFL使用-入门.html">
+            
+                <a href="WinAFL使用-入门.html">
+            
+                    
+                    WinAFL使用-安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="GDB使用.html">
+            
+                <a href="GDB使用.html">
+            
+                    
+                    GDB使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="Fiddler学习.html">
+            
+                <a href="Fiddler学习.html">
+            
+                    
+                    Fiddler学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="windbg记录.html">
+            
+                <a href="windbg记录.html">
+            
+                    
+                    windbg使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >WinAFL使用-安装</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="winafl">WinAFL</h1>
+<p>&#x56E0;&#x4E3A;winafl&#x9700;&#x8981;&#x7684;&#x6D4B;&#x8BD5;&#x65F6;&#x95F4;&#x6BD4;&#x8F83;&#x957F;&#xFF0C;&#x6240;&#x4EE5;&#x76EE;&#x524D;&#x91C7;&#x53D6;&#x7684;&#x7B56;&#x7565;&#xFF1A;</p>
+<p>&#x672C;&#x5730;&#x7684;win10&#x865A;&#x62DF;&#x673A;&#x73AF;&#x5883;&#x914D;&#x7F6E;&#xFF0C;&#x547D;&#x4EE4;&#x914D;&#x7F6E;&#xFF0C;&#x6837;&#x672C;&#x6536;&#x96C6;&#xFF0C;&#x6210;&#x529F;&#x8DD1;&#x8D77;&#x73AF;&#x5883;&#x7684;&#x65F6;&#x5019;&#x63A8;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x8FDB;&#x884C;&#x957F;&#x65F6;&#x95F4;&#x6D4B;&#x8BD5;&#xFF08;&#x64CD;&#x4F5C;&#x76F8;&#x540C;&#x914D;&#x7F6E;&#x3001;&#x6216;&#x8005;&#x76F4;&#x63A5;&#x63A8;&#x9001;&#x5230;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF09;</p>
+<h1 id="&#x73AF;&#x5883;">&#x73AF;&#x5883;</h1>
+<ul>
+<li>win10&#x4E13;&#x4E1A;&#x7248;&#xFF0C;&#x4F46;&#x662F;&#x8BA4;&#x8BC1;&#x8FC7;&#x671F;&#x4E86;</li>
+<li>&#x5B89;&#x88C5;<a href="https://github.com/googleprojectzero/winafl" target="_blank">WinAFL</a></li>
+<li>&#x5B89;&#x88C5;DynamoRIO&#xFF08;&#x65B0;+&#x65E7;&#xFF0C;&#x6CE8;&#x610F;&#x9009;&#x5BF9;&#x4ED3;&#x5E93;&#xFF0C;&#x53F3;&#x8FB9;&#x7684;&#x90A3;&#x4E2A;&#x4ED3;&#x5E93;&#xFF09;</li>
+<li>cmake 3.190&#xFF0C;&#x9AD8;&#x7248;&#x672C;&#x95EE;&#x9898;&#x4E5F;&#x4E0D;&#x5927;&#xFF0C;&#x522B;&#x592A;&#x4F4E;&#x5C31;&#x884C;</li>
+<li>Visual Studio 2019&#xFF08;c++&#x73AF;&#x5883;&#xFF09;</li>
+</ul>
+<h1 id="&#x8FC7;&#x7A0B;">&#x8FC7;&#x7A0B;</h1>
+<p>&#x9700;&#x8981;&#x63D0;&#x524D;&#x5B89;&#x88C5;&#x597D;Visual Studio 2019&#xFF08;c++&#x73AF;&#x5883;&#xFF09;&#x548C;perl&#x73AF;&#x5883;&#x8FD8;&#x6709;doxygen&#x3002;&#x6700;&#x597D;&#x63D0;&#x524D;&#x5B89;&#x88C5;&#x597D;&#xFF0C;&#x914D;&#x7F6E;&#x597D;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF08;&#x6216;&#x8005;&#x5728;make&#x91CC;&#x9762;&#x5F53;&#x65F6;&#x6DFB;&#x52A0;&#xFF09;&#x3002;</p>
+<h2 id="&#x7F16;&#x8BD1;dynamorio">&#x7F16;&#x8BD1;DynamoRIO</h2>
+<p>&#x8FD9;&#x4E2A;&#x662F;&#x63D2;&#x6869;&#x5E93;&#xFF0C;&#x5173;&#x4E8E;fuzz&#x4E2D;&#x5728;Windows&#x4E0A;&#x7528;&#x6765;&#x63D2;&#x6869;&#x7684;&#x5173;&#x952E;&#x5DE5;&#x5177;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x8FD9;&#x4E2A;&#x4E1C;&#x897F;&#xFF0C;winAFL&#x5C31;&#x4E0D;&#x80FD;&#x7F16;&#x8BD1;&#x51FA;<code>winafl.dll</code>&#x8FD9;&#x4E2A;&#x5173;&#x952E;&#x6587;&#x4EF6;&#x3002;&#x4E24;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;<a href="https://github.com/DynamoRIO/dynamorio/releases" target="_blank">&#x6211;&#x5EFA;&#x8BAE;&#x76F4;&#x63A5;&#x5B89;&#x88C5;&#x7F16;&#x8BD1;&#x597D;&#x7684;&#x7248;&#x672C;</a>&#xFF0C;&#x5173;&#x952E;&#x5C31;&#x662F;&#x91CC;&#x9762;&#x7684;<code>cmake</code>&#x76EE;&#x5F55;&#x3002;</p>
+<p><img src="WinAFL&#x4F7F;&#x7528;-&#x5165;&#x95E8;/image-20230416173402004.png" alt="image-20230416173402004"></p>
+<h2 id="&#x7F16;&#x8BD1;afl">&#x7F16;&#x8BD1;AFL</h2>
+<p>&#x4E0D;&#x540C;&#x7684;&#x4F4D;&#x6570;&#x9700;&#x8981;&#x5206;&#x5F00;&#x7F16;&#x8BD1;&#xFF0C;&#x7528;&#x5230;cmake-gui&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x5462;&#xFF0C;&#x56E0;&#x4E3A;Windows&#x4E0B;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x4E0D;&#x4F1A;&#x8BB2;&#x9519;&#x8BEF;&#x9AD8;&#x4EAE;&#x51FA;&#x6765;&#xFF0C;&#x4F60;&#x4E5F;&#x4E0D;&#x77E5;&#x9053;&#x5BF9;&#x9519;&#xFF0C;&#x7ED9;&#x81EA;&#x5DF1;&#x57CB;&#x5730;&#x96F7;&#x3002;</p>
+<h3 id="64">64</h3>
+<p>&#x5229;&#x7528;cmake&#x7684;gui&#x586B;&#x5165;&#x76F8;&#x5173;&#x76EE;&#x5F55;</p>
+<p><img src="WinAFL&#x4F7F;&#x7528;-&#x5165;&#x95E8;/image-20230416173702072.png" alt="image-20230416173702072"></p>
+<p>&#x8FD9;&#x91CC;&#x7B2C;&#x4E8C;&#x4E2A;&#x8F93;&#x51FA;&#x76EE;&#x5F55;&#x968F;&#x4FBF;&#xFF0C;&#x6CA1;&#x6709;&#x5979;&#x4F1A;&#x81EA;&#x5DF1;&#x65B0;&#x5EFA;&#x3002;&#x7136;&#x540E;Configure&#x4E00;&#x4E0B;&#xFF0C;&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x5728;File&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x6E05;&#x7406;&#x7F13;&#x5B58;&#x7684;&#x9009;&#x9879;</p>
+<p><img src="WinAFL&#x4F7F;&#x7528;-&#x5165;&#x95E8;/image-20230416183339869.png" alt="image-20230416183339869"></p>
+<p>Configure&#x91CC;&#x9762;&#x7B2C;&#x4E00;&#x4E2A;&#x5C31;&#x662F;&#x8981;&#x9009;&#x62E9;&#x4E00;&#x4E0B;&#x7F16;&#x8BD1;&#x73AF;&#x5883;</p>
+<p><img src="WinAFL&#x4F7F;&#x7528;-&#x5165;&#x95E8;/image-20230416183421094.png" alt="image-20230416183421094"></p>
+<p>&#x7B2C;&#x4E8C;&#x884C;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x662F;32&#x8FD8;&#x662F;64&#x4F4D;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;64&#xFF0C;&#x4E00;&#x822C;&#x5C31;&#x8FD9;&#x6837;&#x5C31;&#x76F4;&#x63A5;finish&#xFF0C;&#x7136;&#x540E;&#x4E0B;&#x9762;&#x53EF;&#x80FD;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x7F3A;&#x5C11;message compiler&#x6216;&#x8005;&#x662F;&#x4EC0;&#x4E48;&#x5176;&#x4ED6;&#x7684;&#x5C31;everything&#x627E;&#x4E00;&#x4E0B;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x76EE;&#x5F55;&#x6DFB;&#x52A0;&#x8FDB;&#x53BB;&#x5C31;&#x884C;&#xFF0C;<a href="https://www.cnblogs.com/suanguade/p/13388818.html" target="_blank">&#x53C2;&#x8003;</a>&#x8FD9;&#x91CC;&#x5C31;&#x884C;&#x3002;</p>
+<p>&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x518D;&#x70B9;&#x51FB;Generate&#xFF0C;&#x5B8C;&#x4E8B;&#x5C31;&#x53BB;&#x76EE;&#x6807;&#x76EE;&#x5F55;&#x91CC;&#xFF0C;&#x7528;vs&#x6253;&#x5F00;sln&#x6587;&#x4EF6;</p>
+<p><img src="WinAFL&#x4F7F;&#x7528;-&#x5165;&#x95E8;/image-20230416183903174.png" alt="image-20230416183903174"></p>
+<p>&#x8FD9;&#x4E2A;&#x7528;vs&#x6253;&#x5F00;&#xFF0C;&#x7136;&#x540E;&#x7528;vs&#x7F16;&#x8BD1;&#x5C31;&#x884C;&#xFF0C;&#x8FD9;&#x91CC;&#x7F51;&#x4E0A;&#x7684;&#x6559;&#x7A0B;&#x57FA;&#x672C;&#x90FD;&#x662F;&#x8BA9;&#x4F60;&#x7528;&#x547D;&#x4EE4;&#x884C;&#xFF0C;&#x8FD9;&#x79CD;&#x505A;&#x6CD5;&#x76F8;&#x5BF9;&#x6BD4;&#x8F83;&#x50BB;&#x903C;&#x4E00;&#x4E9B;&#xFF0C;&#x7ED9;&#x81EA;&#x5DF1;&#x627E;&#x9EBB;&#x70E6;&#x3002;</p>
+<p><img src="WinAFL&#x4F7F;&#x7528;-&#x5165;&#x95E8;/image-20230416184042641.png" alt="image-20230416184042641"></p>
+<p>&#x76F4;&#x63A5;&#x751F;&#x6210;&#x89E3;&#x51B3;&#x65B9;&#x6848;&#x5C31;&#x884C;&#xFF0C;&#x8FD9;&#x91CC;&#x6CE8;&#x610F;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x62A5;&#x9519;&#xFF0C;&#x4F46;&#x662F;&#x597D;&#x50CF;&#x4E0D;&#x5F71;&#x54CD;&#x6587;&#x4EF6;&#x7684;&#x751F;&#x6210;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#x9879;&#x76EE;&#x91CC;&#x6709;&#x6CA1;&#x6709;<code>winafl</code>&#x8FD9;&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x6CA1;&#x6709;&#x7684;&#x8BDD;&#x5C31;&#x8BF4;&#x660E;cmake&#x5931;&#x8D25;&#x4E86;&#x3002;</p>
+<h3 id="32">32</h3>
+<p>&#x6CE8;&#x610F;&#x5728;cmake&#x91CC;&#x7684;<code>Configure</code>&#x7684;&#x65F6;&#x5019;&#x9009;&#x62E9;&#x4E00;&#x4E0B;&#xFF0C;&#x5176;&#x4ED6;&#x6B65;&#x9AA4;&#x4E00;&#x81F4;&#x3002;vs&#x7F16;&#x8BD1;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x4F1A;&#x62A5;&#x9519;</p>
+<h1 id="&#x6700;&#x540E;">&#x6700;&#x540E;</h1>
+<p><img src="WinAFL&#x4F7F;&#x7528;-&#x5165;&#x95E8;/image-20230416184433650.png" alt="image-20230416184433650"></p>
+<p>&#x770B;&#x5230;&#x8FD9;&#x6837;&#x57FA;&#x672C;&#x5C31;&#x6210;&#x4E86;&#x3002;&#x4E5F;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x76EE;&#x5F55;&#x4E0B;&#x751F;&#x6210;&#x7684;&#x6587;&#x4EF6;&#x3002;</p>
+<p><img src="WinAFL&#x4F7F;&#x7528;-&#x5165;&#x95E8;/image-20230427205355076.png" alt="image-20230427205355076"></p>
+<p>&#x7EA2;&#x6846;&#x4E2D;&#x7684;&#x662F;&#x5173;&#x952E;&#x6587;&#x4EF6;&#xFF0C;&#x5176;&#x4ED6;&#x6587;&#x4EF6;&#x90FD;&#x662F;&#x4E00;&#x4E9B;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x548C;&#x6211;&#x81EA;&#x5DF1;&#x5199;&#x7684;&#x6848;&#x4F8B;&#x3002;</p>
+<h1 id="&#x4F7F;&#x7528;&#x4F8B;&#x5B50;">&#x4F7F;&#x7528;&#x4F8B;&#x5B50;</h1>
+<p>&#x4E3A;&#x4E86;&#x9A8C;&#x8BC1;&#x7A0B;&#x5E8F;&#x662F;&#x4E0D;&#x662F;&#x80FD;&#x8DD1;&#xFF0C;<a href="https://www.cnblogs.com/suanguade/p/14453587.html" target="_blank">&#x5148;&#x627E;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x6D4B;&#x8BD5;&#x4E00;&#x4E0B;</a></p>
+<p><strong>&#x4E0B;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x9700;&#x8981;&#x5728;cmd&#x4E2D;&#x4F7F;&#x7528;&#xFF0C;Windows terminal&#x91CC;&#x9762;&#x65E0;&#x6CD5;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;</strong></p>
+<pre><code class="lang-shell">afl-fuzz.exe 
+-i in 
+-o out 
+-D &quot;D:\dynamorio-master\dynamorio-master\Project\bin32&quot; 
+-t 20000 
+-- 
+-coverage_module gdiplus.dll 
+-coverage_module WindowsCodecs.dll 
+-fuzz_iterations 5000 
+-target_module test_gdiplus.exe 
+-target_offset 0x1680 
+-nargs 1 
+-- 
+test_gdiplus.exe @@
+</code></pre>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x91CC;&#x9762;&#x7684;<code>--</code>&#x662F;&#x5206;&#x9694;&#x7B26;</p>
+<p><code>-o&#x3001;-i</code>&#x662F;&#x8F93;&#x51FA;&#x8F93;&#x5165;&#x76EE;&#x5F55;</p>
+<p><code>-t</code>&#x662F;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;&#x6BEB;&#x79D2;</p>
+<p><code>coverage_module</code>&#x8FD9;&#x662F;&#x6D4B;&#x8BD5;&#x7684;&#x6A21;&#x5757;&#xFF0C;&#x5141;&#x8BB8;&#x6709;&#x591A;&#x4E2A;</p>
+<p><code>fuzz_iterations</code>&#x662F;&#x5FAA;&#x73AF;&#x7684;&#x6B21;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x4F1A;&#x5F71;&#x54CD;<code>exec speed</code>&#xFF0C; &#x4E00;&#x822C;&#x901F;&#x5EA6;&#x5728;&#x51E0;&#x767E;&#x4E0A;&#x5343;&#x662F;&#x6B63;&#x5E38;&#x7684;&#xFF0C;&#x8FC7;&#x6162;&#x5C31;&#x8BF4;&#x660E;&#x524D;&#x5904;&#x7406;&#x8FC7;&#x7A0B;&#x4E0D;&#x884C;</p>
+<p><code>target_module</code>&#x548C;<code>target_offset</code>&#x662F;&#x6D4B;&#x8BD5;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x5C31;&#x662F;&#x8981;&#x6267;&#x884C;&#x7684;&#x7A0B;&#x5E8F;&#xFF0C;&#x8981;&#x548C;&#x6700;&#x540E;&#x7684;&#x76F8;&#x5339;&#x914D;&#xFF0C;&#x800C;&#x4E14;offset&#x4E00;&#x5B9A;&#x8981;&#x662F;module&#x91CC;&#x7684;offset&#xFF0C;ida&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x770B;</p>
+<p><code>-nargs</code>&#x662F;&#x53C2;&#x6570;&#x7684;&#x4E2A;&#x6570;&#xFF0C;&#x4E0D;&#x5305;&#x62EC;&#x672C;&#x8EAB; </p>
+<p><code>@@</code>&#x4EE3;&#x8868;&#x53C2;&#x6570;&#x662F;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x7684;in&#x91CC;&#x7684;</p>
+<p>&#x6700;&#x540E;&#x7684;&#x7ED3;&#x679C;&#x5982;&#x4E0B;&#x6240;&#x793A;</p>
+<p><img src="WinAFL&#x4F7F;&#x7528;-&#x5165;&#x95E8;/image-20230416194408205.png" alt="image-20230416194408205"></p>
+<h1 id="afl">AFL++</h1>
+<p>afl&#x5DF2;&#x7ECF;&#x5F88;&#x4E45;&#x6CA1;&#x6709;&#x66F4;&#x65B0;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x63A8;&#x51FA;&#x7684;afl++&#x8FD8;&#x5728;&#x66F4;&#x65B0;&#xFF0C;&#x6240;&#x4EE5;&#x53EF;&#x4EE5;&#x91C7;&#x7528;afl++&#x6765;&#x66FF;&#x4EE3;afl&#x3002;</p>
+<p>&#x914D;&#x7F6E;&#x8FD9;&#x4E2A;&#x73AF;&#x5883;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;docker&#x5C31;&#x884C;&#x4E86;&#xFF0C;&#x6CE8;&#x610F;&#x8BBE;&#x7F6E;&#x4E00;&#x4E2A;&#x5171;&#x4EAB;&#x76EE;&#x5F55;&#x7528;&#x6765;&#x4EA4;&#x6D41;&#x6587;&#x4EF6;&#x3002;</p>
+<pre><code class="lang-shell">docker pull aflplusplus/aflplusplus
+
+docker run -ti -v $HOME:/home aflplusplus/aflplusplus
+
+export $HOME=&quot;/home&quot;
+</code></pre>
+<h1 id="irfanview&#x6848;&#x4F8B;">IrfanView&#x6848;&#x4F8B;</h1>
+<p>&#x9996;&#x5148;&#x5728;<a href="https://www.irfanview.com/plugins.htm" target="_blank">&#x5B98;&#x7F51;</a>&#x4E0B;&#x8F7D;&#x6700;&#x65B0;&#x7248;&#x672C;&#xFF0C;&#x7136;&#x540E;&#x4E0B;&#x8F7D;&#x4E00;&#x4E9B;&#x4ED6;&#x7684;&#x63D2;&#x4EF6;</p>
+<p><img src="WinAFL&#x4F7F;&#x7528;-&#x5165;&#x95E8;/image-20230422141217671.png" alt="image-20230422141217671"></p>
+<p>&#x5728;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x4E0B;&#x8F7D;&#x63D2;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FD9;&#x91CC;&#x8FD8;&#x662F;&#x6709;&#x4E0D;&#x5C11;CVE&#x7248;&#x672C;&#x7684;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x5148;&#x627E;&#x4E00;&#x4E0B;&#x6837;&#x672C;&#x5E93;&#xFF0C;&#x4ECE;<a href="https://github.com/moshekaplan/FuzzImageMagick" target="_blank">github&#x4ED3;&#x5E93;</a>&#x4E2D;&#x53EF;&#x4EE5;&#x4E0B;&#x8F7D;&#xFF0C;&#x4E0B;&#x8F7D;&#x4E4B;&#x540E;&#x9700;&#x8981;&#x5BF9;&#x6837;&#x672C;&#x8FDB;&#x884C;&#x4E00;&#x4E2A;&#x7CBE;&#x7B80;&#xFF0C;&#x8BA9; afl&#x81EA;&#x5DF1;&#x53BB;&#x6839;&#x636E;&#x7279;&#x5F81;&#x8FDB;&#x884C;&#x5220;&#x51CF;&#x6765;&#x63D0;&#x9AD8;&#x6548;&#x7387;&#x3002;</p>
+<h2 id="&#x5BFB;&#x627E;&#x504F;&#x79FB;">&#x5BFB;&#x627E;&#x504F;&#x79FB;</h2>
+<p>&#x4E0D;&#x8BBA;&#x5E72;&#x5565;&#x90FD;&#x9700;&#x8981;&#x5148;&#x627E;&#x5230;&#x5904;&#x7406;&#x6587;&#x4EF6;&#x7684;&#x5BF9;&#x5E94;&#x7684;&#x504F;&#x79FB;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;ProcMon&#x6765;&#x67E5;&#x627E;</p>
+<p><img src="WinAFL&#x4F7F;&#x7528;-&#x5165;&#x95E8;/image-20230422151412447.png" alt="image-20230422151412447"></p>
+<p>&#x627E;&#x5230;&#x5904;&#x7406;&#x504F;&#x79FB;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x7528;winafl&#x81EA;&#x5E26;&#x7684;&#x5DE5;&#x5177;&#x8FDB;&#x884C;&#x6837;&#x672C;&#x7B5B;&#x9009;</p>
+<pre><code class="lang-shell">python winafl-cmin.py 
+--working-dir C:\Users\moshe\Desktop\fuzz\winafl\build32\bin\Release 
+-w 3 
+-i C:\Users\moshe\Desktop\fuzz\samples 
+-o C:\Users\moshe\Desktop\fuzz\irfanview_cmin 
+-t 4000 
+-D C:\Users\moshe\Desktop\fuzz\dynamorio\build\bin32 
+-covtype edge 
+-target_module &quot;i_view32.exe&quot; 
+-coverage_module &quot;i_view32.exe&quot; 
+-target_offset 0xa54fd
+-nargs 3
+-- 
+C:\Users\moshe\Desktop\fuzz\iview457\i_view32.exe @@ /convert=&quot;NUL&quot; /silent
+</code></pre>
+<ul>
+<li>&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x662F;winafl.dll&#x6240;&#x5728;&#x7684;&#x76EE;&#x5F55;</li>
+<li>-w&#x662F;CPU&#x7684;&#x6838;&#x5FC3;&#x6570;&#xFF0C;&#x63D0;&#x9AD8;&#x7B5B;&#x9009;&#x901F;&#x5EA6;</li>
+<li>i/o&#x5C31;&#x662F;&#x8F93;&#x5165;&#x548C;&#x8F93;&#x51FA;&#x76EE;&#x5F55;</li>
+<li>-t&#x5C31;&#x662F;&#x8D85;&#x65F6;&#x65F6;&#x95F4;</li>
+<li>-D&#x662F;DynamoRIO &#x76EE;&#x5F55;&#x3002;&#x8FD9;&#x4E0E;&#x4E4B;&#x524D;&#x6267;&#x884C; drrun &#x7684;&#x4F4D;&#x7F6E;&#x76F8;&#x540C;.exe</li>
+<li>covtype&#xFF1A;</li>
+</ul>
+<p>&#x9ED8;&#x8BA4;&#x8986;&#x76D6;&#x8DDF;&#x8E2A;&#x5668;&#x4EC5;&#x8DDF;&#x8E2A;&#x904D;&#x5386;&#x4E86;&#x54EA;&#x4E9B;&#x57FA;&#x672C;&#x5757;&#x3002;Edge&#x8FD8;&#x8DDF;&#x8E2A;&#x57FA;&#x672C;&#x5757;&#x88AB;&#x547D;&#x4E2D;&#x7684;&#x987A;&#x5E8F;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x60A8;&#x7684;&#x7A0B;&#x5E8F;&#x4ECE;&#x5177;&#x6709;&#x4E24;&#x4E2A;&#x72EC;&#x7ACB;&#x8F93;&#x5165;&#x7684;&#x57FA;&#x672C;&#x5757; A-&gt;B-&gt;C &#x548C; A-&gt;C-&gt;B &#x5F00;&#x59CB;&#xFF0C;&#x5219;&#x57FA;&#x672C;&#x5757;&#x8DDF;&#x8E2A;&#x5668;&#x53EA;&#x4F1A;&#x770B;&#x5230;&#x4E00;&#x4E2A;&#x611F;&#x5174;&#x8DA3;&#x7684;&#x8F93;&#x5165;&#xFF0C;&#x800C;&#x8FB9;&#x7F18;&#x8DDF;&#x8E2A;&#x5668;&#x5C06;&#x540C;&#x65F6;&#x770B;&#x5230;&#x4E24;&#x4E2A;&#x8F93;&#x5165;&#x3002;</p>
+<ul>
+<li>&#x540E;&#x9762;&#x5C31;&#x662F;&#x76EE;&#x6807;&#x6A21;&#x5757;&#x548C;&#x6D4B;&#x8BD5;&#x6A21;&#x5757;&#x4E86;</li>
+<li>&#x7A0B;&#x5E8F;&#x53C2;&#x6570;&#x7684;&#x4E2A;&#x6570;</li>
+<li>&#x540E;&#x9762;&#x5C31;&#x662F;&#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#x7684;&#x53C2;&#x6570;</li>
+</ul>
+<p>&#x7ECF;&#x8FC7;&#x7B5B;&#x9009;&#x5B8C;&#x4E4B;&#x540E;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x7ED3;&#x679C;</p>
+<p><img src="WinAFL&#x4F7F;&#x7528;-&#x5165;&#x95E8;/image-20230422151938867.png" alt="image-20230422151938867"></p>
+<h2 id="&#x4F7F;&#x7528;drrun&#x9A8C;&#x8BC1;">&#x4F7F;&#x7528;drrun&#x9A8C;&#x8BC1;</h2>
+<p>&#x8FD9;&#x662F;&#x5173;&#x952E;&#x7684;&#x4E00;&#x6B65;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;</p>
+<p>&#x6D4B;&#x8BD5;&#x7A0B;&#x5E8F;&#x548C;winafl&#x4E00;&#x5B9A;&#x8981;&#x5728;&#x540C;&#x4E00;&#x4E2A;&#x76EE;&#x5F55;&#x4E0B;&#xFF0C;&#x4E0D;&#x7136;&#x4F1A;&#x51FA;&#x73B0;&#x5B9A;&#x4F4D;&#x4E0D;&#x5230;&#x504F;&#x79FB;&#x7684;&#x95EE;&#x9898;&#x3002;&#x6BD4;&#x5982;&#x6211;&#x6D4B;&#x8BD5;&#x7684;&#x662F;aaa.exe&#x4F46;&#x662F;&#x4E3B;&#x8981;&#x76EE;&#x6807;&#x662F;&#x4ED6;&#x7684;&#x63D2;&#x4EF6;bbb.dll&#x8FD9;&#x91CC;bbb&#x7684;&#x4F4D;&#x7F6E;&#x65E0;&#x6240;&#x8C13;&#xFF0C;&#x4F46;&#x662F;exe&#x4E00;&#x5B9A;&#x8981;&#x540C;&#x76EE;&#x5F55;</p>
+<p><strong>&#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;&#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;&#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;&#x4E00;&#x5B9A;&#x8981;&#x6CE8;&#x610F;</strong></p>
+<p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5982;&#x4E0B;&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#xFF0C;&#x8FD9;&#x4E2A;&#x6587;&#x6863;&#x4E0D;&#x662F;&#x4E00;&#x5929;&#x5199;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x6D4B;&#x8BD5;&#x7684;&#x7A0B;&#x5E8F;&#x4E0D;&#x4E00;&#x6837;&#xFF0C;&#x61D2;&#x5F97;&#x6539;&#x4E86;&#x3002;</p>
+<pre><code class="lang-shell">D:\DynamoRIO9.92.19461\bin32\drrun.exe 
+-c winafl.dll 
+-debug 
+-target_module calldll.exe 
+- coverage_module test_call.dll
+-fuzz_iterations 10 
+-target_offset 0x1590 
+-- 
+calldll.exe &quot;123123123456asdf&quot;
+</code></pre>
+<h3 id="&#x67E5;&#x770B;&#x8986;&#x76D6;&#x7387;">&#x67E5;&#x770B;&#x8986;&#x76D6;&#x7387;</h3>
+<p>&#x5229;&#x7528;&#x547D;&#x4EE4;&#xFF0C;&#x751F;&#x6210;&#x4E00;&#x4E2A;log&#x6587;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x5229;&#x7528;ida&#x5B89;&#x88C5;&#x7684;lighthouse&#x63D2;&#x4EF6;&#xFF0C;&#x5728;</p>
+<p><img src="WinAFL&#x4F7F;&#x7528;-&#x5165;&#x95E8;/image-20230423175552880.png" alt="image-20230423175552880"></p>
+<p>load&#x751F;&#x6210;&#x7684;log file&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x660E;&#x663E;&#x7684;&#x770B;&#x5230;&#x8986;&#x76D6;&#x7387;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;lighthouse&#x5DF2;&#x7ECF;&#x5F88;&#x4E45;&#x6CA1;&#x66F4;&#x65B0;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x65E7;&#x7248;&#x672C;&#x7684;drrun&#x6765;&#x6D4B;&#x8BD5;&#xFF0C;&#x67E5;&#x770B;&#x7684;&#x7ED3;&#x679C;&#x5176;&#x5B9E;&#x5E94;&#x8BE5;&#x57FA;&#x672C;&#x4E00;&#x6837;&#x7684;&#x3002;&#x5982;&#x679C;&#x62A5;&#x9519;&#x4E86;&#xFF0C;&#x5C31;&#x964D;&#x4F4E;drrun&#x7684;&#x7248;&#x672C;&#xFF0C;&#x4F46;&#x662F;&#x7F16;&#x8BD1;afl&#x7684;&#x65F6;&#x5019;&#x8FD8;&#x662F;&#x7528;&#x65B0;&#x7248;&#x672C;&#x7684;drrun&#x53BB;&#x7F16;&#x8BD1;&#x3002;&#x7136;&#x540E;&#x751F;&#x6210;&#x7684;&#x5BF9;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x8981;load&#x8FDB;&#x5BF9;&#x5E94;&#x6587;&#x4EF6;&#x7684;ida&#x4E2D;&#xFF0C;&#x7528;&#x9519;&#x4E86;&#x4E5F;&#x4F1A;&#x62A5;&#x9519;&#x3002;</p>
+<pre><code class="lang-shell">D:\DynamoRIO-Windows-8.0.18712\bin32\drrun.exe  
+-t drcov 
+-- 
+calldll.exe adsfadfadfdasfassdf 12345609876llllllllllllllllll
+</code></pre>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<p>&#x5229;&#x7528;procmon&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x8FDB;&#x884C;&#x4E00;&#x4E2A;&#x5927;&#x4F53;&#x7684;&#x5B9A;&#x4F4D;&#xFF0C;&#x540E;&#x7EED;&#x7528;&#x5230;&#x7684;drrun&#x5C31;&#x662F;&#x5BF9;&#x5177;&#x4F53;&#x6A21;&#x5757;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x5757;&#x8FDB;&#x884C;&#x7684;&#x5B9A;&#x4F4D;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8986;&#x76D6;&#x767E;&#x5206;&#x7387;&#x8FD9;&#x4E9B;&#x4E1C;&#x897F;&#xFF0C;&#x770B;&#x4E00;&#x4E0B;&#x76EE;&#x6807;&#x6A21;&#x5757;&#x600E;&#x4E48;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#xFF0C;&#x6216;&#x8005;&#x6709;&#x6CA1;&#x6709;&#x9677;&#x5165;&#x5947;&#x602A;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x3002;</p>
+<h2 id="&#x5F00;&#x59CB;&#x6A21;&#x7CCA;&#x6D4B;&#x8BD5;">&#x5F00;&#x59CB;&#x6A21;&#x7CCA;&#x6D4B;&#x8BD5;</h2>
+<p>&#x4F7F;&#x7528;&#x7ECF;&#x5178;&#x7684;winafl&#x547D;&#x4EE4;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#x4E86;&#xFF0C;&#x56E0;&#x4E3A;&#x8FD9;&#x662F;&#x5229;&#x7528; DynamoRIO &#x8FDB;&#x884C;&#x7684;&#x52A8;&#x6001;&#x63D2;&#x6869;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x9700;&#x8981;&#x7F16;&#x8BD1;&#x5565;&#x7684;&#x3002;</p>
+<pre><code class="lang-shell">afl-fuzz.exe 
+-i C:\Users\moshe\Desktop\fuzz\irfanview_cmin 
+-o C:\Users\moshe\Desktop\fuzz\winafl_output 
+-t 1000+ 
+-D C:\Users\moshe\Desktop\fuzz\dynamorio\build\bin32 
+-- 
+-coverage_module &quot;i_view32.exe&quot; 
+-target_module &quot;i_view32.exe&quot; 
+-target_offset 0x082550 
+-- 
+C:\Users\moshe\Desktop\fuzz\iview457\i_view32.exe @@ /convert=&quot;NUL&quot; /silent
+</code></pre>
+<ul>
+<li><code>iotD</code>&#x8FD9;&#x4E9B;&#x53C2;&#x6570;&#x90FD;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#x542B;&#x4E49;</li>
+<li>-- &#x4F5C;&#x4E3A;&#x5206;&#x9694;&#x7B26;</li>
+<li>target_offset&#xFF1A;&#x76EE;&#x6807;&#x7684;&#x76F8;&#x5BF9;&#x4E8E;&#x6587;&#x4EF6;&#x5934;&#x7684;&#x504F;&#x79FB;</li>
+</ul>
+<p>&#x5F00;&#x59CB;&#x6D4B;&#x8BD5;&#xFF1A;</p>
+<p><img src="WinAFL&#x4F7F;&#x7528;-&#x5165;&#x95E8;/image-20230422154314558.png" alt="image-20230422154314558"></p>
+<p>&#x4E0D;&#x96BE;&#x53D1;&#x73B0;&#xFF0C;&#x5168;&#x662F;&#x4E00;&#x5806;time out&#xFF0C;&#x8FD9;&#x663E;&#x7136;&#x662F;&#x4E0D;&#x6210;&#x529F;&#x7684;&#x3002;&#x4F46;&#x662F;&#x57FA;&#x672C;&#x7684;&#x6D41;&#x7A0B;&#x6E05;&#x695A;&#x4E86;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x4ED6;&#x627E;&#x4E0D;&#x5230;&#x8981;&#x6D4B;&#x8BD5;&#x7684;dll&#x5E93;&#x4E86;&#xFF0C;&#x9700;&#x8981;&#x624B;&#x52A8;patch&#x4E00;&#x4E0B;&#x76EE;&#x6807;&#x7A0B;&#x5E8F;&#x8BA9;&#x4ED6;&#x53EF;&#x4EE5;&#x5728;&#x672C;&#x76EE;&#x5F55;&#x4E2D;&#x5BFB;&#x627E;&#x63D2;&#x4EF6;dll&#xFF0C;&#x5426;&#x5219;winafl&#x4F1A;&#x62A5;&#x9519;&#xFF0C;<strong>winafl&#x4E0D;&#x80FD;&#x8DE8;&#x76EE;&#x5F55;</strong></p>
+<p><img src="WinAFL&#x4F7F;&#x7528;-&#x5165;&#x95E8;/image-20230424122030379.png" alt="image-20230424122030379"></p>
+<p>&#x4FEE;&#x6539;&#x4E00;&#x4E0B;&#x8FD9;&#x91CC;&#xFF0C;&#x7136;&#x540E;&#x5C06;webp&#x6258;&#x5230;&#x540C;&#x76EE;&#x5F55;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x5C31;&#x53EF;&#x4EE5;&#x540C;&#x76EE;&#x5F55;&#x6D4B;&#x8BD5;&#x4E86;&#x3002;</p>
+<h2 id="f">-f</h2>
+<p>&#x8FD9;&#x4E2A;&#x6D4B;&#x8BD5;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x8F93;&#x5165;&#x6587;&#x4EF6;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x5982;&#x4E0B;&#x6240;&#x793A;&#xFF1A;</p>
+<pre><code class="lang-shell">afl-fuzz.exe -i in -o out -S s1 -D &quot;D:\DynamoRIO9.92.19461\bin32&quot; -f test.webp -t 7000 -- -c overage_module WebP.dll -target_module call_webp.exe -target_offset 0x0155c -fuzz_iterations 8000 -nargs 1 -- call_webp.exe @@
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x8F93;&#x5165;&#x4F1A;&#x6839;&#x636E;in&#x76EE;&#x5F55;&#x4E2D;&#x7684;&#x6587;&#x4EF6;&#x53D8;&#x5F02;&#x5F97;&#x5230;&#x3002;</p>
+<h2 id="&#x63D0;&#x9AD8;&#x6548;&#x7387;">&#x63D0;&#x9AD8;&#x6548;&#x7387;</h2>
+<p>&#x76F4;&#x63A5;&#x901A;&#x8FC7;&#x539F;&#x59CB;&#x7A0B;&#x5E8F;&#x6D4B;&#x8BD5;&#x4F1A;&#x6709;&#x8BB8;&#x591A;&#x5176;&#x4ED6;&#x8DEF;&#x5F84;&#xFF0C;&#x964D;&#x4F4E;fuzz&#x7684;&#x901F;&#x5EA6;&#xFF0C;&#x5B9E;&#x6D4B;&#x5CF0;&#x503C;&#x5728;40&#x6B21;&#x6BCF;s&#x5DE6;&#x53F3;&#xFF0C;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x624B;&#x52A8;&#x5199;&#x4E00;&#x4E2A;calldll&#x7A0B;&#x5E8F;&#x6765;&#x8FDB;&#x884C;fuzz</p>
+<p>&#x9996;&#x5148;&#x5C31;&#x662F;&#x8981;&#x641E;&#x6E05;&#x695A;dll&#x91CC;&#x67D0;&#x4E2A;&#x5BFC;&#x51FA;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#xFF0C;ida&#x53EF;&#x80FD;&#x4F1A;&#x51FA;&#x9519;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x8981;x64dbg&#x548C;ida&#x8054;&#x5408;&#x8C03;&#x8BD5;&#xFF0C;&#x4E0B;&#x9762;&#x662F;&#x6211;&#x5199;&#x7684;calldll&#x6587;&#x4EF6;&#xFF0C;&#x53EF;&#x4EE5;&#x5C06;&#x901F;&#x5EA6;&#x63D0;&#x5347;&#x5230;1000&#x6B21;&#x6BCF;&#x79D2;&#x5DE6;&#x53F3;&#xFF0C;&#x901F;&#x5EA6;&#x975E;&#x5E38;&#x5FEB;&#xFF0C;&#x4EC5;&#x4F9B;&#x53C2;&#x8003;&#xFF1A;&#x5229;&#x7528;&#x4E0B;&#x9762;&#x7684;&#x7A0B;&#x5E8F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x53EA;fuzz&#x4E0B;&#x9762;&#x7684;&#x90A3;&#x4E2A;fuzz&#x51FD;&#x6570;&#xFF0C;&#x9632;&#x6B62;fuzz&#x7A0B;&#x5E8F;&#x9677;&#x5165;&#x5176;&#x4ED6;&#x65E0;&#x7528;&#x6A21;&#x5757;&#x3002;</p>
+<pre><code class="lang-c">#include&lt;stdio.h&gt;
+#include&lt;windows.h&gt;
+// L&quot;\x65E0\x0000\x215B\x54C4&quot; 2
+wchar_t iarg3[520] = { 0 };
+wchar_t iarg4[520] = { 0 };
+int iarg5[17] = {0};
+
+// typedef void (WINAPI *Readwebp_W)(char *D, wchar_t a2[], wchar_t arg2[] , wchar_t *ini_path, wchar_t* file_path);
+typedef void (WINAPI *Readwebp_W)(LPCWSTR file_path, LPCWSTR ini_path, wchar_t *arg3, wchar_t *arg4, int *arg5);
+
+void fuzz(Readwebp_W readwebp_W, LPCWSTR file_path)
+{
+    LPCWSTR lpFileName = TEXT(L&quot;C:\\Users\\Rootkit\\AppData\\Roaming\\IrfanView\\i_view32.ini&quot;);
+    readwebp_W(file_path, lpFileName, iarg3, iarg4, iarg5);
+}
+
+int main(int argc, char **argv) 
+{
+    HMODULE PDFDLL = LoadLibraryA(&quot;C:\\Users\\Rootkit\\Desktop\\winafl-TEST\\IrfanView\\webp.dll&quot;);
+    if(PDFDLL == NULL)
+    {
+        printf(&quot;call pdf.dll wrong , error code : %d\n&quot;, GetLastError());
+        return 0;
+    }
+
+    Readwebp_W readWebp = (Readwebp_W)GetProcAddress(PDFDLL, &quot;ReadWebP_W&quot;);
+    if (readWebp == NULL) 
+    {
+        printf(&quot;GetProcAddress readWebp failed! error code: %d\n&quot;, GetLastError());
+        FreeLibrary(PDFDLL);
+        return 1;    
+    }
+
+    int len = strlen(argv[1]); // length of input string
+
+    // calculate required length of wide byte string (add 1 for null terminator)
+    int wideLen = MultiByteToWideChar(CP_UTF8, 0, argv[1], len, NULL, 0) + 1;
+    printf(&quot;%d\n&quot;, wideLen);
+    wideLen = len + 1; // UTF-8 to wide char conversion, assuming all chars are the same (no surrogates
+    printf(&quot;%d\n&quot;, wideLen);
+
+    // allocate memory for wide byte string
+    LPWSTR wideStr = (LPWSTR) malloc(wideLen * sizeof(wchar_t));
+
+    // convert narrow byte string to wide byte string
+    MultiByteToWideChar(CP_UTF8, 0, argv[1], len, wideStr, wideLen);
+
+    // null-terminate the wide byte string
+    wideStr[wideLen - 1] = 0;
+    printf(&quot;i will call the fuzz func\n&quot;);
+    fuzz(readWebp, wideStr);
+
+    FreeLibrary(PDFDLL);
+    return 0;
+}
+</code></pre>
+<p>&#x7136;&#x540E;&#x901A;&#x8FC7;-M maste&#x548C;-S s1&#x8FD9;&#x4E9B;&#x53C2;&#x6570;&#x6765;&#x591A;&#x5F00;&#x8FDB;&#x7A0B;&#x6765;&#x63D0;&#x9AD8;&#x6548;&#x7387;&#xFF0C;&#x5F71;&#x54CD;&#x5230;&#x5185;&#x5B58;&#x548C;cpu&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x4F1A;&#x72EC;&#x5360;&#x4E00;&#x4E2A;cpu&#x6838;&#x5FC3;&#xFF0C;&#x5185;&#x5B58;&#x4E5F;&#x4F1A;&#x6210;&#x6CE2;&#x6D6A;&#x5F0F;&#x4F7F;&#x7528;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x61C2;&#x5F97;&#x53D6;&#x820D;&#x3002;</p>
+<h2 id="&#x5B9E;&#x9645;&#x6548;&#x679C;">&#x5B9E;&#x9645;&#x6548;&#x679C;</h2>
+<pre><code class="lang-shell">afl-fuzz.exe -i in -o out -M master -D &quot;D:\DynamoRIO9.92.19461\bin32&quot; -t 7000 -- -c overage_module WebP.dll -target_module call_webp.exe -target_offset 0x0155c -fuzz_iterations 8000 -nargs 1 -- call_webp.exe @@
+
+afl-fuzz.exe -i in -o out -S s1 -D &quot;D:\DynamoRIO9.92.19461\bin32&quot; -t 7000 -- -c overage_module WebP.dll -target_module call_webp.exe -target_offset 0x0155c -fuzz_iterations 8000 -nargs 1 -- call_webp.exe @@
+
+afl-fuzz.exe -i in -o out -S s2 -D &quot;D:\DynamoRIO9.92.19461\bin32&quot; -t 7000 -- -c overage_module WebP.dll -target_module call_webp.exe -target_offset 0x0155c -fuzz_iterations 8000 -nargs 1 -- call_webp.exe @@
+
+afl-fuzz.exe -i in -o out -S s3 -D &quot;D:\DynamoRIO9.92.19461\bin32&quot; -t 7000 -- -c overage_module WebP.dll -target_module call_webp.exe -target_offset 0x0155c -fuzz_iterations 8000 -nargs 1 -- call_webp.exe @@
+</code></pre>
+<p><img src="WinAFL&#x4F7F;&#x7528;-&#x5165;&#x95E8;/IMG_6040.JPG" alt="IMG_6040"></p>
+<p>&#x901F;&#x5EA6;&#x76F8;&#x5F53;&#x53EF;&#x89C2;&#xFF0C;&#x5927;&#x6982;&#x662F;&#x6D4B;&#x8BD5;&#x4E86;33&#x5C0F;&#x65F6;&#xFF0C;&#x5F53;last new path&#x7684;&#x503C;&#x957F;&#x65F6;&#x95F4;&#x4E0D;&#x53D8;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x5DEE;&#x4E0D;&#x591A;&#x53EF;&#x4EE5;&#x505C;&#x4E86;&#xFF0C;&#x6211;&#x505C;&#x6B62;&#x7684;&#x65F6;&#x5019;&#x4ED6;&#x5DF2;&#x7ECF;4&#x5C0F;&#x65F6;&#x6CA1;&#x6709;&#x65B0;&#x8DEF;&#x5F84;&#x4E86;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x505C;&#x4E86;&#xFF0C;&#x4E5F;&#x6CA1;&#x6709;fuzz&#x51FA;crash&#x3002;</p>
+<footer class="page-footer"><span class="copyright">&#x6CA1;&#x6709;&#x7248;&#x6743;&#xFF0C;&#x968F;&#x4FBF;&#x590D;&#x5236;&#xFF0C;&#x514D;&#x8D39;&#x7684;&#x77E5;&#x8BC6;&#x5E94;&#x8BE5;&#x5171;&#x4EAB; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2023-04-27 21:17:24
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="HonggFuzz使用-入门.html" class="navigation navigation-prev " aria-label="Previous page: honggfuzz使用-安装">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="GDB使用.html" class="navigation navigation-next " aria-label="Next page: GDB使用">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"WinAFL使用-安装","level":"1.10.2","depth":2,"next":{"title":"GDB使用","level":"1.10.3","depth":2,"path":"MyArticles/ToolUsage/GDB使用.md","ref":"MyArticles/ToolUsage/GDB使用.md","articles":[]},"previous":{"title":"honggfuzz使用-安装","level":"1.10.1","depth":2,"path":"MyArticles/ToolUsage/HonggFuzz使用-入门.md","ref":"MyArticles/ToolUsage/HonggFuzz使用-入门.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","custom-favicon","tbfed-pagefooter","popup","-sharing","sharing-plus","intopic-toc","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"没有版权，随便复制，免费的知识应该共享","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"./icon/book.ico","back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MyArticles/ToolUsage/WinAFL使用-入门.md","mtime":"2023-04-27T13:17:24.761Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-04-27T13:34:22.714Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
