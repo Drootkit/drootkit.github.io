@@ -1,0 +1,1909 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>蓝屏 - windbg模块解析 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../云原生安全.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../构建gitbook.html">
+            
+                <a href="../构建gitbook.html">
+            
+                    
+                    写在开始，how2gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../Reverse.html">
+            
+                <a href="../Reverse.html">
+            
+                    
+                    Reverse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../Re/控制流平坦化.html">
+            
+                <a href="../Re/控制流平坦化.html">
+            
+                    
+                    反控制流平坦化学习-angr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../Re/反调试 & 沙箱对抗技巧收集.html">
+            
+                <a href="../Re/反调试 & 沙箱对抗技巧收集.html">
+            
+                    
+                    反调试以及沙箱对抗技巧收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../Re/常见加密算法-学习.html">
+            
+                <a href="../Re/常见加密算法-学习.html">
+            
+                    
+                    加密解密学习 - 更
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../Re/分组密码学习.html">
+            
+                <a href="../Re/分组密码学习.html">
+            
+                    
+                    分组密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../Re/vmp3.5unpacke.html">
+            
+                <a href="../Re/vmp3.5unpacke.html">
+            
+                    
+                    vmp3.X 工具向脱壳
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../Re/idaunpackELF.html">
+            
+                <a href="../Re/idaunpackELF.html">
+            
+                    
+                    运行时压缩壳 - IDA动调ELF脱壳
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Basics.html">
+            
+                <a href="../Basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Basics/PE文件加载器.html">
+            
+                <a href="../Basics/PE文件加载器.html">
+            
+                    
+                    PE文件加载器-基于C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Basics/DebugC">
+            
+                <span>
+            
+                    
+                    调试C#的DLL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Basics/调用约定和断点.html">
+            
+                <a href="../Basics/调用约定和断点.html">
+            
+                    
+                    调用约定和断点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Basics/elf文件结构.html">
+            
+                <a href="../Basics/elf文件结构.html">
+            
+                    
+                    ELF structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Basics/Pe File Structer.html">
+            
+                <a href="../Basics/Pe File Structer.html">
+            
+                    
+                    PE structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Basics/arm学习.html">
+            
+                <a href="../Basics/arm学习.html">
+            
+                    
+                    ARM 基础学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../Basics/Windows消息队列学习.html">
+            
+                <a href="../Basics/Windows消息队列学习.html">
+            
+                    
+                    Windows消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../Basics/内网基础.html">
+            
+                <a href="../Basics/内网基础.html">
+            
+                    
+                    内网基础学习 - 域和组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Practice.html">
+            
+                <a href="../Practice.html">
+            
+                    
+                    Practice
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="YouTubePremium.apk.html">
+            
+                <a href="YouTubePremium.apk.html">
+            
+                    
+                    Malware-APK0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    OODA Loops 了解了解
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5.3" data-path="IRQL蓝屏分析.html">
+            
+                <a href="IRQL蓝屏分析.html">
+            
+                    
+                    蓝屏 - windbg模块解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../云原生安全.html">
+            
+                <a href="../云原生安全.html">
+            
+                    
+                    云原生安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../云原生安全/云原生安全 -云原生.html">
+            
+                <a href="../云原生安全/云原生安全 -云原生.html">
+            
+                    
+                    云原生 - 是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../Dailynotes.html">
+            
+                <a href="../Dailynotes.html">
+            
+                    
+                    Daily notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../Dailynotes/G-F-W原理了解学习.html">
+            
+                <a href="../Dailynotes/G-F-W原理了解学习.html">
+            
+                    
+                    G-F-W原理了解学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../Dailynotes/pdf解析重组.html">
+            
+                <a href="../Dailynotes/pdf解析重组.html">
+            
+                    
+                    电子书清晰化的尝试 利用python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../Dailynotes/ipv6_base_vps.html">
+            
+                <a href="../Dailynotes/ipv6_base_vps.html">
+            
+                    
+                    搭建ipv6自有服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../Dailynotes/learn_shell.html">
+            
+                <a href="../Dailynotes/learn_shell.html">
+            
+                    
+                    Shell 学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../Dailynotes/就业意向.html">
+            
+                <a href="../Dailynotes/就业意向.html">
+            
+                    
+                    就业意向
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Development.html">
+            
+                <a href="../Development.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Development/find_dll_in_proc.html">
+            
+                <a href="../Development/find_dll_in_proc.html">
+            
+                    
+                    Find DLL in Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Development/find_thread_in_process.html">
+            
+                <a href="../Development/find_thread_in_process.html">
+            
+                    
+                    Find Thread in Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Development/Build-Arm.html">
+            
+                <a href="../Development/Build-Arm.html">
+            
+                    
+                    构建qemu的持续学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Development/查看父进程.html">
+            
+                <a href="../Development/查看父进程.html">
+            
+                    
+                    查看父进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../CyberSec.html">
+            
+                <a href="../CyberSec.html">
+            
+                    
+                    CyberSec
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../CyberSec/免杀手法收集.html">
+            
+                <a href="../CyberSec/免杀手法收集.html">
+            
+                    
+                    免杀手法收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../CyberSec/yara.html">
+            
+                <a href="../CyberSec/yara.html">
+            
+                    
+                    YARA学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../CyberSec/sigma规则学习.html">
+            
+                <a href="../CyberSec/sigma规则学习.html">
+            
+                    
+                    sigma规则学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../CyberSec/snort工作总结.html">
+            
+                <a href="../CyberSec/snort工作总结.html">
+            
+                    
+                    工作内容 - 产出snort规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../CyberSec/关于bitcoin.html">
+            
+                <a href="../CyberSec/关于bitcoin.html">
+            
+                    
+                    啥是Bitcoin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../CyberSec/IOC-痛苦金字塔.html">
+            
+                <a href="../CyberSec/IOC-痛苦金字塔.html">
+            
+                    
+                    从痛苦金字塔学习分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../CyberSec/PEB和TEB.html">
+            
+                <a href="../CyberSec/PEB和TEB.html">
+            
+                    
+                    TEB & PEB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../CyberSec/进程注入-基础.html">
+            
+                <a href="../CyberSec/进程注入-基础.html">
+            
+                    
+                    进程注入-前置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../CyberSec/6种常见注入方式.html">
+            
+                <a href="../CyberSec/6种常见注入方式.html">
+            
+                    
+                    windows下的进程注入（6种）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../CyberSec/dll-inject.html">
+            
+                <a href="../CyberSec/dll-inject.html">
+            
+                    
+                    Dll注入的3.5种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../CyberSec/DLL注入-突破session0.html">
+            
+                <a href="../CyberSec/DLL注入-突破session0.html">
+            
+                    
+                    DLL注入-突破session0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="../CyberSec/dll劫持原理学习和应用.html">
+            
+                <a href="../CyberSec/dll劫持原理学习和应用.html">
+            
+                    
+                    dll劫持原理以及方式实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../Vulnerability_Mining.html">
+            
+                <a href="../Vulnerability_Mining.html">
+            
+                    
+                    Vulnerability Mining
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../Vulnerability_Mining/iwant2pwn/firstPWN.html">
+            
+                <a href="../Vulnerability_Mining/iwant2pwn/firstPWN.html">
+            
+                    
+                    CTF - PWN 学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1.1" >
+            
+                <span>
+            
+                    
+                    栈的艺术
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.1.2" >
+            
+                <span>
+            
+                    
+                    堆的艺术
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../Vulnerability_Mining/Windows通用shellcode编写.html">
+            
+                <a href="../Vulnerability_Mining/Windows通用shellcode编写.html">
+            
+                    
+                    shellcode编写-地址定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../Vulnerability_Mining/winafl关于pdf测试的阅读-水.html">
+            
+                <a href="../Vulnerability_Mining/winafl关于pdf测试的阅读-水.html">
+            
+                    
+                    winafl文献-关于pdf中的图片测试(极水)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../ToolUsage.html">
+            
+                <a href="../ToolUsage.html">
+            
+                    
+                    Tool usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../ToolUsage/多git公钥配置.html">
+            
+                <a href="../ToolUsage/多git公钥配置.html">
+            
+                    
+                    自定义git公钥配置-常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../ToolUsage/HonggFuzz使用-入门.html">
+            
+                <a href="../ToolUsage/HonggFuzz使用-入门.html">
+            
+                    
+                    honggfuzz使用-安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../ToolUsage/WinAFL使用-入门.html">
+            
+                <a href="../ToolUsage/WinAFL使用-入门.html">
+            
+                    
+                    WinAFL 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../ToolUsage/GDB使用.html">
+            
+                <a href="../ToolUsage/GDB使用.html">
+            
+                    
+                    GDB使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../ToolUsage/Fiddler学习.html">
+            
+                <a href="../ToolUsage/Fiddler学习.html">
+            
+                    
+                    Fiddler学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../ToolUsage/windbg记录.html">
+            
+                <a href="../ToolUsage/windbg记录.html">
+            
+                    
+                    windbg使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" >
+            
+                <span>
+            
+                    
+                    真假C&C - fakenet
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../Botnet.html">
+            
+                <a href="../Botnet.html">
+            
+                    
+                    Botnet
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../Botnet/mirai源码学习.html">
+            
+                <a href="../Botnet/mirai源码学习.html">
+            
+                    
+                    mirai源码分析学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1.1" data-path="../Botnet/dlr.html">
+            
+                <a href="../Botnet/dlr.html">
+            
+                    
+                    dlr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.1.2" data-path="../Botnet/loader.html">
+            
+                <a href="../Botnet/loader.html">
+            
+                    
+                    loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.1.3" data-path="../Botnet/bot.html">
+            
+                <a href="../Botnet/bot.html">
+            
+                    
+                    bot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.1.4" data-path="../Botnet/cnc.html">
+            
+                <a href="../Botnet/cnc.html">
+            
+                    
+                    cnc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.1.5" data-path="../Botnet/tools.html">
+            
+                <a href="../Botnet/tools.html">
+            
+                    
+                    tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    boat （ripper）家族起底分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    NTP botnet 7月样本分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    Muhstik 家族最新攻击分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    Andoryu家族祖孙三代分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    某 - 家族发现起底报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../Botnet/lm工作总结.html">
+            
+                <a href="../Botnet/lm工作总结.html">
+            
+                    
+                    总结 - botnet 还有 实习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../winkernel.html">
+            
+                <a href="../winkernel.html">
+            
+                    
+                    Windows kernel学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../WinKernel/base_env.html">
+            
+                <a href="../WinKernel/base_env.html">
+            
+                    
+                    开发、调试环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../WinKernel/程序隐藏技术-概述.html">
+            
+                <a href="../WinKernel/程序隐藏技术-概述.html">
+            
+                    
+                    概述 - 藏匿程序的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../WinKernel/hello_kernel.html">
+            
+                <a href="../WinKernel/hello_kernel.html">
+            
+                    
+                    Hello Kernel！
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" >
+            
+                <span>
+            
+                    
+                    字符串 - 但是内核安全
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" >
+            
+                <span>
+            
+                    
+                    链表 - 遍历用户进程
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" >
+            
+                <span>
+            
+                    
+                    链表 - 遍历内核模块
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" >
+            
+                <span>
+            
+                    
+                    计时器 - IO还有DPC
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.8" >
+            
+                <span>
+            
+                    
+                    SSDT - 是啥、干啥、怎么用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.9" >
+            
+                <span>
+            
+                    
+                    SSDT - SSSDT
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../Antivirus.html">
+            
+                <a href="../Antivirus.html">
+            
+                    
+                    Bypass Anti-virus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >蓝屏 - windbg模块解析</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x7535;&#x8111;&#x4E24;&#x5468;&#x6CA1;&#x5173;&#x673A;&#xFF0C;&#x51C6;&#x5907;&#x5173;&#x673A;&#x7684;&#x65F6;&#x5019;&#x7A81;&#x7136;&#x84DD;&#x5C4F;&#xFF0C;&#x5F97;&#x5230;&#x9519;&#x8BEF;&#x662F;</p>
+<p>IRQL_NOT_LESS_OR_EQUAL&#xFF0C;&#x91CD;&#x542F;&#x540E;&#x5229;&#x7528;everything&#x641C;&#x7D22;<code>*.dmp</code>&#x6309;&#x65F6;&#x95F4;&#x6392;&#x5E8F;&#x627E;&#x5230;&#x751F;&#x6210;&#x7684;&#x5185;&#x5B58;dump&#x6587;&#x4EF6;&#x5229;&#x7528;windbg&#x8FDB;&#x884C;&#x9519;&#x8BEF;&#x5206;&#x6790;&#x3002;</p>
+<h1 id="&#x6743;&#x9650;&#x95EE;&#x9898;">&#x6743;&#x9650;&#x95EE;&#x9898;</h1>
+<p>&#x4E00;&#x5F00;&#x59CB;&#x76F4;&#x63A5;&#x5728;&#x6E90;&#x76EE;&#x5F55;&#x4E2D;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x4F1A;&#x5BFC;&#x81F4;windbg&#x56E0;&#x4E3A;&#x6743;&#x9650;&#x95EE;&#x9898;&#x6CA1;&#x6CD5;&#x8F7D;&#x5165;dmp&#x6587;&#x4EF6;&#xFF0C;&#x76F4;&#x63A5;&#x590D;&#x5236;&#x5230;&#x684C;&#x9762;&#x4E0A;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x5373;&#x53EF;</p>
+<p>&#x5728;<code>&#x6587;&#x4EF6;</code>&#xFF0C;&#x7B2C;&#x4E00;&#x4E2A;&#x9009;&#x9879;&#xFF0C;&#x627E;&#x5230;<code>open dump file</code>&#xFF0C;&#x76F4;&#x63A5;&#x5BF9;dmp&#x6587;&#x4EF6;&#x8F7D;&#x5165;&#x5206;&#x6790;&#x5373;&#x53EF;&#x3002;</p>
+<p>dump&#x4E00;&#x822C;&#x5206;&#x7C7B;&#x4E3A;full dump&#xFF0C;&#x5373;&#x53D1;&#x751F;&#x62A5;&#x9519;&#x7684;&#x65F6;&#x5019;&#x6240;&#x6709;&#x7684;&#x5185;&#x5B58;&#x5FEB;&#x7167;&#xFF0C;&#x4F53;&#x79EF;&#x8F83;&#x5927;&#xFF0C;&#x4FE1;&#x606F;&#x6BD4;&#x8F83;&#x5168;&#x9762;&#x3002;&#x53E6;&#x4E00;&#x79CD;&#x5C31;&#x662F;minidump&#xFF0C;&#x53EA;&#x5305;&#x542B;&#x4E86;&#x53D1;&#x751F;&#x5F02;&#x5E38;&#x65F6;&#x7684;&#x4E0A;&#x4E0B;&#x5806;&#x6808;&#x7684;&#x73AF;&#x5883;&#xFF0C;&#x9002;&#x5408;&#x7528;&#x6765;&#x63D0;&#x4EA4;&#x62A5;&#x9519;&#xFF0C;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x660E;&#x4E86;&#xFF0C;&#x4F46;&#x662F;&#x5E76;&#x4E0D;&#x5305;&#x542B;&#x5F53;&#x65F6;&#x7684;&#x5185;&#x5B58;&#x8F6C;&#x50A8;&#xFF0C;&#x4E00;&#x822C;&#x9ED8;&#x8BA4;&#x662F;minidump&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x6539;&#x6210;full dump&#x6A21;&#x5F0F;&#x3002;</p>
+<h1 id="&#x8F7D;&#x5165;">&#x8F7D;&#x5165;</h1>
+<p><img src="IRQL&#x84DD;&#x5C4F;&#x5206;&#x6790;/image-20230611105133133.png" alt="image-20230611105133133"></p>
+<p>&#x4E00;&#x822C;&#x90FD;&#x662F;&#x663E;&#x793A;&#x4E0A;&#x9762;&#x7684;&#x4E00;&#x4E9B;&#x57FA;&#x672C;&#x4FE1;&#x606F;&#xFF0C;&#x4E3B;&#x8981;&#x5C31;&#x662F;&#x9488;&#x5BF9;&#x84DD;&#x5C4F;&#x65F6;&#x5019;&#x7684;&#x5806;&#x6808;&#x548C;&#x84DD;&#x5C4F;&#x7684;&#x8FDB;&#x7A0B;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x5E76;&#x5C1D;&#x8BD5;&#x53D1;&#x73B0;&#x95EE;&#x9898;&#x3002;</p>
+<h1 id="&#x4FE1;&#x606F;&#x5206;&#x6790;">&#x4FE1;&#x606F;&#x5206;&#x6790;</h1>
+<pre><code>6: kd&gt; !analyze -v
+*******************************************************************************
+*                                                                             *
+*                        Bugcheck Analysis                                    *
+*                                                                             *
+*******************************************************************************
+
+IRQL_NOT_LESS_OR_EQUAL (a)
+An attempt was made to access a pageable (or completely invalid) address at an
+interrupt request level (IRQL) that is too high.  This is usually
+caused by drivers using improper addresses.
+If a kernel debugger is available get the stack backtrace.
+Arguments:
+Arg1: ffffcf07d379a230&#xFF0C; memory referenced
+Arg2: 0000000000000002&#xFF0C; IRQL
+Arg3: 0000000000000001&#xFF0C; bitfield :
+    bit 0 : value 0 = read operation&#xFF0C; 1 = write operation
+    bit 3 : value 0 = not an execute operation&#xFF0C; 1 = execute operation (only on chips which support this level of status)
+Arg4: fffff8031391807f&#xFF0C; address which referenced memory
+
+Debugging Details:
+------------------
+
+
+KEY_VALUES_STRING: 1
+
+    Key  : Analysis.CPU.mSec
+    Value: 1483
+
+    Key  : Analysis.DebugAnalysisManager
+    Value: Create
+
+    Key  : Analysis.Elapsed.mSec
+    Value: 1541
+
+    Key  : Analysis.IO.Other.Mb
+    Value: 18
+
+    Key  : Analysis.IO.Read.Mb
+    Value: 0
+
+    Key  : Analysis.IO.Write.Mb
+    Value: 31
+
+    Key  : Analysis.Init.CPU.mSec
+    Value: 530
+
+    Key  : Analysis.Init.Elapsed.mSec
+    Value: 131146
+
+    Key  : Analysis.Memory.CommitPeak.Mb
+    Value: 103
+
+    Key  : Bugcheck.Code.DumpHeader
+    Value: 0xa
+
+    Key  : Bugcheck.Code.Register
+    Value: 0xa
+
+    Key  : Dump.Attributes.AsUlong
+    Value: 1808
+
+    Key  : Dump.Attributes.DiagDataWrittenToHeader
+    Value: 1
+
+    Key  : Dump.Attributes.ErrorCode
+    Value: 0
+
+    Key  : Dump.Attributes.KernelGeneratedTriageDump
+    Value: 1
+
+    Key  : Dump.Attributes.LastLine
+    Value: Dump completed successfully.
+
+    Key  : Dump.Attributes.ProgressPercentage
+    Value: 0
+
+
+FILE_IN_CAB:  061023-11093-01.dmp
+
+DUMP_FILE_ATTRIBUTES: 0x1808
+  Kernel Generated Triage Dump
+
+BUGCHECK_CODE:  a
+
+BUGCHECK_P1: ffffcf07d379a230
+
+BUGCHECK_P2: 2
+
+BUGCHECK_P3: 1
+
+BUGCHECK_P4: fffff8031391807f
+
+WRITE_ADDRESS: fffff8031431c468: Unable to get MiVisibleState
+Unable to get NonPagedPoolStart
+Unable to get NonPagedPoolEnd
+Unable to get PagedPoolStart
+Unable to get PagedPoolEnd
+unable to get nt!MmSpecialPagesInUse
+ ffffcf07d379a230 
+
+BLACKBOXBSD: 1 (!blackboxbsd)
+
+
+BLACKBOXNTFS: 1 (!blackboxntfs)
+
+
+BLACKBOXPNP: 1 (!blackboxpnp)
+
+
+BLACKBOXWINLOGON: 1
+
+CUSTOMER_CRASH_COUNT:  1
+
+PROCESS_NAME:  msedge.exe
+
+TRAP_FRAME:  ffffb58592d6f220 -- (.trap 0xffffb58592d6f220)
+NOTE: The trap frame does not contain all registers.
+Some register values may be zeroed or incorrect.
+rax=0000000000000000 rbx=0000000000000000 rcx=ffffcf07d379a230
+rdx=0000000000000000 rsi=0000000000000000 rdi=0000000000000000
+rip=fffff8031391807f rsp=ffffb58592d6f3b0 rbp=ffffb58592d6f749
+ r8=0000000000000000  r9=ffffb58592d6f7d8 r10=0000000000000000
+r11=0000000000000000 r12=0000000000000000 r13=0000000000000000
+r14=0000000000000000 r15=0000000000000000
+iopl=0         nv up ei pl zr na po nc
+nt!KiAcquireKobjectLockSafe+0xf:
+fffff803`1391807f f00fba2907      lock bts dword ptr [rcx]&#xFF0C;7 ds:ffffcf07`d379a230=00060000
+Resetting default scope
+
+STACK_TEXT:  
+ffffb585`92d6f0d8 fffff803`13a417a9     : 00000000`0000000a ffffcf07`d379a230 00000000`00000002 00000000`00000001 : nt!KeBugCheckEx
+ffffb585`92d6f0e0 fffff803`13a3ce34     : 00000000`00000001 ffffb585`92d6f7d0 00000000`00000000 00000000`00000001 : nt!KiBugCheckDispatch+0x69
+ffffb585`92d6f220 fffff803`1391807f     : 00000000`00000000 fffff803`1383d78a 00000000`00000010 00000000`00050282 : nt!KiPageFault+0x474
+ffffb585`92d6f3b0 fffff803`1383d7eb     : ffff910c`f1ded080 ffffcf07`d379a230 00000000`00000000 00000000`00000000 : nt!KiAcquireKobjectLockSafe+0xf
+ffffb585`92d6f3e0 fffff803`13bb7df2     : ffff910c`00000001 ffffb585`92d6f749 00000000`00000000 ffffb585`92d6f7d0 : nt!KeSetEvent+0x6b
+ffffb585`92d6f470 fffff803`13938673     : 00000000`00000000 00000000`00000001 ffff910c`f1ded080 ffffcf08`3658b750 : nt!PsDispatchIumService+0x96e
+ffffb585`92d6f6e0 fffff803`13f589d7     : 00000001`400000d0 ffff910d`135440c0 ffff910d`13544518 00000000`0000000b : nt!VslpEnterIumSecureMode+0x287
+ffffb585`92d6f7b0 fffff803`13b893b1     : 00000000`0000000b 00000000`000000a0 00000000`00000000 ffffcf08`2c7978b8 : nt!VslRundownSecureProcess+0x47
+ffffb585`92d6f860 fffff803`13eb4315     : ffffcf08`2c7978b0 ffffcf08`2c797860 ffffcf08`2c7978a0 fffff803`13cef7c8 : nt!KeRundownSecureProcess+0x15
+ffffb585`92d6f890 fffff803`13cf15ca     : ffff910d`135440c0 ffffcf08`18720060 ffff910d`135440c0 00000000`00000000 : nt!PspRundownSingleProcess+0x224e41
+ffffb585`92d6f920 fffff803`13d7c402     : 00000000`00000000 ffff910d`13544001 ffff910c`f1ded0f4 00000018`a0587000 : nt!PspExitThread+0x64e
+ffffb585`92d6fa20 fffff803`13a40ee8     : ffff910c`0000169c ffff910c`f1ded080 ffff910d`135440c0 ffff910d`135440c0 : nt!NtTerminateProcess+0xf2
+ffffb585`92d6faa0 00007ffe`d968f1d4     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : nt!KiSystemServiceCopyEnd+0x28
+00000018`a0dffb78 00000000`00000000     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : 0x00007ffe`d968f1d4
+
+
+SYMBOL_NAME:  nt!KiAcquireKobjectLockSafe+f
+
+MODULE_NAME: nt
+
+IMAGE_NAME:  ntkrnlmp.exe
+
+IMAGE_VERSION:  10.0.22621.1778
+
+STACK_COMMAND:  .cxr; .ecxr ; kb
+
+BUCKET_ID_FUNC_OFFSET:  f
+
+FAILURE_BUCKET_ID:  AV_nt!KiAcquireKobjectLockSafe
+
+OSPLATFORM_TYPE:  x64
+
+OSNAME:  Windows 10
+
+FAILURE_ID_HASH:  {87978629-0a82-b7ad-caa7-eb2c5ba684a3}
+
+Followup:     MachineOwner
+---------
+</code></pre><h2 id="&#x5F00;&#x5934;">&#x5F00;&#x5934;</h2>
+<p>&#x7B2C;&#x4E00;&#x884C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x62A5;&#x9519;&#x7684;&#x9519;&#x8BEF;&#x7C7B;&#x578B;&#xFF1A;</p>
+<p><img src="IRQL&#x84DD;&#x5C4F;&#x5206;&#x6790;/image-20230611205152290.png" alt="image-20230611205152290"></p>
+<p>&#x540E;&#x9762;&#x7684;(a)&#x4EE3;&#x8868;&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#x7684;&#x9519;&#x8BEF;&#x4EE3;&#x7801;&#x662F;0x0000000A&#xFF0C;&#x540E;&#x9762;&#x662F;&#x5BF9;&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#x7684;&#x89E3;&#x6790;</p>
+<p>&#x5C1D;&#x8BD5;&#x5728;<code>&#x4E2D;&#x65AD;&#x8BF7;&#x6C42;&#x7EA7;&#x522B;(IRQL)</code>&#x8BBF;&#x95EE;&#x4E00;&#x4E2A;&#x53EF;&#x5206;&#x9875;(&#x6216;&#x5B8C;&#x5168;&#x65E0;&#x6548;)&#x7684;&#x5730;&#x5740;&#xFF0C;&#x8FD9;&#x4E2A;&#x7B49;&#x7EA7;&#x592A;&#x9AD8;&#x4E86;&#x3002;&#x8FD9;&#x901A;&#x5E38;&#x662F;&#x7531;&#x4E8E;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x8BBF;&#x95EE;&#x4E86;&#x9519;&#x8BEF;&#x7684;&#x5730;&#x5740;&#x9020;&#x6210;&#x7684;&#x3002;</p>
+<p>&#x63A5;&#x4E0B;&#x6765;&#x662F;&#x5173;&#x4E8E;&#x672C;&#x673A;&#x8FD9;&#x4E2A;&#x62A5;&#x9519;&#x65F6;&#x7684;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x8FD9;&#x6765;&#x81EA;Windows&#x5185;&#x6838;&#x7684;Bug &#x68C0;&#x67E5;&#x673A;&#x5236;</p>
+<p><img src="IRQL&#x84DD;&#x5C4F;&#x5206;&#x6790;/image-20230611213025255.png" alt="image-20230611213025255"></p>
+<p>Bug &#x68C0;&#x67E5;&#x4F1A;&#x663E;&#x793A;&#x84DD;&#x5C4F;&#x4FE1;&#x606F;&#xFF0C;&#x8BB0;&#x5F55;&#x5173;&#x952E;&#x7684;Bug &#x68C0;&#x67E5;&#x4EE3;&#x7801;&#x4E0E;&#x53C2;&#x6570;&#x7B49;&#x4FE1;&#x606F;&#xFF0C;&#x5E76;&#x8F6C;&#x50A8;&#x5185;&#x6838;&#x7684;&#x5185;&#x5B58;&#x4E0E;&#x5BC4;&#x5B58;&#x5668;&#x72B6;&#x6001;&#x3002;</p>
+<pre><code class="lang-c">Arguments:
+Arg1: ffffcf07d379a230&#xFF0C; memory referenced
+// &#x5BFC;&#x81F4;&#x65E0;&#x6548;&#x8BBF;&#x95EE;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;
+Arg2: 0000000000000002&#xFF0C; IRQL
+// &#x5F53;&#x524D;&#x7684;IRQL&#x7EA7;&#x522B;
+Arg3: 0000000000000001&#xFF0C; bitfield :
+    bit 0 : value 0 = read operation&#xFF0C; 1 = write operation
+    bit 3 : value 0 = not an execute operation&#xFF0C; 1 = execute operation (only on chips which support this level of status)
+// &#x65E0;&#x6548;&#x8BBF;&#x95EE;&#x7684;&#x7C7B;&#x578B;(&#x8BFB;/&#x5199;/&#x6267;&#x884C;)
+Arg4: fffff8031391807f&#xFF0C; address which referenced memory
+// &#x5BFC;&#x81F4;&#x6B64;&#x65E0;&#x6548;&#x8BBF;&#x95EE;&#x7684;&#x8C03;&#x7528;&#x5730;&#x5740;
+</code></pre>
+<p>&#x6BCF;&#x4E2A; bug &#x68C0;&#x67E5;&#x4EE3;&#x7801;&#x90FD;&#x6709;&#x56DB;&#x4E2A;&#x5173;&#x8054;&#x7684;&#x53C2;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x63D0;&#x4F9B;&#x4FE1;&#x606F;&#x3002;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;windbg&#x4E2D;&#x7684;&#x547D;&#x4EE4;&#xFF1A;<code>!analyze -show &lt;error code&gt;</code>&#x6765;&#x67E5;&#x770B;</p>
+<p><img src="IRQL&#x84DD;&#x5C4F;&#x5206;&#x6790;/image-20230611213637641.png" alt="image-20230611213637641"></p>
+<p>&#x9488;&#x5BF9;&#x6BCF;&#x4E2A;&#x62A5;&#x9519;&#x7684;&#x4FE1;&#x606F;&#x7684;bug&#x68C0;&#x67E5;&#x4EE3;&#x7801;&#x7684;&#x53C2;&#x6570;&#x7684;&#x89E3;&#x91CA;&#x53EF;&#x4EE5;&#x4ECE;&#x8FD9;&#x91CC;&#x627E;&#x5230;&#xFF1A;<a href="https://learn.microsoft.com/zh-cn/windows-hardware/drivers/debugger/bug-check-code-reference2" target="_blank">https://learn.microsoft.com/zh-cn/windows-hardware/drivers/debugger/bug-check-code-reference2</a></p>
+<p>&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x547D;&#x4EE4;<code>!analyze -show &lt;error code&gt; &lt;vaule&gt;</code>&#x6765;&#x6307;&#x5B9A;&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x503C;</p>
+<p><img src="IRQL&#x84DD;&#x5C4F;&#x5206;&#x6790;/image-20230611214010411.png" alt="image-20230611214010411"></p>
+<p>&#x60F3;&#x663E;&#x793A;&#x540E;&#x9762;&#x7684;&#x67D0;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x4E0D;&#x80FD;&#x8DF3;&#xFF0C;&#x4E0D;&#x80FD;&#x7528;&#x7A7A;&#x683C;&#x4EE3;&#x66FF;&#xFF0C;&#x76F4;&#x63A5;&#x8F93;&#x5165;0&#x5C31;&#x884C;&#xFF0C;&#x5982;&#x4E0B;&#x56FE;</p>
+<p><img src="IRQL&#x84DD;&#x5C4F;&#x5206;&#x6790;/image-20230611214110840.png" alt="image-20230611214110840"></p>
+<p>&#x672C;&#x6B21;&#x62A5;&#x9519;&#x7684;bug&#x68C0;&#x67E5;&#x51FD;&#x6570;&#x7684;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x8BE6;&#x7EC6;&#x5185;&#x5BB9;&#x5728;&#x8FD9;&#x91CC;&#xFF1A;<a href="https://learn.microsoft.com/zh-cn/windows-hardware/drivers/debugger/bug-check-0xa--irql-not-less-or-equal" target="_blank">https://learn.microsoft.com/zh-cn/windows-hardware/drivers/debugger/bug-check-0xa--irql-not-less-or-equal</a></p>
+<h2 id="keyvaluesstring">KEY_VALUES_STRING</h2>
+<p>KEY_VALUES_STRING: 1&#x8868;&#x793A;&#x6B64;&#x8F6C;&#x50A8;&#x4FE1;&#x606F;&#x5305;&#x542B;1&#x7EC4;KEY_VALUES_STRING&#x6570;&#x636E;&#x3002;&#x8FD9;&#x4E00;&#x7EC4;&#x952E;&#x503C;&#x8868;&#x793A;&#x4E86;&#x53D1;&#x751F;crash&#x7684;&#x65F6;&#x5019;&#x4E00;&#x4E9B;&#x73AF;&#x5883;&#x72B6;&#x51B5;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x822C;&#x5206;&#x6790;&#x6765;&#x8BF4;&#x6CA1;&#x5565;&#x7528;&#x3002;</p>
+<p>KEY_VALUES_STRING&#x7684;&#x503C;&#x63D0;&#x4F9B;&#x4E86;&#x6B64;&#x5185;&#x6838;&#x8F6C;&#x50A8;&#x7684;&#x76F8;&#x5173;&#x5206;&#x6790;&#x4FE1;&#x606F;&#x548C;&#x5C5E;&#x6027;&#x3002;&#x5B83;&#x4EEC;&#x4EE3;&#x8868;&#x7684;&#x610F;&#x4E49;&#x5982;&#x4E0B;:</p>
+<ul>
+<li>Analysis.CPU.mSec: &#x5185;&#x6838;&#x5206;&#x6790;&#x4F7F;&#x7528;&#x7684;CPU&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;ms&#x3002;</li>
+<li>Analysis.DebugAnalysisManager: &#x5F53;&#x524D;&#x4F7F;&#x7528;&#x7684;WinDbg&#x5206;&#x6790;&#x7BA1;&#x7406;&#x5668;&#x540D;&#x79F0;&#x3002;</li>
+<li>Analysis.Elapsed.mSec: &#x5185;&#x6838;&#x5206;&#x6790;&#x603B;&#x8017;&#x65F6;&#xFF0C;&#x5355;&#x4F4D;ms&#x3002;</li>
+<li>Analysis.IO.Other.Mb: &#x5185;&#x6838;&#x5206;&#x6790;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x5176;&#x4ED6;IO&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x91CF;&#xFF0C;&#x5355;&#x4F4D;Mb&#x3002;</li>
+<li>Analysis.IO.Read.Mb: &#x5185;&#x6838;&#x5206;&#x6790;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x8BFB;IO&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x91CF;&#xFF0C;&#x5355;&#x4F4D;Mb&#x3002;</li>
+<li>Analysis.IO.Write.Mb: &#x5185;&#x6838;&#x5206;&#x6790;&#x8FC7;&#x7A0B;&#x4E2D;&#x7684;&#x5199;IO&#x64CD;&#x4F5C;&#x6570;&#x636E;&#x91CF;&#xFF0C;&#x5355;&#x4F4D;Mb&#x3002;</li>
+<li>Analysis.Init.CPU.mSec: WinDbg&#x521D;&#x59CB;&#x5316;&#x5185;&#x6838;&#x5206;&#x6790;&#x4F7F;&#x7528;&#x7684;CPU&#x65F6;&#x95F4;&#xFF0C;&#x5355;&#x4F4D;ms&#x3002;</li>
+<li>Analysis.Init.Elapsed.mSec: WinDbg&#x521D;&#x59CB;&#x5316;&#x5185;&#x6838;&#x5206;&#x6790;&#x603B;&#x8017;&#x65F6;&#xFF0C;&#x5355;&#x4F4D;ms&#x3002;</li>
+<li>Analysis.Memory.CommitPeak.Mb: &#x5185;&#x6838;&#x5206;&#x6790;&#x8FC7;&#x7A0B;&#x4E2D;&#x5185;&#x5B58;&#x5360;&#x7528;&#x5CF0;&#x503C;&#xFF0C;&#x5355;&#x4F4D;Mb&#x3002;</li>
+<li>Bugcheck.Code.DumpHeader: &#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x5934;&#x90E8;&#x8BB0;&#x5F55;&#x7684;Bug &#x68C0;&#x67E5;&#x4EE3;&#x7801;&#xFF0C;0xa&#x4EE3;&#x8868;IRQL_NOT_LESS_OR_EQUAL&#x3002;</li>
+<li>Bugcheck.Code.Register: &#x5BC4;&#x5B58;&#x5668;&#x8BB0;&#x5F55;&#x7684;Bug &#x68C0;&#x67E5;&#x4EE3;&#x7801;&#xFF0C;0xa&#x4EE3;&#x8868;IRQL_NOT_LESS_OR_EQUAL&#x3002;</li>
+<li>Dump.Attributes.AsUlong: &#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x3002;</li>
+<li>Dump.Attributes.DiagDataWrittenToHeader: &#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x5934;&#x90E8;&#x662F;&#x5426;&#x5305;&#x542B;&#x8BCA;&#x65AD;&#x6570;&#x636E;&#xFF0C;1&#x8868;&#x793A;&#x5305;&#x542B;&#x3002;</li>
+<li>Dump.Attributes.ErrorCode: &#x8F6C;&#x50A8;&#x4EA7;&#x751F;&#x7684;&#x9519;&#x8BEF;&#x4EE3;&#x7801;&#xFF0C;0&#x8868;&#x793A;&#x65E0;&#x9519;&#x8BEF;&#x3002;</li>
+<li>Dump.Attributes.KernelGeneratedTriageDump: &#x662F;&#x5426;&#x7531;&#x5185;&#x6838;&#x751F;&#x6210;&#x7684;&#x4FEE;&#x590D;&#x8F6C;&#x50A8;&#xFF0C;1&#x8868;&#x793A;&#x662F;&#x3002;</li>
+<li>Dump.Attributes.LastLine: &#x8F6C;&#x50A8;&#x64CD;&#x4F5C;&#x7684;&#x6700;&#x540E;&#x4E00;&#x884C;&#x7ED3;&#x679C;&#xFF0C;&#x8FD9;&#x91CC;&#x663E;&#x793A;&#x8F6C;&#x50A8;&#x6210;&#x529F;&#x5B8C;&#x6210;&#x3002;</li>
+<li>Dump.Attributes.ProgressPercentage: &#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x5934;&#x90E8;&#x8BB0;&#x5F55;&#x7684;&#x8F6C;&#x50A8;&#x64CD;&#x4F5C;&#x8FDB;&#x5EA6;&#x767E;&#x5206;&#x6BD4;&#xFF0C;&#x6B64;&#x5904;&#x672A;&#x8BB0;&#x5F55;&#x3002;</li>
+</ul>
+<h2 id="fileincab">FILE_IN_CAB</h2>
+<p>FILE_IN_CAB: 061023-11093-01.dmp&#x8868;&#x793A;&#x6B64;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x539F;&#x6765;&#x5305;&#x542B;&#x5728;&#x540D;&#x4E3A;061023-11093-01.cab&#x7684;CAB&#x538B;&#x7F29;&#x5305;&#x4E2D;&#x3002;</p>
+<p><img src="IRQL&#x84DD;&#x5C4F;&#x5206;&#x6790;/image-20230611215211210.png" alt="image-20230611215211210"></p>
+<p>&#x5728;Windows&#x6545;&#x969C;&#x8F6C;&#x50A8;&#x7684;&#x4F20;&#x8F93;&#x548C;&#x5904;&#x7406;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x591A;&#x4E2A;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x901A;&#x5E38;&#x88AB;&#x538B;&#x7F29;&#x6210;.cab&#x683C;&#x5F0F;&#x7684;&#x538B;&#x7F29;&#x5305;&#x8FDB;&#x884C;&#x4F20;&#x8F93;&#xFF0C;&#x4EE5;&#x51CF;&#x5C0F;&#x6587;&#x4EF6;&#x5927;&#x5C0F;&#xFF0C;&#x4FBF;&#x4E8E;&#x4F20;&#x8F93;&#x548C;&#x5B58;&#x50A8;&#x3002;&#x4E00;&#x65E6;&#x9700;&#x8981;&#x5206;&#x6790;&#x5176;&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#xFF0C;&#x4F1A;&#x5148;&#x4ECE;.cab&#x538B;&#x7F29;&#x5305;&#x4E2D;&#x5C06;&#x5176;&#x63D0;&#x53D6;&#x51FA;&#x6765;&#xFF0C;&#x7136;&#x540E;&#x52A0;&#x8F7D;&#x5230;WinDbg&#x7B49;&#x8F6C;&#x50A8;&#x5206;&#x6790;&#x5DE5;&#x5177;&#x4E2D;&#x8FDB;&#x884C;&#x5206;&#x6790;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x8FD9;&#x884C;&#x4FE1;&#x606F;&#xFF0C;&#x662F;WinDbg&#x5728;&#x52A0;&#x8F7D;&#x6B64;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x65F6;&#xFF0C;&#x4ECE;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x672C;&#x8EAB;&#x63D0;&#x53D6;&#x7684;&#x5143;&#x6570;&#x636E;&#xFF0C;&#x5B83;&#x8BB0;&#x5F55;&#x4E86;&#x6B64;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x539F;&#x6765;&#x6253;&#x5305;&#x5728;&#x540D;&#x4E3A;061023-11093-01.cab&#x7684;CAB&#x538B;&#x7F29;&#x5305;&#x4E2D;&#x7684;&#x4E8B;&#x5B9E;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x5206;&#x6790;&#x6765;&#x8BF4;&#x6CA1;&#x6709;&#x5B9E;&#x9645;&#x610F;&#x4E49;&#x3002;</p>
+<h2 id="dumpfileattributes">DUMP_FILE_ATTRIBUTES</h2>
+<p>DUMP_FILE_ATTRIBUTES: 0x1808</p>
+<p>&#x8868;&#x793A;&#x6B64;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x7684;&#x5C5E;&#x6027;&#x503C;&#x4E3A;0x1808&#x3002;</p>
+<p>0x1000: &#x5185;&#x6838;&#x751F;&#x6210;&#x7684;&#x4FEE;&#x590D;&#x8F6C;&#x50A8;(Kernel Generated Triage Dump)
+0x0800: &#x5305;&#x542B;&#x8BCA;&#x65AD;&#x6570;&#x636E;&#x7684;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x5934;
+0x0008: &#x8F6C;&#x50A8;&#x64CD;&#x4F5C;&#x6210;&#x529F;&#x5B8C;&#x6210;</p>
+<p>&#x6240;&#x4EE5;&#x5173;&#x4E8E;&#x8FD9;&#x4E2A;&#x7279;&#x6027;&#x7684;&#x89E3;&#x91CA;&#x5C31;&#x662F;&#xFF1A;</p>
+<ol>
+<li><p>&#x6B64;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x5C5E;&#x4E8E;&#x5185;&#x6838;&#x751F;&#x6210;&#x7684;&#x4FEE;&#x590D;&#x8F6C;&#x50A8;(Kernel Generated Triage Dump)</p>
+</li>
+<li><p>&#x6B64;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x7684;&#x5934;&#x90E8;&#x5305;&#x542B;&#x8BCA;&#x65AD;&#x6570;&#x636E;</p>
+</li>
+<li><p>&#x6B64;&#x8F6C;&#x50A8;&#x64CD;&#x4F5C;&#x6210;&#x529F;&#x5B8C;&#x6210;</p>
+</li>
+</ol>
+<p>&#x6CA1;&#x5565;&#x7528;&#x5904;&#xFF0C;&#x5C31;&#x662F;&#x544A;&#x8BC9;&#x4F60;&#x5728;&#x751F;&#x6210;&#x8FD9;&#x4E2A;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x7684;&#x65F6;&#x5019;&#x5F88;&#x6210;&#x529F;&#xFF0C;&#x6CA1;&#x6709;&#x53D1;&#x751F;&#x610F;&#x5916;&#x548C;&#x4E2D;&#x65AD;&#x3002;</p>
+<p>&#x8FD9;&#x4E0B;&#x9762;&#x7684;&#x51E0;&#x4E2A;BUGCHECK&#x548C;&#x524D;&#x9762;&#x6700;&#x5F00;&#x59CB;&#x5C55;&#x793A;&#x7684;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#x662F;&#x4E00;&#x4E2A;&#x4E1C;&#x897F;</p>
+<p><img src="IRQL&#x84DD;&#x5C4F;&#x5206;&#x6790;/image-20230611220008086-16864920085171.png" alt="image-20230611220008086"></p>
+<p>&#x5C31;&#x662F;&#x5206;&#x5F00;&#x8BF4;&#x4E86;&#x4E00;&#x4E0B;&#xFF0C;&#x6CA1;&#x5565;&#x7528;&#x3002;</p>
+<p>&#x518D;&#x5F80;&#x4E0B;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x4FE1;&#x606F;&#xFF0C;&#x8FD9;&#x4E2A;&#x4FE1;&#x606F;&#x4E3B;&#x8981;&#x662F;windbg&#x5728;&#x5206;&#x6790;&#x6B64;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x65F6;,&#x5C1D;&#x8BD5;&#x4ECE;&#x8F6C;&#x50A8;&#x83B7;&#x53D6;&#x4E00;&#x4E9B;&#x91CD;&#x8981;&#x7684;&#x5185;&#x5B58;&#x5E03;&#x5C40;&#x4FE1;&#x606F;&#x5931;&#x8D25;&#x4E86;,&#x6240;&#x4EE5;&#x65E0;&#x6CD5;&#x786E;&#x5B9A;&#x5730;&#x5740;fffffcf07d379a230&#x662F;&#x5426;&#x5C5E;&#x4E8E;&#x53EF;&#x5199;&#x5185;&#x5B58;&#x533A;&#x57DF;&#x3002;</p>
+<p><img src="IRQL&#x84DD;&#x5C4F;&#x5206;&#x6790;/image-20230611220416208.png" alt="image-20230611220416208"></p>
+<pre><code class="lang-c">WRITE_ADDRESS: fffff8031431c468: 
+Unable to get MiVisibleState    <span class="hljs-comment">//&#x53EF;&#x89C1;&#x5185;&#x5B58;&#x9875;&#x7684;&#x72B6;&#x6001;&#x4FE1;&#x606F;</span>
+Unable to get NonPagedPoolStart    <span class="hljs-comment">//&#x975E;&#x5206;&#x9875;&#x5185;&#x5B58;&#x6C60;&#x7684;&#x8D77;&#x59CB;&#x548C;&#x7ED3;&#x675F;&#x5730;&#x5740;</span>
+Unable to get NonPagedPoolEnd    
+Unable to get PagedPoolStart    <span class="hljs-comment">//&#x5206;&#x9875;&#x5185;&#x5B58;&#x6C60;&#x7684;&#x8D77;&#x59CB;&#x548C;&#x7ED3;&#x675F;&#x5730;&#x5740;</span>
+Unable to get PagedPoolEnd
+unable to get nt!MmSpecialPagesInUse    <span class="hljs-comment">//&#x6B63;&#x5728;&#x4F7F;&#x7528;&#x7684;&#x7279;&#x6B8A;&#x5185;&#x5B58;&#x9875;&#x4FE1;&#x606F;</span>
+ ffffcf07d379a230
+</code></pre>
+<p>&#x7531;&#x4E8E;&#x83B7;&#x53D6;&#x8FD9;&#x4E9B;&#x4FE1;&#x606F;&#x5931;&#x8D25;,&#x6240;&#x4EE5;WinDbg&#x65E0;&#x6CD5;&#x5224;&#x65AD;&#x5730;&#x5740;fffffcf07d379a230&#x662F;&#x5426;&#x53EF;&#x5199;,&#x53EA;&#x80FD;&#x8F93;&#x51FA;&#x4E00;&#x6761;&#x8B66;&#x544A;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x4E00;&#x822C;&#x5728;&#x4E0B;&#x9762;&#x4E09;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x4F1A;&#x53D1;&#x751F;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#xFF0C;2&#x6BD4;&#x8F83;&#x5E38;&#x89C1;&#x7684;&#x53EF;&#x80FD;&#x3002;</p>
+<ol>
+<li>&#x6B64;&#x8F6C;&#x50A8;&#x5DF2;&#x635F;&#x574F;,&#x5173;&#x952E;&#x5185;&#x5B58;&#x5E03;&#x5C40;&#x4FE1;&#x606F;&#x4E22;&#x5931;&#x6216;&#x635F;&#x574F;</li>
+<li><strong>&#x6B64;&#x8F6C;&#x50A8;&#x5C5E;&#x4E8E;&#x4FEE;&#x590D;&#x8F6C;&#x50A8;&#x6216;&#x8F6C;&#x50A8;&#x7EA7;&#x522B;&#x8F83;&#x4F4E;,&#x672A;&#x5305;&#x542B;&#x4E0A;&#x8FF0;&#x4FE1;&#x606F;</strong></li>
+<li>&#x7CFB;&#x7EDF;&#x5185;&#x5B58;&#x5E03;&#x5C40;&#x53D1;&#x751F;&#x53D8;&#x5316;,WinDbg&#x7248;&#x672C;&#x8F83;&#x65E7;&#x65E0;&#x6CD5;&#x6B63;&#x786E;&#x89E3;&#x6790;</li>
+</ol>
+<h2 id="blackboxbsd">BLACKBOXBSD</h2>
+<h3 id="bsdbsod">BSD/BSOD</h3>
+<p>Berkeley Software Distribution&#x6216;Berkeley Standard Distribution&#x7684;&#x7F29;&#x5199;&#xFF0C;&#x4E00;&#x822C;&#x662F;FreeBSD&#x7B49;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x7684;&#x7B80;&#x79F0;&#xFF0C;&#x8FD9;&#x91CC;&#x6307;&#x7684;&#x662F;<strong>Blue screen of death</strong></p>
+<p>&#x8FD9;3&#x6761;&#x4FE1;&#x606F;&#x8868;&#x793A;WinDbg&#x52A0;&#x8F7D;&#x4E86;&#x9ED1;&#x7BB1;&#x6269;&#x5C55;(BlackBox Extension)&#x6765;&#x5206;&#x6790;&#x6B64;&#x8F6C;&#x50A8;&#x6587;&#x4EF6;&#x3002;</p>
+<p><img src="IRQL&#x84DD;&#x5C4F;&#x5206;&#x6790;/image-20230611233006182.png" alt="image-20230611233006182"></p>
+<ul>
+<li>BLACKBOXBSD: 1 (!blackboxbsd)</li>
+</ul>
+<p>&#x52A0;&#x8F7D;&#x4E86; blackboxbsd.dll &#x6269;&#x5C55;&#x6765;&#x5206;&#x6790;BSD&#x78C1;&#x76D8;&#x5B50;&#x7CFB;&#x7EDF;&#x76F8;&#x5173;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<ul>
+<li>BLACKBOXNTFS: 1 (!blackboxntfs)</li>
+</ul>
+<p>&#x52A0;&#x8F7D;&#x4E86; blackboxntfs.dll &#x6269;&#x5C55;&#x6765;&#x5206;&#x6790;NTFS&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x76F8;&#x5173;&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+<ul>
+<li>BLACKBOXPNP: 1 (!blackboxpnp)</li>
+</ul>
+<p>&#x52A0;&#x8F7D;&#x4E86; blackboxpnp.dll &#x6269;&#x5C55;&#x6765;&#x5206;&#x6790;&#x5373;&#x63D2;&#x5373;&#x7528;(PnP)&#x4E0E;&#x7535;&#x6E90;&#x7BA1;&#x7406;&#x76F8;&#x5173;&#x7684;&#x95EE;&#x9898;&#x3002;&#x6CA1;&#x5565;&#x7528;&#xFF0C;&#x9664;&#x975E;&#x4F60;&#x8D85;&#x9891;&#x4E86;</p>
+<p>&#x9ED1;&#x7BB1;&#x6269;&#x5C55;&#x7531;&#x5FAE;&#x8F6F;&#x63D0;&#x4F9B;,&#x5305;&#x542B;&#x8BB8;&#x591A;&#x4E13;&#x95E8;&#x7528;&#x4E8E;&#x5206;&#x6790;Windows&#x5185;&#x6838;&#x548C;&#x9A71;&#x52A8;&#x7A0B;&#x5E8F;&#x76F8;&#x5173;&#x5B50;&#x7CFB;&#x7EDF;&#x7684;&#x811A;&#x672C;&#x4E0E;&#x5DE5;&#x5177;&#x3002;&#x901A;&#x8FC7;&#x52A0;&#x8F7D;&#x4E0D;&#x540C;&#x7684;&#x9ED1;&#x7BB1;&#x6269;&#x5C55;,WinDbg&#x53EF;&#x4EE5;&#x81EA;&#x52A8;&#x8FDB;&#x884C;&#x9A71;&#x52A8;&#x548C;&#x7CFB;&#x7EDF;&#x670D;&#x52A1;&#x76F8;&#x5173;&#x7684;&#x5206;&#x6790;&#x6765;&#x67E5;&#x627E;&#x6F5C;&#x5728;&#x95EE;&#x9898;&#x3002;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x70B9;&#x51FB;&#x540E;&#x9762;&#x7684;&#x547D;&#x4EE4;&#x67E5;&#x770B;&#x4E0D;&#x540C;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#x3002;</p>
+<h2 id="&#x62A5;&#x9519;&#x8FDB;&#x7A0B;&#x548C;&#x6B21;&#x6570;">&#x62A5;&#x9519;&#x8FDB;&#x7A0B;&#x548C;&#x6B21;&#x6570;</h2>
+<p>&#x8FD9;&#x662F;&#x5173;&#x952E;&#x7684;&#x90E8;&#x5206;&#xFF0C;&#x5B83;&#x76F4;&#x767D;&#x7684;&#x544A;&#x8BC9;&#x4F60;&#x662F;&#x54EA;&#x91CC;&#x53D1;&#x751F;&#x7684;&#x62A5;&#x9519;&#x548C;&#x8FD9;&#x662F;&#x7B2C;&#x51E0;&#x6B21;&#x53D1;&#x751F;&#x7684;&#x62A5;&#x9519;</p>
+<p><img src="IRQL&#x84DD;&#x5C4F;&#x5206;&#x6790;/image-20230611235226852.png" alt="image-20230611235226852"></p>
+<p>&#x672C;&#x673A;&#x62A5;&#x9519;&#x662F;&#x7531;<code>msedge.exe</code>&#x8FDB;&#x7A0B;&#x5BFC;&#x81F4;&#x7684;&#xFF0C;&#x8FD9;&#x662F;edge&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x4E3B;&#x8FDB;&#x7A0B;&#xFF0C;&#x8FD9;&#x6B63;&#x597D;&#x5BF9;&#x5E94;&#x4E86;&#x6211;&#x5728;&#x5173;&#x95ED;&#x6D4F;&#x89C8;&#x5668;&#x65F6;&#x53D1;&#x751F;&#x84DD;&#x5C4F;&#x7684;&#x65F6;&#x95F4;&#x8282;&#x70B9;&#x3002;</p>
+<h2 id="&#x5BC4;&#x5B58;&#x5668;&#x72B6;&#x6001;">&#x5BC4;&#x5B58;&#x5668;&#x72B6;&#x6001;</h2>
+<h3 id="trap-frame">trap frame</h3>
+<p>&#x65E0;&#x8BBA;3&#x73AF;&#x662F;&#x4ECE;&#x4E2D;&#x65AD;&#x95E8;&#x8FD8;&#x662F;systementer&#x8FDB;&#x5165;0&#x73AF;&#xFF0C;3&#x73AF;&#x7684;&#x5BC4;&#x5B58;&#x5668;&#x90FD;&#x4F1A;&#x5BC4;&#x5B58;&#x5728;_Trap_Frame&#x7ED3;&#x6784;&#x4F53;&#x4E2D;&#xFF0C;&#x901A;&#x8FC7;&#x547D;&#x4EE4;<code>dt _KTrap_Frame</code>&#x53EF;&#x4EE5;&#x4ECE;windbg&#x4E2D;&#x67E5;&#x770B;&#x8BE5;&#x7ED3;&#x6784;&#x4F53;</p>
+<pre><code>6: kd&gt; dt _KTrap_Frame
+nt!_KTRAP_FRAME
+   +0x000 P1Home           : Uint8B
+   +0x008 P2Home           : Uint8B
+   +0x010 P3Home           : Uint8B
+   +0x018 P4Home           : Uint8B
+   +0x020 P5               : Uint8B
+   +0x028 PreviousMode     : Char
+   +0x028 InterruptRetpolineState : UChar
+   +0x029 PreviousIrql     : UChar
+   +0x02a FaultIndicator   : UChar
+   +0x02a NmiMsrIbrs       : UChar
+   +0x02b ExceptionActive  : UChar
+   +0x02c MxCsr            : Uint4B
+   +0x030 Rax              : Uint8B
+   +0x038 Rcx              : Uint8B
+   +0x040 Rdx              : Uint8B
+   +0x048 R8               : Uint8B
+   +0x050 R9               : Uint8B
+   +0x058 R10              : Uint8B
+   +0x060 R11              : Uint8B
+   +0x068 GsBase           : Uint8B
+   +0x068 GsSwap           : Uint8B
+   +0x070 Xmm0             : _M128A
+   +0x080 Xmm1             : _M128A
+   +0x090 Xmm2             : _M128A
+   +0x0a0 Xmm3             : _M128A
+   +0x0b0 Xmm4             : _M128A
+   +0x0c0 Xmm5             : _M128A
+   +0x0d0 FaultAddress     : Uint8B
+   +0x0d0 ContextRecord    : Uint8B
+   +0x0d8 Dr0              : Uint8B
+   +0x0e0 Dr1              : Uint8B
+   +0x0e8 Dr2              : Uint8B
+   +0x0f0 Dr3              : Uint8B
+   +0x0f8 Dr6              : Uint8B
+   +0x100 Dr7              : Uint8B
+   +0x0d8 ShadowStackFrame : Uint8B
+   +0x0e0 Spare            : [5] Uint8B
+   +0x108 DebugControl     : Uint8B
+   +0x110 LastBranchToRip  : Uint8B
+   +0x118 LastBranchFromRip : Uint8B
+   +0x120 LastExceptionToRip : Uint8B
+   +0x128 LastExceptionFromRip : Uint8B
+   +0x130 SegDs            : Uint2B
+   +0x132 SegEs            : Uint2B
+   +0x134 SegFs            : Uint2B
+   +0x136 SegGs            : Uint2B
+   +0x138 TrapFrame        : Uint8B
+   +0x140 Rbx              : Uint8B
+   +0x148 Rdi              : Uint8B
+   +0x150 Rsi              : Uint8B
+   +0x158 Rbp              : Uint8B
+   +0x160 ErrorCode        : Uint8B
+   +0x160 ExceptionFrame   : Uint8B
+   +0x168 Rip              : Uint8B
+   +0x170 SegCs            : Uint2B
+   +0x172 Fill0            : UChar
+   +0x173 Logging          : UChar
+   +0x174 Fill1            : [2] Uint2B
+   +0x178 EFlags           : Uint4B
+   +0x17c Fill2            : Uint4B
+   +0x180 Rsp              : Uint8B
+   +0x188 SegSs            : Uint2B
+   +0x18a Fill3            : Uint2B
+   +0x18c Fill4            : Uint4B
+</code></pre><p>&#x501F;&#x7528;csdn&#x4E2D;&#x7684;&#x4E00;&#x4F4D;&#x535A;&#x4E3B;&#x7684;&#x56FE;&#x7247;&#xFF1A;&#x6211;&#x662F;win11 64&#x4F4D;&#x7684;&#xFF0C;&#x8FD9;&#x4E2A;&#x56FE;&#x7247;&#x73AF;&#x5883;&#x672A;&#x77E5;&#xFF0C;&#x6240;&#x4EE5;&#x6709;&#x4E9B;&#x51FA;&#x5165;&#x3002;</p>
+<p><img src="IRQL&#x84DD;&#x5C4F;&#x5206;&#x6790;/20191207215316421.png" alt="20191207215316421"></p>
+<p><img src="IRQL&#x84DD;&#x5C4F;&#x5206;&#x6790;/image-20230611235601152.png" alt="image-20230611235601152"></p>
+<p>&#x8FD9;&#x91CC;&#x8BB0;&#x5F55;&#x7684;&#x662F;&#x53D1;&#x751F;&#x9519;&#x8BEF;&#x7684;&#x65F6;&#x5019;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x72B6;&#x6001;&#xFF0C;&#x5176;&#x4E2D;&#x84DD;&#x8272;&#x7684;&#x5B57;&#x4F53;<code>Some register values may be zeroed or incorrect.</code>&#x8BC1;&#x660E;&#x4E86;&#x8FD9;&#x4E2A;dump&#x53D1;&#x751F;&#x5728;&#x4F4E;&#x7B49;&#x7EA7;&#x4E0B;&#xFF0C;&#x6240;&#x4EE5;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x503C;&#x5E76;&#x4E0D;&#x662F;&#x5168;&#x7684;&#xFF0C;&#x5185;&#x6838;&#x672A;&#x80FD;&#x6355;&#x83B7;&#x5168;&#x90E8;&#x5BC4;&#x5B58;&#x5668;&#x72B6;&#x6001;&#x3002;</p>
+<p>rip&#x548C;&#x6808;&#x4FE1;&#x606F;(rsp&#x3001;rbp)&#x662F;&#x6211;&#x4EEC;&#x5224;&#x65AD;&#x5D29;&#x6E83;&#x539F;&#x56E0;&#x6700;&#x5173;&#x952E;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;rip&#x627E;&#x5230;&#x5BFC;&#x81F4;&#x5D29;&#x6E83;&#x7684;&#x6307;&#x4EE4;,&#x901A;&#x8FC7;&#x6808;&#x6862;&#x56DE;&#x6EAF;&#x8C03;&#x7528;&#x8FC7;&#x7A0B;&#x3002;&#x5176;&#x4ED6;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x503C;&#x4E5F;&#x53EF;&#x80FD;&#x63D0;&#x4F9B;&#x4E00;&#x5B9A;&#x4E0A;&#x4E0B;&#x6587;&#x4FE1;&#x606F;&#x5E2E;&#x52A9;&#x5206;&#x6790;&#x3002;</p>
+<p>&#x4E0B;&#x9762;&#x8FD8;&#x6709;&#x4E00;&#x884C;&#x5947;&#x602A;&#x7684;&#x73A9;&#x610F;&#xFF1A;</p>
+<blockquote>
+<p> iopl=0     nv up ei pl zr na po nc </p>
+</blockquote>
+<p>&#x662F;&#x6B64;trap frame&#x63D0;&#x4F9B;&#x7684;CPU&#x72B6;&#x6001;&#x6807;&#x5FD7;&#x4FE1;&#x606F;&#x3002;</p>
+<p>&#x5176;&#x4E2D;,&#x6BCF;&#x4E2A;&#x6807;&#x5FD7;&#x7684;&#x542B;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>iopl - I/O&#x7279;&#x6743;&#x7EA7;,0&#x8868;&#x793A;&#x5904;&#x4E8E;&#x7528;&#x6237;&#x6A21;&#x5F0F; 
+nv - &#x6EA2;&#x51FA;&#x6807;&#x5FD7;
+up - &#x534F;&#x5904;&#x7406;&#x5668;&#x4F7F;&#x7528;&#x6807;&#x5FD7;
+ei - &#x4E2D;&#x65AD;&#x4F7F;&#x80FD;&#x6807;&#x5FD7;
+pl - &#x7279;&#x6743;&#x7EA7;&#x6807;&#x5FD7;,0&#x8868;&#x793A;&#x5904;&#x4E8E;&#x7279;&#x6743;&#x7EA7;0 
+zr - &#x96F6;&#x6807;&#x5FD7;
+na - &#x8F85;&#x52A9;&#x8FDB;&#x4F4D;&#x6807;&#x5FD7;
+po - &#x5947;&#x5076;&#x6807;&#x5FD7;
+nc - &#x8FDB;&#x4F4D;&#x6807;&#x5FD7;</p>
+<p>&#x8FD9;&#x4E9B;&#x6807;&#x5FD7;&#x63CF;&#x8FF0;&#x4E86;CPU&#x5728;&#x53D1;&#x751F;trap&#x65F6;&#x7684;&#x72B6;&#x6001;&#x4E0E;&#x6A21;&#x5F0F;&#x3002;&#x5176;&#x5B9E;&#x8FD9;&#x5C31;&#x662F;&#x54EA;&#x4E9B;ZF OF&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x53E6;&#x4E00;&#x79CD;&#x8868;&#x793A;&#x65B9;&#x5F0F;&#x3002;</p>
+<p>OV = OVerflow, NV = No oVerflow. DN = DowN, UP (up).</p>
+<p>EI = Enable Interupt, DI = Disable Interupt.</p>
+<p>NG = NeGative, PL = PLus; a strange mixing of terms due to the</p>
+<p>fact that &apos;Odd Parity&apos; is represented by PO (rather than</p>
+<p>POsitive), but they still could have used &apos;MI&apos; for MInus.</p>
+<p>ZR = ZeRo, NZ = Not Zero.</p>
+<p>AC = Auxiliary Carry, NA = Not Auxiliary carry.</p>
+<p>PE = Parity Even, PO = Parity Odd. CY = CarrY, NC = No Carry.</p>
+<ul>
+<li>&#x6B64;trap&#x53D1;&#x751F;&#x4E8E;&#x7528;&#x6237;&#x6A21;&#x5F0F;(iopl=0, pl=0)</li>
+<li>&#x6CA1;&#x6709;&#x6EA2;&#x51FA;&#x6216;&#x8FDB;&#x4F4D;(nv=0, nc=0)</li>
+<li>&#x6CA1;&#x6709;&#x4F7F;&#x7528;FPU(up=0)</li>
+<li>&#x4E2D;&#x65AD;&#x5DF2;&#x4F7F;&#x80FD;(ei=1)</li>
+<li>&#x5F53;&#x524D;&#x65E0;&#x96F6;&#x7ED3;&#x679C;(zr=0)</li>
+</ul>
+<p>&#x6240;&#x4EE5;,&#x8FD9;&#x4E9B;&#x6807;&#x5FD7;&#x4FE1;&#x606F;&#x53EF;&#x4EE5;&#x8F85;&#x52A9;&#x5224;&#x65AD;&#x5BFC;&#x81F4;&#x6B64;trap&#x7684;&#x4EE3;&#x7801;&#x5728;&#x4EC0;&#x4E48;&#x6A21;&#x5F0F;&#x4E0B;&#x6267;&#x884C;&#x7684;&#x3002;&#x4F46;&#x662F;&#x770B;&#x8FD9;&#x91CC;&#x53EA;&#x662F;&#x7ED9;&#x51FA;&#x4E86;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x4F46;&#x662F;&#x6CA1;&#x6709;&#x6570;&#x503C;&#xFF0C;&#x5E94;&#x8BE5;&#x662F;&#x5185;&#x6838;&#x5E76;&#x6CA1;&#x6709;&#x8FDB;&#x884C;&#x4FDD;&#x5B58;&#x3002;</p>
+<h2 id="&#x5D29;&#x6E83;&#x65F6;&#x7684;&#x6307;&#x4EE4;">&#x5D29;&#x6E83;&#x65F6;&#x7684;&#x6307;&#x4EE4;</h2>
+<p><img src="IRQL&#x84DD;&#x5C4F;&#x5206;&#x6790;/image-20230612100312749.png" alt="image-20230612100312749"></p>
+<p>&#x8FD9;&#x91CC;&#x7ED9;&#x51FA;&#x4E86;&#x5B9A;&#x4F4D;&#x5230;&#x6C47;&#x7F16;&#x7C92;&#x5EA6;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x8FD9;&#x6761;&#x4FE1;&#x606F;&#x7684;&#x4EE3;&#x8868;&#x4E86;&#xFF0C;&#x5728;&#x6267;&#x884C;&#x5230;ntoskrnl.exe&#x4E2D;&#x7684;<code>KiAcquireKobjectLockSafe</code>&#x51FD;&#x6570;&#x504F;&#x79FB;&#x4F4D;&#x7F6E;&#x4E3A;0xf&#x7684;&#x6307;&#x4EE4;<code>lock bts dword ptr [rcx],7 ds:ffffcf07d379a230=00060000</code>&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x53D1;&#x751F;&#x7684;&#x62A5;&#x9519;&#xFF08;<code>f00fba2907</code>&#x662F;&#x8FD9;&#x4E2A;&#x6307;&#x4EE4;&#x7684;&#x5B57;&#x8282;&#x7801;&#xFF09;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x4EE3;&#x7801;&#x7684;&#x5177;&#x4F53;&#x542B;&#x4E49;&#x662F;&#xFF1A;&#x4EE5;&#x4E92;&#x65A5;&#x65B9;&#x5F0F;&#x4FEE;&#x6539;&#x5185;&#x5B58;&#x5730;&#x5740;ffffcf07`d379a230&#x7684;&#x7B2C;7&#x4F4D;&#x3002;&#x7136;&#x540E;&#x5C31;&#x53D1;&#x751F;&#x4E86;crash&#x3002;</p>
+<h2 id="&#x5806;&#x6808;&#x4FE1;&#x606F;">&#x5806;&#x6808;&#x4FE1;&#x606F;</h2>
+<p>&#x8FD9;&#x91CC;&#x7684;&#x5806;&#x6808;&#x4FE1;&#x606F;&#x663E;&#x793A;&#x7684;&#x662F;&#x6808;&#x56DE;&#x6EAF;&#x4FE1;&#x606F;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x76F4;&#x5230;&#x53D1;&#x751F;&#x62A5;&#x9519;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5F53;&#x524D;&#x6808;&#x4E0A;&#x7684;&#x8C03;&#x7528;&#x94FE;&#x3002;&#x5B83;&#x53CD;&#x6620;&#x4E86;&#x9519;&#x8BEF;&#x5806;&#x6808;&#x7684;&#x8C03;&#x7528;&#x60C5;&#x51B5;&#x3002;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x987A;&#x5E8F;&#x662F;<strong>&#x4ECE;&#x4E0B;&#x9762;&#x5F80;&#x4E0A;</strong>&#x9762;&#x8D70;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6700;&#x4E0A;&#x9762;&#x7684;&#x51FD;&#x6570;&#x662F;KeBugCheckEx&#x3002;</p>
+<pre><code>STACK_TEXT:  
+ffffb585`92d6f0d8 fffff803`13a417a9     : 00000000`0000000a ffffcf07`d379a230 00000000`00000002 00000000`00000001 : nt!KeBugCheckEx
+ffffb585`92d6f0e0 fffff803`13a3ce34     : 00000000`00000001 ffffb585`92d6f7d0 00000000`00000000 00000000`00000001 : nt!KiBugCheckDispatch+0x69
+ffffb585`92d6f220 fffff803`1391807f     : 00000000`00000000 fffff803`1383d78a 00000000`00000010 00000000`00050282 : nt!KiPageFault+0x474
+ffffb585`92d6f3b0 fffff803`1383d7eb     : ffff910c`f1ded080 ffffcf07`d379a230 00000000`00000000 00000000`00000000 : nt!KiAcquireKobjectLockSafe+0xf
+ffffb585`92d6f3e0 fffff803`13bb7df2     : ffff910c`00000001 ffffb585`92d6f749 00000000`00000000 ffffb585`92d6f7d0 : nt!KeSetEvent+0x6b
+ffffb585`92d6f470 fffff803`13938673     : 00000000`00000000 00000000`00000001 ffff910c`f1ded080 ffffcf08`3658b750 : nt!PsDispatchIumService+0x96e
+ffffb585`92d6f6e0 fffff803`13f589d7     : 00000001`400000d0 ffff910d`135440c0 ffff910d`13544518 00000000`0000000b : nt!VslpEnterIumSecureMode+0x287
+ffffb585`92d6f7b0 fffff803`13b893b1     : 00000000`0000000b 00000000`000000a0 00000000`00000000 ffffcf08`2c7978b8 : nt!VslRundownSecureProcess+0x47
+ffffb585`92d6f860 fffff803`13eb4315     : ffffcf08`2c7978b0 ffffcf08`2c797860 ffffcf08`2c7978a0 fffff803`13cef7c8 : nt!KeRundownSecureProcess+0x15
+ffffb585`92d6f890 fffff803`13cf15ca     : ffff910d`135440c0 ffffcf08`18720060 ffff910d`135440c0 00000000`00000000 : nt!PspRundownSingleProcess+0x224e41
+ffffb585`92d6f920 fffff803`13d7c402     : 00000000`00000000 ffff910d`13544001 ffff910c`f1ded0f4 00000018`a0587000 : nt!PspExitThread+0x64e
+ffffb585`92d6fa20 fffff803`13a40ee8     : ffff910c`0000169c ffff910c`f1ded080 ffff910d`135440c0 ffff910d`135440c0 : nt!NtTerminateProcess+0xf2
+ffffb585`92d6faa0 00007ffe`d968f1d4     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : nt!KiSystemServiceCopyEnd+0x28
+00000018`a0dffb78 00000000`00000000     : 00000000`00000000 00000000`00000000 00000000`00000000 00000000`00000000 : 0x00007ffe`d968f1d4
+</code></pre><p>&#x53EF;&#x4EE5;&#x5C06;&#x4E0A;&#x9762;&#x7684;&#x6570;&#x636E;&#x5206;&#x4E3A;4&#x680F;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x680F;&#x662F;&#x51FD;&#x6570;&#x7684;&#x7B26;&#x53F7;&#x540D;&#x79F0;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x57FA;&#x672C;&#x90FD;&#x662F;&#x5728;nt&#x91CC;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x90FD;&#x5B9A;&#x4F4D;&#x5230;&#x4E86;&#x4E00;&#x4E9B;&#x504F;&#x79FB;&#x7684;&#x5177;&#x4F53;&#x4F4D;&#x7F6E;&#xFF1B;&#x4E2D;&#x95F4;&#x4E00;&#x680F;&#x662F;&#x51FD;&#x6570;&#x7684;&#x56DB;&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7528;&#x7A7A;&#x683C;&#x9694;&#x5F00;&#x3002;</p>
+<p><img src="IRQL&#x84DD;&#x5C4F;&#x5206;&#x6790;/image-20230612110142572.png" alt="image-20230612110142572"></p>
+<p>&#x8FD9;&#x4E2A;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;k&#x547D;&#x4EE4;&#x6216;&#x8005;kb&#x547D;&#x4EE4;&#x6765;&#x770B;&#x5F97;&#x5230;&#x7C7B;&#x4F3C;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<h2 id="&#x7ED3;&#x5C3E;">&#x7ED3;&#x5C3E;</h2>
+<pre><code>
+
+SYMBOL_NAME:  nt!KiAcquireKobjectLockSafe+f
+# &#x53D1;&#x751F;&#x62A5;&#x9519;&#x7684;&#x7B26;&#x53F7;&#x540D;&#x79F0;&#xFF08;&#x51FD;&#x6570;&#x540D;&#x79F0;&#xFF09;
+MODULE_NAME: nt
+# &#x53D1;&#x751F;&#x62A5;&#x9519;&#x7684;&#x6A21;&#x5757;&#x540D;&#x79F0;&#xFF0C;&#x8FD9;&#x91CC;&#x662F;&#x5185;&#x6838;
+IMAGE_NAME:  ntkrnlmp.exe
+# &#x53D1;&#x751F;&#x9519;&#x8BEF;&#x7684;&#x955C;&#x50CF;&#x540D;&#x79F0;
+IMAGE_VERSION:  10.0.22621.1778
+# &#x6620;&#x50CF;&#x7684;&#x7248;&#x672C;&#x53F7;
+STACK_COMMAND:  .cxr; .ecxr ; kb
+# &#x4E00;&#x4E9B;&#x547D;&#x4EE4;
+BUCKET_ID_FUNC_OFFSET:  f
+# &#x5BF9;&#x5E94;&#x53D1;&#x751F;&#x62A5;&#x9519;&#x5730;&#x5740;&#x7684;&#x51FD;&#x6570;&#x91CC;&#x7684;&#x504F;&#x79FB;
+FAILURE_BUCKET_ID:  AV_nt!KiAcquireKobjectLockSafe
+# &#x663E;&#x793A;&#x6B64;&#x95EE;&#x9898;&#x7684;&#x552F;&#x4E00;&#x6876;ID
+OSPLATFORM_TYPE:  x64
+# &#x7CFB;&#x7EDF;&#x4F4D;&#x6570;
+OSNAME:  Windows 10
+# &#x7CFB;&#x7EDF;&#x540D;&#x79F0;&#xFF0C;&#x6211;&#x662F;win11&#xFF0C;&#x5185;&#x6838;&#x7248;&#x672C;&#x8FD8;&#x662F;win10
+FAILURE_ID_HASH:  {87978629-0a82-b7ad-caa7-eb2c5ba684a3}
+# &#x5BF9;&#x5E94;&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#x7684;hash&#x503C;
+Followup:     MachineOwner
+---------
+</code></pre><h1 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h1>
+<p>&#x4F7F;&#x7528;windbg&#x5BF9;dump&#x6587;&#x4EF6;&#x8FDB;&#x884C;&#x5206;&#x6790;&#xFF0C;&#x5173;&#x952E;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x6620;&#x50CF;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x62A5;&#x9519;&#x4FE1;&#x606F;&#xFF0C;&#x8FDB;&#x7A0B;&#x540D;&#x79F0;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x5806;&#x6808;&#x4FE1;&#x606F;&#xFF0C;&#x4E00;&#x822C;&#x5982;&#x679C;&#x662F;Windows&#x81EA;&#x5DF1;&#x7684;&#x7A0B;&#x5E8F;&#x548C;&#x5E94;&#x7528;&#x548C;&#x5185;&#x6838;&#x53D1;&#x751F;&#x4E86;&#x9519;&#x8BEF;&#x57FA;&#x672C;&#x5C31;&#x65E0;&#x89E3;&#x4E86;&#xFF0C;&#x6BD4;&#x5982;&#x8FD9;&#x4E2A;dump&#x6587;&#x4EF6;&#x663E;&#x793A;&#x7684;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x8FD9;&#x4E2A;&#x5206;&#x6790;&#x4E3B;&#x8981;&#x662F;&#x5BF9;dump&#x91CC;&#x663E;&#x793A;&#x7684;&#x5185;&#x5BB9;&#x7684;&#x6BCF;&#x4E00;&#x4E2A;&#x6761;&#x76EE;&#x7684;&#x539F;&#x7406;&#x548C;&#x5185;&#x5BB9;&#x8FDB;&#x884C;&#x5B66;&#x4E60;&#xFF0C;&#x4E3B;&#x8981;&#x662F;&#x504F;&#x91CD;&#x4E8E;&#x5185;&#x5BB9;&#x7684;&#x5206;&#x6790;&#x89E3;&#x91CA;&#x800C;&#x4E0D;&#x662F;&#x64CD;&#x4F5C;&#x7684;&#x8FC7;&#x7A0B;&#x3002; </p>
+<footer class="page-footer"><span class="copyright">&#x6CA1;&#x6709;&#x7248;&#x6743;&#xFF0C;&#x968F;&#x4FBF;&#x590D;&#x5236;&#xFF0C;&#x514D;&#x8D39;&#x7684;&#x77E5;&#x8BC6;&#x5E94;&#x8BE5;&#x5171;&#x4EAB; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2023-06-12 12:08:05
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="../云原生安全.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 云原生安全">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"蓝屏 - windbg模块解析","level":"1.5.3","depth":2,"next":{"title":"云原生安全","level":"1.6","depth":1,"path":"MyArticles/云原生安全.md","ref":"MyArticles/云原生安全.md","articles":[{"title":"云原生 - 是什么","level":"1.6.1","depth":2,"path":"MyArticles/云原生安全/云原生安全 -云原生.md","ref":"MyArticles/云原生安全/云原生安全 -云原生.md","articles":[]}]},"previous":{"title":"OODA Loops 了解了解","level":"1.5.2","depth":2,"ref":"","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","custom-favicon","tbfed-pagefooter","popup","-sharing","sharing-plus","intopic-toc","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"没有版权，随便复制，免费的知识应该共享","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"./icon/book.ico","back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MyArticles/Practice/IRQL蓝屏分析.md","mtime":"2023-06-12T04:08:05.653Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-25T07:42:30.802Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
