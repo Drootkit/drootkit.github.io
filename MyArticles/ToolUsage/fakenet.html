@@ -1,0 +1,1523 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>真假C&C - fakenet · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Botnet.html" />
+    
+    
+    <link rel="prev" href="windbg记录.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../构建gitbook.html">
+            
+                <a href="../构建gitbook.html">
+            
+                    
+                    写在开始，how2gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../SUMMARY.html">
+            
+                <a href="../../SUMMARY.html">
+            
+                    
+                    所有目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Reverse.html">
+            
+                <a href="../Reverse.html">
+            
+                    
+                    Reverse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Re/控制流平坦化.html">
+            
+                <a href="../Re/控制流平坦化.html">
+            
+                    
+                    反控制流平坦化学习-angr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Re/反调试 & 沙箱对抗技巧收集.html">
+            
+                <a href="../Re/反调试 & 沙箱对抗技巧收集.html">
+            
+                    
+                    反调试以及沙箱对抗技巧收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Re/常见加密算法-学习.html">
+            
+                <a href="../Re/常见加密算法-学习.html">
+            
+                    
+                    加密解密学习 - 更
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Re/分组密码学习.html">
+            
+                <a href="../Re/分组密码学习.html">
+            
+                    
+                    分组密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Re/vmp3.5unpacke.html">
+            
+                <a href="../Re/vmp3.5unpacke.html">
+            
+                    
+                    vmp3.X 工具向脱壳
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Re/idaunpackELF.html">
+            
+                <a href="../Re/idaunpackELF.html">
+            
+                    
+                    运行时压缩壳 - IDA动调ELF脱壳
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Basics.html">
+            
+                <a href="../Basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Basics/PE文件加载器.html">
+            
+                <a href="../Basics/PE文件加载器.html">
+            
+                    
+                    PE文件加载器-基于C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Basics/DebugC">
+            
+                <span>
+            
+                    
+                    调试C#的DLL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Basics/调用约定和断点.html">
+            
+                <a href="../Basics/调用约定和断点.html">
+            
+                    
+                    调用约定和断点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Basics/elf文件结构.html">
+            
+                <a href="../Basics/elf文件结构.html">
+            
+                    
+                    ELF structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Basics/Pe File Structer.html">
+            
+                <a href="../Basics/Pe File Structer.html">
+            
+                    
+                    PE structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Basics/arm学习.html">
+            
+                <a href="../Basics/arm学习.html">
+            
+                    
+                    ARM 基础学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../Basics/Windows消息队列学习.html">
+            
+                <a href="../Basics/Windows消息队列学习.html">
+            
+                    
+                    Windows消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../Basics/内网基础.html">
+            
+                <a href="../Basics/内网基础.html">
+            
+                    
+                    内网基础学习 - 域和组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Practice.html">
+            
+                <a href="../Practice.html">
+            
+                    
+                    Practice
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Practice/YouTubePremium.apk.html">
+            
+                <a href="../Practice/YouTubePremium.apk.html">
+            
+                    
+                    Malware-APK0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Practice/OODA-Loops.html">
+            
+                <a href="../Practice/OODA-Loops.html">
+            
+                    
+                    edr对抗 - OODA 角度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Practice/IRQL蓝屏分析.html">
+            
+                <a href="../Practice/IRQL蓝屏分析.html">
+            
+                    
+                    蓝屏 - windbg模块解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Practice/shutdownWinDefender.html">
+            
+                <a href="../Practice/shutdownWinDefender.html">
+            
+                    
+                    失效的欺骗 - 假杀软欺骗真winDef
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../云原生安全.html">
+            
+                <a href="../云原生安全.html">
+            
+                    
+                    云原生安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../云原生安全/云原生安全 -云原生.html">
+            
+                <a href="../云原生安全/云原生安全 -云原生.html">
+            
+                    
+                    云原生 - 是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Dailynotes.html">
+            
+                <a href="../Dailynotes.html">
+            
+                    
+                    Daily notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Dailynotes/G-F-W原理了解学习.html">
+            
+                <a href="../Dailynotes/G-F-W原理了解学习.html">
+            
+                    
+                    G-F-W原理了解学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Dailynotes/pdf解析重组.html">
+            
+                <a href="../Dailynotes/pdf解析重组.html">
+            
+                    
+                    电子书清晰化的尝试 利用python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Dailynotes/ipv6_base_vps.html">
+            
+                <a href="../Dailynotes/ipv6_base_vps.html">
+            
+                    
+                    搭建ipv6自有服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Dailynotes/learn_shell.html">
+            
+                <a href="../Dailynotes/learn_shell.html">
+            
+                    
+                    Shell 学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Dailynotes/就业意向.html">
+            
+                <a href="../Dailynotes/就业意向.html">
+            
+                    
+                    就业意向
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Development.html">
+            
+                <a href="../Development.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Development/find_dll_in_proc.html">
+            
+                <a href="../Development/find_dll_in_proc.html">
+            
+                    
+                    Find DLL in Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../Development/find_thread_in_process.html">
+            
+                <a href="../Development/find_thread_in_process.html">
+            
+                    
+                    Find Thread in Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../Development/Build-Arm.html">
+            
+                <a href="../Development/Build-Arm.html">
+            
+                    
+                    构建qemu的持续学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../Development/查看父进程.html">
+            
+                <a href="../Development/查看父进程.html">
+            
+                    
+                    查看父进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../CyberSec.html">
+            
+                <a href="../CyberSec.html">
+            
+                    
+                    CyberSec
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../CyberSec/免杀手法收集.html">
+            
+                <a href="../CyberSec/免杀手法收集.html">
+            
+                    
+                    免杀手法收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../CyberSec/yara.html">
+            
+                <a href="../CyberSec/yara.html">
+            
+                    
+                    YARA学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../CyberSec/sigma规则学习.html">
+            
+                <a href="../CyberSec/sigma规则学习.html">
+            
+                    
+                    sigma规则学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../CyberSec/snort工作总结.html">
+            
+                <a href="../CyberSec/snort工作总结.html">
+            
+                    
+                    工作内容 - 产出snort规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../CyberSec/关于bitcoin.html">
+            
+                <a href="../CyberSec/关于bitcoin.html">
+            
+                    
+                    啥是Bitcoin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../CyberSec/IOC-痛苦金字塔.html">
+            
+                <a href="../CyberSec/IOC-痛苦金字塔.html">
+            
+                    
+                    从痛苦金字塔学习分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../CyberSec/PEB和TEB.html">
+            
+                <a href="../CyberSec/PEB和TEB.html">
+            
+                    
+                    TEB & PEB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../CyberSec/进程注入-基础.html">
+            
+                <a href="../CyberSec/进程注入-基础.html">
+            
+                    
+                    进程注入-前置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../CyberSec/6种常见注入方式.html">
+            
+                <a href="../CyberSec/6种常见注入方式.html">
+            
+                    
+                    windows下的进程注入（6种）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../CyberSec/dll-inject.html">
+            
+                <a href="../CyberSec/dll-inject.html">
+            
+                    
+                    Dll注入的3.5种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../CyberSec/DLL注入-突破session0.html">
+            
+                <a href="../CyberSec/DLL注入-突破session0.html">
+            
+                    
+                    DLL注入-突破session0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="../CyberSec/dll劫持原理学习和应用.html">
+            
+                <a href="../CyberSec/dll劫持原理学习和应用.html">
+            
+                    
+                    dll劫持原理以及方式实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Vulnerability_Mining.html">
+            
+                <a href="../Vulnerability_Mining.html">
+            
+                    
+                    Vulnerability Mining
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Vulnerability_Mining/iwant2pwn/firstPWN.html">
+            
+                <a href="../Vulnerability_Mining/iwant2pwn/firstPWN.html">
+            
+                    
+                    CTF - PWN 学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1.1" >
+            
+                <span>
+            
+                    
+                    栈的艺术
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.2" >
+            
+                <span>
+            
+                    
+                    堆的艺术
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Vulnerability_Mining/Windows通用shellcode编写.html">
+            
+                <a href="../Vulnerability_Mining/Windows通用shellcode编写.html">
+            
+                    
+                    shellcode编写-地址定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Vulnerability_Mining/winafl关于pdf测试的阅读-水.html">
+            
+                <a href="../Vulnerability_Mining/winafl关于pdf测试的阅读-水.html">
+            
+                    
+                    winafl文献-关于pdf中的图片测试(极水)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../ToolUsage.html">
+            
+                <a href="../ToolUsage.html">
+            
+                    
+                    Tool usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="多git公钥配置.html">
+            
+                <a href="多git公钥配置.html">
+            
+                    
+                    自定义git公钥配置-常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="HonggFuzz使用-入门.html">
+            
+                <a href="HonggFuzz使用-入门.html">
+            
+                    
+                    honggfuzz使用-安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="WinAFL使用-入门.html">
+            
+                <a href="WinAFL使用-入门.html">
+            
+                    
+                    WinAFL 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="GDB使用.html">
+            
+                <a href="GDB使用.html">
+            
+                    
+                    GDB使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="Fiddler学习.html">
+            
+                <a href="Fiddler学习.html">
+            
+                    
+                    Fiddler学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="windbg记录.html">
+            
+                <a href="windbg记录.html">
+            
+                    
+                    windbg使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12.7" data-path="fakenet.html">
+            
+                <a href="fakenet.html">
+            
+                    
+                    真假C&C - fakenet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Botnet.html">
+            
+                <a href="../Botnet.html">
+            
+                    
+                    Botnet
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Botnet/mirai源码学习.html">
+            
+                <a href="../Botnet/mirai源码学习.html">
+            
+                    
+                    mirai源码分析学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1.1" data-path="../Botnet/dlr.html">
+            
+                <a href="../Botnet/dlr.html">
+            
+                    
+                    dlr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.2" data-path="../Botnet/loader.html">
+            
+                <a href="../Botnet/loader.html">
+            
+                    
+                    loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.3" data-path="../Botnet/bot.html">
+            
+                <a href="../Botnet/bot.html">
+            
+                    
+                    bot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.4" data-path="../Botnet/cnc.html">
+            
+                <a href="../Botnet/cnc.html">
+            
+                    
+                    cnc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.5" data-path="../Botnet/tools.html">
+            
+                <a href="../Botnet/tools.html">
+            
+                    
+                    tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    boat （ripper）家族起底分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    NTP botnet 7月样本分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    Muhstik 家族最新攻击分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    Andoryu家族祖孙三代分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    某 - 家族发现起底报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="../Botnet/lm工作总结.html">
+            
+                <a href="../Botnet/lm工作总结.html">
+            
+                    
+                    总结 - botnet 还有 实习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../winkernel.html">
+            
+                <a href="../winkernel.html">
+            
+                    
+                    Windows kernel学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../WinKernel/base_env.html">
+            
+                <a href="../WinKernel/base_env.html">
+            
+                    
+                    开发、调试环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../WinKernel/程序隐藏技术-概述.html">
+            
+                <a href="../WinKernel/程序隐藏技术-概述.html">
+            
+                    
+                    概述 - 藏匿程序的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../WinKernel/hello_kernel.html">
+            
+                <a href="../WinKernel/hello_kernel.html">
+            
+                    
+                    Hello Kernel！
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../WinKernel/kerstr.html">
+            
+                <a href="../WinKernel/kerstr.html">
+            
+                    
+                    字符串 - 但是内核安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../WinKernel/user_procs.html">
+            
+                <a href="../WinKernel/user_procs.html">
+            
+                    
+                    链表 - 遍历用户进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../WinKernel/ker_mod.html">
+            
+                <a href="../WinKernel/ker_mod.html">
+            
+                    
+                    链表 - 遍历内核模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" >
+            
+                <span>
+            
+                    
+                    计时器 - IO还有DPC
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" >
+            
+                <span>
+            
+                    
+                    SSDT - 是啥、干啥、怎么用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.9" >
+            
+                <span>
+            
+                    
+                    SSDT - SSSDT
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Antivirus.html">
+            
+                <a href="../Antivirus.html">
+            
+                    
+                    Bypass Anti-virus
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >真假C&C - fakenet</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x53C2;&#x8003;&#xFF1A;">&#x53C2;&#x8003;&#xFF1A;</h1>
+<p><a href="https://www.freebuf.com/articles/others-articles/232557.html" target="_blank">&#x4F7F;&#x7528;FakeNet-NG&#x6539;&#x8FDB;&#x52A8;&#x6001;&#x6076;&#x610F;&#x8F6F;&#x4EF6;&#x5206;&#x6790; - FreeBuf&#x7F51;&#x7EDC;&#x5B89;&#x5168;&#x884C;&#x4E1A;&#x95E8;&#x6237;</a></p>
+<p><a href="https://github.com/mandiant/flare-fakenet-ng" target="_blank">GitHub - mandiant/flare-fakenet-ng: FakeNet-NG - Next Generation Dynamic Network Analysis Tool</a></p>
+<p>&#x5341;&#x5206;&#x611F;&#x6168;&#x554A;&#xFF0C;&#x8FD9;&#x4E2A;&#x9879;&#x76EE;2020&#x5E74;&#x5C31;&#x505C;&#x66F4;&#x4E86;&#xFF0C;2020&#x6211;&#x5165;&#x5B66;&#xFF0C;&#x611F;&#x89C9;&#x597D;&#x50CF;&#x8FD8;&#x662F;&#x5F88;&#x65B0;&#x7684;&#x9879;&#x76EE;&#xFF0C;&#x4F46;&#x662F;&#x8F6C;&#x5FF5;&#x4E00;&#x770B;&#x5DF2;&#x7ECF;&#x8FC7;&#x53BB;3&#x3001;4&#x5E74;&#x4E86;&#xFF0C;&#x8FD9;&#x4E2A;&#x9879;&#x76EE;&#x8001;&#x4E86;&#xFF0C;&#x6211;&#x4E5F;&#x8BE5;&#x6BD5;&#x4E1A;&#x4E86;&#x3002;&#x603B;&#x611F;&#x89C9;&#x597D;&#x50CF;&#x5C31;&#x5728;&#x6628;&#x5929;&#xFF0C;&#x8C01;&#x80FD;&#x60F3;&#x5230;&#x6211;&#x521D;&#x4E2D;&#x6570;&#x5B66;&#x8001;&#x5E08;&#xFF0C;&#x6211;&#x4EEC;&#x662F;&#x5979;&#x5E26;&#x7684;&#x7B2C;&#x4E00;&#x5C4A;&#x5B66;&#x751F;&#xFF0C;&#x5E26;&#x4E86;&#x6211;&#x4EEC;&#x4E09;&#x5E74;&#xFF0C;&#x73B0;&#x5728;&#x5979;&#x4E5F;&#x662F;&#x8D44;&#x6DF1;&#x6559;&#x5E08;&#x4E86;&#x3002;</p>
+<p>&#x5149;&#x9634;&#x4F3C;&#x9A8F;&#x9A6C;&#x52A0;&#x97AD;&#xFF0C;&#x65E5;&#x6708;&#x5982;&#x843D;&#x82B1;&#x6D41;&#x6C34;&#x554A;&#x3002;</p>
+<p>&#x8C01;&#x80FD;&#x60F3;&#x5230;&#xFF0C;2018&#x5E74;&#x5DF2;&#x7ECF;&#x8FC7;&#x53BB;5&#x5E74;&#x4E86;&#xFF0C;&#x6709;&#x65F6;&#x5019;&#x5C31;&#x662F;&#x8FD9;&#x4E48;&#x795E;&#x5947;&#xFF0C;&#x6709;&#x4E9B;&#x65F6;&#x95F4;&#x611F;&#x89C9;&#x8FC7;&#x53BB;&#x5F88;&#x8FDC;&#xFF0C;&#x4F46;&#x662F;&#x4ED6;&#x5374;&#x5F88;&#x8FD1;&#xFF0C;&#x6709;&#x4E9B;&#x611F;&#x89C9;&#x5F88;&#x8FD1;&#xFF0C;&#x4F46;&#x662F;&#x4ED6;&#x786E;&#x5B9E;&#x611F;&#x89C9;&#x8FC7;&#x53BB;&#x4E86;&#x5F88;&#x4E45;&#x3002;</p>
+<h1 id="windows&#x4F7F;&#x7528;">Windows&#x4F7F;&#x7528;</h1>
+<p>&#x76F4;&#x63A5;&#x4E0B;&#x8F7D;release&#x5C31;&#x884C;&#x4E86;&#xFF0C;&#x53CC;&#x51FB;&#x4F7F;&#x7528;&#xFF0C;&#x6539;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x81EA;&#x5B9A;&#x4E49;&#x4E5F;&#x884C;&#x3002;&#x6211;&#x5728;win10&#x4E0B;&#x6CA1;&#x6210;&#x529F;&#x7684;&#x8DD1;&#x8D77;&#x6765;&#xFF0C;&#x5728;win7&#x4E0B;&#x8FD0;&#x884C;&#x5012;&#x633A;&#x597D;&#x7684;&#x3002;&#x4F46;&#x662F;&#x9700;&#x8981;&#x5728;&#x7BA1;&#x7406;&#x5458;&#x6743;&#x9650;&#x4E0B;&#x8FD0;&#x884C;&#x3002;</p>
+<h1 id="linux&#x4F7F;&#x7528;">linux&#x4F7F;&#x7528;</h1>
+<p>&#x6CA1;&#x6709;release&#xFF0C;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x7F16;&#x8BD1;&#xFF0C;&#x7F16;&#x8BD1;&#x5B8C;&#x4E8B;&#x4E00;&#x8FD0;&#x884C;&#x5C31;&#x51FA;&#x95EE;&#x9898;&#x3002;&#x6309;github&#x4E0A;&#x8BF4;&#x7684;&#x6765;&#x5C31;&#x884C;&#x3002;&#x5C3D;&#x91CF;&#x4F7F;&#x7528;python36&#x4E4B;&#x4E0A;&#x7684;&#x7248;&#x672C;&#x6765;&#x64CD;&#x4F5C;&#x3002;</p>
+<pre><code class="lang-shell">sudo apt-get install build-essential python-dev libnetfilter-queue-dev
+</code></pre>
+<pre><code class="lang-shell">git clone https://github.com/mandiant/flare-fakenet-ng/
+</code></pre>
+<pre><code class="lang-shell">python3 setup.py install
+</code></pre>
+<p>&#x5728;&#x5B89;&#x88C5;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x770B;&#x7740;&#x7F3A;&#x5565;&#x5C31;pip&#x5565;&#xFF0C;&#x56E0;&#x4E3A;&#x4ED6;&#x81EA;&#x52A8;pip&#x6BD4;&#x8F83;&#x6162;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x4E3A;&#x5565;&#x8FD8;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x6240;&#x4EE5;&#x770B;&#x4ED6;&#x5728;&#x4E0B;&#x4EC0;&#x4E48;&#x53E6;&#x5916;&#x5F00;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#x4E0B;&#x5C31;&#x884C;&#x4E86;&#x3002;&#x5B8C;&#x4E8B;&#x5C31;&#x53EF;&#x4EE5; &#x8FD0;&#x884C;&#x4E86;&#x3002;</p>
+<p><img src="fakenet/image-20230827170740323.png" alt="image-20230827170740323"></p>
+<p>&#x4F46;&#x662F;&#x8FD9;&#x91CC;&#x4E0D;&#x77E5;&#x9053;&#x4E3A;&#x5565;53&#x4E00;&#x76F4;&#x88AB;&#x5360;&#x7528;&#xFF0C;&#x4E5F;&#x662F;&#x672C;&#x5730;&#x7684;dns&#x89E3;&#x6790;&#x5360;&#x7528;&#x7684;&#xFF0C;&#x8FD9;&#x4E0D;&#x5408;&#x7406;&#x3002;&#x76F4;&#x63A5;&#x628A;&#x90A3;&#x51E0;&#x4E2A;&#x5360;&#x7528;&#x7684;&#x8FDB;&#x7A0B;&#x90FD;kill&#x6389;&#xFF0C;&#x518D;&#x8FD0;&#x884C;&#x5C31;&#x62A5;&#x9519;&#x4E86;&#xFF1A;</p>
+<p><img src="fakenet/image-20230827172848654.png" alt="image-20230827172848654"></p>
+<p>&#x6838;&#x5FC3;&#x9519;&#x8BEF;&#x5C31;&#x662F;&#xFF1A;</p>
+<pre><code class="lang-shell">FileNotFoundError: [Errno 2] No such file or directory: &apos;/proc/net/netfilter/nfnetlink_queue&apos;
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x9519;&#x8BEF;&#x5C1A;&#x672A;&#x627E;&#x5230;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF0C;issue&#x91CC;&#x7684;&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#x90FD;&#x626F;&#x6DE1;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x5C31;&#x5361;&#x4F4F;&#x4E86;&#xFF0C;&#x8FD8;&#x662F;&#x7528;windows&#x5427;&#x3002;linux&#x5C31;tcpdumps&#x6293;&#x5C31;&#x5B8C;&#x4E86;&#xFF0C;&#x6CA1;&#x6709;&#x6B3A;&#x9A97;&#x6D41;&#x91CF;&#xFF0C;&#x6B63;&#x597D;&#x51CF;&#x5C11;&#x5DE5;&#x4F5C;&#x91CF;&#xFF0C;&#x76F4;&#x63A5;&#x5206;&#x6790;&#x5B8C;&#x7A0B;&#x5E8F;&#x5C31;&#x53EF;&#x4EE5;&#x4EA4;&#x5DEE;&#x4E86;&#xFF0C;&#x7701;&#x7684;&#x518D;&#x770B;&#x6D41;&#x91CF;&#x731C;&#x529F;&#x80FD;&#x4E86;&#x3002;</p>
+<p>&#x4F7F;&#x7528;&#x7684;&#x547D;&#x4EE4;&#x548C;Windows&#x4E0A;&#x7684;&#x547D;&#x4EE4;&#x90FD;&#x4E00;&#x6837;&#xFF0C;&#x76F4;&#x63A5;&#x8DDF;&#x5230;<code>sudo python3 -m fakenet.fakenet</code>&#x540E;&#x9762;&#x5C31;&#x53EF;&#x4EE5;&#x3002;</p>
+<h1 id="&#x6CE8;&#x610F;&#xFF1A;">&#x6CE8;&#x610F;&#xFF1A;</h1>
+<ul>
+<li>&#x542F;&#x52A8;&#x7A0B;&#x5E8F;&#x9ED8;&#x8BA4;&#x5168;&#x5C40;hook&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x8FDB;&#x884C;&#x7F51;&#x5740;&#x89E3;&#x6790;&#x7B49;&#x7B49;&#x3002;</li>
+<li>&#x914D;&#x7F6E;&#x5173;&#x7CFB;&#x4E3A;default.ini  ---&gt; custom.ini ---&gt; python&#x7A0B;&#x5E8F;&#x3002;</li>
+<li>&#x54CD;&#x5E94;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x4E00;&#x5B9A;&#x8981;&#x4EE5;FakeNet&#x683C;&#x5F0F;&#x547D;&#x540D;&#x3002;&#x5426;&#x5219;&#x627E;&#x4E0D;&#x5230;&#x3002;</li>
+<li>&#x6D41;&#x91CF;&#x5305;&#x4F1A;&#x4FDD;&#x5B58;&#x5230;&#x672C;&#x5730;&#x3002;</li>
+<li>443-htttps&#xFF1B;80&#xFF0C;8080-http&#x3002;</li>
+</ul>
+<p>&#x4E00;&#x76F4;&#x6CA1;&#x673A;&#x4F1A;&#x7528;&#xFF0C;&#x5206;&#x6790;&#x7684;&#x90FD;&#x662F;&#x50F5;&#x5C38;&#x7F51;&#x7EDC;&#xFF0C;linux&#x4E0A;&#x53C8;&#x7528;&#x4E0D;&#x4E86;&#xFF0C;Windows&#x53C8;&#x6CA1;&#x6837;&#x672C;&#x3002;&#x5148;&#x653E;&#x7740;&#x4EE5;&#x540E;&#x518D;&#x8BF4;&#x5427;&#x3002; </p>
+<footer class="page-footer"><span class="copyright">&#x6CA1;&#x6709;&#x7248;&#x6743;&#xFF0C;&#x968F;&#x4FBF;&#x590D;&#x5236;&#xFF0C;&#x514D;&#x8D39;&#x7684;&#x77E5;&#x8BC6;&#x5E94;&#x8BE5;&#x5171;&#x4EAB; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2023-08-27 21:05:00
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="windbg记录.html" class="navigation navigation-prev " aria-label="Previous page: windbg使用">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Botnet.html" class="navigation navigation-next " aria-label="Next page: Botnet">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"真假C&C - fakenet","level":"1.12.7","depth":2,"next":{"title":"Botnet","level":"1.13","depth":1,"path":"MyArticles/Botnet.md","ref":"MyArticles/Botnet.md","articles":[{"title":"mirai源码分析学习","level":"1.13.1","depth":2,"path":"MyArticles/Botnet/mirai源码学习.md","ref":"MyArticles/Botnet/mirai源码学习.md","articles":[{"title":"dlr","level":"1.13.1.1","depth":3,"path":"MyArticles/Botnet/dlr.md","ref":"MyArticles/Botnet/dlr.md","articles":[]},{"title":"loader","level":"1.13.1.2","depth":3,"path":"MyArticles/Botnet/loader.md","ref":"MyArticles/Botnet/loader.md","articles":[]},{"title":"bot","level":"1.13.1.3","depth":3,"path":"MyArticles/Botnet/bot.md","ref":"MyArticles/Botnet/bot.md","articles":[]},{"title":"cnc","level":"1.13.1.4","depth":3,"path":"MyArticles/Botnet/cnc.md","ref":"MyArticles/Botnet/cnc.md","articles":[]},{"title":"tools","level":"1.13.1.5","depth":3,"path":"MyArticles/Botnet/tools.md","ref":"MyArticles/Botnet/tools.md","articles":[]}]},{"title":"boat （ripper）家族起底分析报告","level":"1.13.2","depth":2,"path":"MyArticles/Botnet/botnetGroup/temp.md","ref":"MyArticles/Botnet/botnetGroup/temp.md","articles":[]},{"title":"NTP botnet 7月样本分析报告","level":"1.13.3","depth":2,"path":"MyArticles/Botnet/botnetGroup/temp.md","ref":"MyArticles/Botnet/botnetGroup/temp.md","articles":[]},{"title":"Muhstik 家族最新攻击分析报告","level":"1.13.4","depth":2,"path":"MyArticles/Botnet/botnetGroup/temp.md","ref":"MyArticles/Botnet/botnetGroup/temp.md","articles":[]},{"title":"Andoryu家族祖孙三代分析报告","level":"1.13.5","depth":2,"path":"MyArticles/Botnet/botnetGroup/temp.md","ref":"MyArticles/Botnet/botnetGroup/temp.md","articles":[]},{"title":"某 - 家族发现起底报告","level":"1.13.6","depth":2,"path":"MyArticles/Botnet/botnetGroup/temp.md","ref":"MyArticles/Botnet/botnetGroup/temp.md","articles":[]},{"title":"总结 - botnet 还有 实习","level":"1.13.7","depth":2,"path":"MyArticles/Botnet/lm工作总结.md","ref":"MyArticles/Botnet/lm工作总结.md","articles":[]}]},"previous":{"title":"windbg使用","level":"1.12.6","depth":2,"path":"MyArticles/ToolUsage/windbg记录.md","ref":"MyArticles/ToolUsage/windbg记录.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","custom-favicon","tbfed-pagefooter","popup","-sharing","sharing-plus","intopic-toc","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"没有版权，随便复制，免费的知识应该共享","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"./icon/book.ico","back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MyArticles/ToolUsage/fakenet.md","mtime":"2023-08-27T13:05:00.095Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-27T14:41:12.369Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
