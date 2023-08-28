@@ -1,0 +1,1793 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Hook - R3 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Vulnerability_Mining.html" />
+    
+    
+    <link rel="prev" href="dll劫持原理学习和应用.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../构建gitbook.html">
+            
+                <a href="../构建gitbook.html">
+            
+                    
+                    写在开始，how2gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../SUMMARY.html">
+            
+                <a href="../../SUMMARY.html">
+            
+                    
+                    所有目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Reverse.html">
+            
+                <a href="../Reverse.html">
+            
+                    
+                    Reverse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Re/控制流平坦化.html">
+            
+                <a href="../Re/控制流平坦化.html">
+            
+                    
+                    反控制流平坦化学习-angr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Re/反调试 & 沙箱对抗技巧收集.html">
+            
+                <a href="../Re/反调试 & 沙箱对抗技巧收集.html">
+            
+                    
+                    反调试以及沙箱对抗技巧收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Re/常见加密算法-学习.html">
+            
+                <a href="../Re/常见加密算法-学习.html">
+            
+                    
+                    加密解密学习 - 更
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Re/分组密码学习.html">
+            
+                <a href="../Re/分组密码学习.html">
+            
+                    
+                    分组密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Re/vmp3.5unpacke.html">
+            
+                <a href="../Re/vmp3.5unpacke.html">
+            
+                    
+                    vmp3.X 工具向脱壳
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Re/idaunpackELF.html">
+            
+                <a href="../Re/idaunpackELF.html">
+            
+                    
+                    运行时压缩壳 - IDA动调ELF脱壳
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Basics.html">
+            
+                <a href="../Basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Basics/PE文件加载器.html">
+            
+                <a href="../Basics/PE文件加载器.html">
+            
+                    
+                    PE文件加载器-基于C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Basics/DebugC">
+            
+                <span>
+            
+                    
+                    调试C#的DLL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Basics/调用约定和断点.html">
+            
+                <a href="../Basics/调用约定和断点.html">
+            
+                    
+                    调用约定和断点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Basics/elf文件结构.html">
+            
+                <a href="../Basics/elf文件结构.html">
+            
+                    
+                    ELF structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Basics/Pe File Structer.html">
+            
+                <a href="../Basics/Pe File Structer.html">
+            
+                    
+                    PE structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Basics/arm学习.html">
+            
+                <a href="../Basics/arm学习.html">
+            
+                    
+                    ARM 基础学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../Basics/Windows消息队列学习.html">
+            
+                <a href="../Basics/Windows消息队列学习.html">
+            
+                    
+                    Windows消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../Basics/内网基础.html">
+            
+                <a href="../Basics/内网基础.html">
+            
+                    
+                    内网基础学习 - 域和组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Practice.html">
+            
+                <a href="../Practice.html">
+            
+                    
+                    Practice
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Practice/YouTubePremium.apk.html">
+            
+                <a href="../Practice/YouTubePremium.apk.html">
+            
+                    
+                    Malware-APK0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Practice/OODA-Loops.html">
+            
+                <a href="../Practice/OODA-Loops.html">
+            
+                    
+                    edr对抗 - OODA 角度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Practice/IRQL蓝屏分析.html">
+            
+                <a href="../Practice/IRQL蓝屏分析.html">
+            
+                    
+                    蓝屏 - windbg模块解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Practice/shutdownWinDefender.html">
+            
+                <a href="../Practice/shutdownWinDefender.html">
+            
+                    
+                    失效的欺骗 - 假杀软欺骗真winDef
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../云原生安全.html">
+            
+                <a href="../云原生安全.html">
+            
+                    
+                    云原生安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../云原生安全/云原生安全 -云原生.html">
+            
+                <a href="../云原生安全/云原生安全 -云原生.html">
+            
+                    
+                    云原生 - 是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Dailynotes.html">
+            
+                <a href="../Dailynotes.html">
+            
+                    
+                    Daily notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Dailynotes/G-F-W原理了解学习.html">
+            
+                <a href="../Dailynotes/G-F-W原理了解学习.html">
+            
+                    
+                    G-F-W原理了解学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Dailynotes/pdf解析重组.html">
+            
+                <a href="../Dailynotes/pdf解析重组.html">
+            
+                    
+                    电子书清晰化的尝试 利用python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Dailynotes/ipv6_base_vps.html">
+            
+                <a href="../Dailynotes/ipv6_base_vps.html">
+            
+                    
+                    搭建ipv6自有服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Dailynotes/learn_shell.html">
+            
+                <a href="../Dailynotes/learn_shell.html">
+            
+                    
+                    Shell 学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Dailynotes/就业意向.html">
+            
+                <a href="../Dailynotes/就业意向.html">
+            
+                    
+                    就业意向
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Development.html">
+            
+                <a href="../Development.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Development/find_dll_in_proc.html">
+            
+                <a href="../Development/find_dll_in_proc.html">
+            
+                    
+                    Find DLL in Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../Development/find_thread_in_process.html">
+            
+                <a href="../Development/find_thread_in_process.html">
+            
+                    
+                    Find Thread in Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../Development/Build-Arm.html">
+            
+                <a href="../Development/Build-Arm.html">
+            
+                    
+                    构建qemu的持续学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../Development/查看父进程.html">
+            
+                <a href="../Development/查看父进程.html">
+            
+                    
+                    查看父进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../CyberSec.html">
+            
+                <a href="../CyberSec.html">
+            
+                    
+                    CyberSec
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="免杀手法收集.html">
+            
+                <a href="免杀手法收集.html">
+            
+                    
+                    免杀手法收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="yara.html">
+            
+                <a href="yara.html">
+            
+                    
+                    YARA学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="sigma规则学习.html">
+            
+                <a href="sigma规则学习.html">
+            
+                    
+                    sigma规则学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="snort工作总结.html">
+            
+                <a href="snort工作总结.html">
+            
+                    
+                    工作内容 - 产出snort规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="关于bitcoin.html">
+            
+                <a href="关于bitcoin.html">
+            
+                    
+                    啥是Bitcoin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="IOC-痛苦金字塔.html">
+            
+                <a href="IOC-痛苦金字塔.html">
+            
+                    
+                    从痛苦金字塔学习分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="PEB和TEB.html">
+            
+                <a href="PEB和TEB.html">
+            
+                    
+                    TEB & PEB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="进程注入-基础.html">
+            
+                <a href="进程注入-基础.html">
+            
+                    
+                    进程注入-前置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="6种常见注入方式.html">
+            
+                <a href="6种常见注入方式.html">
+            
+                    
+                    windows下的进程注入（6种）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="dll-inject.html">
+            
+                <a href="dll-inject.html">
+            
+                    
+                    Dll注入的3.5种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="DLL注入-突破session0.html">
+            
+                <a href="DLL注入-突破session0.html">
+            
+                    
+                    DLL注入-突破session0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="dll劫持原理学习和应用.html">
+            
+                <a href="dll劫持原理学习和应用.html">
+            
+                    
+                    dll劫持原理以及方式实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10.13" data-path="r3-hook.html">
+            
+                <a href="r3-hook.html">
+            
+                    
+                    Hook - R3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Vulnerability_Mining.html">
+            
+                <a href="../Vulnerability_Mining.html">
+            
+                    
+                    Vulnerability Mining
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Vulnerability_Mining/iwant2pwn/firstPWN.html">
+            
+                <a href="../Vulnerability_Mining/iwant2pwn/firstPWN.html">
+            
+                    
+                    CTF - PWN 学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1.1" >
+            
+                <span>
+            
+                    
+                    栈的艺术
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.2" >
+            
+                <span>
+            
+                    
+                    堆的艺术
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Vulnerability_Mining/Windows通用shellcode编写.html">
+            
+                <a href="../Vulnerability_Mining/Windows通用shellcode编写.html">
+            
+                    
+                    shellcode编写-地址定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Vulnerability_Mining/winafl关于pdf测试的阅读-水.html">
+            
+                <a href="../Vulnerability_Mining/winafl关于pdf测试的阅读-水.html">
+            
+                    
+                    winafl文献-关于pdf中的图片测试(极水)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../ToolUsage.html">
+            
+                <a href="../ToolUsage.html">
+            
+                    
+                    Tool usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../ToolUsage/多git公钥配置.html">
+            
+                <a href="../ToolUsage/多git公钥配置.html">
+            
+                    
+                    自定义git公钥配置-常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../ToolUsage/HonggFuzz使用-入门.html">
+            
+                <a href="../ToolUsage/HonggFuzz使用-入门.html">
+            
+                    
+                    honggfuzz使用-安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../ToolUsage/WinAFL使用-入门.html">
+            
+                <a href="../ToolUsage/WinAFL使用-入门.html">
+            
+                    
+                    WinAFL 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../ToolUsage/GDB使用.html">
+            
+                <a href="../ToolUsage/GDB使用.html">
+            
+                    
+                    GDB使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../ToolUsage/Fiddler学习.html">
+            
+                <a href="../ToolUsage/Fiddler学习.html">
+            
+                    
+                    Fiddler学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../ToolUsage/windbg记录.html">
+            
+                <a href="../ToolUsage/windbg记录.html">
+            
+                    
+                    windbg使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../ToolUsage/fakenet.html">
+            
+                <a href="../ToolUsage/fakenet.html">
+            
+                    
+                    真假C&C - fakenet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Botnet.html">
+            
+                <a href="../Botnet.html">
+            
+                    
+                    Botnet
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Botnet/mirai源码学习.html">
+            
+                <a href="../Botnet/mirai源码学习.html">
+            
+                    
+                    mirai源码分析学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1.1" data-path="../Botnet/dlr.html">
+            
+                <a href="../Botnet/dlr.html">
+            
+                    
+                    dlr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.2" data-path="../Botnet/loader.html">
+            
+                <a href="../Botnet/loader.html">
+            
+                    
+                    loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.3" data-path="../Botnet/bot.html">
+            
+                <a href="../Botnet/bot.html">
+            
+                    
+                    bot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.4" data-path="../Botnet/cnc.html">
+            
+                <a href="../Botnet/cnc.html">
+            
+                    
+                    cnc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.5" data-path="../Botnet/tools.html">
+            
+                <a href="../Botnet/tools.html">
+            
+                    
+                    tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    boat （ripper）家族起底分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    NTP botnet 7月样本分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    Muhstik 家族最新攻击分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    Andoryu家族祖孙三代分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    某 - 家族发现起底报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="../Botnet/lm工作总结.html">
+            
+                <a href="../Botnet/lm工作总结.html">
+            
+                    
+                    总结 - botnet 还有 实习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../winkernel.html">
+            
+                <a href="../winkernel.html">
+            
+                    
+                    Windows kernel学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../WinKernel/base_env.html">
+            
+                <a href="../WinKernel/base_env.html">
+            
+                    
+                    开发、调试环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../WinKernel/程序隐藏技术-概述.html">
+            
+                <a href="../WinKernel/程序隐藏技术-概述.html">
+            
+                    
+                    概述 - 藏匿程序的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../WinKernel/hello_kernel.html">
+            
+                <a href="../WinKernel/hello_kernel.html">
+            
+                    
+                    Hello Kernel！
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../WinKernel/kerstr.html">
+            
+                <a href="../WinKernel/kerstr.html">
+            
+                    
+                    字符串 - 但是内核安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../WinKernel/user_procs.html">
+            
+                <a href="../WinKernel/user_procs.html">
+            
+                    
+                    链表 - 遍历用户进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../WinKernel/ker_mod.html">
+            
+                <a href="../WinKernel/ker_mod.html">
+            
+                    
+                    链表 - 遍历内核模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" >
+            
+                <span>
+            
+                    
+                    计时器 - IO还有DPC
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" >
+            
+                <span>
+            
+                    
+                    SSDT - 是啥、干啥、怎么用
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.9" >
+            
+                <span>
+            
+                    
+                    SSDT - SSSDT
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Antivirus.html">
+            
+                <a href="../Antivirus.html">
+            
+                    
+                    Bypass Anti-virus
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../bypass_antivirus/openARK/openark.html">
+            
+                <a href="../bypass_antivirus/openARK/openark.html">
+            
+                    
+                    学习 - OpenARK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Hook - R3</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>Windows&#x4E0B;&#x7684;hook&#x6280;&#x672F;&#x5B66;&#x4E60;</p>
+<h1 id="hook&#x5206;&#x7C7B;">hook&#x5206;&#x7C7B;</h1>
+<p><img src="hook&#x6280;&#x672F;&#x5B66;&#x4E60;/20180806142903509.png" alt="20180806142903509"></p>
+<p>&#x8FD9;&#x5F20;&#x56FE;&#x975E;&#x5E38;&#x7ECF;&#x5178;&#xFF0C;&#x5F88;&#x591A;&#x5E73;&#x53F0;&#x90FD;&#x80FD;&#x770B;&#x5230;&#x4E00;&#x6A21;&#x4E00;&#x6837;&#x7684;&#x5206;&#x7C7B;&#x3002;</p>
+<p>&#x6839;&#x636E;&#x300A;&#x9006;&#x5411;&#x5DE5;&#x7A0B;&#x6838;&#x5FC3;&#x539F;&#x7406;&#x300B;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5206;&#x7C7B;&#x56FE;&#xFF1A;</p>
+<p><img src="hook&#x6280;&#x672F;&#x5B66;&#x4E60;/image-20230723101207625.png" alt="image-20230723101207625"></p>
+<p>&#x8FD9;&#x7BC7;&#x7528;&#x6765;&#x8BB0;&#x5F55;&#x5E94;&#x7528;&#x5C42;hook&#xFF0C;&#x5185;&#x6838;&#x8FD8;&#x6CA1;&#x5B66;&#x1F605;</p>
+<h1 id="1&#x3001;&#x6D88;&#x606F;hook&#x7C7B;&#x578B;">1&#x3001;&#x6D88;&#x606F;hook&#x7C7B;&#x578B;</h1>
+<h2 id="&#x539F;&#x7406;">&#x539F;&#x7406;</h2>
+<p>&#x6D88;&#x606F;&#x673A;&#x5236;&#x7B97;&#x5F97;&#x4E0A;Windows&#x4E2D;&#x7684;&#x6700;&#x5E38;&#x89C1;&#x7684;&#x5E38;&#x7528;&#x7684;&#x673A;&#x5236;&#x4E4B;&#x4E00;&#xFF0C;&#x6BD4;&#x5982;&#x5F53;&#x952E;&#x76D8;&#x6572;&#x51FB;&#x4E8B;&#x4EF6;&#x53D1;&#x751F;&#xFF0C;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x5C31;&#x88AB;&#x6DFB;&#x52A0;&#x5230;<strong>&#x7CFB;&#x7EDF;&#x7684;&#x6D88;&#x606F;&#x961F;&#x5217;</strong>&#x4E2D;&#xFF0C;&#x7136;&#x540E;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5224;&#x65AD;&#x54EA;&#x4E2A;&#x7A0B;&#x5E8F;&#x53D1;&#x751F;&#x4E86;&#x4E8B;&#x4EF6;&#xFF0C;&#x7136;&#x540E;&#x628A;&#x8FD9;&#x4E2A;&#x4E8B;&#x4EF6;&#x8F6C;&#x79FB;&#x5230;&#x5BF9;&#x5E94;&#x7A0B;&#x5E8F;&#x7684;<strong>&#x79C1;&#x6709;&#x961F;&#x5217;</strong>&#x4E2D;&#xFF0C;&#x7A0B;&#x5E8F;&#x68C0;&#x6D4B;&#x5230;&#x81EA;&#x5DF1;&#x7684;&#x961F;&#x5217;&#x4E2D;&#x6709;&#x65B0;&#x589E;&#x6D88;&#x606F;&#xFF0C;&#x5C31;&#x68C0;&#x67E5;&#x6D88;&#x606F;&#x8FDB;&#x884C;&#x54CD;&#x5E94;&#xFF0C;&#x5C31;&#x5B8C;&#x4E86;&#x3002;</p>
+<p>&#x8FD9;&#x79CD;hook&#x6280;&#x672F;&#x53C8;&#x79F0;<strong>Windows hook</strong>&#xFF0C;&#x8FD9;&#x79CD;&#x7C7B;&#x578B;&#x7684;hook&#x60C5;&#x51B5;&#xFF0C;Windows&#x7ED9;&#x51FA;&#x4E86;&#x4E00;&#x4E2A;&#x5B98;&#x65B9;&#x7684;API&#xFF1A;<code>SetWindowsHookEx</code>&#x3002;&#x8FD9;&#x4E2A;&#x5E38;&#x5E38;&#x548C;dll&#x6CE8;&#x5165;&#x914D;&#x5408;&#x4F7F;&#x7528;&#x3002;</p>
+<p>Hook&#x5206;&#x4E3A;&#x5168;&#x5C40;&#x548C;&#x5C40;&#x90E8;&#xFF0C;&#x5168;&#x5C40;&#x4E00;&#x822C;&#x7528;&#x6765;&#x5B9E;&#x73B0;dll&#x6CE8;&#x5165;(&#x56E0;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x7684;&#x5730;&#x5740;&#x90FD;&#x662F;&#x72EC;&#x7ACB;&#x7684;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5C06;hook&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x90A3;&#x4E48;&#x6267;&#x884C;&#x8D77;&#x6765;&#x5C06;&#x975E;&#x5E38;&#x9EBB;&#x70E6;)&#xFF0C;&#x5C40;&#x90E8;hook&#x5C31;&#x662F;&#x9488;&#x5BF9;&#x67D0;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x8FDB;&#x884C;hook&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">HHOOK WINAPI <span class="hljs-title">SetWindowsHookEx</span><span class="hljs-params">(
+__in <span class="hljs-keyword">int</span> idHook, \\&#x94A9;&#x5B50;&#x7C7B;&#x578B;
+__in HOOKPROC lpfn, \\&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x5730;&#x5740;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x6D88;&#x606F;&#x5904;&#x7406;&#x51FD;&#x6570;
+__in HINSTANCE hMod, \\&#x5B9E;&#x4F8B;&#x53E5;&#x67C4;
+__in DWORD dwThreadId)</span></span>; \\&#x7EBF;&#x7A0B;ID&#xFF0C;&#x8BBE;&#x7F6E;&#x4E3A;<span class="hljs-number">0</span>&#x5219;&#x4E3A;&#x5168;&#x5C40;&#x94A9;&#x5B50;&#xFF0C;&#x4F1A;&#x5F71;&#x54CD;&#x6240;&#x6709;&#x7684;&#x8FDB;&#x7A0B;
+</code></pre>
+<p>&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;api&#x4E4B;&#x540E;&#xFF0C;&#x5F53;&#x4EFB;&#x610F;&#x8FDB;&#x7A0B;&#x4E2D;&#x751F;&#x6210;&#x6307;&#x5B9A;&#x7684;&#x6D88;&#x606F;&#x7684;&#x65F6;&#x5019;&#xFF0C;os&#x5C31;&#x4F1A;&#x628A;&#x8FD9;&#x4E2A;dll&#x8F7D;&#x8FDB;&#x53BB;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528;hook&#xFF0C;&#x8FD9;&#x90FD;&#x662F;os&#x81EA;&#x52A8;&#x8FDB;&#x884C;&#x7684;&#x3002;</p>
+<h2 id="&#x952E;&#x76D8;-hook-&#x4EE3;&#x7801;">&#x952E;&#x76D8; Hook &#x4EE3;&#x7801;</h2>
+<p>&#x4EE3;&#x7801;&#x6765;&#x81EA;&#x300A;&#x9006;&#x5411;&#x5DE5;&#x7A0B;&#x6838;&#x5FC3;&#x539F;&#x7406;&#x300B;&#xFF0C;&#x4E0B;&#x9762;&#x662F;keylogger.dll&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x901A;&#x8FC7;&#x53E6;&#x4E00;&#x4E2A;&#x8F7D;&#x5165;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x8FD9;&#x4E2A;dll&#xFF0C;&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x6572;&#x51FB;&#x952E;&#x76D8;&#x8BB0;&#x5F55;&#x4E86;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span><span class="hljs-meta-string">&lt;windows.h&gt;</span></span>
+
+HINSTANCE g_hInstance = <span class="hljs-literal">NULL</span>;
+HHOOK g_hHook = <span class="hljs-literal">NULL</span>;
+HWND g_hWnd = <span class="hljs-literal">NULL</span>;
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> DEF_PROCESS_NAME <span class="hljs-string">&quot;notepad.exe&quot;</span></span>
+
+<span class="hljs-comment">// &#x8FD9;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x7528;&#x6765;&#x5904;&#x7406;&#x952E;&#x76D8;&#x8F93;&#x5165;</span>
+<span class="hljs-function">LRESULT CALLBACK <span class="hljs-title">KeyboardProc</span><span class="hljs-params">(<span class="hljs-keyword">int</span> nCode, WPARAM wParam, LPARAM lParam)</span>
+</span>{
+    <span class="hljs-keyword">char</span> szPath[MAX_PATH] = {<span class="hljs-number">0</span>};
+    <span class="hljs-keyword">char</span>* p = <span class="hljs-literal">NULL</span>;
+
+    <span class="hljs-keyword">if</span>(nCode &gt;= <span class="hljs-number">0</span>)
+    {
+        <span class="hljs-keyword">if</span>(!(lParam &amp; <span class="hljs-number">0x80000000</span>))
+        {
+            GetModuleFileNameA(<span class="hljs-literal">NULL</span>, szPath, MAX_PATH);
+            <span class="hljs-comment">// &#x53D6;\\&#x4E4B;&#x540E;&#x7684;&#x5B57;&#x7B26;&#xFF0C;&#x7528;&#x6765;&#x5224;&#x65AD;&#x662F;&#x4E0D;&#x662F;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;notepad&#x3002;</span>
+            p = <span class="hljs-built_in">strrchr</span>(szPath, <span class="hljs-string">&apos;\\&apos;</span>);
+        }
+    }
+
+    <span class="hljs-keyword">if</span>( !_stricmp(p + <span class="hljs-number">1</span>, DEF_PROCESS_NAME) )
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+
+    <span class="hljs-comment">// &#x4E0D;&#x662F;&#x5C31;&#x6362;&#x4E0B;&#x4E00;&#x4E2A;&#x51FD;&#x6570;</span>
+    <span class="hljs-keyword">return</span> CallNextHookEx(g_hHook, nCode, wParam, lParam);
+}
+
+<span class="hljs-comment">// &#x5229;&#x7528;api&#x542F;&#x52A8;&#x6302;&#x94A9;</span>
+__declspec(dllexport) <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">StartHook</span><span class="hljs-params">()</span>
+</span>{
+    g_hHook = SetWindowsHookEx(WH_KEYBOARD, KeyboardProc, g_hInstance, <span class="hljs-number">0</span>);
+}
+
+<span class="hljs-comment">// &#x53D6;&#x6D88;&#x6302;&#x94A9;</span>
+__declspec(dllexport) <span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">StopHook</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-comment">// &#x5148;&#x68C0;&#x67E5;&#x4E00;&#x4E0B;&#x7B2C;&#x4E00;&#x6B65;&#x6302;&#x94A9;&#x662F;&#x5426;&#x6210;&#x529F;&#xFF0C;&#x662F;&#x88AB;&#x5C31;&#x4E0D;&#x7528;&#x4E86;</span>
+    <span class="hljs-keyword">if</span>(g_hHook)
+    {
+        UnhookWindowsHookEx(g_hHook);
+        g_hHook = <span class="hljs-literal">NULL</span>;
+    }
+}
+
+<span class="hljs-comment">// &#x8FD9;&#x91CC;&#x7684;dllmain&#x5B9E;&#x9645;&#x4E0A;&#x7528;&#x4E0D;&#x5230;, &#x5199;&#x4E0D;&#x5199;&#x90FD;&#x65E0;&#x6240;&#x8C13;&#x4E86;</span>
+<span class="hljs-function">BOOL WINAPI <span class="hljs-title">DllMain</span><span class="hljs-params">(HINSTANCE hinstDLL, DWORD dwReason, LPVOID lpvReserved)</span>
+</span>{
+    <span class="hljs-keyword">switch</span> (dwReason)
+    {
+        <span class="hljs-keyword">case</span> DLL_PROCESS_ATTACH:
+            g_hInstance = hinstDLL;
+            <span class="hljs-keyword">break</span>;
+        <span class="hljs-keyword">case</span> DLL_PROCESS_DETACH:
+            <span class="hljs-keyword">break</span>;
+    }
+    <span class="hljs-keyword">return</span> TRUE;
+}
+</code></pre>
+<h1 id="2&#x3001;iat-hook">2&#x3001;IAT Hook</h1>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x4E3B;&#x8981;&#x662F;&#x9488;&#x5BF9;&#x7A0B;&#x5E8F;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x8FDB;&#x884C;hook&#xFF0C;&#x800C;&#x4E14;&#x662F;&#x9488;&#x5BF9;&#x9700;&#x8981;&#x4ECE;&#x5916;&#x90E8;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x7684;&#x8FDB;&#x884C;HOOK&#x3002;&#x6211;&#x8BA4;&#x4E3A;&#x4E0E;&#x4E4B;&#x5BF9;&#x5E94;&#x7684;&#x662F;<strong>inline hook</strong>&#x3002;</p>
+<p>IAT&#x662F;&#x5BFC;&#x5165;&#x5730;&#x5740;&#x8868;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;EAT&#x5BFC;&#x51FA;&#x5730;&#x5740;&#x8868;&#x4E5F;&#x53EF;&#x4EE5;&#x88AB;hook</p>
+<h2 id="&#x539F;&#x7406;">&#x539F;&#x7406;</h2>
+<p>1&#x3001;&#x4FEE;&#x6539;&#x88AB;hook&#x51FD;&#x6570;&#x7684;&#x5728;IAT&#x8868;&#x4E2D;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x8BA9;&#x4ED6;&#x6307;&#x5411;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x51FD;&#x6570;&#x3002;&#x5077;&#x6881;&#x6362;&#x67F1;&#x3002;</p>
+<p>2&#x3001;&#x6839;&#x636E;&#x8FD9;&#x4E2A;&#x539F;&#x7406;&#xFF0C;&#x601D;&#x8DEF;&#x5C31;&#x662F;&#xFF1A;&#x627E;&#x5230;&#x76EE;&#x6807;&#x51FD;&#x6570;iat&#x4E2D;&#x7684;&#x4F4D;&#x7F6E;---&gt;&#x4FEE;&#x6539;iat&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x7684;&#x539F;&#x6765;&#x7684;&#x5730;&#x5740;----&gt;&#x6539;&#x6210;&#x81EA;&#x5B9A;&#x4E49;&#x51FD;&#x6570;&#x7684;&#x5730;&#x5740;----&gt;&#x6B63;&#x5E38;&#x8C03;&#x7528;&#x539F;&#x6765;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<p>3&#x3001;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5916;&#x90E8;dll&#x8FDB;&#x884C;hook&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7A0B;&#x5E8F;&#x81EA;&#x8EAB;&#x5185;&#x90E8;&#x4EE3;&#x7801;&#x5B9E;&#x73B0;iathook&#x3002;</p>
+<h2 id="walkthrough">Walkthrough</h2>
+<ol>
+<li>&#x5F97;&#x5230; PE baseaddr</li>
+<li>&#x5229;&#x7528; e_lfanew &#x5730;&#x5740;&#x83B7;&#x5F97;NT&#x5934;</li>
+<li>&#x5F97;&#x5230;NT&#x5934;&#x627E;&#x5230;&#x53EF;&#x9009;&#x5934;</li>
+<li>&#x53EF;&#x9009;&#x5934;&#x7684;IDD&#x6570;&#x7EC4;</li>
+<li>&#x6570;&#x7EC4;&#x7B2C;&#x4E8C;&#x9879;&#x4E3A;&#x5BFC;&#x5165;&#x8868;</li>
+</ol>
+<p><img src="hook&#x6280;&#x672F;&#x5B66;&#x4E60;/image-20230723163637596.png" alt="image-20230723163637596"></p>
+<ol>
+<li>&#x6839;&#x636E;&#x504F;&#x79FB;+&#x57FA;&#x5730;&#x5740;&#x5F97;&#x5230;&#x5BFC;&#x5165;&#x8868;</li>
+<li>&#x5229;&#x7528;&#x5BFC;&#x5165;&#x8868;&#x91CC;&#x7684;name&#x5B57;&#x6BB5;&#x7684;&#x503C;+&#x57FA;&#x5730;&#x5740;&#x5F97;&#x5230;&#x6BCF;&#x4E2A;&#x5BFC;&#x5165;&#x8868;&#x7684;&#x540D;&#x79F0;</li>
+</ol>
+<h2 id="&#x5BFC;&#x5165;&#x8868;&#x4E2D;&#x7684;&#x53CC;&#x6865;&#x7ED3;&#x6784;">&#x5BFC;&#x5165;&#x8868;&#x4E2D;&#x7684;&#x53CC;&#x6865;&#x7ED3;&#x6784;</h2>
+<ul>
+<li>&#x53C2;&#x8003;&#x5B66;&#x4E60;&#xFF1A;<a href="https://blog.csdn.net/weixin_43742894/article/details/106150321" target="_blank">&#x5BFC;&#x5165;&#x8868;&#x4E2D;&#x7684;&#x53CC;&#x6865;&#x7ED3;&#x6784;</a></li>
+</ul>
+<p>&#x8FD9;&#x4E2A;&#x7ED3;&#x6784;&#x7684;&#x4E3B;&#x8981;&#x7684;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x5C31;&#x662F;<code>OriginalFirstThunk</code>&#x8FD8;&#x6709;<code>FirstThunk</code></p>
+<p>IID&#x7684;&#x7ED3;&#x6784;&#x5982;&#x4E0B;: </p>
+<pre><code class="lang-c"><span class="hljs-keyword">struct</span> _IMAGE_IMPORT_DESCRIPTOR {
+    <span class="hljs-keyword">union</span> {
+        DWORD   Characteristics; 
+        DWORD   OriginalFirstThunk; <span class="hljs-comment">//&#x6307;&#x5411;INT    &#x6865;1    </span>
+    } DUMMYUNIONNAME;
+    DWORD   TimeDateStamp;
+    DWORD   ForwarderChain;         
+    DWORD   Name;                   <span class="hljs-comment">//dll&#x540D;&#x79F0;</span>
+    DWORD   FirstThunk;            <span class="hljs-comment">//&#x6307;&#x5411;IAT    &#x6865;2</span>
+} IMAGE_IMPORT_DESCRIPTOR;
+</code></pre>
+<p>OriginalFirstThunk &#x548C; FirstThunk &#x4ED6;&#x4EEC;&#x90FD;&#x662F;&#x4E24;&#x4E2A;&#x7C7B;&#x578B;&#x4E3A;IMAGE_THUNK_DATA &#x7684;&#x6570;&#x7EC4;</p>
+<blockquote>
+<p>OriginalFirstThunk: </p>
+<p>&#x53CC;&#x5B57;&#x6700;&#x9AD8;&#x4F4D;&#x4E3A;0&#xFF0C;&#x5BFC;&#x5165;&#x7B26;&#x53F7;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x503C;&#xFF0C;&#x8BE5;&#x6570;&#x503C;&#x662F;&#x4E00;&#x4E2A;RVA&#x3002;</p>
+<p>&#x53CC;&#x5B57;&#x6700;&#x9AD8;&#x4F4D;&#x4E3A;1&#xFF0C;&#x5BFC;&#x5165;&#x7B26;&#x53F7;&#x662F;&#x4E00;&#x4E2A;&#x540D;&#x79F0;</p>
+</blockquote>
+<p>PE &#x88C5;&#x8F7D;&#x5668;&#x9996;&#x5148;&#x641C;&#x7D22; OriginalFirstThunk &#xFF0C;&#x627E;&#x5230;&#x4E4B;&#x540E;&#x52A0;&#x8F7D;&#x7A0B;&#x5E8F;&#x8FED;&#x4EE3;&#x641C;&#x7D22;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6BCF;&#x4E2A;&#x6307;&#x9488;&#xFF0C;&#x627E;&#x5230;&#x6BCF;&#x4E2A; IMAGE_IMPORT_BY_NAME &#x7ED3;&#x6784;&#x6240;&#x6307;&#x5411;&#x7684;&#x8F93;&#x5165;&#x51FD;&#x6570;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x7136;&#x540E;&#x52A0;&#x8F7D;&#x5668;<strong>&#x7528;&#x51FD;&#x6570;&#x771F;&#x6B63;&#x5165;&#x53E3;&#x5730;&#x5740;&#x6765;&#x66FF;&#x4EE3;&#x7531; FirstThunk &#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5165;&#x53E3;</strong>&#xFF0C;&#x56E0;&#x6B64;&#x6211;&#x4EEC;&#x79F0;&#x4E3A;&#x8F93;&#x5165;&#x5730;&#x5740;&#x8868;&#xFF08;IAT&#xFF09;&#x3002;</p>
+<p><img src="hook&#x6280;&#x672F;&#x5B66;&#x4E60;/image-20230723231335777.png" alt="image-20230723231335777"></p>
+<p>&#x9759;&#x6001;&#x7ED3;&#x6784;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="hook&#x6280;&#x672F;&#x5B66;&#x4E60;/image-20230723231510423.png" alt="image-20230723231510423"></p>
+<p>&#x5176;&#x5B9E;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x4F5C;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x7684;&#x662F;INT&#xFF0C;&#x53E6;&#x4E00;&#x4E2A;&#x6307;&#x5411;&#x7684;&#x662F;IAT&#x3002;</p>
+<h2 id="&#x5B9E;&#x73B0;&#x4EE3;&#x7801;">&#x5B9E;&#x73B0;&#x4EE3;&#x7801;</h2>
+<p>&#x5176;&#x5B9E;&#x4EE3;&#x7801;&#x7684;&#x5173;&#x952E;&#x5C31;&#x662F;&#x786E;&#x5B9A;&#x8981;hook&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x7136;&#x540E;&#x904D;&#x5386;&#x5BFC;&#x5165;&#x8868;&#xFF0C;&#x4FEE;&#x6539;&#x5730;&#x5740;&#xFF0C;&#x8C03;&#x7528;&#x539F;&#x51FD;&#x6570;&#x3002;</p>
+<p>&#x6838;&#x5FC3;&#xFF1A;&#x5229;&#x7528;<code>OriginalFirstThunk</code>&#x548C;<code>FirstThunk</code>&#x8FDB;&#x884C;&#x5BFC;&#x5165;&#x8868;&#x7684;&#x904D;&#x5386;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdio.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;stdlib.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;Windows.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;winternl.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;winnt.h&gt;</span></span>
+
+<span class="hljs-comment">// &#x5B9A;&#x4E49;MessageBoxA&#x51FD;&#x6570;&#x539F;&#x578B;  </span>
+<span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">int</span> <span class="hljs-params">(WINAPI* PrototypeMessageBox)</span><span class="hljs-params">(HWND, LPCSTR, LPCSTR, UINT)</span></span>;
+
+<span class="hljs-comment">// &#x539F;&#x59CB;MessageBoxA&#x51FD;&#x6570;&#x7684;&#x5730;&#x5740;  </span>
+PrototypeMessageBox originalMsgBox;
+
+<span class="hljs-comment">// Hook&#x51FD;&#x6570;  </span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">hookedMessageBox</span><span class="hljs-params">(HWND hWnd, LPCSTR lpText, LPCSTR lpCaption, UINT uType)</span>
+</span>{
+    MessageBoxW(<span class="hljs-literal">NULL</span>, TEXT(<span class="hljs-string">&quot;Hooked sucess&quot;</span>), TEXT(<span class="hljs-string">&quot;Title&quot;</span>), <span class="hljs-number">0</span>);
+
+    <span class="hljs-keyword">return</span> originalMsgBox(hWnd, lpText, lpCaption, uType);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x6A21;&#x5757;&#x57FA;&#x5730;&#x5740;</span>
+    HMODULE module = GetModuleHandle(<span class="hljs-literal">NULL</span>);
+
+    <span class="hljs-comment">// &#x83B7;&#x53D6;DOS&#x5934;</span>
+    PIMAGE_DOS_HEADER dosHeader = (PIMAGE_DOS_HEADER)module;
+
+    <span class="hljs-comment">// &#x83B7;&#x53D6;NT&#x5934; </span>
+    PIMAGE_NT_HEADERS ntHeader = (PIMAGE_NT_HEADERS)((BYTE*)module + dosHeader-&gt;e_lfanew);
+
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x5BFC;&#x5165;&#x8868;&#x76EE;&#x5F55;</span>
+    PIMAGE_DATA_DIRECTORY importDir = &amp;ntHeader-&gt;OptionalHeader.DataDirectory[IMAGE_DIRECTORY_ENTRY_IMPORT];
+
+    <span class="hljs-comment">// &#x83B7;&#x53D6;&#x5BFC;&#x5165;&#x8868;&#x5165;&#x53E3;  </span>
+    PIMAGE_IMPORT_DESCRIPTOR importDesc = (PIMAGE_IMPORT_DESCRIPTOR)(importDir-&gt;VirtualAddress + (DWORD)module);
+
+    <span class="hljs-comment">// &#x904D;&#x5386;&#x5BFC;&#x5165;&#x8868;</span>
+    <span class="hljs-keyword">while</span> (importDesc-&gt;Name)
+    {
+        <span class="hljs-comment">// &#x83B7;&#x53D6;DLL&#x540D;&#x79F0;</span>
+        LPCSTR dllName = (LPCSTR)importDesc-&gt;Name + (DWORD)module;
+        <span class="hljs-comment">// &#x7A0B;&#x5E8F;&#x5728;&#x51FD;&#x6570;&#x6CA1;&#x7528;&#x8C03;&#x7528;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x6CA1;&#x7528;&#x628A;&#x5BF9;&#x5E94;&#x7684;dll&#x8F7D;&#x5165;&#x5185;&#x5B58;&#xFF0C;&#x8FD9;&#x6837;&#x5F3A;&#x5236;&#x8F7D;&#x5165;&#xFF0C;&#x521D;&#x59CB;&#x5316;iat&#x8868;&#x7ED3;&#x675F;&#x4E4B;&#x540E;&#xFF0C;&#x624D;&#x80FD;&#x8FDB;&#x884C;&#x540E;&#x7EED;&#x7684;&#x4FEE;&#x6539;</span>
+        HMODULE dllHandle = LoadLibraryA(dllName);
+
+        <span class="hljs-keyword">if</span> (dllHandle)
+        {
+            <span class="hljs-comment">// &#x83B7;&#x53D6;&#x539F;&#x59CB;&#x548C;&#x4FEE;&#x6B63;&#x540E;&#x7684;IAT</span>
+            PIMAGE_THUNK_DATA originalIAT = (PIMAGE_THUNK_DATA)((BYTE*)module + importDesc-&gt;OriginalFirstThunk);
+            PIMAGE_THUNK_DATA firstIAT = (PIMAGE_THUNK_DATA)((BYTE*)module + importDesc-&gt;FirstThunk);
+
+            <span class="hljs-comment">// &#x904D;&#x5386;IAT&#x67E5;&#x627E;MessageBoxA</span>
+            <span class="hljs-keyword">while</span> (originalIAT-&gt;u1.AddressOfData)
+            {
+                PIMAGE_IMPORT_BY_NAME funcInfo = (PIMAGE_IMPORT_BY_NAME)((BYTE*)module + originalIAT-&gt;u1.AddressOfData);
+
+                <span class="hljs-keyword">if</span> (<span class="hljs-built_in">strcmp</span>(funcInfo-&gt;Name, <span class="hljs-string">&quot;MessageBoxA&quot;</span>) == <span class="hljs-number">0</span>)
+                {
+                    <span class="hljs-comment">// &#x4FDD;&#x5B58;&#x539F;&#x59CB;&#x5730;&#x5740;</span>
+                    originalMsgBox = (PrototypeMessageBox)firstIAT-&gt;u1.Function;
+
+                    <span class="hljs-comment">// &#x4FEE;&#x6539;&#x5185;&#x5B58;&#x6743;&#x9650;&#xFF0C;&#x65B9;&#x4FBF;&#x540E;&#x7EED;&#x5199;&#x5165;</span>
+                    DWORD oldProtect;
+                    VirtualProtect(firstIAT, <span class="hljs-keyword">sizeof</span>(PIMAGE_THUNK_DATA), PAGE_READWRITE, &amp;oldProtect);
+
+                    <span class="hljs-comment">// &#x5199;&#x5165;Hook&#x5730;&#x5740;</span>
+                    firstIAT-&gt;u1.Function = (DWORD)hookedMessageBox;
+
+                    <span class="hljs-comment">// &#x5B8C;&#x6210;&#x4EFB;&#x52A1;&#x5C31;&#x76F4;&#x63A5;&#x9000;&#x51FA;&#x5FAA;&#x73AF;</span>
+                    <span class="hljs-keyword">break</span>;
+                }
+                originalIAT++;
+                firstIAT++;
+            }
+        }
+        importDesc++;
+    }
+
+    <span class="hljs-comment">// &#x8C03;&#x7528;MessageBoxA</span>
+    originalMsgBox(<span class="hljs-literal">NULL</span>, <span class="hljs-string">&quot;Hello&quot;</span>, <span class="hljs-string">&quot;Original&quot;</span>, <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-comment">/*&#x4EE3;&#x7801;&#x53C2;&#x8003;&#xFF1A;https://www.ired.team/offensive-security/code-injection-process-injection/import-adress-table-iat-hooking*/</span>
+</code></pre>
+<p><strong><em>ps: &#x8FD9;&#x91CC;&#x53D1;&#x73B0;&#x4E0D;&#x5C11;&#x7684;&#x5B9A;&#x4F4D;&#x504F;&#x79FB;&#x90FD;&#x662F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x5B8F;&#x6765;&#x5B9E;&#x73B0;&#xFF0C;&#x4E4B;&#x524D;&#x7684;&#x4EE3;&#x7801;&#x4E2D;&#x6211;&#x8FD8;&#x5728;&#x82E6;&#x54C8;&#x54C8;&#x7684;&#x624B;&#x52A8;&#x7B97;&#x504F;&#x79FB;&#xFF0C;&#x7A0B;&#x5E8F;&#x91CC;&#x5168;&#x662F;++--&#xFF0C;&#x901A;&#x8FC7;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5B66;&#x5230;&#x4E86;&#x591A;&#x53BB;&#x627E;&#x627E;&#x5BF9;&#x5E94;&#x7684;&#x5B8F;&#xFF0C;&#x5FAE;&#x8F6F;&#x80AF;&#x5B9A;&#x4E0D;&#x4F1A;&#x9002;&#x914D;&#x8FD9;&#x4E48;&#x4E0D;&#x597D;&#x7684;&#x3002;</em></strong></p>
+<h1 id="21&#x3001;eat-hook">2.1&#x3001;EAT hook</h1>
+<p>&#x8FD9;&#x4E2A;&#x548C;&#x4E0A;&#x9762;&#x7684;&#x601D;&#x8DEF;&#x57FA;&#x672C;&#x4E00;&#x6A21;&#x4E00;&#x6837;&#xFF0C;&#x533A;&#x522B;&#x6709;&#x4E24;&#x4E2A;&#xFF1A;</p>
+<ul>
+<li>&#x4EE3;&#x7801;&#x533A;&#x522B;&#xFF1A;&#x66F4;&#x6539;&#x4F7F;&#x7528;<code>IMAGE_DIRECTORY_ENTRY_EXPORT</code>&#x5B8F;&#x6765;&#x5B9A;&#x4F4D;&#x5BFC;&#x51FA;&#x8868;&#x3002;</li>
+<li>&#x4F7F;&#x7528;&#x533A;&#x522B;&#xFF1A;&#x5BFC;&#x51FA;&#x8868;&#x8BE5;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x7684;&#xFF0C;&#x4F5C;&#x7528;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF1B;&#x5BFC;&#x51FA;&#x8868;hook&#xFF0C;&#x76F4;&#x63A5;&#x6539;dll&#x7684;&#xFF0C;&#x5F71;&#x54CD;&#x4F7F;&#x7528;&#x8BE5;dll&#x7684;&#x6240;&#x6709;&#x7A0B;&#x5E8F;&#x3002;</li>
+</ul>
+<h1 id="3&#x3001;inline-hook">3&#x3001;inline hook</h1>
+<p>&#x987E;&#x540D;&#x601D;&#x4E49;&#xFF0C;&#x5C31;&#x662F;&#x76F4;&#x63A5;&#x6539;&#x7A0B;&#x5E8F;&#x91CC;&#x7684;&#x6307;&#x4EE4;&#x3002;&#x7C7B;&#x4F3C;&#x4E8E;&#x76F4;&#x63A5;patch&#x7A0B;&#x5E8F;&#xFF0C;&#x4F46;&#x662F;&#x662F;&#x52A8;&#x6001;&#x7684;&#x3002;&#x901A;&#x8FC7;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x5185;&#x5B58;&#x4E2D;&#x4EFB;&#x610F;&#x51FD;&#x6570;&#x7684;&#x4EE3;&#x7801;&#xFF0C;&#x5C06;&#x5176;&#x52AB;&#x6301;&#x81F3;Hook API&#x3002;&#x540C;&#x65F6;&#xFF0C;&#x5B83;&#x6BD4;IAT Hook&#x7684;&#x9002;&#x7528;&#x8303;&#x56F4;&#x66F4;&#x5E7F;&#xFF0C;&#x56E0;&#x4E3A;&#x53EA;&#x8981;&#x662F;&#x5185;&#x5B58;&#x4E2D;&#x6709;&#x7684;&#x51FD;&#x6570;&#x5B83;&#x90FD;&#x80FD;Hook&#xFF0C;&#x800C;&#x540E;&#x8005;&#x53EA;&#x80FD;Hook IAT&#x8868;&#x91CC;&#x5B58;&#x5728;&#x7684;&#x51FD;&#x6570;&#xFF08;&#x6709;&#x4E9B;&#x7A0B;&#x5E8F;&#x4F1A;&#x52A8;&#x6001;&#x52A0;&#x8F7D;&#x51FD;&#x6570;&#xFF09;&#x3002;</p>
+<h2 id="&#x88AB;hook&#x7684;&#x4F4D;&#x7F6E;">&#x88AB;hook&#x7684;&#x4F4D;&#x7F6E;</h2>
+<p>&#x5728;&#x8FDB;&#x884C;hook&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x6700;&#x91CD;&#x8981;&#x7684;&#x5C31;&#x662F;&#x627E;&#x5BF9;hook&#x7684;&#x51C6;&#x786E;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x4FDD;&#x8BC1;hook&#x4E4B;&#x540E;&#x7A0B;&#x5E8F;&#x8FD8;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x6267;&#x884C;&#xFF0C;&#x4E0D;&#x4F1A;&#x56E0;&#x4E3A;&#x5806;&#x6808;&#x95EE;&#x9898;&#x9000;&#x51FA;&#x3002;&#x6CE8;&#x610F;&#x7684;&#x662F;hook&#x8FC7;&#x7A0B;&#x4E2D;&#x4FEE;&#x6539;&#x4EE3;&#x7801;&#x7684;&#x4F4D;&#x7F6E;&#x4E0D;&#x5728;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x800C;&#x662F;&#x5728;&#x88AB;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x7684;&#x524D;&#x51E0;&#x884C;&#x3002;</p>
+<p>&#x80FD;&#x4EA7;&#x751F;&#x63A7;&#x5236;&#x6D41;&#x5206;&#x652F;&#x7684;&#x6307;&#x4EE4;&#x5E38;&#x89C1;&#x7684;&#x65E0;&#x975E;call&#x3001;jmp&#x5BB6;&#x65CF;&#x3001;ret&#x8FD9;&#x4E9B;&#xFF0C;call&#x548C;ret&#x90FD;&#x4F1A;&#x5BF9;&#x6808;&#x4EA7;&#x751F;&#x5F71;&#x54CD;&#xFF0C;&#x6240;&#x4EE5;&#x5C31;&#x7528;jmp&#x8FDB;&#x884C;hook&#x6700;&#x65B9;&#x4FBF;&#x4E86;&#x3002;</p>
+<h2 id="&#x601D;&#x8DEF;">&#x601D;&#x8DEF;</h2>
+<p>&#x601D;&#x8DEF;&#x5F88;&#x7B80;&#x5355;&#xFF0C;inline hook&#x662F;&#x901A;&#x8FC7;&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x8FDB;&#x7A0B;&#x4EE3;&#x7801;&#x6765;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5982;&#x679C;&#x4E0D;&#x8003;&#x4E86;&#x7A33;&#x5B9A;&#x6027;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#x7684;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x5730;&#x65B9;&#x505A;hook&#x65B9;&#x5F0F;&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x4EE3;&#x7801;&#x6BB5;&#x3002;</p>
+<h3 id="&#x95EE;&#x9898;">&#x95EE;&#x9898;</h3>
+<p>&#x6709;&#x4E00;&#x4E2A;&#x96BE;&#x70B9;&#xFF0C;hook&#x7684;&#x5730;&#x5740;&#x600E;&#x4E48;&#x627E;&#xFF0C;&#x867D;&#x7136;&#x5979;&#x53EF;&#x4EE5;&#x5728;&#x4EFB;&#x610F;&#x88AB;&#x6267;&#x884C;&#x7684;&#x5730;&#x65B9;&#x8FDB;&#x884C;hook&#xFF0C;&#x4F46;&#x662F;&#x5982;&#x679C;&#x786E;&#x5B9A;&#x5730;&#x5740;&#x5462;&#xFF1F;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#x3002;</p>
+<ul>
+<li>&#x81EA;&#x5DF1;hook&#x81EA;&#x5DF1;</li>
+<li>hook&#x76EE;&#x6807;&#x8FDB;&#x7A0B;</li>
+</ul>
+<p>hook&#x81EA;&#x5DF1;&#x7684;&#x8BDD;&#xFF0C;&#x5F97;&#x5230;&#x4E00;&#x4E9B;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x51FD;&#x6570;&#x7684;&#x5730;&#x5740;&#x662F;&#x5F88;&#x65B9;&#x4FBF;&#x7684;&#xFF0C;&#x5176;&#x4ED6;&#x4F4D;&#x7F6E;&#x7684;&#x5730;&#x5740;&#x57FA;&#x672C;&#x8981;&#x9760;&#x504F;&#x79FB;&#x63A8;&#x6D4B;&#x51FA;&#x6765;&#xFF0C;&#x6240;&#x4EE5;&#x5B9E;&#x9645;&#x4E0A;&#x8FD8;&#x662F;&#x53EA;&#x80FD;hook&#x51FD;&#x6570;&#x8C03;&#x7528;&#xFF0C;&#x65E0;&#x6CD5;&#x4EFB;&#x610F;&#x5730;&#x5740;&#x4FEE;&#x6539;&#x3002;</p>
+<p>hook&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#xFF0C;&#x600E;&#x4E48;&#x627E;&#x5230;&#x5BF9;&#x9762;&#x7684;&#x8981;&#x4FEE;&#x6539;jmp&#x7684;&#x5730;&#x65B9;&#x7684;&#x5730;&#x5740;&#x662F;&#x5927;&#x95EE;&#x9898;&#xFF0C;&#x4E00;&#x822C;&#x64CD;&#x4F5C;&#x90FD;&#x662F;&#x9488;&#x5BF9;win api&#x8FDB;&#x884C;&#x7684;hook&#xFF0C;&#x5BF9;&#x4E8E;&#x5BF9;&#x65B9;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x51FD;&#x6570;&#x8C03;&#x7528;hook&#x5B9E;&#x73B0;&#x6BD4;&#x8F83;&#x56F0;&#x96BE;&#xFF0C;&#x5B9E;&#x5728;&#x8981;hook&#x53EA;&#x80FD;&#x4EBA;&#x5DE5;&#x4ECB;&#x5165;&#x624B;&#x52A8;&#x5206;&#x6790;&#x7B97;&#x51FA;&#x504F;&#x79FB;&#x5229;&#x7528;baseaddr&#x8FDB;&#x884C;&#x8BA1;&#x7B97;&#x4ECE;&#x800C;&#x8FDB;&#x884C;hook&#x3002;</p>
+<h3 id="&#x5E94;&#x7528;&#x573A;&#x666F;">&#x5E94;&#x7528;&#x573A;&#x666F;</h3>
+<p>&#x9664;&#x4E86;&#x7528;&#x5728;CTF&#x51FA;&#x9898;&#x4E2D;&#x6709;&#x4E9B;&#x7528;&#xFF0C;&#x597D;&#x50CF;&#x4E5F;&#x6CA1;&#x5565;&#x7528;&#x4E86;&#xFF0C;&#x60F3;&#x6267;&#x884C;shellcode&#x4E0D;&#x5982;&#x76F4;&#x63A5;&#x6CE8;&#x5165;&#xFF0C;&#x800C;&#x4E14;&#x64CD;&#x4F5C;&#x5176;&#x4ED6;&#x8FDB;&#x7A0B;&#x4E5F;&#x9700;&#x8981;&#x5F88;&#x591A;&#x8BA1;&#x7B97;&#xFF0C;&#x81EA;&#x52A8;&#x5316;&#x7A0B;&#x5EA6;&#x4E0D;&#x9AD8;&#x3002;</p>
+<h2 id="&#x5B9E;&#x73B0;&#x4EE3;&#x7801;">&#x5B9E;&#x73B0;&#x4EE3;&#x7801;</h2>
+<p>&#x4F7F;&#x7528;<code>jmp + &#x504F;&#x79FB;&#x5730;&#x5740;</code>&#x7684;&#x65B9;&#x5F0F;&#x8FDB;&#x884C;hook&#xFF0C;&#x53BB;hook&#x522B;&#x7684;&#x6BD4;&#x8F83;&#x56F0;&#x96BE;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x81EA;&#x5DF1;hook&#x81EA;&#x5DF1;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;hook&#x4E00;&#x4E2A;&#x5199;&#x597D;&#x4E86;&#x4F46;&#x662F;&#x6CA1;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x7B80;&#x5355;&#x4E3B;&#x8981;&#x662F;&#x3002;&#x5C31;32&#x4F4D;&#x7684;&#x7A0B;&#x5E8F;&#x8FDB;hook&#xFF0C;&#x5730;&#x5740;&#x6BD4;&#x8F83;&#x77ED;&#x3002;</p>
+<p>&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x867D;&#x7136;jmp&#x5728;&#x6C47;&#x7F16;&#x6765;&#x770B;&#x662F;<code>jmp+dst_addr</code>&#x7684;&#x683C;&#x5F0F;&#xFF0C;&#x4F46;&#x662F;&#x5728;&#x5B9E;&#x9645;&#x5B57;&#x8282;&#x7801;&#x4E2D;&#xFF0C;&#x662F;<code>jmp+offset-len</code>&#x7684;&#x65B9;&#x5F0F;&#xFF1B;&#x7B2C;&#x4E8C;&#x4E2A;&#x5C31;&#x662F;&#x9700;&#x8981;&#x6CE8;&#x610F;&#xFF0C;0xeb&#x548C;0xe9&#x8FD9;&#x4E24;&#x4E2A;&#x7684;&#x533A;&#x522B;&#xFF0C;&#x867D;&#x7136;&#x90FD;&#x662F;jmp&#x6307;&#x4EE4;&#xFF0C;&#x4F46;&#x662F;&#x540E;&#x9762;&#x8DDF;&#x7684;&#x5730;&#x5740;&#x4E0D;&#x540C;&#x3002;</p>
+<p>0xE9       JMP    &#x540E;&#x9762;&#x7684;&#x56DB;&#x4E2A;&#x5B57;&#x8282;&#x662F;&#x504F;&#x79FB;</p>
+<p>0xEB       JMP    &#x540E;&#x9762;&#x7684;&#x4E8C;&#x4E2A;&#x5B57;&#x8282;&#x662F;&#x504F;&#x79FB;</p>
+<p>0xFF25    JMP    &#x540E;&#x9762;&#x7684;&#x56DB;&#x4E2A;&#x5B57;&#x8282;&#x662F;&#x5B58;&#x653E;&#x5730;&#x5740;&#x7684;&#x5730;&#x5740;</p>
+<p>0xFF15    CALL  &#x540E;&#x9762;&#x7684;&#x56DB;&#x4E2A;&#x5B57;&#x8282;&#x662F;&#x5B58;&#x653E;&#x5730;&#x5740;&#x7684;&#x5730;&#x5740;</p>
+<p>0xE8       CALL  &#x540E;&#x9762;&#x7684;&#x56DB;&#x4E2A;&#x5B57;&#x8282;&#x662F;&#x5730;&#x5740;</p>
+<p>0x68         PUSH   &#x540E;&#x9762;&#x7684;&#x56DB;&#x4E2A;&#x5B57;&#x8282;&#x5165;&#x6808;</p>
+<p>0x69         PUSH   &#x540E;&#x9762;&#x7684;1&#x4E2A;&#x5B57;&#x8282;&#x5165;&#x6808;</p>
+<p>eb&#x548C;e9&#x8FD9;&#x7075;&#x6D3B;&#x642D;&#x914D;&#x5C31;&#x884C;&#xFF0C;&#x53EF;&#x4EE5;&#x5148;&#x7528;eb&#x8FD9;&#x79CD;&#x76EE;&#x6807;&#x5730;&#x5740;&#x77ED;&#x7684;&#x65B9;&#x5F0F;&#x8DF3;&#x5230;&#x4F4D;&#x7F6E;&#x4E0D;&#x90A3;&#x4E48;&#x7D27;&#x5F20;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x518D;&#x7528;e9&#x6765;&#x5B9E;&#x73B0;&#x8DF3;&#x8F6C;hook&#x3002;</p>
+<p><img src="hook&#x6280;&#x672F;&#x5B66;&#x4E60;/image-20230828162139858.png" alt="image-20230828162139858"></p>
+<p>&#x8FD8;&#x6709;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x5982;&#x679C;&#x4F7F;&#x7528;vs2022&#xFF0C;&#x7B2C;&#x4E8C;&#x6B21;&#x8C03;&#x7528;&#x51FD;&#x6570;&#x4F1A;&#x88AB;&#x5185;&#x8054;&#x8FDB;&#x53BB;&#xFF0C;&#x6240;&#x4EE5;hook&#x7684;&#x6210;&#x529F;&#x4E4B;&#x540E;&#x6839;&#x672C;&#x6267;&#x884C;&#x4E0D;&#x5230;&#x90A3;&#x91CC;&#xFF0C;&#x5BFC;&#x81F4;&#x770B;&#x8D77;&#x6765;&#x5931;&#x8D25;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#x4FEE;&#x6539;&#x6743;&#x9650;&#xFF0C;&#x53EF;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x4E00;&#x822C;&#x6CA1;&#x6709;&#x5199;&#x7684;&#x6743;&#x9650;&#x3002;&#x5148;&#x6DFB;&#x52A0;&#x5199;&#x6743;&#x9650;&#xFF0C;&#x4FEE;&#x6539;&#x5B8C;&#x4E8B;&#x518D;&#x6062;&#x590D;&#x3002;&#x8FD9;&#x91CC;&#x4E0D;&#x4E00;&#x5B9A;&#x8981;&#x7528;<code>WriteProcessMemory</code>&#x51FD;&#x6570;&#xFF0C;&#x76F4;&#x63A5;&#x7528;memcpy&#x4E5F;&#x884C;&#x3002;</p>
+<pre><code class="lang-c">DWORD oldProtect;
+VirtualProtect(origin_func, <span class="hljs-number">5</span>, PAGE_EXECUTE_READWRITE, &amp;oldProtect);
+WriteProcessMemory(GetCurrentProcess(), (LPVOID)(addr_origfunc), newcode, <span class="hljs-number">2</span>, <span class="hljs-literal">NULL</span>);
+VirtualProtect(origin_func, <span class="hljs-number">5</span>, oldProtect, &amp;oldProtect);
+</code></pre>
+<h1 id="4&#x3001;&#x70ED;&#x8865;&#x4E01;---hotfix-hook">4&#x3001;&#x70ED;&#x8865;&#x4E01; - HotFix HOOK</h1>
+<p>&#x4E4B;&#x524D;&#x7684;&#x65B9;&#x5F0F;&#x9700;&#x8981;&#x4FEE;&#x6539;&#x7A0B;&#x5E8F;&#x7136;&#x540E;&#x518D;&#x5C06;&#x7A0B;&#x5E8F;&#x4FEE;&#x6539;&#x56DE;&#x6765;&#xFF0C;&#x5F53;&#x8FDB;&#x884C;&#x5168;&#x5C40;Hook&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7CFB;&#x7EDF;&#x8FD0;&#x884C;&#x6548;&#x7387;&#x4F1A;&#x53D7;&#x5F71;&#x54CD;&#x3002;&#x800C;&#x4E14;&#xFF0C;&#x5F53;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x5C1D;&#x8BD5;&#x8FD0;&#x884C;&#x67D0;&#x6BB5;&#x4EE3;&#x7801;&#x65F6;&#xFF0C;&#x82E5;&#x53E6;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x6B63;&#x5728;&#x5BF9;&#x8BE5;&#x6BB5;&#x4EE3;&#x7801;&#x8FDB;&#x884C;&#x201C;&#x5199;&#x201D;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD9;&#x65F6;&#x5C31;&#x4F1A;&#x7A0B;&#x5E8F;&#x51B2;&#x7A81;&#xFF0C;&#x6700;&#x7EC8;&#x5F15;&#x53D1;&#x4E00;&#x4E9B;&#x9519;&#x8BEF;&#x3002;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;HotFix Hook&#xFF08;&#x201C;&#x70ED;&#x8865;&#x4E01;&#x201D;&#xFF09;&#x65B9;&#x6CD5;&#x5F25;&#x8865;&#x4E0A;&#x8FF0;&#x95EE;&#x9898;&#x3002;</p>
+<p>&#x4E3A;&#x5565;&#x53EB;&#x70ED;&#x8865;&#x4E01;&#xFF0C;&#x5F53;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x4E0D;&#x80FD;&#x505C;&#x6B62;&#x7684;&#x65F6;&#x5019;&#x8FDB;&#x884C;&#x8865;&#x4E01;&#x64CD;&#x4F5C;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x5E76;&#x6CA1;&#x6709;&#x627E;&#x5230;&#x592A;&#x591A;&#x7684;&#x89E3;&#x91CA;&#x548C;&#x5B9A;&#x4E49;&#xFF0C;&#x4ED6;&#x4E0D;&#x662F;&#x4E00;&#x79CD;&#x7279;&#x5B9A;&#x7684;&#x6280;&#x672F;&#xFF0C;&#x800C;&#x662F;&#x4E00;&#x7C7B;&#x6280;&#x672F;&#x7684;&#x6982;&#x51B5;&#xFF0C;&#x7CBE;&#x7EC6;&#x5316;&#x5230;&#x64CD;&#x4F5C;&#x4E0A;&#x53EF;&#x4EE5;&#x6309;&#x7167;&#x5982;&#x4E0B;&#x7406;&#x89E3;&#xFF1A;</p>
+<h2 id="&#x5DEE;&#x5F02;-&#x548C;inline-hook">&#x5DEE;&#x5F02; &#x548C;inline hook</h2>
+<p>&#x8FD9;&#x662F;&#x6B63;&#x5E38;&#x7684;&#x8C03;&#x7528;&#x4E00;&#x4E2A;api&#x65F6;&#x5019;&#x7684;&#x6C47;&#x7F16;</p>
+<p><img src="hook&#x6280;&#x672F;&#x5B66;&#x4E60;/image-20230828172812910.png" alt="image-20230828172812910"></p>
+<p>&#x770B;&#x5230;&#x5728;push&#x4E0A;&#x9762;&#x8FD8;&#x6709;&#x5F88;&#x591A;&#x7A7A;&#x767D;&#x7684;&#x5730;&#x65B9;&#x53EF;&#x4EE5;&#x64CD;&#x4F5C;&#xFF0C;inline hook&#x7684;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x76F4;&#x63A5;e9+&#x76EE;&#x6807;&#x5730;&#x5740;&#xFF0C;hot fix&#x4F7F;&#x7528;&#x7684;&#x65B9;&#x6CD5;&#x662F; eb+5&#x5148;&#x8DF3;&#x5230;&#x6700;&#x4E0A;&#x9762;&#x90A3;&#x4E2A;ret&#x4E0B;&#x9762;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x8FDB;&#x884C;e9&#x7684;inline hook&#x64CD;&#x4F5C;&#x3002;</p>
+<h2 id="&#x539F;&#x56E0;">&#x539F;&#x56E0;</h2>
+<p>&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x66F4;&#x52A0;&#x5B89;&#x5168;&#xFF0C;&#x56E0;&#x4E3A;&#x4ED6;&#x5E76;&#x6CA1;&#x6709;&#x66F4;&#x6539;&#x4EFB;&#x4F55;&#x6709;&#x610F;&#x4E49;&#x7684;&#x7A0B;&#x5E8F;&#x4EE3;&#x7801;&#x3002;inline hook&#x4F1A;&#x5360;&#x7528;5&#x5B57;&#x8282;&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x8FD9;&#x5C31;&#x906E;&#x6321;&#x4E86;push&#x548C;mov&#x6307;&#x4EE4;&#xFF1B;hotfix&#x65B9;&#x5F0F;&#x53EA;&#x5360;&#x7528;&#x4E86;<code>mov edi&#xFF0C;edi</code>&#x8FD9;&#x4E2A;&#x65E0;&#x610F;&#x4E49;&#x7684;&#x6307;&#x4EE4;&#x3002;&#x5373;&#x4F7F;&#x662F;hook&#x5931;&#x8D25;&#x4E86;&#xFF0C;&#x7A0B;&#x5E8F;&#x8FD8;&#x662F;&#x53EF;&#x4EE5;&#x6B63;&#x5E38;&#x6267;&#x884C;&#xFF0C;&#x4E0D;&#x53D7;&#x5F71;&#x54CD;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">&#x6CA1;&#x6709;&#x7248;&#x6743;&#xFF0C;&#x968F;&#x4FBF;&#x590D;&#x5236;&#xFF0C;&#x514D;&#x8D39;&#x7684;&#x77E5;&#x8BC6;&#x5E94;&#x8BE5;&#x5171;&#x4EAB; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2023-08-28 17:34:43
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="dll劫持原理学习和应用.html" class="navigation navigation-prev " aria-label="Previous page: dll劫持原理以及方式实践">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Vulnerability_Mining.html" class="navigation navigation-next " aria-label="Next page: Vulnerability Mining">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Hook - R3","level":"1.10.13","depth":2,"next":{"title":"Vulnerability Mining","level":"1.11","depth":1,"path":"MyArticles/Vulnerability_Mining.md","ref":"MyArticles/Vulnerability_Mining.md","articles":[{"title":"CTF - PWN 学习","level":"1.11.1","depth":2,"path":"MyArticles/Vulnerability_Mining/iwant2pwn/firstPWN.md","ref":"MyArticles/Vulnerability_Mining/iwant2pwn/firstPWN.md","articles":[{"title":"栈的艺术","level":"1.11.1.1","depth":3,"ref":"","articles":[]},{"title":"堆的艺术","level":"1.11.1.2","depth":3,"ref":"","articles":[]}]},{"title":"shellcode编写-地址定位","level":"1.11.2","depth":2,"path":"MyArticles/Vulnerability_Mining/Windows通用shellcode编写.md","ref":"MyArticles/Vulnerability_Mining/Windows通用shellcode编写.md","articles":[]},{"title":"winafl文献-关于pdf中的图片测试(极水)","level":"1.11.3","depth":2,"path":"MyArticles/Vulnerability_Mining/winafl关于pdf测试的阅读-水.md","ref":"MyArticles/Vulnerability_Mining/winafl关于pdf测试的阅读-水.md","articles":[]}]},"previous":{"title":"dll劫持原理以及方式实践","level":"1.10.12","depth":2,"path":"MyArticles/CyberSec/dll劫持原理学习和应用.md","ref":"MyArticles/CyberSec/dll劫持原理学习和应用.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","custom-favicon","tbfed-pagefooter","popup","-sharing","sharing-plus","intopic-toc","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"没有版权，随便复制，免费的知识应该共享","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"livereload":{},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"./icon/book.ico","back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MyArticles/CyberSec/r3-hook.md","mtime":"2023-08-28T09:34:43.822Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-08-28T09:36:23.912Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
