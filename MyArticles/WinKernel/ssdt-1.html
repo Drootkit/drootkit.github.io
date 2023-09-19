@@ -1,0 +1,1824 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>SSDT - 是啥、干啥、怎么用 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-intopic-toc/style.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../构建gitbook.html">
+            
+                <a href="../构建gitbook.html">
+            
+                    
+                    写在开始，how2gitbook
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../SUMMARY.html">
+            
+                <a href="../../SUMMARY.html">
+            
+                    
+                    所有目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../Reverse.html">
+            
+                <a href="../Reverse.html">
+            
+                    
+                    Reverse
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../Re/控制流平坦化.html">
+            
+                <a href="../Re/控制流平坦化.html">
+            
+                    
+                    反控制流平坦化学习-angr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../Re/反调试 & 沙箱对抗技巧收集.html">
+            
+                <a href="../Re/反调试 & 沙箱对抗技巧收集.html">
+            
+                    
+                    反调试以及沙箱对抗技巧收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../Re/常见加密算法-学习.html">
+            
+                <a href="../Re/常见加密算法-学习.html">
+            
+                    
+                    加密解密学习 - 更
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../Re/分组密码学习.html">
+            
+                <a href="../Re/分组密码学习.html">
+            
+                    
+                    分组密码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../Re/vmp3.5unpacke.html">
+            
+                <a href="../Re/vmp3.5unpacke.html">
+            
+                    
+                    vmp3.X 工具向脱壳
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../Re/idaunpackELF.html">
+            
+                <a href="../Re/idaunpackELF.html">
+            
+                    
+                    运行时压缩壳 - IDA动调ELF脱壳
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Basics.html">
+            
+                <a href="../Basics.html">
+            
+                    
+                    Basics
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Basics/PE文件加载器.html">
+            
+                <a href="../Basics/PE文件加载器.html">
+            
+                    
+                    PE文件加载器-基于C
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../Basics/DebugC">
+            
+                <span>
+            
+                    
+                    调试C#的DLL
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../Basics/调用约定和断点.html">
+            
+                <a href="../Basics/调用约定和断点.html">
+            
+                    
+                    调用约定和断点
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../Basics/elf文件结构.html">
+            
+                <a href="../Basics/elf文件结构.html">
+            
+                    
+                    ELF structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../Basics/Pe File Structer.html">
+            
+                <a href="../Basics/Pe File Structer.html">
+            
+                    
+                    PE structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../Basics/arm学习.html">
+            
+                <a href="../Basics/arm学习.html">
+            
+                    
+                    ARM 基础学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.7" data-path="../Basics/Windows消息队列学习.html">
+            
+                <a href="../Basics/Windows消息队列学习.html">
+            
+                    
+                    Windows消息队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.8" data-path="../Basics/内网基础.html">
+            
+                <a href="../Basics/内网基础.html">
+            
+                    
+                    内网基础学习 - 域和组
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Practice.html">
+            
+                <a href="../Practice.html">
+            
+                    
+                    Practice
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Practice/YouTubePremium.apk.html">
+            
+                <a href="../Practice/YouTubePremium.apk.html">
+            
+                    
+                    Malware-APK0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../Practice/OODA-Loops.html">
+            
+                <a href="../Practice/OODA-Loops.html">
+            
+                    
+                    edr对抗 - OODA 角度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../Practice/IRQL蓝屏分析.html">
+            
+                <a href="../Practice/IRQL蓝屏分析.html">
+            
+                    
+                    蓝屏 - windbg模块解析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../Practice/shutdownWinDefender.html">
+            
+                <a href="../Practice/shutdownWinDefender.html">
+            
+                    
+                    失效的欺骗 - 假杀软欺骗真winDef
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../云原生安全.html">
+            
+                <a href="../云原生安全.html">
+            
+                    
+                    云原生安全
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../云原生安全/云原生安全 -云原生.html">
+            
+                <a href="../云原生安全/云原生安全 -云原生.html">
+            
+                    
+                    云原生 - 是什么
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../Dailynotes.html">
+            
+                <a href="../Dailynotes.html">
+            
+                    
+                    Daily notes
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../Dailynotes/G-F-W原理了解学习.html">
+            
+                <a href="../Dailynotes/G-F-W原理了解学习.html">
+            
+                    
+                    G-F-W原理了解学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../Dailynotes/pdf解析重组.html">
+            
+                <a href="../Dailynotes/pdf解析重组.html">
+            
+                    
+                    电子书清晰化的尝试 利用python
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../Dailynotes/ipv6_base_vps.html">
+            
+                <a href="../Dailynotes/ipv6_base_vps.html">
+            
+                    
+                    搭建ipv6自有服务器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../Dailynotes/learn_shell.html">
+            
+                <a href="../Dailynotes/learn_shell.html">
+            
+                    
+                    Shell 学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../Dailynotes/就业意向.html">
+            
+                <a href="../Dailynotes/就业意向.html">
+            
+                    
+                    就业意向
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../Development.html">
+            
+                <a href="../Development.html">
+            
+                    
+                    Development
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../Development/find_dll_in_proc.html">
+            
+                <a href="../Development/find_dll_in_proc.html">
+            
+                    
+                    Find DLL in Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../Development/find_thread_in_process.html">
+            
+                <a href="../Development/find_thread_in_process.html">
+            
+                    
+                    Find Thread in Process
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../Development/Build-Arm.html">
+            
+                <a href="../Development/Build-Arm.html">
+            
+                    
+                    构建qemu的持续学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../Development/查看父进程.html">
+            
+                <a href="../Development/查看父进程.html">
+            
+                    
+                    查看父进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../CyberSec.html">
+            
+                <a href="../CyberSec.html">
+            
+                    
+                    CyberSec
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../CyberSec/免杀手法收集.html">
+            
+                <a href="../CyberSec/免杀手法收集.html">
+            
+                    
+                    免杀手法收集
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../CyberSec/yara.html">
+            
+                <a href="../CyberSec/yara.html">
+            
+                    
+                    YARA学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../CyberSec/sigma规则学习.html">
+            
+                <a href="../CyberSec/sigma规则学习.html">
+            
+                    
+                    sigma规则学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../CyberSec/snort工作总结.html">
+            
+                <a href="../CyberSec/snort工作总结.html">
+            
+                    
+                    工作内容 - 产出snort规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../CyberSec/关于bitcoin.html">
+            
+                <a href="../CyberSec/关于bitcoin.html">
+            
+                    
+                    啥是Bitcoin
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../CyberSec/IOC-痛苦金字塔.html">
+            
+                <a href="../CyberSec/IOC-痛苦金字塔.html">
+            
+                    
+                    从痛苦金字塔学习分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../CyberSec/PEB和TEB.html">
+            
+                <a href="../CyberSec/PEB和TEB.html">
+            
+                    
+                    TEB & PEB
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../CyberSec/进程注入-基础.html">
+            
+                <a href="../CyberSec/进程注入-基础.html">
+            
+                    
+                    进程注入-前置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../CyberSec/6种常见注入方式.html">
+            
+                <a href="../CyberSec/6种常见注入方式.html">
+            
+                    
+                    windows下的进程注入（6种）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.10" data-path="../CyberSec/dll-inject.html">
+            
+                <a href="../CyberSec/dll-inject.html">
+            
+                    
+                    Dll注入的3.5种方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.11" data-path="../CyberSec/DLL注入-突破session0.html">
+            
+                <a href="../CyberSec/DLL注入-突破session0.html">
+            
+                    
+                    DLL注入-突破session0
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.12" data-path="../CyberSec/dll劫持原理学习和应用.html">
+            
+                <a href="../CyberSec/dll劫持原理学习和应用.html">
+            
+                    
+                    dll劫持原理以及方式实践
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.13" data-path="../CyberSec/r3-hook.html">
+            
+                <a href="../CyberSec/r3-hook.html">
+            
+                    
+                    Hook - R3
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../Vulnerability_Mining.html">
+            
+                <a href="../Vulnerability_Mining.html">
+            
+                    
+                    Vulnerability Mining
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../Vulnerability_Mining/iwant2pwn/firstPWN.html">
+            
+                <a href="../Vulnerability_Mining/iwant2pwn/firstPWN.html">
+            
+                    
+                    CTF - PWN 学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1.1" >
+            
+                <span>
+            
+                    
+                    栈的艺术
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.1.2" >
+            
+                <span>
+            
+                    
+                    堆的艺术
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../Vulnerability_Mining/Windows通用shellcode编写.html">
+            
+                <a href="../Vulnerability_Mining/Windows通用shellcode编写.html">
+            
+                    
+                    shellcode编写-地址定位
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../Vulnerability_Mining/winafl关于pdf测试的阅读-水.html">
+            
+                <a href="../Vulnerability_Mining/winafl关于pdf测试的阅读-水.html">
+            
+                    
+                    winafl文献-关于pdf中的图片测试(极水)
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../ToolUsage.html">
+            
+                <a href="../ToolUsage.html">
+            
+                    
+                    Tool usage
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../ToolUsage/多git公钥配置.html">
+            
+                <a href="../ToolUsage/多git公钥配置.html">
+            
+                    
+                    自定义git公钥配置-常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../ToolUsage/HonggFuzz使用-入门.html">
+            
+                <a href="../ToolUsage/HonggFuzz使用-入门.html">
+            
+                    
+                    honggfuzz使用-安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../ToolUsage/WinAFL使用-入门.html">
+            
+                <a href="../ToolUsage/WinAFL使用-入门.html">
+            
+                    
+                    WinAFL 使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../ToolUsage/GDB使用.html">
+            
+                <a href="../ToolUsage/GDB使用.html">
+            
+                    
+                    GDB使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../ToolUsage/Fiddler学习.html">
+            
+                <a href="../ToolUsage/Fiddler学习.html">
+            
+                    
+                    Fiddler学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../ToolUsage/windbg记录.html">
+            
+                <a href="../ToolUsage/windbg记录.html">
+            
+                    
+                    windbg使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../ToolUsage/fakenet.html">
+            
+                <a href="../ToolUsage/fakenet.html">
+            
+                    
+                    真假C&C - fakenet
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../Botnet.html">
+            
+                <a href="../Botnet.html">
+            
+                    
+                    Botnet
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../Botnet/mirai源码学习.html">
+            
+                <a href="../Botnet/mirai源码学习.html">
+            
+                    
+                    mirai源码分析学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1.1" data-path="../Botnet/dlr.html">
+            
+                <a href="../Botnet/dlr.html">
+            
+                    
+                    dlr
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.2" data-path="../Botnet/loader.html">
+            
+                <a href="../Botnet/loader.html">
+            
+                    
+                    loader
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.3" data-path="../Botnet/bot.html">
+            
+                <a href="../Botnet/bot.html">
+            
+                    
+                    bot
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.4" data-path="../Botnet/cnc.html">
+            
+                <a href="../Botnet/cnc.html">
+            
+                    
+                    cnc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.1.5" data-path="../Botnet/tools.html">
+            
+                <a href="../Botnet/tools.html">
+            
+                    
+                    tools
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    boat （ripper）家族起底分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    NTP botnet 7月样本分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    Muhstik 家族最新攻击分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    Andoryu家族祖孙三代分析报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../Botnet/botnetGroup/temp.html">
+            
+                <a href="../Botnet/botnetGroup/temp.html">
+            
+                    
+                    某 - 家族发现起底报告
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="../Botnet/lm工作总结.html">
+            
+                <a href="../Botnet/lm工作总结.html">
+            
+                    
+                    总结 - botnet 还有 实习
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../winkernel.html">
+            
+                <a href="../winkernel.html">
+            
+                    
+                    Windows kernel学习
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="base_env.html">
+            
+                <a href="base_env.html">
+            
+                    
+                    开发、调试环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="程序隐藏技术-概述.html">
+            
+                <a href="程序隐藏技术-概述.html">
+            
+                    
+                    概述 - 藏匿程序的方式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="hello_kernel.html">
+            
+                <a href="hello_kernel.html">
+            
+                    
+                    Hello Kernel！
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="kerstr.html">
+            
+                <a href="kerstr.html">
+            
+                    
+                    字符串 - 但是内核安全
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="user_procs.html">
+            
+                <a href="user_procs.html">
+            
+                    
+                    链表 - 遍历用户进程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="ker_mod.html">
+            
+                <a href="ker_mod.html">
+            
+                    
+                    链表 - 遍历内核模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="自旋锁.html">
+            
+                <a href="自旋锁.html">
+            
+                    
+                    spinlock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" >
+            
+                <span>
+            
+                    
+                    计时器 - IO还有DPC
+            
+                </span>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.14.9" data-path="ssdt-1.html">
+            
+                <a href="ssdt-1.html">
+            
+                    
+                    SSDT - 是啥、干啥、怎么用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.10" >
+            
+                <span>
+            
+                    
+                    SSDT - SSSDT
+            
+                </span>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../Antivirus.html">
+            
+                <a href="../Antivirus.html">
+            
+                    
+                    Bypass Anti-virus
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../bypass_antivirus/openARK/openark.html">
+            
+                <a href="../bypass_antivirus/openARK/openark.html">
+            
+                    
+                    学习 - OpenARK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >SSDT - 是啥、干啥、怎么用</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ssdt--sssdt">SSDT &amp; SSSDT</h1>
+<p>SSDT&#x8868;&#xFF1A;&#x7CFB;&#x7EDF;&#x670D;&#x52A1;&#x63CF;&#x8FF0;&#x7B26;&#x8868;&#xFF0C;&#x628A;&#x5E94;&#x7528;&#x5C42;&#x4E0E;&#x5185;&#x6838;&#x5C42;&#x8054;&#x7CFB;&#x8D77;&#x6765;&#xFF0C;&#x8D77;&#x5230;<strong>&#x6865;&#x6881;</strong>&#x7684;&#x4F5C;&#x7528;&#x3002;</p>
+<p>&#x6BD4;&#x5982; ReadProcessMemory&#x51FD;&#x6570; &#x5728;r3&#x88AB;&#x8C03;&#x7528;&#xFF0C;&#x5176;&#x529F;&#x80FD;&#x5B9E;&#x73B0;&#x9700;&#x8981;&#x7ECF;&#x8FC7;kerneldll&#x4F20;&#x9012;&#x5230;ntdll.dll&#x7136;&#x540E;&#x7ECF;&#x8FC7;&#xFF1A;</p>
+<pre><code class="lang-assembly">mov eax, API&#x7D22;&#x5F15;&#x53F7;
+mov edx, &#x4E00;&#x4E2A;&#x5730;&#x5740;    ;&#x8BE5;&#x5730;&#x5740;&#x91CC;&#x7684;&#x503C;&#x662F;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#x5730;&#x5740;
+call [edx]          ;&#x8C03;&#x7528;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5B9E;&#x73B0;&#x8FDB;&#x5165;0&#x73AF;
+retn 14h
+</code></pre>
+<p>&#x8FD9;&#x4E2A;&#x5185;&#x6838;&#x51FD;&#x6570;&#x7684;&#x5730;&#x5740;&#x5728;SSDT&#x8868;&#x4E2D;&#x4F4D;&#x4E8E;&#x67D0;&#x4E2A;&#x4F4D;&#x7F6E;&#xFF0C;&#x8FD9;&#x4E2A;&#x4F4D;&#x7F6E;&#x5C31;&#x662F;&#x7D22;&#x5F15;&#x53F7;&#x3002;<a href="https://www.52pojie.cn/thread-1228067-1-1.html" target="_blank">&#x53C2;&#x8003;&#xFF1A;&#x65AD;&#x5176;&#x7CAE;&#x9053;&#x2014;&#x2014;&#x5185;&#x6838;&#x7EA7;&#x62D2;&#x7EDD;&#x670D;&#x52A1;&#x653B;&#x51FB;</a></p>
+<p>&#x679A;&#x4E3E;SSDT&#x8868;&#x4E5F;&#x662F;&#x53CD;&#x5185;&#x6838;&#x5DE5;&#x5177;&#x6700;&#x57FA;&#x672C;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5728;64&#x4F4D;&#x7CFB;&#x7EDF;&#x4E2D;&#x627E;SSDT&#x8868;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x627E;<code>KeServiceDescriptorTable</code>&#x51FD;&#x6570;&#xFF0C;&#x8BE5;&#x51FD;&#x6570;&#x6CA1;&#x6709;&#x88AB;&#x5BFC;&#x51FA;&#xFF0C;&#x53EA;&#x80FD;&#x52A8;&#x6001;&#x7684;&#x67E5;&#x627E;&#x5730;&#x5740;&#x3002;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x67E5;&#x627E;<code>msr(c0000082)</code>&#x8FD9;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x5BC4;&#x5B58;&#x5668;&#x6765;&#x66FF;&#x4EE3;&#x67E5;&#x627E;<code>KeServiceDescriptorTable</code>&#x8FD9;&#x4E00;&#x6B65;&#x3002;</p>
+<h1 id="msr-&#x5BC4;&#x5B58;&#x5668;">MSR &#x5BC4;&#x5B58;&#x5668;</h1>
+<blockquote>
+<p>MSR&#xFF08;Model Specific Register&#xFF09;&#x662F;x86&#x67B6;&#x6784;&#x4E2D;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x6307;&#x7684;&#x662F;&#x5728;x86&#x67B6;&#x6784;&#x5904;&#x7406;&#x5668;&#x4E2D;&#xFF0C;&#x4E00;&#x7CFB;&#x5217;&#x7528;&#x4E8E;&#x63A7;&#x5236;CPU&#x8FD0;&#x884C;&#x3001;&#x529F;&#x80FD;&#x5F00;&#x5173;&#x3001;&#x8C03;&#x8BD5;&#x3001;&#x8DDF;&#x8E2A;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x3001;&#x76D1;&#x6D4B;CPU&#x6027;&#x80FD;&#x7B49;&#x65B9;&#x9762;&#x7684;&#x5BC4;&#x5B58;&#x5668;&#x3002;</p>
+</blockquote>
+<p>&#x8FD9;&#x4E2A;&#x5BC4;&#x5B58;&#x5668;&#x4ED6;&#x6709;&#x5F88;&#x591A;&#xFF0C;msr&#x662F;&#x4ED6;&#x4EEC;&#x7EDF;&#x4E00;&#x7684;&#x540E;&#x7F00;&#x3002;</p>
+<p><strong>MSR &#x662F;CPU &#x7684;&#x4E00;&#x7EC4;64 &#x4F4D;&#x5BC4;&#x5B58;&#x5668;</strong>&#xFF0C;&#x53EF;&#x4EE5;&#x5206;&#x522B;&#x901A;&#x8FC7;<strong>RDMSR &#x548C;WRMSR &#x4E24;&#x6761;&#x6307;&#x4EE4;</strong>&#x8FDB;&#x884C;&#x8BFB;&#x548C;&#x5199;&#x7684;&#x64CD;&#x4F5C;&#xFF0C;&#x524D;&#x63D0;&#x8981;&#x5728;ECX &#x4E2D;&#x5199;&#x5165;MSR &#x7684;&#x5730;&#x5740;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;RDMSR &#x6307;&#x4EE4;&#xFF0C;&#x5C06;&#x4F1A;&#x8FD4;&#x56DE;&#x76F8;&#x5E94;&#x7684;MSR &#x4E2D;64bit &#x4FE1;&#x606F;&#x5230;(EDX&#xFF1A;EAX)&#x5BC4;&#x5B58;&#x5668;&#x4E2D;&#xFF1B;&#x5BF9;&#x4E8E;WRMSR &#x6307;&#x4EE4;&#xFF0C;&#x628A;&#x8981;&#x5199;&#x5165;&#x7684;&#x4FE1;&#x606F;&#x5B58;&#x5165;(EDX&#xFF1A;EAX)&#x4E2D;&#xFF0C;&#x6267;&#x884C;&#x5199;&#x6307;&#x4EE4;&#x540E;&#xFF0C;&#x5373;&#x53EF;&#x5C06;&#x76F8;&#x5E94;&#x7684;&#x4FE1;&#x606F;&#x5B58;&#x5165;ECX &#x6307;&#x5B9A;&#x7684;MSR &#x4E2D;&#x3002;<strong>MSR &#x7684;&#x6307;&#x4EE4;&#x5FC5;&#x987B;&#x6267;&#x884C;&#x5728;level 0</strong> &#x6216;&#x5B9E;&#x6A21;&#x5F0F;&#x4E0B;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x91CC;&#x4ED6;&#x7684;&#x7528;&#x5904;&#x5C31;&#x662F;&#x5F97;&#x5230;<code>KeServiceDescriptorTable</code>&#x7684;&#x5730;&#x5740;&#x3002;</p>
+<blockquote>
+<p><a href="https://ti.dbappsecurity.com.cn/info/2275&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x4ECB;&#x7ECD;&#x4E86;&#x5229;&#x7528;msr&#x7981;&#x7528;&#x7CFB;&#x7EDF;&#x670D;&#x52A1;&#x6765;&#x63D0;&#x9AD8;&#x6728;&#x9A6C;&#x7684;&#x6316;&#x77FF;&#x6548;&#x7387;&#x7684;&#x60C5;&#x51B5;&#x3002;" target="_blank">https://ti.dbappsecurity.com.cn/info/2275&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x4ECB;&#x7ECD;&#x4E86;&#x5229;&#x7528;msr&#x7981;&#x7528;&#x7CFB;&#x7EDF;&#x670D;&#x52A1;&#x6765;&#x63D0;&#x9AD8;&#x6728;&#x9A6C;&#x7684;&#x6316;&#x77FF;&#x6548;&#x7387;&#x7684;&#x60C5;&#x51B5;&#x3002;</a></p>
+</blockquote>
+<h1 id="&#x5B9A;&#x4F4D;ssdt">&#x5B9A;&#x4F4D;ssdt</h1>
+<h2 id="&#x53CC;&#x51FB;&#x8C03;&#x8BD5;">&#x53CC;&#x51FB;&#x8C03;&#x8BD5;</h2>
+<p>&#x9700;&#x8981;&#x63D0;&#x524D;&#x914D;&#x7F6E;&#x4E00;&#x4E0B;Windbg&#x7684;&#x53CC;&#x673A;&#x8C03;&#x8BD5;&#x3002;&#x6838;&#x5FC3;&#x5C31;&#x662F;&#x6DFB;&#x52A0;&#x4E32;&#x53E3;&#xFF0C;&#x8BB0;&#x4F4F;&#x7BA1;&#x9053;&#x540D;&#x8BCD;&#xFF0C;&#x5F00;&#x542F;&#x8C03;&#x8BD5;&#x6A21;&#x5F0F;&#xFF0C;&#x865A;&#x62DF;&#x673A;&#x914D;&#x7F6E;&#x4E00;&#x4E0B;msconfig&#xFF0C;windbg&#x8FDE;&#x63A5;&#x6CE8;&#x610F;port&#x586B;&#x5199;&#x7BA1;&#x9053;&#x540D;&#x79F0;&#xFF0C;&#x5176;&#x4ED6;&#x7684;&#x90FD;&#x662F;&#x8FD9;&#x4E9B;&#x6559;&#x7A0B;&#x4E92;&#x76F8;&#x6284;&#x6765;&#x6284;&#x53BB;&#xFF0C;&#x6CA1;&#x5C4C;&#x7528;&#x3002;<img src="ssdt-1/image-20230830090240655.png" alt="image-20230830090240655"></p>
+<p><img src="ssdt-1/image-20230830093503314.png" alt="image-20230830093503314"></p>
+<p>&#x4E0D;&#x77E5;&#x9053;&#x4E3A;&#x5565;&#x5F00;&#x542F;&#x4E86;&#x4E32;&#x53E3;&#x4E4B;&#x540E;CPU&#x5360;&#x7528;&#x4E00;&#x76F4;&#x4E0B;&#x4E0D;&#x53BB;&#xFF0C;12500h&#x7684;cpu&#xFF0C;32G&#x5185;&#x5B58;&#x3002;</p>
+<p><img src="ssdt-1/image-20230829234249497.png" alt="image-20230829234249497"></p>
+<h2 id="&#x5B9A;&#x4F4D;&#x601D;&#x8DEF;">&#x5B9A;&#x4F4D;&#x601D;&#x8DEF;</h2>
+<p>&#x57FA;&#x672C;&#x601D;&#x8DEF;&#x5982;&#x4E0B;&#xFF1A;</p>
+<blockquote>
+<p>rdmsr c0000082 -&gt; KiSystemCall64Shadow -&gt; KiSystemServiceUser -&gt; SSDT</p>
+</blockquote>
+<p><img src="ssdt-1/image-20230829233249481.png" alt="image-20230829233249481"></p>
+<p>&#x4E0A;&#x8FF0;&#x601D;&#x8DEF;&#x7684;&#x5185;&#x6838;&#x601D;&#x60F3;&#x662F;&#xFF1A;<strong>&#x5728;&#x5185;&#x6838;&#x4E2D;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x5185;&#x6838;&#x51FD;&#x6570;&#x901A;&#x8FC7;&#x5411;&#x524D;&#x6216;&#x8005;&#x5411;&#x540E;&#x504F;&#x79FB;&#x6765;&#x627E;&#x5230; KiSystemServiceRepeat&#x51FD;&#x6570;&#x6700;&#x540E;&#x5B9A;&#x4F4D;SSDT&#x8868;&#x6216;&#x8005;SSDTShadow&#x8868;</strong></p>
+<p><code>KiSystemServiceRepeat</code>&#x524D;&#x4E24;&#x884C;&#x5C31;&#x662F;SSDT&#x8868;&#x548C;SSSDT&#x8868;&#x7684;&#x5730;&#x5740;</p>
+<p><img src="ssdt-1/image-20230830090439075.png" alt="image-20230830090439075"></p>
+<h3 id="&#x7279;&#x5F81;&#x7801;">&#x7279;&#x5F81;&#x7801;</h3>
+<p>&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E2A;&#x7528;&#x6765;&#x5B9A;&#x4F4D;&#x7684;&#x7279;&#x5F81;&#x7801;&#xFF0C;&#x901A;&#x8FC7;&#x8FD9;&#x4E2A;&#x7279;&#x5F81;&#x7801;&#x8FDB;&#x884C;&#x5339;&#x914D;&#x5C31;&#x53EF;&#x4EE5;&#x5B9A;&#x4F4D;&#x5230;&#x8FD9;&#x91CC;</p>
+<ul>
+<li>0x4c 0x8d 0x15 ---&gt; Get SSDT</li>
+<li>0x4c 0x8d 0x1d ---&gt; Get SSDTShadow</li>
+</ul>
+<p><img src="ssdt-1/image-20230830091542453.png" alt="image-20230830091542453"></p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF1A;</p>
+<ul>
+<li>msr&#x5728;&#x5F00;&#x542F;&#x5185;&#x6838;&#x9694;&#x79BB;&#x6A21;&#x5F0F;&#x4E0B;&#x83B7;&#x53D6;&#x7684;&#x662F; <code>KiSystemCall64Shadow</code>&#xFF1B;&#x800C;&#x5728;&#x672A;&#x5F00;&#x542F;&#x5185;&#x6838;&#x6A21;&#x5F0F;&#x4E0B;&#x5219;&#x662F;&#x83B7;&#x53D6;&#x7684; <code>KiSystemCall64</code>&#x3002;</li>
+</ul>
+<p><img src="ssdt-1/image-20230829233727974.png" alt="image-20230829233727974"></p>
+<p>&#x8FD9;&#x91CC;&#x5F97;&#x5230;&#x7684;&#x5C31;&#x662F;<code>KiSystemCall64</code>&#x51FD;&#x6570;&#x7684;&#x5730;&#x5740;&#x3002;&#x4E0D;&#x8FC7;&#x95EE;&#x9898;&#x4E0D;&#x5927;&#xFF0C;&#x53CD;&#x6B63;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x8DD1;&#x504F;&#x79FB;&#x6765;&#x904D;&#x5386;&#x7684;&#x3002;</p>
+<h2 id="&#x7A0B;&#x5E8F;&#x5B9E;&#x73B0;">&#x7A0B;&#x5E8F;&#x5B9E;&#x73B0;</h2>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;ntifs.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">pragma</span> intrinsic(__readmsr)</span>
+
+ULONGLONG ssdt_address = <span class="hljs-number">0</span>;
+
+<span class="hljs-comment">// &#x83B7;&#x53D6; KeServiceDescriptorTable &#x9996;&#x5730;&#x5740;</span>
+<span class="hljs-function">ULONGLONG <span class="hljs-title">GetKeServiceDescriptorTable</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;</span>
+    PUCHAR StartSearchAddress = (PUCHAR)__readmsr(<span class="hljs-number">0xC0000082</span>);
+    <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;</span>
+    PUCHAR EndSearchAddress = StartSearchAddress + <span class="hljs-number">0x100000</span>;
+    DbgPrint(<span class="hljs-string">&quot;&#x626B;&#x63CF;&#x8D77;&#x59CB;&#x5730;&#x5740;: %p --&gt; &#x626B;&#x63CF;&#x7ED3;&#x675F;&#x5730;&#x5740;: %p \n&quot;</span>, StartSearchAddress, EndSearchAddress);
+
+    PUCHAR ByteCode = <span class="hljs-literal">NULL</span>;
+    UCHAR OpCodeA = <span class="hljs-number">0</span>, OpCodeB = <span class="hljs-number">0</span>, OpCodeC = <span class="hljs-number">0</span>;
+    ULONGLONG addr = <span class="hljs-number">0</span>;
+    ULONG templong = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (ByteCode = StartSearchAddress; ByteCode &lt; EndSearchAddress; ByteCode++)
+    {
+        <span class="hljs-comment">// &#x4F7F;&#x7528;MmIsAddressValid()&#x51FD;&#x6570;&#x68C0;&#x67E5;&#x5730;&#x5740;&#x662F;&#x5426;&#x6709;&#x9875;&#x9762;&#x9519;&#x8BEF;,&#x5C31;&#x662F;&#x5224;&#x65AD;&#x5730;&#x5740;&#x662F;&#x5426;&#x5408;&#x6CD5;&#x53EF;&#x7528;&#xFF0C;&#x9632;&#x6B62;BSOD</span>
+        <span class="hljs-keyword">if</span> (MmIsAddressValid(ByteCode) &amp;&amp; 
+            MmIsAddressValid(ByteCode + <span class="hljs-number">1</span>) &amp;&amp;
+            MmIsAddressValid(ByteCode + <span class="hljs-number">2</span>))
+        {
+            OpCodeA = *ByteCode;
+            OpCodeB = *(ByteCode + <span class="hljs-number">1</span>);
+            OpCodeC = *(ByteCode + <span class="hljs-number">2</span>);
+            <span class="hljs-comment">// &#x5BF9;&#x6BD4;&#x7279;&#x5F81;&#x503C; &#x5BFB;&#x627E; nt!KeServiceDescriptorTable &#x51FD;&#x6570;&#x5730;&#x5740;</span>
+            <span class="hljs-comment">/*
+            nt!KiSystemServiceRepeat:
+            fffff803`6ebd2b94 4c8d15e59c3b00 lea r10, [nt!KeServiceDescriptorTable (fffff803`6ef8c880)]
+            fffff803`6ebd2b9b 4c8d1dde1e3a00 lea r11, [nt!KeServiceDescriptorTableShadow (fffff803`6ef74a80)]
+            */</span>
+            <span class="hljs-keyword">if</span> (OpCodeA == <span class="hljs-number">0x4c</span> &amp;&amp; OpCodeB == <span class="hljs-number">0x8d</span> &amp;&amp; OpCodeC == <span class="hljs-number">0x15</span>)
+            {
+                <span class="hljs-comment">// &#x83B7;&#x53D6;&#x9AD8;&#x4F4D;&#x5730;&#x5740;</span>
+                <span class="hljs-built_in">memcpy</span>(&amp;templong, ByteCode + <span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+                DbgPrint(<span class="hljs-string">&quot;ByteCode + 3 == %p\n&quot;</span>, ByteCode + <span class="hljs-number">3</span>);
+                DbgPrint(<span class="hljs-string">&quot;*(ByteCode + 3) == %p\n&quot;</span>, *(ByteCode + <span class="hljs-number">3</span>));
+                DbgPrint(<span class="hljs-string">&quot;templong = %p\n&quot;</span>, templong);
+                <span class="hljs-comment">// &#x56E0;&#x4E3A;&#x8FD9;&#x662F;&#x4E00;&#x6761;lea&#x6307;&#x4EE4;&#xFF0C;lea&#x540E;&#x9762;&#x662F;&#x4E00;&#x76F8;&#x5BF9;&#x4E8E;&#x4E0B;&#x4E00;&#x4E2A;&#x6307;&#x4EE4;&#x7684;&#x504F;&#x79FB;&#x5730;&#x5740;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;templong+bytecode&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x504F;&#x79FB;+&#x57FA;&#x5730;&#x5740;</span>
+                <span class="hljs-comment">// +7&#x662F;&#x56E0;&#x4E3A;&#x6307;&#x4EE4;&#x957F;&#x5EA6;</span>
+                addr = (ULONGLONG)templong + (ULONGLONG)ByteCode + <span class="hljs-number">7</span>;
+                <span class="hljs-keyword">return</span> addr;
+            }
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+<span class="hljs-function">NTSTATUS <span class="hljs-title">unload</span><span class="hljs-params">(PDRIVER_OBJECT driver)</span>
+</span>{
+    DbgPrint(<span class="hljs-string">&quot;Driver unload success..&quot;</span>);
+    <span class="hljs-keyword">return</span> STATUS_SUCCESS;
+}
+
+<span class="hljs-function">NTSTATUS <span class="hljs-title">DriverEntry</span><span class="hljs-params">(PDRIVER_OBJECT driver, PUNICODE_STRING RegistryPath)</span>
+</span>{
+    driver-&gt;DriverUnload = unload;
+    DbgPrint(<span class="hljs-string">&quot;3 Hello World\n&quot;</span>);
+    ssdt_address = GetKeServiceDescriptorTable();
+    DbgPrint(<span class="hljs-string">&quot;SSDT = %p \n&quot;</span>, ssdt_address);
+    <span class="hljs-keyword">return</span> STATUS_SUCCESS;
+}
+</code></pre>
+<h3 id="&#x9A8C;&#x8BC1;">&#x9A8C;&#x8BC1;</h3>
+<p>&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x5F97;&#x5230;&#x5730;&#x5740;&#xFF1A;</p>
+<p><img src="ssdt-1/image-20230830093435569.png" alt="image-20230830093435569"></p>
+<p>windbg&#x5F97;&#x5230;&#x5730;&#x5740;&#xFF1A;</p>
+<p><img src="ssdt-1/image-20230830093551424.png" alt="image-20230830093551424"></p>
+<p>&#x6210;&#x529F;&#x627E;&#x5230;&#x4E86;ssdt&#x8868;&#x3002;</p>
+<h1 id="&#x89E3;&#x5BC6;ssdt">&#x89E3;&#x5BC6;ssdt</h1>
+<p>&#x5B9A;&#x4F4D;&#x5230;&#x4E86;ssdt&#x8868;&#x4E2D;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x4F46;&#x662F;&#x8FD9;&#x4E2A;&#x5185;&#x5BB9;&#x5E76;&#x4E0D;&#x662F;&#x5185;&#x6838;&#x51FD;&#x6570;&#x7684;&#x771F;&#x6B63;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x8FD8;&#x9700;&#x8981;&#x8FDB;&#x884C;&#x7B80;&#x5355;&#x7684;&#x5730;&#x5740;&#x8BA1;&#x7B97;&#x624D;&#x80FD;&#x5F97;&#x5230;&#x771F;&#x5B9E;&#x7684;&#x5730;&#x5740;&#x3002;</p>
+<p>&#x5F97;&#x5230; ServiceTableBase &#x7684;&#x5730;&#x5740;&#x540E;&#xFF0C;&#x5C31;&#x80FD;&#x5F97;&#x5230;&#x6BCF;&#x4E2A;&#x670D;&#x52A1;&#x51FD;&#x6570;&#x7684;&#x5730;&#x5740;&#x3002;&#x4F46;&#x8FD9;&#x4E2A;&#x8868;&#x5B58;&#x653E;&#x7684;&#x5E76;&#x4E0D;&#x662F; SSDT &#x51FD;&#x6570;
+&#x7684;&#x5B8C;&#x6574;&#x5730;&#x5740;&#xFF0C;&#x800C;&#x662F;&#x5176;&#x76F8;&#x5BF9;&#x4E8E; <code>ServiceTableBase[Index]&gt;&gt;4</code> &#x7684;&#x6570;&#x636E;&#xFF0C;&#x6BCF;&#x4E2A;&#x6570;&#x636E;&#x5360;&#x56DB;&#x4E2A;&#x5B57;&#x8282;&#xFF0C;&#x6240;&#x4EE5;&#x8BA1;&#x7B97;&#x6307;
+&#x5B9A; Index &#x51FD;&#x6570;&#x5B8C;&#x6574;&#x5730;&#x5740;&#x7684;&#x516C;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<ul>
+<li>x86: <ul>
+<li><code>FuncAddress = KeServiceDescriptorTable + 4 * Index</code></li>
+</ul>
+</li>
+<li>x64&#xFF1A;<ul>
+<li><code>FuncAddress = [KeServiceDescriptorTable+4*Index]&gt;&gt;4 + KeServiceDescriptorTable</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="&#x65B9;&#x6CD5;1---&#x6284;&#x6E90;&#x7801;">&#x65B9;&#x6CD5;1 - &#x6284;&#x6E90;&#x7801;</h2>
+<p>&#x76F4;&#x63A5;&#x4ECE;&#x5185;&#x6838;&#x4E2D;&#x63D0;&#x53D6;&#x89E3;&#x6790;&#x5730;&#x5740;&#x7684;&#x6E90;&#x7801;&#xFF0C;&#x76F4;&#x63A5;&#x4F7F;&#x7528;shellcode&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">UINT64</span><span class="hljs-params">(__fastcall* SCFN)</span><span class="hljs-params">(UINT64, UINT64)</span></span>;
+SCFN scfn;
+<span class="hljs-function">VOID <span class="hljs-title">DecodeSSDT</span><span class="hljs-params">()</span>
+</span>{
+    UCHAR strShellCode[<span class="hljs-number">36</span>] = <span class="hljs-string">&quot;\x48\x8B\xC1\x4C\x8D\x12\x8B\xF8\xC1\xEF\x07\x83\xE7\x20\x4E\x8B\x14\x17\x4D\x63\x1C\x82\x49\x8B\xC3\x49\xC1\xFB\x04\x4D\x03\xD3\x49\x8B\xC2\xC3&quot;</span>;
+    scfn = ExAllocatePool(NonPagedPool, <span class="hljs-number">36</span>);
+    <span class="hljs-built_in">memcpy</span>(scfn, strShellCode, <span class="hljs-number">36</span>);
+}
+</code></pre>
+<p>&#x8FD9;&#x6837;&#x5C31;&#x80FD;&#x5F97;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x8C03;&#x7528;&#x53F7;&#x7684;&#x5730;&#x5740;&#x3002;rdx=ssdt&#xFF1B;rcx=index</p>
+<p><img src="ssdt-1/image-20230830225511875.png" alt="image-20230830225511875"></p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;ntifs.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">pragma</span> intrinsic(__readmsr)</span>
+
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _SYSTEM_SERVICE_TABLE
+{
+    PVOID ServiceTableBase;
+    PVOID ServiceCounterTableBase;
+    ULONGLONG NumberOfServices;
+    PVOID ParamTableBase;
+} SYSTEM_SERVICE_TABLE, * PSYSTEM_SERVICE_TABLE;
+
+<span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">UINT64</span><span class="hljs-params">(__fastcall* SCFN)</span><span class="hljs-params">(UINT64, UINT64)</span></span>;
+SCFN scfn;
+
+ULONGLONG ssdt_base_aadress;
+PSYSTEM_SERVICE_TABLE KeServiceDescriptorTable;
+
+<span class="hljs-comment">// &#x89E3;&#x5BC6;&#x7B97;&#x6CD5;</span>
+<span class="hljs-function">VOID <span class="hljs-title">DecodeSSDT</span><span class="hljs-params">()</span>
+</span>{
+    UCHAR strShellCode[<span class="hljs-number">36</span>] = <span class="hljs-string">&quot;\x48\x8B\xC1\x4C\x8D\x12\x8B\xF8\xC1\xEF\x07\x83\xE7\x20\x4E\x8B\x14\x17\x4D\x63\x1C\x82\x49\x8B\xC3\x49\xC1\xFB\x04\x4D\x03\xD3\x49\x8B\xC2\xC3&quot;</span>;
+    scfn = ExAllocatePool(NonPagedPool, <span class="hljs-number">36</span>);
+    <span class="hljs-built_in">memcpy</span>(scfn, strShellCode, <span class="hljs-number">36</span>);
+}
+
+<span class="hljs-comment">// &#x83B7;&#x53D6; KeServiceDescriptorTable &#x9996;&#x5730;&#x5740;</span>
+<span class="hljs-function">ULONGLONG <span class="hljs-title">GetKeServiceDescriptorTable</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;</span>
+    PUCHAR StartSearchAddress = (PUCHAR)__readmsr(<span class="hljs-number">0xC0000082</span>);
+    <span class="hljs-comment">// &#x8BBE;&#x7F6E;&#x7ED3;&#x675F;&#x4F4D;&#x7F6E;</span>
+    PUCHAR EndSearchAddress = StartSearchAddress + <span class="hljs-number">0x100000</span>;
+    DbgPrint(<span class="hljs-string">&quot;&#x626B;&#x63CF;&#x8D77;&#x59CB;&#x5730;&#x5740;: %p --&gt; &#x626B;&#x63CF;&#x7ED3;&#x675F;&#x5730;&#x5740;: %p \n&quot;</span>, StartSearchAddress, EndSearchAddress);
+
+    PUCHAR ByteCode = <span class="hljs-literal">NULL</span>;
+    UCHAR OpCodeA = <span class="hljs-number">0</span>, OpCodeB = <span class="hljs-number">0</span>, OpCodeC = <span class="hljs-number">0</span>;
+    ULONGLONG addr = <span class="hljs-number">0</span>;
+    ULONG templong = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">for</span> (ByteCode = StartSearchAddress; ByteCode &lt; EndSearchAddress; ByteCode++)
+    {
+        <span class="hljs-comment">// &#x4F7F;&#x7528;MmIsAddressValid()&#x51FD;&#x6570;&#x68C0;&#x67E5;&#x5730;&#x5740;&#x662F;&#x5426;&#x6709;&#x9875;&#x9762;&#x9519;&#x8BEF;,&#x5C31;&#x662F;&#x5224;&#x65AD;&#x5730;&#x5740;&#x662F;&#x5426;&#x5408;&#x6CD5;&#x53EF;&#x7528;&#xFF0C;&#x9632;&#x6B62;BSOD</span>
+        <span class="hljs-keyword">if</span> (MmIsAddressValid(ByteCode) &amp;&amp;
+            MmIsAddressValid(ByteCode + <span class="hljs-number">1</span>) &amp;&amp;
+            MmIsAddressValid(ByteCode + <span class="hljs-number">2</span>))
+        {
+            OpCodeA = *ByteCode;
+            OpCodeB = *(ByteCode + <span class="hljs-number">1</span>);
+            OpCodeC = *(ByteCode + <span class="hljs-number">2</span>);
+
+            <span class="hljs-keyword">if</span> (OpCodeA == <span class="hljs-number">0x4c</span> &amp;&amp; OpCodeB == <span class="hljs-number">0x8d</span> &amp;&amp; OpCodeC == <span class="hljs-number">0x15</span>)
+            {
+                <span class="hljs-comment">// &#x83B7;&#x53D6;&#x9AD8;&#x4F4D;&#x5730;&#x5740;</span>
+                <span class="hljs-built_in">memcpy</span>(&amp;templong, ByteCode + <span class="hljs-number">3</span>, <span class="hljs-number">4</span>);
+                DbgPrint(<span class="hljs-string">&quot;ByteCode + 3 == %p\n&quot;</span>, ByteCode + <span class="hljs-number">3</span>);
+                DbgPrint(<span class="hljs-string">&quot;*(ByteCode + 3) == %p\n&quot;</span>, *(ByteCode + <span class="hljs-number">3</span>));
+                DbgPrint(<span class="hljs-string">&quot;templong = %p\n&quot;</span>, templong);
+                <span class="hljs-comment">// &#x56E0;&#x4E3A;&#x8FD9;&#x662F;&#x4E00;&#x6761;lea&#x6307;&#x4EE4;&#xFF0C;lea&#x540E;&#x9762;&#x662F;&#x4E00;&#x76F8;&#x5BF9;&#x4E8E;&#x4E0B;&#x4E00;&#x4E2A;&#x6307;&#x4EE4;&#x7684;&#x504F;&#x79FB;&#x5730;&#x5740;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x91CC;templong+bytecode&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x504F;&#x79FB;+&#x57FA;&#x5730;&#x5740;</span>
+                <span class="hljs-comment">// +7&#x662F;&#x56E0;&#x4E3A;&#x6307;&#x4EE4;&#x957F;&#x5EA6;</span>
+                addr = (ULONGLONG)templong + (ULONGLONG)ByteCode + <span class="hljs-number">7</span>;
+                <span class="hljs-keyword">return</span> addr;
+            }
+        }
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-comment">// &#x6839;&#x636E;&#x5E8F;&#x53F7;&#x5F97;&#x5230;&#x51FD;&#x6570;&#x5730;&#x5740;</span>
+<span class="hljs-function">ULONGLONG <span class="hljs-title">GetSSDTFunctionAddress</span><span class="hljs-params">(ULONGLONG NtApiIndex)</span>
+</span>{
+    ULONGLONG ret = <span class="hljs-number">0</span>;
+
+    <span class="hljs-comment">// &#x5F97;&#x5230;ssdt&#x57FA;&#x5730;&#x5740;</span>
+    ssdt_base_aadress = GetKeServiceDescriptorTable();
+    <span class="hljs-comment">// &#x52A0;&#x8F7D;shellcode</span>
+    DecodeSSDT();
+    ret = scfn(NtApiIndex, ssdt_base_aadress);
+    <span class="hljs-keyword">return</span> ret;
+}
+
+<span class="hljs-function">NTSTATUS <span class="hljs-title">unload</span><span class="hljs-params">(PDRIVER_OBJECT driver)</span>
+</span>{
+    DbgPrint(<span class="hljs-string">&quot;Driver unload success..&quot;</span>);
+    <span class="hljs-keyword">return</span> STATUS_SUCCESS;
+}
+
+<span class="hljs-function">NTSTATUS <span class="hljs-title">DriverEntry</span><span class="hljs-params">(PDRIVER_OBJECT driver, PUNICODE_STRING RegistryPath)</span>
+</span>{
+    driver-&gt;DriverUnload = unload;
+    DbgPrint(<span class="hljs-string">&quot;4 Hello World\n&quot;</span>);
+    ssdt_base_aadress = GetKeServiceDescriptorTable();
+    DbgPrint(<span class="hljs-string">&quot;SSDT = %p \n&quot;</span>, ssdt_base_aadress);
+    ULONGLONG func_addr = GetSSDTFunctionAddress(<span class="hljs-number">51</span>);
+    DbgPrint(<span class="hljs-string">&quot;NtOpenFile addr = %p \n&quot;</span>, func_addr);
+    <span class="hljs-keyword">return</span> STATUS_SUCCESS;
+}
+</code></pre>
+<h2 id="&#x65B9;&#x6CD5;2---&#x76F4;&#x63A5;&#x7B97;">&#x65B9;&#x6CD5;2 - &#x76F4;&#x63A5;&#x7B97;</h2>
+<h3 id="&#x8FC7;&#x7A0B;">&#x8FC7;&#x7A0B;</h3>
+<blockquote>
+<p>&#x6CE8;&#x610F;&#xFF1A;windbg&#x9ED8;&#x8BA4;&#x90FD;&#x662F;16&#x8FDB;&#x5236;&#x7684;</p>
+</blockquote>
+<ol>
+<li><p>&#x5B9A;&#x4F4D;&#x5230;&#x51FD;&#x6570;&#xFF1A;</p>
+<p><img src="ssdt-1/image-20230831141201033.png" alt="image-20230831141201033"></p>
+</li>
+<li><p>&#x627E;&#x5230;ssdt&#x8868;&#x7684;&#x57FA;&#x5730;&#x5740;&#xFF1A;<code>fffff8065c8c7b30</code></p>
+<p><img src="ssdt-1/image-20230831141230390.png" alt="image-20230831141230390"></p>
+</li>
+<li><p>&#x6839;&#x636E;&#x8C03;&#x7528;&#x53F7;&#x627E;&#x504F;&#x79FB;&#xFF1A;&#x5047;&#x8BBE;&#x8C03;&#x7528;&#x53F7;51</p>
+<p><img src="ssdt-1/image-20230831141333443.png" alt="image-20230831141333443"></p>
+</li>
+<li><p>&#x5F97;&#x5230;&#x504F;&#x79FB;&#x5730;&#x5740;</p>
+<p><img src="ssdt-1/image-20230831141840106.png" alt="image-20230831141840106"></p>
+</li>
+<li><p>&#x504F;&#x79FB;&#x5730;&#x5740;&gt;&gt;4&#xFF0C;&#x52A0;&#x4E0A;&#x57FA;&#x5730;&#x5740;&#xFF0C;&#x5F97;&#x5230;&#x771F;&#x6B63;&#x5730;&#x5740;</p>
+<p><img src="ssdt-1/image-20230831142241676.png" alt="image-20230831142241676"></p>
+</li>
+</ol>
+<h3 id="&#x4EE3;&#x7801;&#x5B9E;&#x73B0;">&#x4EE3;&#x7801;&#x5B9E;&#x73B0;</h3>
+<p>&#x6211;&#x66F4;&#x559C;&#x6B22;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x66F4;&#x52A0;&#x7B80;&#x5355;&#x660E;&#x4E86;&#xFF0C;&#x540C;&#x65F6;&#x51CF;&#x5C11;&#x4E86;&#x5F88;&#x591A;&#x4E0D;&#x5FC5;&#x8981;&#x7684;&#x8BED;&#x6CD5;&#xFF0C;&#x66F4;&#x597D;&#x7684;&#x9632;&#x6B62;BSOD&#x3002;</p>
+<p><img src="ssdt-1/image-20230831134120796.png" alt="image-20230831134120796"></p>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8FD9;&#x91CC;&#x5F97;&#x5230;&#x7684;&#x662F;<code>NtOpenFile</code>&#x51FD;&#x6570;</p>
+<p><img src="ssdt-1/image-20230831135024857.png" alt="image-20230831135024857"></p>
+<pre><code class="lang-c"><span class="hljs-function">NTSTATUS <span class="hljs-title">unload</span><span class="hljs-params">(PDRIVER_OBJECT driver)</span>
+</span>{
+    DbgPrint(<span class="hljs-string">&quot;Driver unload success..&quot;</span>);
+    <span class="hljs-keyword">return</span> STATUS_SUCCESS;
+}
+
+<span class="hljs-comment">// &#x6CE8;&#x610F;&#x6570;&#x636E;&#x7C7B;&#x578B;</span>
+<span class="hljs-function">ULONGLONG <span class="hljs-title">GetTrueAddr</span><span class="hljs-params">(LONG num, ULONGLONG addr_ssdt)</span>
+</span>{
+    LONGLONG ssdt_base = *(PLONGLONG)addr_ssdt;
+    DbgPrint(<span class="hljs-string">&quot;ssdt base addr: %p --&gt; %p\n&quot;</span>, addr_ssdt, ssdt_base);
+
+    LONGLONG addr_func_offset = ssdt_base + num * <span class="hljs-number">4</span>;
+    LONG func_offset = *(PLONGLONG)addr_func_offset;
+    DbgPrint(<span class="hljs-string">&quot;func offset addr: %p --&gt; %p\n&quot;</span>, addr_func_offset, func_offset);
+
+    ULONGLONG ret = ssdt_base + (func_offset &gt;&gt; <span class="hljs-number">4</span>);
+    <span class="hljs-keyword">return</span> ret;
+}
+
+<span class="hljs-function">NTSTATUS <span class="hljs-title">DriverEntry</span><span class="hljs-params">(PDRIVER_OBJECT driver, PUNICODE_STRING RegistryPath)</span>
+</span>{
+    driver-&gt;DriverUnload = unload;
+    DbgPrint(<span class="hljs-string">&quot;3 Hello World\n&quot;</span>);
+    ssdt_address = GetKeServiceDescriptorTable();
+    <span class="hljs-comment">//DbgPrint(&quot;SSDT = %p \n&quot;, ssdt_address);</span>
+    LONG call_num = <span class="hljs-number">51</span>;
+    ULONGLONG func_addr = GetTrueAddr(call_num, ssdt_address);
+    DbgPrint(<span class="hljs-string">&quot;call num 51 addr is = %p \n&quot;</span>, func_addr);
+    <span class="hljs-keyword">return</span> STATUS_SUCCESS;
+}
+</code></pre>
+<p>&#x5176;&#x4ED6;&#x7684;&#x51FD;&#x6570;&#x90FD;&#x4E00;&#x6837;&#xFF0C;&#x8FD9;&#x91CC;&#x5C31;&#x662F;&#x901A;&#x8FC7;&#x8BA1;&#x7B97;&#x5F97;&#x5230;&#x7684;&#x6307;&#x5B9A;&#x51FD;&#x6570;&#x8C03;&#x7528;&#x53F7;&#x7684;&#x51FD;&#x6570;&#x5730;&#x5740;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">&#x6CA1;&#x6709;&#x7248;&#x6743;&#xFF0C;&#x968F;&#x4FBF;&#x590D;&#x5236;&#xFF0C;&#x514D;&#x8D39;&#x7684;&#x77E5;&#x8BC6;&#x5E94;&#x8BE5;&#x5171;&#x4EAB; all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x8BE5;&#x6587;&#x7AE0;&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2023-08-31 14:57:09
+</span></footer>
+<script>console.log("plugin-popup....");document.onclick = function(e){ e.target.tagName === "IMG" && window.open(e.target.src,e.target.src)}</script><style>img{cursor:pointer}</style>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"SSDT - 是啥、干啥、怎么用","level":"1.14.9","depth":2,"next":{"title":"SSDT - SSSDT","level":"1.14.10","depth":2,"ref":"","articles":[]},"previous":{"title":"计时器 - IO还有DPC","level":"1.14.8","depth":2,"ref":"","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["back-to-top-button","chapter-fold","code","splitter","-lunr","-search","search-pro","custom-favicon","tbfed-pagefooter","popup","-sharing","sharing-plus","intopic-toc"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"没有版权，随便复制，免费的知识应该共享","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"intopic-toc":{"isCollapsed":true,"isScrollspyActive":true,"label":"In this article","maxDepth":6,"mode":"nested","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4, .markdown-section h5, .markdown-section h6","visible":true},"splitter":{},"search-pro":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"popup":{},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"favicon":"./icon/book.ico","back-to-top-button":{},"custom-favicon":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"MyArticles/WinKernel/ssdt-1.md","mtime":"2023-08-31T06:57:09.480Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-09-19T03:57:09.070Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing-plus/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/anchor.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/gumshoe.polyfills.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-intopic-toc/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
